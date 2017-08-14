@@ -10,7 +10,7 @@
 <h1>マイページ</h1>
 
 <p>
-<a href="" target="_blank">登録情報変更・確認</a>
+<a href="a" target="_blank">登録情報変更・確認</a>
 </p>
 
 <p>
