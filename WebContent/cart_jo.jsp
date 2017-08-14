@@ -16,6 +16,9 @@
 <p>
 <a href="shiharai_takeshita.jsp">購入手続きに進む</a></p>
 
+<p>
+<a href="help_togashi.jsp">お問い合わせ</a>
+</p>
 
 </body>
 </html>
