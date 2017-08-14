@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ヘルプ：お問い合わせ方法</title>
+<link rel="stylesheet" type="text/css"href="help.css">
 </head>
 <body>
 <a href=""></a>
