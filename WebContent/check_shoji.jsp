@@ -17,6 +17,9 @@ VISA(ロゴ) カード番号 **** **** **** 1234
 <p>(購入する商品のリスト)<br>
 <img src= "img/1.jpg">
 ワンピース 1巻　500円
+<img src= "img/2.jpg">
+ワンピース 2巻　500円
+小計
 </p>
 
 <h3><a href="finish_shoji.jsp">確認</a></h3>
