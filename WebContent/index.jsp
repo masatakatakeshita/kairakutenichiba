@@ -1,31 +1,69 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
 
+<!DOCTYPE html>
+
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>快楽天市場</title>
+<meta charset="UTF-8">
+<title>toppage</title>
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+<link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <!-- indexのcssのディレクトリ入れる-->
 </head>
 
 
+
 <body>
-<a href="該当ファイルまでのパス"> リンク名 </a>
-移行ページ：
-ログイン画面
-商品詳細
-カート(買い物かご)
+<header>
+    <h2>
+  <a href="index.jsp">快楽天市場</a>
+    </h2>
+    <select name="検索窓">
+        <option value="">カテゴリー1</option>
+        <option value="">カテゴリー2</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+    </select>
+        <input type ="text" placeholder="あとで検索窓に置換します">
+        <br>
+<span class="box">
+    <a href="category_shoujidairi.jsp">カテゴリー</a></span>
+<span class="box">
+    <a href="login_kato.jsp">ログイン</a></span>
+<span class="box">
+    <a href="mypage_enju.jsp">マイページ</a></span>
+<span class="box">
+    <a href="rireki_enju.jsp">履歴</a> </span>
+<span class="box">
+    <a href="cart_jo.jsp">カート</a></span>
+</header>
 
-他にも移行ページ？
-マイページ
-買い物履歴
+cart
+login
+mypage
+rireki
+help
+index(toppage)<br>こいつらがリンクとして関連付けした要素群<br>
 
-内部完結要素：
-・中央上部に検索窓
-・左か右サイドバーとして、カテゴリー。
-　セレクトボックスでカテゴリー表示？
+・後々Javaで検索窓とDBの関連付けを行う。<br>
+・宣伝としていくつかの商品をトップページに表示する場合は<br>
+    <a href="detail_shoujidairi.jsp">商品詳細</a>
 
 
-次にページ内部のデザイン？
+
+<footer>
+<div class="index">
+     <a href="index.jsp">トップページに戻る</a></div>
+<div class="help">
+     <a href="help_togashi.jsp">ヘルプ</a></div>
+</footer>
+<!--footerのCSS機能しねぇ-->
+
+
 </body>
 </html>
