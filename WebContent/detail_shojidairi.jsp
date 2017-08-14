@@ -7,6 +7,12 @@
 <title>商品詳細</title>
 </head>
 <body>
-<h1>商品詳細</h1>
+<h1>本の名前</h1>
+<p><a href="category_shojidairi.jsp">作者名</a></p>
+<p><a href="category_shojidairi.jsp">出版社名</a></p>
+（同じカテゴリの本何冊か表示できるといいかも）
+<p>（本の画像）</p>
+<p><a href="cart_jo.jsp">カートに入れる</a></p>
+<p><a href="index.jsp">トップページへ戻る</a></p>
 </body>
 </html>
