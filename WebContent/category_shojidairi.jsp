@@ -7,7 +7,9 @@
 <title>カテゴリ別ページ</title>
 </head>
 <body>
-<h1>カテゴリ別ページ</h1>
+<p>(条件に当てはまる商品一覧)<a href="detail_shojidairi.jsp">本の名前</a></p>
+<p><a href="index.jsp">トップページへ戻る</a>　　<a href="detail_shojidairi.jsp">カートを見る</a></p>
+
 
 </body>
 </html>
