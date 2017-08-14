@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/check.css">
 <title>購入確認</title>
 </head>
 <body>
 <h1>購入内容確認ページ</h1>
 
+
+<h3>お支払い方法</h3>
 <p>
-お支払い方法<br>
 VISA(ロゴ) カード番号 **** **** **** 1234
 </p>
 <table border="5" cellspacing="2"  cellpadding="2">
