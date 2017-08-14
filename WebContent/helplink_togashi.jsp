@@ -7,6 +7,15 @@
 <title>ヘルプ：お問い合わせ</title>
 </head>
 <body>
-送信が完了しました。
+<script>
+var send =0;
+if (send =1){
+	document.write("送信されました。");
+}else{
+document.write("送信されませんでした。")
+}
+
+</script>
+
 </body>
 </html>
