@@ -9,6 +9,6 @@
 <body>
 <h1>購入履歴</h1>
 
-<p><input type="search" name="example" autocomplete="off"></p>
+<input type="search" name="example" autocomplete="off"><input type="submit" value="検索">
 </body>
 </html>
