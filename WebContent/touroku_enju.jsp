@@ -18,7 +18,7 @@
 
 
 <tr>
-<th><label for="name">氏名</label></th>
+<th><label for="name">氏名 </label></th>
 <td class="required"><img src="required1.gif" alt="必須" width="26" height="15"></td>
 <td><input type="text" name="name" id="name" size="50"><br>
 <span class="supplement">例） 山田太郎</span></td>
