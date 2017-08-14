@@ -13,15 +13,19 @@
 お支払い方法<br>
 VISA(ロゴ) カード番号 **** **** **** 1234
 </p>
-
-<p>(購入する商品のリスト)<br>
-<img src= "img/1.jpg">
-ワンピース 1巻　500円
-<img src= "img/2.jpg">
-ワンピース 2巻　500円
-小計
-</p>
-
+<table border="5" cellspacing="2"  cellpadding="2">
+<tr>
+<td><dev class="imagea"><img src= "img/1.jpg"></dev></td>
+<td>ワンピース 1巻</td><td>500円</td>
+</tr>
+<tr>
+<td><dev class="imageb"><img src= "img/2.jpg"></dev></td>
+<td>ワンピース 2巻</td><td>500円</td>
+</tr>
+<tr>
+<td></td><td>小計</td><td>1,000円</td>
+</tr>
+</table>
 <h3><a href="finish_shoji.jsp">確認</a></h3>
 <h5><a href="cart_jo.jsp">カートへ戻る</a> *購入手続きされません</h5>
 <h5><a href="shiharai_takeshita.jsp">支払い方法の選択へ戻る</a> *購入手続きされません</h5>
