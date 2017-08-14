@@ -7,6 +7,8 @@
 <title>購入完了</title>
 </head>
 <body>
-<h1>購入完了ページ</h1>
+<h1>お買い上げありがとうございました。</h1>
+<h4><a href="rireki_enju.jsp">購入履歴</a></h4>
+<h4><a href="index.jsp">トップページへ戻る</a></h4>
 </body>
 </html>
