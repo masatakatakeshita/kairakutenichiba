@@ -4,18 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>マイページ</title>
+<title>購入履歴</title>
 </head>
 <body>
-<h1>マイページ</h1>
+<h1>購入履歴</h1>
 
-<p>
-<a href="http://localhost:8080/kairakutenichiba/touroku_enju.jsp" target="_blank">登録情報変更・確認</a>
-</p>
-
-<p>
-<a href="http://localhost:8080/kairakutenichiba/rireki_enju.jsp" target="_blank">購入履歴</a>
-</p>
-
+<p><input type="search" name="example" autocomplete="off"></p>
 </body>
 </html>
