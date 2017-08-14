@@ -16,7 +16,7 @@
 
 
 <body>
-<header>
+<header background="de281b48e7ff7179dd118b9b260aadac.jpg">
     <h2>
   <a href="index.jsp">快楽天市場</a>
     </h2>
@@ -28,8 +28,8 @@
         <option value="">category3</option>
         <option value="">category3</option>
         <option value="">category3</option>
-    </select>
         <input type ="text" placeholder="あとで検索窓に置換します">
+    </select>
         <br>
 <span class="box">
     <a href="category_shoujidairi.jsp">カテゴリー</a></span>
@@ -41,7 +41,10 @@
     <a href="rireki_enju.jsp">履歴</a> </span>
 <span class="box">
     <a href="cart_jo.jsp">カート</a></span>
+<span class="box">
+    <a href="cart_jo.jsp">ヘルプ</a></span>
 </header>
+
 
 cart
 login
