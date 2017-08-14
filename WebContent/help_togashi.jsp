@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ヘルプ：お問い合わせ方法</title>
+<link rel="stylesheet" type="text/css"href="help.css">
 </head>
 <body>
 <a href=""></a>
@@ -15,7 +16,7 @@
 などをすぐに確認できるため、スムーズなご対応が可能です。
 
 
-<form method="get" action="help_togashi.jsp">
+<form method="get" action="helplink_togashi.jsp">
 氏名(必須)
 <input type="text" name="氏名">
 <br>
