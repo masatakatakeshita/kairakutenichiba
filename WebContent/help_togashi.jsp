@@ -15,7 +15,7 @@
 などをすぐに確認できるため、スムーズなご対応が可能です。
 
 
-<form method="get" action="help_togashi.jsp">
+<form method="get" action="helplink_togashi.jsp">
 氏名(必須)
 <input type="text" name="氏名">
 <br>
