@@ -14,7 +14,7 @@
 </head>
 
 
-<body>
+<body onLoad="document.login.userid.focus()" bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#ff0000">
 
 <div id="login">
 <form method="post" action="https://" name="login" onSubmit="formParts.logoutCheck();return false;">
