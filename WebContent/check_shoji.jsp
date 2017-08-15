@@ -39,7 +39,7 @@ VISA(ロゴ) カード番号 **** **** **** 1234
 </p>
 
 <h4><a href="finish_shoji.jsp">確認</a></h4>
-<div class="a">*購入手続きされません</div> //floatの処理のために順番が前後している。
+<div class="a">*購入手続きされません</div> <!-- floatの処理のために順番が前後している。 -->
 <div class="b"><a href="cart_jo.jsp">カートへ戻る</a></div> <br>
 <div class="a"> *購入手続きされません</div>
 <div class="b"><a href="shiharai_takeshita.jsp">支払い方法の選択へ戻る</a></div>
