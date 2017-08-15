@@ -5,7 +5,7 @@ header{
     width:100%;
     height:130px;
     background-color:#FFCC99;
-    background-image: ur("img/de281b48e7ff7179dd118b9b260aadac.jpg")
+    background-image: url("img/de281b48e7ff7179dd118b9b260aadac.jpg")
 }
 
 h2{
