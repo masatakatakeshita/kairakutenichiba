@@ -13,11 +13,11 @@
 <table border="5" cellspacing="2"  cellpadding="2">
 <tr>
 <td><img class="imagea" src= "img/1.jpg"></td>
-<td><a href="detail_yamaguchi.jsp">ワンピース 1巻</a></td><td>500円</td>
+<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 1巻</a></div><br><a href="category_shojidairi.jsp">尾田栄一郎</a><br><a href="category_shojidairi.jsp">集英社</a></td><td>500円</td>
 </tr>
 <tr>
 <td><img class="imageb" src= "img/2.jpg"></td>
-<td><a href="detail_yamaguchi.jsp">ワンピース 2巻</a></td><td>500円</td>
+<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 2巻</a></div><br><a href="category_shojidairi.jsp">尾田栄一郎</a><br><a href="category_shojidairi.jsp">集英社</a></td><td>500円</td>
 </tr>
 <tr>
 
