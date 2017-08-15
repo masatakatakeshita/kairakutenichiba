@@ -4,7 +4,7 @@ body{
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
-	background-image: url('img/renji.jpg');
+	background-image: url('../img/renji.jpg');
 	background-size:cover;
 }
 

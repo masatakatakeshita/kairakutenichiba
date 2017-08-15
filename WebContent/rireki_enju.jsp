@@ -5,7 +5,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="rireki_enju.css">
+<link rel="stylesheet" type="text/css" href="CSS/rireki_enju.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>購入履歴</title>
 </head>
