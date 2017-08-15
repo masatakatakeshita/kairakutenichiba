@@ -11,10 +11,14 @@
 </head>
 <body>
 
-<h1>購入履歴</h1>
 
-<div class="search">
+<h1>購入履歴</h1><img src="img/ninsani02.gif"width="50" height="50">
+	<p>こちらには過去に購入されたものが表示されます</p><div class="search">
 <input type="search" name="example" autocomplete="off"><input type="submit" value="検索">
 </div>
+
+
+
+
 </body>
 </html>

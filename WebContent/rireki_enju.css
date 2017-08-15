@@ -2,6 +2,24 @@
 	float:right;
 	padding-top:20px;
 }
+
+body{
+	background-image: url('img/renji2.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	font-family:'Gungsuh';
+	font-size:18px;
+	font-family:'Gungsuh';
+}
+
+img{
+	padding:18px 10px;
+
+}
 h1{
 	float:left;
+}
+p{
+	padding:20px 10px;
+	font-size:20px;
 }
