@@ -5,48 +5,69 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ヘルプ：お問い合わせ方法</title>
-<link rel="stylesheet" type="text/css"href="help.css">
+
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/kairakutenichiba/CSS/help.css">
+
 </head>
 <body>
 <a href=""></a>
-ヘルプ＆カスタマーサービス
-<h1>お問い合わせ方法</h1>
+<h1>ヘルプ＆カスタマーサービス</h1>
+<h2>お問い合わせ方法</h2>
+<p>
 カスタマーサービスでは24時間お問い合わせを承っております。<br>
 以下の手順でお問い合わせいただくと、お客様のアカウント情報<br>
 などをすぐに確認できるため、スムーズなご対応が可能です。
+</p>
 
-
-<form method="get" action="helplink_togashi.jsp">
-氏名(必須)
+<form id="form2">
+<p>
+<span>氏名(必須)</span>
 <input type="text" name="氏名">
+</p>
 <br>
-氏名(カナ)(必須)
+<p>
+<span>氏名(カナ)(必須)</span>
 <input type="text" name="氏名(カナ)">
+</p>
 <br>
-住所(必須)
+<p>
+<span>住所(必須)</span>
 〒<input type="text" name="郵便番号" size="10">
-<input type="text" name="住所" size="40" placeholder="例)東京都千代田区～">
+<input type="text" name="住所" size="30" placeholder="例)東京都千代田区～">
+</p>
 <br>
-連絡先(必須)
+<p>
+<span>連絡先(必須)</span>
 <input type="text" name="連絡先">
+</p>
 <br>
-メールアドレス(必須)
-<input type="text" name="メールアドレス" size="30">
-<input type="text" name="メールアドレス" size="30" placeholder="確認のため再度入力">
+<p>
+<span>メールアドレス(必須)</span>
+
+<input type="text" name="メールアドレス" size="20">
+<input type="text" name="メールアドレス" size="20"  placeholder="確認のため再度入力">
+
+</p>
 <br>
-お問い合わせ種類(必須)
+<p>
+<span>お問い合わせ種類(必須)</span>
 <select name="お問い合わせ種類">
 <option value="お問い合わせ種類">アカウントについて</option>
 <option value="お問い合わせ種類">お支払い方法について</option>
 <option value="お問い合わせ種類">注文内容について</option>
 <option value="お問い合わせ種類">その他</option>
 </select>
+</p>
 <br>
-お問い合わせ内容(必須)
+<p>
+<span>お問い合わせ内容(必須)</span>
 <textarea name="△" rows="10" cols="50"></textarea>
 <br>
+</p>
 <input type="submit" value="送信">
-<a href="helplink_togashi.jsp">送信 </a>
+<a href="http://localhost:8080/kairakutenichiba/helplink_togashi.jsp"></a>
+
+
 
 </form>
 <br><br><br><br>
@@ -58,3 +79,4 @@
 
 </body>
 </html>
+
