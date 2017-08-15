@@ -11,3 +11,12 @@ body{
 .button{
 	padding:20px 220px;
 }
+
+th{
+	webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 3px; solid #EEE9ED;
+}
+div{
+	padding:0px 265px;
+}

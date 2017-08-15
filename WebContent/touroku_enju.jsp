@@ -19,9 +19,9 @@
 
 
 <table>
-<div class="main img">
 
-</div>
+
+
 
 
 <tr>
@@ -124,6 +124,8 @@
 
 <p class="button" ><input type="submit" value="入力内容の確認画面へ"
 style="height:35"></p>
+
+<div><input type="button" value="閉じる" onClick="javascript:window.close();"></div>
 
 </form>
 
