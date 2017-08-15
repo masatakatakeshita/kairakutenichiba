@@ -1,14 +1,13 @@
-.a{
-	position:relative;
-}
-.b{
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
+
+h1{
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
 }
 h4{
-	text-align:right;
+	position:absolute;
+	top:70%;
+	left:80%;
 }
