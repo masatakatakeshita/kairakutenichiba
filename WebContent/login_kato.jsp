@@ -18,6 +18,8 @@
 
 <body onLoad="document.login.userid.focus()" bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#ff0000">
 
+
+
 <div id="login">
 <form method="post" action="https://" name="login" onSubmit="formParts.logoutCheck();return false;">
 <input type="hidden" name="__event" value="login">
@@ -48,22 +50,13 @@
 <p>
 <input type="hidden" name="pp_version" value="20170213">
 <input type="submit" value="ログイン" class="loginButton">
+
 </p>
 </div>
 </form>
 </div>
 
-<h2>まだ会員登録されていない方</h2>
-<div id="newEntry">
-<form method="post" action="https://" name="entry">
-<input type="hidden" name="__event" value="ID01_001_002">
-<input type="hidden" name="service_id" value="top">
-<div class="btnChange">
-<p><a href="JavaScript:setAction()" id="entryBtn"><span>新規会員登録して<br>
-サービスを利用する</span></a></p>
-</div>
-</form>
-</div>
+
 
 </body>
 

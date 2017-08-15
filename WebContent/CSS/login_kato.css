@@ -1,17 +1,50 @@
 @CHARSET "UTF-8";
 
 h1{
-color:firebrick;
+color:#ff0000;
 
 }
 
 body{
-	margin-top:50px;
-margin-left:50px;
-width:280px;
-height:240px;
-border:5px solid grey;
-background-color:white;
-padding:20px;
+
+	line-height: 1.5;
+	color: #00ff00;
+	background: #c0c0c0;
+
+	}
+
+#login {
+	background: #ff80c0;
+	text-align: center;
+	width: 500px;
+	float: left;
+	border: 5px solid #999999;
 
 }
+.clear{
+	clear:both;
+
+}
+em{
+font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Party LET','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+
+}
+
+.loginButton {
+
+	width: 350px;
+	margin-bottom:10px;
+	padding:5px;
+	font-size:500%;
+	font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Party LET','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+	color: #00ff00;
+
+}
+
+.textBox {
+	font-size: 300%;
+	width: 255px;
+	padding: 1px;
+	border: 1px solid #bbbbbb;
+}
+
