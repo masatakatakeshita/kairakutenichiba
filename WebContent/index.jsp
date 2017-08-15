@@ -43,7 +43,7 @@
 <span class="box">
     <a href="cart_jo.jsp">カート</a></span>
 <span class="box">
-    <a href="cart_jo.jsp">ヘルプ</a></span>
+    <a href="help_togashi.jsp">ヘルプ</a></span>
 </header>
 
 
