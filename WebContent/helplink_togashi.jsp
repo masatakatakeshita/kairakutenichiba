@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>買い物かご</title>
+<title>ヘルプ：お問い合わせ</title>
 </head>
 <body>
-<h1>以下の商品が買い物かごにはいっています</h1>
+<script>
+var send =0;
+if (send =1){
+	document.write("送信されました。");
+}else{
+document.write("送信されませんでした。")
+}
 
-<h3>商品名　　　価格　　注文数　　小計</h3>
-<h4>商品合計</h4>
-<h4>送料</h4>
-<h4>合計</h4>
-<p>
-<a href="shiharai_takeshita.jsp">購入手続きに進む</a></p>
-
+</script>
 
 </body>
 </html>
