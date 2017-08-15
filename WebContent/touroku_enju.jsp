@@ -14,7 +14,7 @@
 
 <p>以下のフォームにご入力の上、「入力内容の確認画面へ」ボタンをクリックしてください。</p>
 
-<p class="attention"><img src="C:\Users\internousdev\Desktop\sample\required1.gif" alt="必須" width="26" height="12"> マークの項目は入力必須となります。</p>
+<p class="attention"><img src="img/required1.gif" alt="必須" width="26" height="12"> マークの項目は入力必須となります。</p>
 
 
 
@@ -26,13 +26,13 @@
 
 <tr>
 <th><label for="name">氏名 </label></th>
-<td class="required"><img src="C:\Users\internousdev\Desktop\sample\required1.gif" alt="必須" width="26" height="12"></td>
+<td class="required"><img src="img/required1.gif" alt="必須" width="26" height="12"></td>
 <td><input type="text" name="name" id="name" size="50"><br>
 <span class="supplement">例） 山田太郎</span></td>
 </tr>
 <tr>
 <th><label for="name2">氏名 <span class="supplement">（フリガナ）</span></label></th>
-<td class="required"><img src="C:\Users\internousdev\Desktop\sample\required1.gif" alt="必須" width="26" height="12"></td>
+<td class="required"><img src="img/required1.gif" alt="必須" width="26" height="12"></td>
 <td><input type="text" name="name2" id="name2" size="50"><br>
 <span class="supplement">例） ヤマダタロウ</span></td>
 </tr>
@@ -40,7 +40,7 @@
 
 <tr>
 <th><label for="email">メールアドレス</label></th>
-<td class="required"><img src="C:\Users\internousdev\Desktop\sample\required1.gif" alt="必須" width="26" height="12"></td>
+<td class="required"><img src="img/required1.gif" alt="必須" width="26" height="12"></td>
 <td><input type="text" name="email" id="email" size="50"> <span class="supplement">（半角英数字）</span><br>
 <span class="supplement">ご入力間違いのないようにご注意ください</span></td>
 </tr>
@@ -60,7 +60,7 @@
 <td><label for="zip1">郵便番号</label> <input type="text" name="zip1" id="zip1" size="12"> - <input type="text" name="zip2" id="zip2" size="12"> <span class="supplement">（半角数字）</span></td>
 </tr>
 <tr>
-<td class="required"><img src="C:\Users\internousdev\Desktop\sample\required1.gif" alt="必須" width="26" height="12"></td>
+<td class="required"><img src="img/required1.gif" alt="必須" width="26" height="12"></td>
 <td><select name="prefecture" id="prefecture">
 <option value="">都道府県の選択</option>
 <option value="北海道">北海道</option>

@@ -7,3 +7,9 @@ body{
 	font-size:18px;
 	font-family:'Gungsuh';
 }
+a{
+	color: #000000;
+}
+p a:hover{
+	color:red;
+}
