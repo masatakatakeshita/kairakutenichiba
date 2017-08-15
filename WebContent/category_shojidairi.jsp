@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<h3>"ワンピース"の検索結果</h3>
 <table border="5" cellspacing="2"  cellpadding="2">
 <tr>
 <td><img class="imagea" src= "img/1.jpg"></td>
