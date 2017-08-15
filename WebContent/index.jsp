@@ -16,7 +16,8 @@
 
 
 <body>
-<header background="de281b48e7ff7179dd118b9b260aadac.jpg">
+<header>
+  <!-- なんか背景画像が表示されないんだが -->
     <h2>
   <a href="index.jsp">快楽天市場</a>
     </h2>
@@ -28,11 +29,11 @@
         <option value="">category3</option>
         <option value="">category3</option>
         <option value="">category3</option>
-        <input type ="text" placeholder="あとで検索窓に置換します">
     </select>
+    	<input type ="text" placeholder="あとで検索窓に置換します">
         <br>
 <span class="box">
-    <a href="category_shoujidairi.jsp">カテゴリー</a></span>
+    <a href="category_shojidairi.jsp">カテゴリー</a></span>
 <span class="box">
     <a href="login_kato.jsp">ログイン</a></span>
 <span class="box">
