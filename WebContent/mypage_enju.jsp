@@ -8,7 +8,7 @@
 <title>マイページ</title>
 </head>
 <body>
-<h1>マイページ</h1>
+<h1><div class="opacity">マイページ</div></h1>
 
 <p>
 <a href="http://localhost:8080/kairakutenichiba/touroku_enju.jsp" target="_blank">登録情報変更・確認</a>
