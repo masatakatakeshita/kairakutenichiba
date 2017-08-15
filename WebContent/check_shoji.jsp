@@ -38,8 +38,10 @@ VISA(ロゴ) カード番号 **** **** **** 1234
 お届け先住所　東京都A区B 1-2-3　山田荘101
 </p>
 
-<h3><a href="finish_shoji.jsp">確認</a></h3>
-<h5><a href="cart_jo.jsp">カートへ戻る</a> *購入手続きされません</h5>
-<h5><a href="shiharai_takeshita.jsp">支払い方法の選択へ戻る</a> *購入手続きされません</h5>
+<h4><a href="finish_shoji.jsp">確認</a></h4>
+<div class="a">*購入手続きされません</div> //floatの処理のために順番が前後している。
+<div class="b"><a href="cart_jo.jsp">カートへ戻る</a></div> <br>
+<div class="a"> *購入手続きされません</div>
+<div class="b"><a href="shiharai_takeshita.jsp">支払い方法の選択へ戻る</a></div>
 </body>
 </html>
