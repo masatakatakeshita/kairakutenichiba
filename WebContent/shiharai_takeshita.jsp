@@ -90,7 +90,21 @@
 
             </table>
 
-            <input type="submit" value="決定">
+            <table class="haisou fontsize_09 w560">
+
+              <tr>
+           <th>配送方法<font class="xs_font_red">［必須］</font></th>
+             <td><label><input type="radio" name="haisou" value="宅配便" >宅配便</label>
+                 <label><input type="radio" name="haisou" value="メール便">メール便</label>
+           　</td>
+       　　　　　</tr>
+
+
+            </table>
+            <p>
+
+           <a href="check_shoji.jsp"><input type="submit" value=内容確認></a>
+            </p>
 
         </div>
 
