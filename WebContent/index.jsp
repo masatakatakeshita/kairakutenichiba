@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 <link rel="stylesheet" type="text/css" href="CSS/index.css">
-    <!-- indexのcssのディレクトリ入れる-->
+    <!-- indexのcssのディレクトリ入れる 階層ごとに../が必要な場合がある。本当にディレクトリまでのパスがあっているか確かめる。-->
 </head>
 
 
