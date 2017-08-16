@@ -3,6 +3,7 @@ header{
 	position:absolute;
 	left:0;
 	top:0;
+	margin-bottom:20px;
 	position:fixed;
 	width:100%;
 	height:100px;
@@ -10,10 +11,11 @@ header{
 	padding:10px;
 	font-family:ƒƒCƒŠƒI;
 	background-color:#ff00ff;
+	z-index: 10;
 
 }
 
-.square_btn {
+.header_btn {
 	font-weight: bold;
     display: inline-block;
     padding: 0.5em 1em;
@@ -23,7 +25,8 @@ header{
     border-radius: 3px;
     transition: .4s;
     background:#ffffff;
+    z-index: 11;
 }
-.square_btn:hover {
+.header_btn:hover {
     background: #c0c0c0;
 }

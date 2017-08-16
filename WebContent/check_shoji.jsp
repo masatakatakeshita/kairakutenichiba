@@ -5,9 +5,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css"  href="CSS/check.css">
+<link rel="stylesheet" type="text/css"  href="CSS/header.css">
 <title>購入確認</title>
 </head>
 <body>
+
+<header>
+    <h2>
+  <a href="index.jsp">快楽天市場</a>
+    </h2>
+
+    <select name="検索窓">
+        <option value="">カテゴリー1</option>
+        <option value="">カテゴリー2</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+    </select>
+     <a href="category_shojidairi.jsp">
+    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
+
+
+    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
+
+
+
+    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
+
+
+
+    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
+
+    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+</header>
+<div class="main">
 <h1>購入内容の確認</h1>
 
 
@@ -22,7 +55,10 @@
 <td>ワンピース 2巻</td><td>500円</td>
 </tr>
 <tr>
-<td></td><td>小計</td><td>1,000円</td>
+<td></td><td>送料</td><td>500円</td>
+</tr>
+<tr>
+<td></td><td>小計</td><td>1,500円</td>
 </tr>
 </table>
 
@@ -43,5 +79,7 @@ VISA(ロゴ) カード番号 **** **** **** 1234
 <div class="b"><a href="cart_jo.jsp">カートへ戻る</a></div> <br>
 <div class="a"> *購入手続きされません</div>
 <div class="b"><a href="shiharai_takeshita.jsp">支払い方法の選択へ戻る</a></div>
+
+</div>
 </body>
 </html>
