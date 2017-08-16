@@ -11,9 +11,7 @@
 <header>
 
   <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-
-<br>
-<br>
+　　　
     <select name="検索窓">
         <option value="">カテゴリー1</option>
         <option value="">カテゴリー2</option>
