@@ -11,10 +11,10 @@
 <body>
 
 <header>
-    <h2>
-  <a href="index.jsp">快楽天市場</a>
-    </h2>
 
+  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
+
+<p>
     <select name="検索窓">
         <option value="">カテゴリー1</option>
         <option value="">カテゴリー2</option>
@@ -39,6 +39,7 @@
     　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
 
     　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+    </p>
 </header>
 <div class="main">
 <h1>購入内容の確認</h1>
