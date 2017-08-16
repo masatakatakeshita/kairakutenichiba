@@ -10,21 +10,22 @@
 
 body{
 	width:100%;
+	height:100%;
 	float:center;
 	line-height: 1.5;
 	color: #000000;
-	background: #ffffff;
+	background: #EEE9ED;
 
 	}
 
 #login,loginbox {
 	margin: 30px auto;
 	padding:50px;
-	background: #c0c0c0;
+	background: #ffffff;
 	width: 400px;
 	height: 400px;
 	text-align: center;
-	border: 5px solid #808080;
+	border: 5px solid #EEE9ED;
 	webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
@@ -32,7 +33,7 @@ body{
 
 
 .loginbutton  {
-  background: #ff80ff;
+  background: #ffb5da;
   border-color: transparent;
   color: #000000;
   cursor: pointer;
@@ -43,7 +44,16 @@ body{
   webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+
+  }
+
+  .loginbutton:hover {
+  position:relative;
+  top:2px;
+  left:2px;
+  opacity: 0.8;
 }
+
 
 
 
