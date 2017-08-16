@@ -26,17 +26,17 @@
     	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
 
 
-
-
-    　　　<a href="login_kato.jsp"><input type="submit" value="ログイン"></a>
-
-    　　　<a href="mypage_enju.jsp"><input type="submit" value="マイページ"></a>
+    　　　<a href="login_kato.jsp" class="square_btn">ログイン</a>
 
 
 
-    　　　<a href="cart_jo.jsp"><input type="submit" value="カート"></a>
+    　　　<a href="mypage_enju.jsp" class="square_btn">マイページ</a>
 
-    　　　<a href="help_togashi.jsp"><input type="submit" value="ヘルプ"></a>
+
+
+    　　　<a href="cart_jo.jsp" class="square_btn">カート</a>
+
+    　　　<a href="help_togashi.jsp" class="square_btn">ヘルプ</a>
 </header>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
