@@ -65,7 +65,7 @@
 	<table class="type04">
 		<tr>
 		<th scope="row">合計</th>
-		<td>1000円</td></tr>
+		<td>1500円</td></tr>
 		</table>
 
 </table>
