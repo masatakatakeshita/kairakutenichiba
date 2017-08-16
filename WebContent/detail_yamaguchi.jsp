@@ -10,6 +10,11 @@
 <title>商品詳細</title>
 </head>
 <body>
+<header>
+<div class="logo">快楽店市場</div>
+</header>
+<footer>
+Copyright(C) 2016 Bill Gates Practice. All Rights Reserved. </footer>
 <img class="photo" src="img/haikei2.jpg">
 <div style="background: url(haikei2.jpg);">
 <div class="navi">

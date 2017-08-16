@@ -4,9 +4,28 @@
     color:grey;
     background-image:url(img/haikei2.jpg);
 }
+header{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:50px;
+background-color:#ffd9e3;
+color: black;
+font-size:12px;
+}
 
-
-
+footer{
+position:absolute;
+bottom:0;
+width:100%;
+height:70px;
+background-color:#ffd9e3;
+color: black;
+text-align:center;
+font-size:12px;
+line-height:70px;
+}
 .main{
 	position:absolute;
     background-color:#e6e6fa;
@@ -64,12 +83,12 @@ color:black;
 line-height:30px;}
 
 .navibox2{
-float:relative;
+float:left;
 width:100px;
 height:25px;
-bottom:20px;
+bottom:0px;
 background-color:#f5ded3;
-text-align: center;
+text-align: justify;
 margin:5px;
 font-size:17px;
 color:black;
