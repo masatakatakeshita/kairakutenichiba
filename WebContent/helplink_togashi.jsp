@@ -14,7 +14,6 @@ if (send =1){
 }else{
 document.write("送信されませんでした。")
 }
-
 </script>
 
 </body>
