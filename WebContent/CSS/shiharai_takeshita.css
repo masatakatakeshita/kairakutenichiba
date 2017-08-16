@@ -1,0 +1,19 @@
+input:focus + span {
+
+display: inline;
+}
+
+
+body{
+    font-family: "ƒƒCƒŠƒI";
+}
+h3{
+     padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #2c2c2f;
+    background: hotpink;
+    border-radius: 10px;
+    width: 13%;
+}
+th{background-color: pink}
+
