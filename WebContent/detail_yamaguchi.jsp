@@ -19,7 +19,7 @@ Copyright(C) 2016 Bill Gates Practice. All Rights Reserved. </footer>
 <div style="background: url(haikei2.jpg);">
 <div class="navi">
 <div class="navibox"><h1>本の名前</h1></div>
-<div class="navibox"><p><a href="category_shojidairi.jsp">作者名</a></p>
+<div class="navibox"><p><a href="category_shojidairi.jsp">あ作者名</a></p>
 </div>
 <div class="navibox"><p><a href="category_shojidairi.jsp">出版社名</a></p></div>
 
