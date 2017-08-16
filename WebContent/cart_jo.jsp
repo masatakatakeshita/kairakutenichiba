@@ -12,8 +12,7 @@
 <header>
 
   <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-
-<p>
+　　　
     <select name="検索窓">
         <option value="">カテゴリー1</option>
         <option value="">カテゴリー2</option>
@@ -38,7 +37,7 @@
     　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
 
     　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
-    </p>
+
 </header>
 <h1>以下の商品が買い物かごにはいっています</h1>
 
