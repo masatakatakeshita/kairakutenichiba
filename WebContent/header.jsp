@@ -28,15 +28,15 @@
 
 
 
-    　　　<a href="login_kato.jsp">ログイン</a>
+    　　　<a href="login_kato.jsp"><input type="submit" value="ログイン"></a>
 
-    　　　<a href="mypage_enju.jsp">マイページ</a>
+    　　　<a href="mypage_enju.jsp"><input type="submit" value="マイページ"></a>
 
 
 
-    　　　<a href="cart_jo.jsp">カート</a>
+    　　　<a href="cart_jo.jsp"><input type="submit" value="カート"></a>
 
-    　　　<a href="help_togashi.jsp">ヘルプ</a>
+    　　　<a href="help_togashi.jsp"><input type="submit" value="ヘルプ"></a>
 </header>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
