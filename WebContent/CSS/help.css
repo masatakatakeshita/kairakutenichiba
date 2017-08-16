@@ -16,7 +16,7 @@ form#form2 {
 	color: #666;
 	padding: 7px;
 	margin-bottom: 15px;
-	border: 3px solid #EEE9ED;
+border: 3px solid #EEE9ED;
 
 	border-radius: 15px;
 	width:800px;
@@ -85,36 +85,36 @@ form#form2 p span.check: after,  {
 
 
 form#form2 box1 {
-	margin-right: 200px;
+	margin-right: 205px;
 }
 
 
 form#form2 box2 {
-	margin-right: 200px;
+	margin-right: 205px;
 }
 
 
 form#form2 box3 {
-	margin-right: 250px;
+	margin-right: 260px;
 }
 
 
 form#form2 box4 {
-	margin-right: 600px;
+	margin-right: +135px;
 }
 
 
 form#form2 box5 {
-	margin-right: 200px;
+	margin-right: 205px;
 }
 
 
 form#form2 box6 {
-	margin-right: 1000px;
+	margin-right: 130px;
 }
 
 form#form2 box7 {
-	margin-right: 200px;
+	margin-right: 135px;
 }
 
 form#form2 box8 {
