@@ -23,6 +23,7 @@
 
 	<div id="login">
 	<form action="https://" method="post" name="login">
+	<div id="loginbox">
 	<h1 class="logintitle">快楽天会員ログイン</h1>
 
 
@@ -37,16 +38,18 @@
 	<span>password:</span>
 	<input type="password" placeholder="パスワードを入力してください" class="textbox" size="31">
 	</p>
+	</div>
 
 <br>
 
 	<p>
 	<input type="submit" value="ログイン" class="loginbutton">
-	</p>
 
+	</p>
 
 	</form>
 	</div>
+
 
 </body>
 </html>
