@@ -59,7 +59,7 @@
 	<table class="type03">
 		<tr>
 		<th scope="row">送料</th>
-		<td>0円</td></tr>
+		<td>500円</td></tr>
 		</table>
 
 	<table class="type04">
