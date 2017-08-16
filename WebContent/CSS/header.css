@@ -29,7 +29,7 @@ header{
     border-radius: 3px;
     transition: .4s;
     background:#ffffff;
-    z-index: 11;
+    z-index: 12;
 }
 .header_btn:hover {
     background: #c0c0c0;
