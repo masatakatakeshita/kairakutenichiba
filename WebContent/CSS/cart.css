@@ -1,3 +1,6 @@
+h1{background-color:pink;
+margin-top:150px;
+}
 table.type01 {
     border-collapse: collapse;
     text-align: left;
@@ -55,6 +58,7 @@ table.type02 th {
 table.type02 td {
 	width: 50px;
 	padding: 10px;
+	 font-weight: bold;
 	vertical-align: top;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
@@ -83,6 +87,7 @@ table.type03 th {
 table.type03 td {
 	width: 50px;
 	padding: 10px;
+	 font-weight: bold;
 	vertical-align: top;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
@@ -110,6 +115,7 @@ table.type04 th {
 table.type04 td {
 	width: 50px;
 	padding: 10px;
+	 font-weight: bold;
 	vertical-align: top;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
