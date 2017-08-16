@@ -56,7 +56,7 @@ index(toppage)<br>こいつらがリンクとして関連付けした要素群<b
 
 ・後々Javaで検索窓とDBの関連付けを行う。<br>
 ・宣伝としていくつかの商品をトップページに表示する場合は<br>
-    <a href="detail_shoujidairi.jsp">商品詳細</a>
+    <a href="detail_yamaguchi.jsp">商品詳細</a>
 
 
 
