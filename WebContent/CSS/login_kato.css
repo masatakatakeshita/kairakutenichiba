@@ -1,40 +1,42 @@
 @CHARSET "UTF-8";
 
-h1{
-color:#ff0000;
+* {-webkit-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   box-sizing: border-box
+  }
 
-}
 
 body{
-
+	width:100%;
 	float:center;
 	line-height: 1.5;
 	color: #000000;
-	background: #c0c0c0;
+	background: #ffffff;
 
 	}
 
 #login {
+	margin: 30px auto;
+	padding:50px;
 	background: #ffffff;
-	width: 500px;
-	text-align:center;
-	border: 5px solid #999999;
+	width: 400px;
+	height: 400px;
+	text-align: center;
+	border: 5px solid #c0c0c0;
 
 }
 
-em{
-font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Party LET','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 
-}
-
-.loginButton {
+.loginbutton {
 
 	width: 100px;
 	margin-bottom:10px;
 	padding:5px;
 	font-size:100%;
-	font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Party LET','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
-	color: #000000;
+	font-family: 'メイリオ',sans-serif;
+	border: 3px solid  #ff80ff;
 
 }
 
@@ -43,6 +45,16 @@ font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Part
 	font-size: 300%;
 	width: 255px;
 	padding: 1px;
-	border: 1px solid #bbbbbb;
+	border: 1px solid #999999;
 }
 
+
+em{
+font-family: 'メイリオ',sans-serif;
+
+}
+
+h1{
+color:#000000;
+
+}
