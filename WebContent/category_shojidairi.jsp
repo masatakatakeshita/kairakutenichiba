@@ -4,11 +4,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css"  href="CSS/category.css">
 <title>カテゴリ別ページ</title>
 </head>
 <body>
-<p>(条件に当てはまる商品一覧)<a href="detail_yamaguchi.jsp">本の名前</a></p>
-<p><a href="index.jsp">トップページへ戻る</a>　　<a href="cart_jo.jsp">カートを見る</a></p>
+
+<h3>"ワンピース"の検索結果</h3>
+<table border="5" cellspacing="2"  cellpadding="2">
+<tr>
+<td><img class="imagea" src= "img/1.jpg"></td>
+<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 1巻</a></div><br><a href="category_shojidairi.jsp">尾田栄一郎</a><br><a href="category_shojidairi.jsp">集英社</a></td><td>500円</td>
+</tr>
+<tr>
+<td><img class="imageb" src= "img/2.jpg"></td>
+<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 2巻</a></div><br><a href="category_shojidairi.jsp">尾田栄一郎</a><br><a href="category_shojidairi.jsp">集英社</a></td><td>500円</td>
+</tr>
+<tr>
+
+</tr>
+</table>
+
+
+<h5><a href="index.jsp">トップページへ戻る</a></h5>
 
 
 </body>

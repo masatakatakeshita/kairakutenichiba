@@ -7,24 +7,21 @@ color:#ff0000;
 
 body{
 
+	float:center;
 	line-height: 1.5;
-	color: #00ff00;
+	color: #000000;
 	background: #c0c0c0;
 
 	}
 
 #login {
-	background: #ff80c0;
-	text-align: center;
+	background: #ffffff;
 	width: 500px;
-	float: left;
+	text-align:center;
 	border: 5px solid #999999;
 
 }
-.clear{
-	clear:both;
 
-}
 em{
 font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Party LET','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 
@@ -32,16 +29,17 @@ font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Part
 
 .loginButton {
 
-	width: 350px;
+	width: 100px;
 	margin-bottom:10px;
 	padding:5px;
-	font-size:500%;
+	font-size:100%;
 	font-family: 'Impact','メイリオ', Meiryo,'Phosphate-Solid','Wawati SC','Party LET','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
-	color: #00ff00;
+	color: #000000;
 
 }
 
 .textBox {
+
 	font-size: 300%;
 	width: 255px;
 	padding: 1px;

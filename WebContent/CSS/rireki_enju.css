@@ -4,7 +4,7 @@
 }
 
 body{
-	background-image: url('img/renji2.jpg');
+	background-image: url('../img/renji2.jpg');
 	background-size:cover;
 	background-repeat: no-repeat;
 	font-family:'Gungsuh';
@@ -22,4 +22,7 @@ h1{
 p{
 	padding:20px 10px;
 	font-size:20px;
+}
+.button{
+	padding:500px 500px 100px;
 }

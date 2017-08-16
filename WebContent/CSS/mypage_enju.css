@@ -1,0 +1,24 @@
+body{
+	width: 100%;
+	background-image: url('../img/renji3.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	font-family:'Gungsuh';
+	font-size:18px;
+	font-family:'Gungsuh';
+}
+a{
+	color: #000000;
+	padding: 20px;
+}
+p a:hover{
+	color:red;
+}
+h1:first-letter {
+font-size: 1.5em;
+color: #88b5ff;
+}
+
+.opacity{
+	opacity: 0.6;
+}
