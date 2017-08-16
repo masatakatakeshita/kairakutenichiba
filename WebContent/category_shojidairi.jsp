@@ -5,10 +5,43 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css"  href="CSS/category.css">
+
+<link rel="stylesheet" type="text/css"  href="CSS/header.css">
 <title>カテゴリ別ページ</title>
 </head>
 <body>
+<header>
+    <h2>
+  <a href="index.jsp">快楽天市場</a>
+    </h2>
 
+    <select name="検索窓">
+        <option value="">カテゴリー1</option>
+        <option value="">カテゴリー2</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+    </select>
+     <a href="category_shojidairi.jsp">
+    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
+
+
+    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
+
+
+
+    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
+
+
+
+    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
+
+    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+</header>
+
+<div class="main">
 <h3>"ワンピース"の検索結果</h3>
 <table border="5" cellspacing="2"  cellpadding="2">
 <tr>
@@ -26,7 +59,7 @@
 
 
 <h5><a href="index.jsp">トップページへ戻る</a></h5>
-
+</div>
 
 </body>
 </html>
