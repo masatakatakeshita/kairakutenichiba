@@ -1,0 +1,52 @@
+.body{
+     margin-left: 0px;
+
+}
+
+.header{
+    width:100%;
+}
+
+.message{
+    font-family: fantasy;
+    font-size:20px;
+}
+
+.header-logo{
+    font-family: fantasy;
+    font-size:34px;
+    padding:15px 35px;
+    background-color:white;
+    color:black;
+    margin-top:10px;
+}
+
+.menulist{
+	color:black;
+  margin-left:20px;
+  margin-top:10px;
+
+}
+
+.header-list {
+    float:left;
+    background-color:gray;
+    color:white;
+    font-size:23px;
+    padding:15px 40px;
+    list-style:none;
+}
+.footer{
+position: absolute;
+font :ÉÅÉCÉäÉI;
+
+
+
+
+
+
+}
+
+
+
+}
