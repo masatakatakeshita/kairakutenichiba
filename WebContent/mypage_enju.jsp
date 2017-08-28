@@ -6,9 +6,44 @@
 <link rel="stylesheet" type="text/css" href="CSS/mypage_enju.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>マイページ</title>
+<link rel="stylesheet" type="text/css" href="CSS/header.css">
 </head>
 <body>
-<h1><div class="opacity">マイページ</div></h1>
+
+<header>
+
+  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
+　　　
+    <select name="検索窓">
+        <option value="">カテゴリー1</option>
+        <option value="">カテゴリー2</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+    </select>
+     <a href="category_shojidairi.jsp">
+    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
+
+
+    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
+
+
+
+    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
+
+
+
+    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
+
+    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+
+</header>
+
+<div class="main">
+
+<h1>マイページ</h1>
 
 <p>
 <a href="http://localhost:8080/kairakutenichiba/touroku_enju.jsp" target="_blank">登録情報変更・確認</a>
@@ -17,6 +52,6 @@
 <p>
 <a href="http://localhost:8080/kairakutenichiba/rireki_enju.jsp" target="_blank">購入履歴</a>
 </p>
-
+</div>
 </body>
 </html>
