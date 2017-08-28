@@ -8,18 +8,76 @@
 <link rel="stylesheet" type="text/css" href="CSS/rireki_enju.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>購入履歴</title>
+<link rel="stylesheet" type="text/css"  href="CSS/header.css">
 </head>
 <body>
 
 
-<h1>購入履歴</h1><img src="img/ninsani02.gif"width="50" height="50">
+<header>
+
+  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
+　　　
+    <select name="検索窓">
+        <option value="">カテゴリー1</option>
+        <option value="">カテゴリー2</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+        <option value="">category3</option>
+    </select>
+     <a href="category_shojidairi.jsp">
+    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
+
+
+    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
+
+
+
+    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
+
+
+
+    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
+
+    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+
+</header>
+
+<div class="main">
+<h1>購入履歴</h1>
+<div class="gif"><img src="img/ninsani02.gif"width="50" height="50"></div>
 	<p>こちらには過去に購入されたものが表示されます</p>
 	<div class="search">
 		<input type="search" name="example" autocomplete="off"><input type="submit" value="検索">
 </div>
 
-<Form class="button"><Input type="button" value="閉じる" onClick="javascript:window.close();"></Form>
+<table>
+<tr>
+	<td><img class="image" src= "img/1.jpg"></td>
+	<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 1巻</a></div><br>
+		<a href="category_shojidairi.jsp">尾田栄一郎</a><br>
+		<a href="category_shojidairi.jsp">集英社</a></td>
+			<td>500円</td>
+</tr>
+<tr>
+	<td><img class="image" src= "img/2.jpg"></td>
+	<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 2巻</a></div><br>
+		<a href="category_shojidairi.jsp">尾田栄一郎</a><br>
+		<a href="category_shojidairi.jsp">集英社</a></td>
+			<td>500円</td>
+</tr>
+<tr>
 
+</tr>
+</table>
+
+
+
+
+
+<Form class="button"><Input type="button" value="閉じる" onClick="javascript:window.close();"></Form>
+</div>
 
 </body>
 </html>
