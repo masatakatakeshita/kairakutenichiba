@@ -119,19 +119,7 @@ function keisan(){
 
 		</table>
 
-	<table class="type03">
-		<tr>
-		<th scope="row">送料</th>
-		<td>500円</td></tr>
-		</table>
 
-	<table class="type04">
-		<tr>
-		<th scope="row">合計</th>
-		<td>1500円</td></tr>
-		</table>
-
-</table>
 
 </form>
 <span style="position;absolute;margin-left:562px">
