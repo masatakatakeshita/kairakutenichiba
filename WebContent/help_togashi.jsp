@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" type="text/css" href="http://localhost:8080/kairakutenichiba/CSS/help.css">
 
-<link rel="stylesheet" type="text/css" href="CSS/header.css">
+<link rel="stylesheet" type="text/css"  href="CSS/header.css">
 
 </head>
 <body>
@@ -138,12 +138,6 @@
 
 
 <br><br><br>
-ヘルプの検索<br>
-<input type="text" name="q" size="31" maxlength="255" value="">
-<input type="submit" name="btng" value="検索">
-<input type="hidden" name="h1" value="ja">
-<input type="hidden" name="sitesearch"value="web-officer.com">
-
 
 
 
