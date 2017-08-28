@@ -5,6 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ヘルプ：お問い合わせ</title>
+<link rel="stylesheet" type="text/css" href="CSS/helplink.css">
+
+<link rel="stylesheet" type="text/css" href="CSS/header.css">
 </head>
 <body>
 <header>
@@ -37,6 +40,7 @@
     　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
 
 </header>
+<center>
 <script>
 var send =0;
 if (send =1){
@@ -45,6 +49,6 @@ if (send =1){
 document.write("送信されませんでした。")
 }
 </script>
-
+</center>
 </body>
 </html>
