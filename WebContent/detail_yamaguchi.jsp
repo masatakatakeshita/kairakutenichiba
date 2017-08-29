@@ -33,7 +33,7 @@
 
 
  <div class="relative">
-<img class="photo" src="img/haikei2.jpg">
+<img class="photo" src="img/kemono1.jpg">
 <img class="center" src="img/1.jpg" alt=""class="absolute" />
 </div>
 
@@ -48,7 +48,8 @@
 <div class="cart">
 <p><h1>価格</h1></p>
 <div class="price"><p>500円</p></div>
-<a href="cart_jo.jsp">カートに商品を追加</a></p>
+<a href="cart_jo.jsp"><input type="submit"value="カートに商品を追加"></a></p>
+
 </div>
 
 <div class = "clear"></div>
