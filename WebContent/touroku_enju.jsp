@@ -10,41 +10,31 @@
 </head>
 <body>
 
-<header>
+ <header>
 
   <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-　　　
-    <select name="検索窓">
-        <option value="">カテゴリー1</option>
-        <option value="">カテゴリー2</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-    </select>
-     <a href="category_shojidairi.jsp">
-    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
-
-
-    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
 
 
 
-    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
+
+    <a href="login_kato.jsp" class="header_btn">ログイン</a>
 
 
 
-    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
+    <a href="mypage_enju.jsp" class="header_btn">マイページ</a>
 
-    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+
+
+    <a href="cart_jo.jsp" class="header_btn">カート</a>
+
+    <a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
 
 </header>
 
 
 
 
-<form method="post" action="#" class="contact">
+<form method="post" ACTION="kakunin_enju.jsp">
 
 <div class="main">
 
@@ -69,7 +59,7 @@
 
 
 <tr>
-<th><label for="name">氏名 </label></th>
+	<th><label for="name">氏名 </label></th>
 	<td class="required"><img src="img/required1.gif" alt="必須" width="26" height="12"></td>
 	<td><input type="text" name="name" id="name" size="50"><br>
 	<span class="supplement">例） 山田太郎</span></td>
@@ -94,11 +84,7 @@
 	<td class="arbitrary"></td>
 	<td><input type="text" name="tel1" id="tel1" size="12"> - <input type="text" name="tel2" id="tel2" size="12"> - <input type="text" name="tel3" id="tel3" size="12"> <span class="supplement">（半角数字）</span></td>
 </tr>
-<tr>
-	<th><label for="fax1">FAX番号</label></th>
-	<td class="arbitrary"></td>
-	<td><input type="text" name="fax1" id="fax1" size="12"> - <input type="text" name="fax2" id="fax2" size="12"> - <input type="text" name="fax3" id="fax3" size="12"> <span class="supplement">（半角数字）</span></td>
-</tr>
+
 <tr>
 	<th rowspan="3"><label for="zip1">ご住所</label></th>
 	<td class="arbitrary"></td>
@@ -168,13 +154,18 @@
 </table>
 
 
+
+
+
 <div class="btn">
-<p><input type="submit" value="入力内容の確認画面へ" style="height:35"></p>
+<button type="submit"style="height:35">確認画面へ</button>
+<input type="hidden" name="Confirm_Page" value="kakunin_enju.jsp">
 </div>
 <div class="btn">
 <input type="button" value="閉じる" onClick="javascript:window.close();">
 </div>
 </div>
+
 
 
 </form>

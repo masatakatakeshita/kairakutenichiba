@@ -17,17 +17,7 @@
 
   <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
 　　　
-    <select name="検索窓">
-        <option value="">カテゴリー1</option>
-        <option value="">カテゴリー2</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-    </select>
-     <a href="category_shojidairi.jsp">
-    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
+
 
 
     　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
@@ -49,7 +39,6 @@
 <div class="gif"><img src="img/ninsani02.gif"width="50" height="50"></div>
 	<p>こちらには過去に購入されたものが表示されます</p>
 	<div class="search">
-		<input type="search" name="example" autocomplete="off"><input type="submit" value="検索">
 </div>
 
 <table>
