@@ -14,20 +14,6 @@
 <header>
  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
 
-　　　
-    <select name="検索窓">
-        <option value="">カテゴリー1</option>
-        <option value="">カテゴリー2</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-    </select>
-     <a href="category_shojidairi.jsp">
-    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
-
-
     　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
 
 
@@ -41,30 +27,52 @@
     　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
 
 </header>
-<footer>
-Copyright(C) 2017 快楽店市場. All Rights Reserved.
- </footer>
 
- <div class="aaa">
+
+
+
+
+ <div class="relative">
 <img class="photo" src="img/haikei2.jpg">
+<img class="center" src="img/1.jpg" alt=""class="absolute" />
+</div>
+
 <div class="navi">
-<div class="navibox"><h1>本の名前</h1></div>
-<div class="navibox"><p><a href="category_shojidairi.jsp">作者名</a></p>
+<div class="navibox"><p><h1>ONE PIECE</h1></p></div>
+<div class="navibox"><p>尾田栄一郎</p></div>
+<div class="navibox"><p>集英社</p></div>
 </div>
-<div class="navibox"><p><a href="category_shojidairi.jsp">出版社名</a></p></div>
+<div class = "clear"></div>
 
 
-<div class="navibox1"><p><a href="cart_jo.jsp">カートに入れる</a></p>
+<div class="cart">
+<p><h1>価格</h1></p>
+<div class="price"><p>500円</p></div>
+<a href="cart_jo.jsp">カートに商品を追加</a></p>
 </div>
-<div class="clear"></div>>
-<div class="navibox2"><p><a href="index.jsp">トップページへ戻る</a></p></div>
 
+<div class = "clear"></div>
 
-
-（同じカテゴリの本何冊か表示できるといいかも）
-<p>（本の画像）</p>
-
+<div class="info">
+<h1>商品基本情報</h1>
+<p>発売日　　：1997年12月</p>
+<p>著者　　　：尾田栄一郎</p>
+<p>出版社　　：集英社</p>
+<p>発行形態　：コミック</p>
+<p>ページ数　：207P</p>
+<p>ISBNコード：9784088725093</p>
 </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
