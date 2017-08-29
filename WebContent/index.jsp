@@ -21,7 +21,7 @@
 
 
 <body>
-
+<!--  -->
 	<header> <a href="index.jsp"><img class="logo"
 		src="img/logo.jpg"></a>
 	　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
