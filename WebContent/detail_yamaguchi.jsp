@@ -38,7 +38,7 @@
 </div>
 
 <div class="navi">
-<div class="navibox"><p><h1>ONE PIECE</h1></p></div>
+<div class="navibox"><p><h1>ONE PIECE 巻一</h1></p></div>
 <div class="navibox"><p>尾田栄一郎</p></div>
 <div class="navibox"><p>集英社</p></div>
 </div>
