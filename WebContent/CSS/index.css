@@ -1,42 +1,5 @@
 
 
-/*
-.box1{
-    float:left;
-    margin-top:10px;
-    margin-left:50px;
-    text-align:center;
-    line-height:200px;
-    width:180px;
-    height:200px;
-    border:2px solid grey;
-    background-color:#C0D1EE;
-}
-.box2{
-    float:left;
-    margin-top:10px;
-    margin-left:50px;
-    text-align:center;
-    line-height:200px;
-    width:180px;
-    height:200px;
-    border:2px solid grey;
-    background-color:#C0D1EE;
-}
-.box3{
-    float:left;
-    margin-top:10px;
-    margin-left:50px;
-    text-align:center;
-    line-height:200px;
-    width:180px;
-    height:200px;
-    border:2px solid grey;
-    background-color:#C0D1EE;
-}
-*/
-
-
 *{
     margin:0; padding:0;
     line-height:1.5;
@@ -44,16 +7,10 @@
 }
 
 
-
 div#pagebody{
-
-    width:796;margin:0 auto;
+    width:796px; margin:0 auto;
+    margin-top:100px;
     text-align:left;
-/*
-    background-image:url("sidebar_180.gif");
-    background-repeat:repeat-y;
-
-*/
 }
 
 div#submenu{
@@ -112,7 +69,8 @@ h2{
     font-size:100px;
     margin-bottom:10px;
     padding-left:25px;
-    font-size:95%; border-bottom:solid 1px #cccccc;
+    font-size:95%;
+    border-bottom:solid 1px #cccccc;
 }
 
 h3{
@@ -143,4 +101,15 @@ div#pick up li{
     list-style-type:none;
     line-height:1.8;
 }
+
+
+
+
+
+
+
+
+
+
+
 
