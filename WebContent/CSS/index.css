@@ -1,6 +1,6 @@
 
 
-
+/*
 .box1{
     float:left;
     margin-top:10px;
@@ -34,6 +34,7 @@
     border:2px solid grey;
     background-color:#C0D1EE;
 }
+*/
 
 
 *{
@@ -42,18 +43,16 @@
     color:#333333;
 }
 
-body{
-    text-align:center;
-}
+
 
 div#pagebody{
-	margin-top:100px;
+
     width:796;margin:0 auto;
     text-align:left;
 /*
     background-image:url("sidebar_180.gif");
     background-repeat:repeat-y;
-    background-color:#ffffff;
+
 */
 }
 
