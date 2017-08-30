@@ -47,7 +47,7 @@
 
 <div class="cart">
 <p><h1>価格</h1></p>
-<div class="price"><p>500円</p></div>
+<div class="price"><p>500円(税込)</p></div>
 <a href="cart_jo.jsp"><input type="submit"value="カートに商品を追加"></a></p>
 
 </div>
