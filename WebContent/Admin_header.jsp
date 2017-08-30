@@ -31,7 +31,7 @@
 
     　　　<a href="help_admin_syousai.jsp" class="header_btn">お問い合わせ</a>
 
- 　　　<a href="help_admin_syousai.jsp" class="header_btn">log out</a>
+ 　　　<a href="admin_top_yama.jsp" class="header_btn">log out</a>
 
 </header>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
