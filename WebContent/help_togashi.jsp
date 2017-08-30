@@ -69,7 +69,7 @@
 </p>
 <br>
 <p>
-<span>住所(必須)</span>
+<span>住所</span>
 <box3>
 〒<input type="text" name="郵便番号" size="10">
 </box3>
@@ -80,13 +80,7 @@
 </box4>
 </p>
 <br>
-<p>
-<span>連絡先(必須)</span>
-<box5>
-<input type="text" name="連絡先">
-</box5>
-</p>
-<br>
+
 <p>
 <span>メールアドレス(必須)</span>
 <box6>
