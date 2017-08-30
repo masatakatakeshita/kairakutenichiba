@@ -14,9 +14,12 @@
 </head>
 <body>
 
+
+
+
 <div class="header">
 <div class="header-logo"><h1>快楽店市場</h1></div>
-<div class="message">管理者TOP</div>
+<div class="message"><h2>管理者TOP</h2></div>
 
 <ul>
 
