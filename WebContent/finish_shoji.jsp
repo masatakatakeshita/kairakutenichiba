@@ -10,10 +10,12 @@
 <title>購入完了</title>
 </head>
 <body>
-
 <header>
 
   <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
+　　　
+
+
 
     　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
 
@@ -30,7 +32,8 @@
 </header>
 
 <h1>お買い上げありがとうございました。</h1>
-<h4><a href="rireki_enju.jsp">購入履歴</a><br>
-<a href="index.jsp">トップページへ戻る</a></h4>
+<h3>※5秒で自動的にトップページに戻ります。</h3>
+
+<h4><a href="index.jsp">今すぐトップページへ戻る</a></h4>
 </body>
 </html>
