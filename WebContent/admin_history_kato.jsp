@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" type="text/css" href="CSS/admin_history_kato.css">
 
-<title>販売履歴</title>
+<title>管理者販売履歴</title>
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 
