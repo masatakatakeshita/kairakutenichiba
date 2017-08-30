@@ -30,21 +30,14 @@
 </header>
 
 <div class="main">
-        <h3>お支払い方法の選択</h3>
+        <h3>カード情報の入力</h3>
+        ※<strong>お支払い方法はクレジットカードのみとなります。</strong><br/>
         ※半角カナ・全角英数文字は、使用しないでください。<br/>
 
 
 
         <div class="shiharai" >
-           <table class="nyuuryoku1 " border="1"  >
 
-                <tr>
-           <th>お支払い方法［必須］</th>
-             <td><label><input type="radio" name="shiharaihouhou" value="代金引換" >代金引換</label>
-                 <label><input type="radio" name="shiharaihouhou" value="クレジットカード">クレジットカード</label>
-           　</td>
-       　　　　　</tr>
-          </table>
 
             <table class="nyuuryoku " border="1" >
 
