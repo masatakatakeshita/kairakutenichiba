@@ -23,6 +23,12 @@ td table date セル←長方形の内部データ。小さい四角
     <a href ="xxx.html"></a>
     <a href ="xxx.html"></a>
 <h1>管理者画面　顧客情報</h1>
+    <p>
+    <input type = "text" name = "検索" maxlength = "40" placeholder = "検索">
+    </p>
+    <p>
+    <input type = "submit" vlaue="検索">
+    </p>
     <table>
         <tr>
             <td>ID</td>
