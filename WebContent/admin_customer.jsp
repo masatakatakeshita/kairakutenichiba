@@ -36,17 +36,7 @@ td table date セル←長方形の内部データ。小さい四角
             <td>氏名かな</td>
             <td>パスワード</td>
             <td>メールアドレス</td>
-            <td>電話番号</td>
-            <td>FAX番号</td>
             <td>住所</td>
-            <td>登録日</td>
-            <td>更新日</td>
-            <td>クレジットカードID</td>
-            <td>カード番号</td>
-            <td>カード名義</td>
-            <td>セキュリティコード</td>
-            <td>有効期限(月)</td>
-            <td>有効期限(年) </td>
             <td>登録日</td>
             <td>更新日</td>
         </tr>
@@ -56,19 +46,10 @@ td table date セル←長方形の内部データ。小さい四角
             <td>ジョン</td>
             <td>password</td>
             <td>john@gmail.com</td>
-            <td>080114514</td>
-            <td>08037564</td>
             <td>地球</td>
             <td>0年1月1日</td>
             <td>明日</td>
-            <td>0000-0000-000</td>
-            <td>0000-0000-000</td>
-            <td>john</td>
-            <td>0721</td>
-            <td>1</td>
-            <td>9999 </td>
-            <td>1/1</td>
-            <td>1/1</td>
+
         </tr>
     </table>
 
