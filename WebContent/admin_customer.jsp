@@ -18,10 +18,10 @@ tr table row 行←横に長い長方形。
 td table date セル←長方形の内部データ。小さい四角
 -->
 <a href ="xxx.html">管理者画面トップ</a>
-    <a href ="xxx.html">管理者画面トップ</a>
-    <a href ="xxx.html">管理者画面トップ</a>
-    <a href ="xxx.html">管理者画面トップ</a>
-    <a href ="xxx.html">管理者画面トップ</a>
+    <a href ="xxx.html"></a>
+    <a href ="xxx.html"></a>
+    <a href ="xxx.html"></a>
+    <a href ="xxx.html"></a>
 <h1>管理者画面　顧客情報</h1>
     <table>
         <tr>
