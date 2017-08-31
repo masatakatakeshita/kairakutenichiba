@@ -6,7 +6,7 @@
 body{
 	margin: 0px auto;
 	width:100%;
-	height:100%;
+
 	float:center;
 	line-height: 1.5;
 	color: #000000;
@@ -69,4 +69,5 @@ body{
 #idpass{
 	text-align: right;
 }
+
 
