@@ -18,8 +18,16 @@
 </tr>
 </table>
 <h2>詳細内容</h2>
-<textarea name="ああ" rows="10" cols="50">
+<textarea name="詳細内容" rows="10" cols="50">
 ログインできなくなってしまったのですが、どうすればいいですか？
 </textarea>
+
+<h2>返信</h2>
+<textarea name ="返信" rows="10" cols="50">
+お問い合わせいただきありがとうございます。
+</textarea>
+<p>
+<input type="submit" value="返信">
+
 </body>
 </html>
