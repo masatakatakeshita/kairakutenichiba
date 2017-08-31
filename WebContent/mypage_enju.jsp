@@ -36,11 +36,11 @@
 <h1>マイページ</h1>
 
 <p>
-<a href="http://localhost:8080/kairakutenichiba/touroku_enju.jsp" target="_blank">登録情報変更・確認</a>
+<a href="http://localhost:8080/kairakutenichiba/touroku_enju.jsp" target="_blank">快楽的登録情報参照</a>
 </p>
 
 <p>
-<a href="http://localhost:8080/kairakutenichiba/rireki_enju.jsp" target="_blank">購入履歴</a>
+<a href="http://localhost:8080/kairakutenichiba/rireki_enju.jsp" target="_blank">快楽歴史</a>
 </p>
 </div>
 </body>

@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="CSS/rireki_enju.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>購入履歴</title>
+<title>快楽歴史</title>
 <link rel="stylesheet" type="text/css"  href="CSS/header.css">
 </head>
 <body>
@@ -35,9 +35,9 @@
 </header>
 
 <div class="main">
-<h1>購入履歴</h1>
+<h1>快楽歴史</h1>
 <div class="gif"><img src="img/ninsani02.gif"width="50" height="50"></div>
-	<p>こちらには過去に購入されたものが表示されます</p>
+	<p>こちらには過去に貪った快楽が表示されます</p>
 	<div class="search">
 </div>
 
