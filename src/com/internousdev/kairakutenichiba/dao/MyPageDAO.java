@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.internousdev.kairakutenichiba.dto.myPageDTO;
+import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.internousdev.util.DBConnector;
 
 
@@ -18,13 +18,13 @@ import com.internousdev.util.DBConnector;
  * @author internousdev
  *
  */
-public class myPageDAO {
+public class MyPageDAO {
 
-	public ArrayList<myPageDTO> select(int userId) {
+	public ArrayList<MyPageDTO> select(int userId) {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
-		myPageDTO dto = new myPageDTO();
-		ArrayList<myPageDTO> userList = new ArrayList<myPageDTO>();
+		MyPageDTO dto = new MyPageDTO();
+		ArrayList<MyPageDTO> userList = new ArrayList<MyPageDTO>();
 
 		String sql = "select * from users where user_id=?";
 

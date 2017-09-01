@@ -7,7 +7,7 @@ package com.internousdev.kairakutenichiba.dto;
  * @author internousdev
  *
  */
-public class myPageDTO {
+public class MyPageDTO {
 
 	private int userId;
 	private String password;

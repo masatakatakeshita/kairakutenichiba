@@ -8,19 +8,19 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.kairakutenichiba.dao.myPageDAO;
-import com.internousdev.kairakutenichiba.dto.myPageDTO;
+import com.internousdev.kairakutenichiba.dao.MyPageDAO;
+import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * @author internousdev
  *
  */
-public class myPageAction extends ActionSupport implements SessionAware{
+public class MyPageAction extends ActionSupport implements SessionAware{
 
 	private Map<String,Object> session;
 
-	private ArrayList<myPageDTO> UserList = new ArrayList<myPageDTO>();
+	private ArrayList<MyPageDTO> UserList = new ArrayList<MyPageDTO>();
 
 	private int userId;
 
@@ -30,9 +30,9 @@ public class myPageAction extends ActionSupport implements SessionAware{
 		}
 
 		userId = (int) session.get("userId");
-		myPageDAO mypagedao = new myPageDAO();
+		MyPageDAO MyPagedao = new MyPageDAO();
 
-		UserList = mypagedao.select(userId);
+		UserList = MyPagedao.select(userId);
 
 		if (UserList.size() ==0){
 			return ERROR;
@@ -49,11 +49,11 @@ public class myPageAction extends ActionSupport implements SessionAware{
 		this.session =session;
 		}
 
-	public ArrayList<myPageDTO> getUserList(){
+	public ArrayList<MyPageDTO> getUserList(){
 		return UserList;
 	}
 
-	public void setUserList(ArrayList<myPageDTO> userList){
+	public void setUserList(ArrayList<MyPageDTO> userList){
 		UserList = userList;
 	}
 
