@@ -31,5 +31,10 @@
 <td>山田</td><td>sample2@gmail.com</td><td>注文内容について</td><td>カートに入れた商品がなくなった<a href="help_admin_syousai.jsp">(詳細)</a></td>
 </tr>
 </table>
+
+
+
+
+
 </body>
 </html>
