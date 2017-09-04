@@ -3,10 +3,7 @@
  */
 package com.internousdev.kairakutenichiba.dto;
 
-/**
- * @author internousdev
- *
- */
+
 public class MyPageDTO {
 
 	private int userId;
