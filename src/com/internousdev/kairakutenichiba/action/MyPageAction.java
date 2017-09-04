@@ -12,10 +12,8 @@ import com.internousdev.kairakutenichiba.dao.MyPageDAO;
 import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-/**
- * @author internousdev
- *
- */
+
+@SuppressWarnings("serial")
 public class MyPageAction extends ActionSupport implements SessionAware{
 
 	private Map<String,Object> session;
