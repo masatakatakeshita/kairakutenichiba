@@ -36,15 +36,15 @@
 
 				<p id=idpass>
 
-					<label for="userid">ID:</label> <input type="text"
-						placeholder="※半角英数字" id="userid" class="textbox" size="30">
+					<label for="email">Email:</label> <input type="email"
+						placeholder="※半角英数字" id="email" class="textbox" size="25">
 				</p>
 
 
 
 				<p id=idpass>
 					<label for="passwd">password:</label> <input type="password"
-						placeholder="※半角英数字" id="passwd" class="textbox" size="31">
+						placeholder="※半角英数字" id="passwd" class="textbox" size="25">
 				</p>
 			</div>
 
