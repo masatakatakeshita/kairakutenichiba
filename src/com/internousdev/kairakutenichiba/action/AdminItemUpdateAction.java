@@ -18,7 +18,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * @author internousdev
- *
+ *管理者が商品情報を編集するためのクラス
  */
 public class AdminItemUpdateAction extends ActionSupport implements SessionAware{
 

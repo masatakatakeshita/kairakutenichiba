@@ -14,7 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * @author internousdev
- *
+ *販売履歴を一覧表示するためのアクション
  */
 public class AdminPurchaseOutlineAction extends ActionSupport implements SessionAware{
 

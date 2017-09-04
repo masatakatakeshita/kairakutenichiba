@@ -1,4 +1,5 @@
 /**
+ユーザーがマイページでユーザー情報を取得するクラス
  *
  */
 package com.internousdev.kairakutenichiba.action;

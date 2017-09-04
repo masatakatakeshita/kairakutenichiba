@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * @author internousdev
- *
+ *管理者が商品の削除フラグを編集するためのクラス
  */
 public class AdminItemSwitchAction extends ActionSupport implements SessionAware{
 

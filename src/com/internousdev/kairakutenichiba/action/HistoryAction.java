@@ -1,4 +1,5 @@
 /**
+購入履歴画面に必要な情報を取ってくるための Actionクラス
  *
  */
 package com.internousdev.kairakutenichiba.action;

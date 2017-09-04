@@ -14,7 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * @author internousdev
- *
+ *管理者用商品一覧画面に必要な情報を取得するためのクラス
  */
 public class ConCustomerAction extends ActionSupport implements SessionAware{
 

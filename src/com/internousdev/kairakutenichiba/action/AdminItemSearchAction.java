@@ -13,7 +13,7 @@ import com.internousdev.kairakutenichiba.dto.ItemDTO;
 
 /**
  * @author internousdev
- *
+ *管理者画面で商品を検索するためのアクションクラス
  */
 public class AdminItemSearchAction {
 
