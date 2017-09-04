@@ -1,0 +1,35 @@
+.main{
+	position:relative;
+	top:100px;
+}
+
+h4{
+	text-align:center;
+}
+.a{
+	float:right;
+	width:33%;
+	text-align:right;
+
+}
+.b{
+	float:right;
+	width:33%;
+	text-align:center;
+}
+
+.clear{
+	clear:both;
+}
+.imagea{
+	width:300px;
+	height:400px;
+}
+.imageb{
+	width:300px;
+	height:400px;
+}
+
+a:hover {
+	color:red;
+}
