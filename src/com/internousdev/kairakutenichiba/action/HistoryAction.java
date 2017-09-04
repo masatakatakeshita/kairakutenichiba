@@ -3,6 +3,7 @@
  */
 package com.internousdev.kairakutenichiba.action;
 
+
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -12,10 +13,7 @@ import com.internousdev.kairakutenichiba.dao.HistoryDAO;
 import com.internousdev.kairakutenichiba.dto.HistoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-/**
- * @author internousdev
- *
- */
+
 public class HistoryAction extends ActionSupport implements SessionAware{
 
 	/**

@@ -13,11 +13,6 @@ import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.internousdev.util.DBConnector;
 
 
-
-/**
- * @author internousdev
- *
- */
 public class MyPageDAO {
 
 	public ArrayList<MyPageDTO> select(int userId) {
