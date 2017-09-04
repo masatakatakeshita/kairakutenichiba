@@ -5,7 +5,7 @@ package com.internousdev.kairakutenichiba.dto;
 
 /**
  * @author internousdev
- *
+ *購入履歴
  */
 public class HistoryDTO {
 
