@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.kairakutenichiba.dao.HelpDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -44,6 +45,52 @@ private String category;
  * 問い合わせ内容
  */
 private String comment;
+
+
+/**
+ * セッション情報
+ */
+private Map<String, Object> session;
+
+
+/**
+ * ユーザーID
+ */
+private boolean userId;
+
+
+
+/**
+ * 実行メソッド
+ *
+ * @return HelpDAO
+ */
+
+public String execute() {
+
+    String result = ERROR;
+    HelpDAO dao = new HelpDAO();
+    int count = 0;
+
+    if (session.get("userId") != null) {
+        userId = (boolean) session.get("userId");
+        userId = true;
+    }
+
+    if (userId) {
+        count = dao.insertDAO(userName, userAddress, userMail, category, comment, userId);
+    }
+    if (count > 0) {
+        result = SUCCESS;
+    }
+    return result;
+}
+
+
+
+
+
+
 
 /**
  * 氏名を取得するメソッド
@@ -127,15 +174,46 @@ public void setComment(String comment) {
     this.comment = comment;
 }
 
-@Override
-public void setSession(Map<String, Object> arg0) {
-	// TODO 自動生成されたメソッド・スタブ
 
+
+/**
+ * セッションIDを取得するメソッド
+ * @return　session セッションID
+ */
+public Map<String, Object> getSession() {
+    return session;
+}
+
+/**
+ * セッションIDを格納するメソッド
+ * @param　session セットする　セッションID
+ */
+public void setSession(Map<String, Object> session) {
+    this.session = session;
+}
+
+/**
+ * ユーザーIDを取得するメソッド
+ * @return userId ユーザーID
+ */
+public boolean getUserId() {
+    return userId;
+}
+
+/**
+ * ユーザーIDを格納するメソッド
+ * @param userId　セットする　ユーザーID
+ */
+public void setUser_int(boolean userId) {
+    this.userId = userId;
 }
 
 
 
+
 }
+
+
 
 
 

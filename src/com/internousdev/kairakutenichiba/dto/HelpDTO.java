@@ -10,6 +10,12 @@ package com.internousdev.kairakutenichiba.dto;
 public class HelpDTO {
 
 
+	  /**
+	    * ユーザーID
+	    */
+	    private int userId;
+
+
 	  	    /**
 	     * 氏名
 	     */
@@ -48,6 +54,27 @@ public class HelpDTO {
 	     */
 
 		private String updateDay;
+
+
+
+		 /**
+	     * ユーザーIDを取得
+	     * @return ユーザーID
+	     */
+	    public int getUserId() {
+	        return userId;
+	    }
+
+	    /**
+	     * ユーザーIDを格納
+	     * @param userId ユーザーID
+	     */
+	    public void setUserId(int userId) {
+	        this.userId = userId;
+	    }
+
+
+
 
 
 	    /**

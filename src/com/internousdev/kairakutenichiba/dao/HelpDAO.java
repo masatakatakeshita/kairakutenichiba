@@ -26,18 +26,18 @@ public class HelpDAO {
      * @param comment 問い合わせ内容
      */
     public int insertDAO(String userName, String userAdress, String userMail, String category, String comment,
-            int usersId) {
+            boolean userId) {
         int count = 0;
 
-        Connection con = new MySqlConnector("sundia").getConnection();
-        String sql = "INSERT INTO inquiry_histories(user_name,user_address,user_tellnumber,title,comment,login)VALUES(?,?,?,?,?,?)";
+        Connection con = new MySqlConnector("kairakutenihiba").getConnection();
+        String sql = "INSERT INTO help_histories(user_name,user_address,user_mail,category,comment,)VALUES(?,?,?,?,?,)";
         Connection con2 = new MySqlConnector("openconnect").getConnection();
         String sql2 = "SELECT * FROM users where user_id=?";
         HelpDTO dto = new HelpDTO();
 
         try {
             PreparedStatement ps2 = con2.prepareStatement(sql2);
-            ps2.setInt(1, usersId);
+            ps2.setBoolean(1, userId);
             ResultSet rs = ps2.executeQuery();
 
             if (rs.next()) {
@@ -45,7 +45,7 @@ public class HelpDAO {
                     userName = rs.getString("user_name");
                 }
                 if(!(userMail.length()>0)){
-                    userMail = rs.getString("user mailadress");
+                    userMail = rs.getString("user_mail");
                 }
 
             }
