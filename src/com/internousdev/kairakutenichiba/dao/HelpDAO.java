@@ -68,7 +68,7 @@ public class HelpDAO {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        }
+    }
         return count;
     }
 }

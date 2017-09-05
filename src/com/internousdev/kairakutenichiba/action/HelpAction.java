@@ -16,10 +16,6 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class HelpAction extends ActionSupport  implements SessionAware {
 
-
-
-
-
 	/**
 	 * 問い合わせ氏名
 	 *
