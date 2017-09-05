@@ -16,6 +16,13 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class HelpAction extends ActionSupport  implements SessionAware {
 
+
+	 /**
+     * シリアルキー
+     */
+    private static final long serialVersionUID = 7307749500088925358L;
+
+
 	/**
 	 * 問い合わせ氏名
 	 *
