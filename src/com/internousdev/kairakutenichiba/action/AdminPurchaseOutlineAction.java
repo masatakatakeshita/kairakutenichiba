@@ -60,8 +60,6 @@ public class AdminPurchaseOutlineAction extends ActionSupport implements Session
 
     /**
      * 実行メソッド
-     * @author RYO SASAKI
-     * @since 2017/08/17
      * 1: リストの表示に必要な情報を取得する
      * 2: 取得が完了したとき、trueをでjspに表示を許可
      * 3: 成功したらSUCCESS,失敗したらERRORを返す

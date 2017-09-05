@@ -23,11 +23,6 @@ public class AdminItemSearchAction {
 	    private Map<String, Object> session;
 
 	    /**
-	    * シリアルID
-	    */
-	    private static final long serialVersionUID = -2457344252220177410L;
-
-	    /**
 	    * 商品リスト
 	    */
 	    private ArrayList<ItemDTO> adminItemList = new ArrayList<ItemDTO>();
@@ -54,8 +49,6 @@ public class AdminItemSearchAction {
 
 	    /**
 	    * 特定条件で商品を検索し表示する実行メソッド
-	    * @author JUNYA TAKENO
-	    * @since 2017/07/16
 	    * @version 1.0
 	    * @return 成功ならSUCCESS それ以外はERROR
 	    */

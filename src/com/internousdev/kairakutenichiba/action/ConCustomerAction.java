@@ -66,8 +66,6 @@ public class ConCustomerAction extends ActionSupport implements SessionAware{
 
    /**
     * リスト生成
-    * @author YUITO YAMAMOTO
-    * @since 2017/07/11
     * @version 1.1
     */
    public String execute() {

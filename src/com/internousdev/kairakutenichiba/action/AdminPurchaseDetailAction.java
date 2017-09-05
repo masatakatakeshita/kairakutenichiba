@@ -51,8 +51,6 @@ public class AdminPurchaseDetailAction extends ActionSupport implements SessionA
 
 	    /**
 	     * 販売履歴の詳細を表示するための実行メソッド
-	     * @author RYO SASAKI
-	     * @since 2017/07/16
 	     * @return 成功ならSUCCESS それ以外はERROR
 	     */
 	    public String execute() {

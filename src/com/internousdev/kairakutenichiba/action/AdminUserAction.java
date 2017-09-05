@@ -18,9 +18,6 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class AdminUserAction extends ActionSupport implements SessionAware{
 
-	/**
-	 *
-	 */
 
 	/**
 	 * シリアルID
@@ -31,10 +28,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	 *
 	 */
 	private static final long serialVersionUID = -2149261769882286949L;
-
-	/**
-	 *
-	 */
 
 	/**
 	 * 顧客ID

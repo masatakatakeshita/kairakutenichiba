@@ -48,7 +48,6 @@ public class AdminItemDisplayAction extends ActionSupport implements SessionAwar
     /**
     * 商品一覧情報を取得する実行メソッド
     * @return 成功ならSUCCESS それ以外はERROR
-    * @author JUNYA TAKENO
     * @version 1.0
     */
     public String execute() throws Exception {
