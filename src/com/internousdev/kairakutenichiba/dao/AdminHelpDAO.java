@@ -31,7 +31,7 @@ public class AdminHelpDAO {
 	     */
 	    public ArrayList<AdminHelpDTO> display(String userName,String isDeleted) {
 	        Connection con = (Connection) new MySqlConnector("kairakutenichiba").getConnection();
-	        String sql = "select * from AdminHelp_histories";
+	        String sql = "select * from inquiry_histories";
 	        String text =" where";
 	        if (!userName.equals("")) {
 	            sql += text + " user_name like \'%" + userName + "%\'";
