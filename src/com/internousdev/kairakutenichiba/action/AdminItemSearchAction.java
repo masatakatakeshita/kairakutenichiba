@@ -6,8 +6,11 @@ package com.internousdev.kairakutenichiba.action;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.internousdev.kairakutenichiba.dao.AdminItemSearchDAO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
+import com.opensymphony.xwork2.ActionSupport;
 
 
 
@@ -15,9 +18,14 @@ import com.internousdev.kairakutenichiba.dto.ItemDTO;
  * @author internousdev
  *管理者画面で商品を検索するためのアクションクラス
  */
-public class AdminItemSearchAction {
+public class AdminItemSearchAction extends ActionSupport implements SessionAware{
 
 	   /**
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = 717023371827239913L;
+
+	/**
 	    * セッション情報
 	    */
 	    private Map<String, Object> session;
