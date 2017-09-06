@@ -25,7 +25,7 @@
 <body>
 	<header>
 		<s:include value="header.jsp" />
-	</header>r
+	</header>
 
 
 	<div id="logout">
