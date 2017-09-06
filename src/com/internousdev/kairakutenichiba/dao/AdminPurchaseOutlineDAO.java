@@ -22,7 +22,7 @@ public class AdminPurchaseOutlineDAO {
 	    ArrayList<PurchaseOutlineDTO> SearchList = new ArrayList<PurchaseOutlineDTO>();
 
 	    public ArrayList<PurchaseOutlineDTO> display(int userId, String userName, String address, String isComplete) {
-	        Connection con = new MySqlConnector("sundia").getConnection();
+	        Connection con = new MySqlConnector("kairakutenichiba").getConnection();
 	        String table1 = "purchases_outlines";
 	        String table2_1 = "openconnect.", table2_2 = "users", table2 = table2_1 + table2_2;
 	        String sql = "SELECT * FROM " + table1 + " INNER JOIN " + table2 + " ON " + table1 + ".user_id=" + table2
