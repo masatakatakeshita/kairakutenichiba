@@ -12,9 +12,9 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * カートの情報を取得するアクションクラス
- * @author  MISAKI AKIMOTO
- * @since 2017/07/18
- * @version 1.0
+ * @author
+ * @since
+ * @version
  */
 
 public class GoCartAction extends ActionSupport implements SessionAware {
