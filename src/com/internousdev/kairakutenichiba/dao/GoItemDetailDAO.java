@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.dao;
 
@@ -15,8 +15,6 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 /**
 * 商品詳細表示に関するクラス
-* @author Tatsuhiro Saito
-* @since 2017/05/19
 * @version 1.0
 */
 public class GoItemDetailDAO {
@@ -26,12 +24,10 @@ public class GoItemDetailDAO {
 	 *種類IDで商品詳細を取得しリストに格納するメソッド
 	 * @param sortId 種類ID
 	 * @return searchList 商品情報
-	 * @author Tatsuhiro Saito
-	 * @since 2017/05/19
 	 * @version 1.0
 	 */
 	public ArrayList<ItemDTO> select(int sortId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","legmina", "root","mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","openconnect", "root","mysql");
 		Connection con = db.getConnection();
 		String sql;
 		 sql = "select * from items where sort_id=? and del_key =false";
@@ -73,7 +69,7 @@ public class GoItemDetailDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<ItemDTO> selectbyItem(int itemId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","legmina", "root","mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","openconnect", "root","mysql");
 		Connection con = db.getConnection();
 		ItemDTO dto = new ItemDTO();
 		ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();

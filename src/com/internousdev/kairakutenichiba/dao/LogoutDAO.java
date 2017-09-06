@@ -19,8 +19,6 @@ public class LogoutDAO {
 	 * @param userId ユーザーＩＤ
 	 * @param loginFlg ログインフラグ
 	 * @return count 正しく動作すれば変更を行った行数、errorならば0を返す
-	 * @author Miyauchi Akitomo
-	 * @since 2017/05/15
 	 * @version 1.0
 	 */
 	public int update(int userId, boolean loginFlg){

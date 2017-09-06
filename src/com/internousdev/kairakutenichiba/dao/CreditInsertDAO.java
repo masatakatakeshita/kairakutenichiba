@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.dao;
 
@@ -14,8 +14,6 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 /**
  * クレジットカード情報の入力・削除に関するクラス
- * @author MISA KIKUCHI
- * @since 5/19
  * @version 1.0
  */
 public class CreditInsertDAO {
@@ -31,13 +29,11 @@ public class CreditInsertDAO {
 	 * @param expirationMonth 有効期限（月）
 	 * @param expirationYear 有効期限（年）
 	 * @return ret 成否を格納する変数
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public int insert(int userId, int creditId, String creditNumber, String nameE, String securityCode,
 			int expirationMonth, int expirationYear) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		int ret = 0;
 		String query = "INSERT INTO credits(user_id, credit_id, credit_number, name_e, security_code, expiration_month, expiration_year) VALUES(?,?,?,?,?,?,?)";
@@ -72,12 +68,10 @@ public class CreditInsertDAO {
 	 * クレジットカードテーブルの情報が重複していないかを確認するメソッド
 	 * @param userId ユーザーＩＤ
 	 * @return result 重複されていたらtrue、そうでなければfalse
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public boolean search(int userId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String sql = "select * from credits where user_id =?";
 		boolean result = false;
@@ -110,13 +104,11 @@ public class CreditInsertDAO {
 	 * クレジットカードテーブルの情報を削除するメソッド
 	 * @param userId ユーザーＩＤ
 	 * @return ret 成否を格納する変数
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public int cleanCredit(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String cleanCreditCard = "delete from credits where user_id = ?";
 		try {
@@ -140,8 +132,6 @@ public class CreditInsertDAO {
 	 * @param creditNumber クレジット番号
 	 * @param amountAll 合計金額
 	 * @return ret 成否を格納する変数
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public int selectInsert(String creditType, String creditNumber, int amountAll) {
@@ -181,13 +171,13 @@ public class CreditInsertDAO {
 					psInsert.setString(1, dto.getLoginId());
 					psInsert.setString(2, dto.getLastName());
 					psInsert.setString(3, dto.getFirstName());
-					psInsert.setString(4, "legmina");
+					psInsert.setString(4, "kairakutenichiba");
 					psInsert.setInt(5, amountAll);
 					psInsert.setInt(6, amountAll);
 				} else {
 					psInsert.setString(1, dto.getLoginId());
 					psInsert.setString(2, dto.getLastName());
-					psInsert.setString(3, "legmina");
+					psInsert.setString(3, "kairakutenichiba");
 					psInsert.setInt(4, amountAll);
 					psInsert.setInt(5, amountAll);
 				}
@@ -209,13 +199,11 @@ public class CreditInsertDAO {
 	 * クレジットカード情報をリストに格納するメソッド
 	 * @param userId ユーザーID
 	 * @return creditList クレジットカード情報
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public ArrayList<CreditDTO> selectCredit(int userId) {
 
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		ArrayList<CreditDTO> creditList = new ArrayList<CreditDTO>();
 		String sql = "select * from credits where user_id=?";

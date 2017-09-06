@@ -17,8 +17,6 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 /**
 * 決済に関するクラス
-* @author MISA KIKUCHI
-* @since 5/19
 * @version 1.0
 */
 public class PurchaseCompleteDAO {
@@ -27,12 +25,10 @@ public class PurchaseCompleteDAO {
 	 * カートリストの商品に在庫切れのものがないかを確認するメソッド
 	 * @param cartList カートリスト
 	 * @return check 在庫があればOK、なければNGを返す
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public String stockCheck(ArrayList<CartDTO> cartList) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
 		String sql = "select * from items where item_id=?";
@@ -77,13 +73,11 @@ public class PurchaseCompleteDAO {
 	 * カートテーブルの情報を、購入情報テーブルにインサートするメソッド
 	 * @param userId ユーザーＩＤ
 	 * @return ret 成否を格納する変数
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public int purchase(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = null;
 		con = db.getConnection();
 		CartDTO dto = new CartDTO();
@@ -122,13 +116,11 @@ public class PurchaseCompleteDAO {
 	 * カート情報を削除するメソッド
 	 * @param userId ユーザーＩＤ
 	 * @return ret 成否を格納する変数
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public int clean(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String cleanCart = "delete from carts where user_id = ?";
 		try {
@@ -150,13 +142,11 @@ public class PurchaseCompleteDAO {
 	 * 商品情報の在庫数を販売数だけ減らすメソッド
 	 * @param userId ユーザーID
 	 * @return ret 成否を格納する変数
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public int stockUpdate(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String stockUpdate = "UPDATE items SET stocks = ? WHERE item_id = ?";
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
@@ -227,13 +217,11 @@ public class PurchaseCompleteDAO {
 	 * 商品情報の売上数を販売数だけ増やすメソッド
 	 * @param userId ユーザーID
 	 * @return ret 成否を格納する変数
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public int salesUpdate(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String stockUpdate = "UPDATE items SET sales = ? WHERE item_id = ?";
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();

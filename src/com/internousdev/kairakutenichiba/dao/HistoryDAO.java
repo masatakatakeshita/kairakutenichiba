@@ -28,8 +28,6 @@ public class HistoryDAO {
 	 * @param userId ユーザーID
 	 * @param itemsName 商品名
 	 * @return HistoryList アレイリストの値を返す
-	 * @author abc def
-	 * @since 2017/09/01
 	 * @version 1.0
 	 */
 	public ArrayList<HistoryDTO> HistoryList(int userId,String itemsName){

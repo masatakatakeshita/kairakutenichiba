@@ -23,8 +23,6 @@ public class GoCartDAO{
 	 * カート内の商品情報を取得しリストに格納するメソッド
 	 * @param userId ユーザーID
 	 * @return cartList カート内の商品情報
-	 * @author Misa Kikuchi
-	 * @since 2017/05/18
 	 * @version 1.0
 	 */
   public ArrayList<CartDTO> selectedItem(int userId){
