@@ -334,6 +334,11 @@ public class ItemDTO {
 		this.ItemName = ItemName;
 	}
 
+	public void setQuantities(int int1) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
 
 
 
