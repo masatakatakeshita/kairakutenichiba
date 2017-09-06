@@ -30,7 +30,7 @@ public class AdminPurchaseDetailDAO {
 
     public PurchaseOutlineDTO getOutline(int purchaseId) {
         PurchaseOutlineDTO dto = new PurchaseOutlineDTO();
-        Connection con = new MySqlConnector("sundia").getConnection();
+        Connection con = new MySqlConnector("kairakutenichiba").getConnection();
         String table1 = "purchases_outlines";
         String table2 = "openconnect.users";
         String sql = "SELECT * FROM " + table1 + " INNER JOIN " + table2 + " ON " + table1 + ".user_id=" + table2
@@ -71,7 +71,7 @@ public class AdminPurchaseDetailDAO {
 
     public ArrayList<PurchaseDetailDTO> display(int purchaseId) {
         ArrayList<PurchaseDetailDTO> SearchList = new ArrayList<PurchaseDetailDTO>();
-        Connection con = new MySqlConnector("sundia").getConnection();
+        Connection con = new MySqlConnector("kairakutenichiba").getConnection();
 
         String table1 = "purchases_details";
         String table2 = "items";

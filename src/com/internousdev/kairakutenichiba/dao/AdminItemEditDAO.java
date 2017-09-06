@@ -21,7 +21,7 @@ public class AdminItemEditDAO {
      * @return dto DTOをactionに返す
      */
 
-    private Connection con = new MySqlConnector("sundia").getConnection();
+    private Connection con = new MySqlConnector("kairakutenichiba").getConnection();
     private ItemDTO dto = new ItemDTO();
 
     public ItemDTO getItemData(int id) throws Exception {

@@ -36,7 +36,7 @@ public class AdminItemSwitchDAO {
     public String switchDeleted(int id, boolean flg) throws Exception {
         result = "error";
         try {
-            final Connection con = new MySqlConnector("sundia").getConnection();
+            final Connection con = new MySqlConnector("kairakutenichiba").getConnection();
 
             sql = "UPDATE items SET is_deleted=? WHERE item_id=?";
 

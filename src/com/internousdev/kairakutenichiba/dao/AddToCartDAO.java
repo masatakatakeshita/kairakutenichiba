@@ -30,7 +30,7 @@ public class AddToCartDAO {
 
     public ArrayList<ItemDTO> itemStatus(int itemId) {
 
-        MySqlConnector db = new MySqlConnector("sundia");
+        MySqlConnector db = new MySqlConnector("kairakutenichiba");
         Connection con = db.getConnection();
         ArrayList<ItemDTO> itemStatus = new ArrayList<ItemDTO>();
 
@@ -75,7 +75,7 @@ public class AddToCartDAO {
         boolean errorCheck=true;
 
 
-        Connection con = new MySqlConnector("sundia").getConnection();
+        Connection con = new MySqlConnector("kairakutenichiba").getConnection();
         System.out.println(userId + "," + itemId);
         String sql1 = "select * from items where item_id=?";
         String sql2 = "select * from carts where user_id=? and item_id=?";
@@ -152,7 +152,7 @@ public class AddToCartDAO {
     public ArrayList<CartDTO> selected(int userId) {
 
 
-        MySqlConnector db = new MySqlConnector( "sundia");
+        MySqlConnector db = new MySqlConnector( "kairakutenichiba");
         Connection con = db.getConnection();
         ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
         String sql = "select * from carts where user_id=?";
