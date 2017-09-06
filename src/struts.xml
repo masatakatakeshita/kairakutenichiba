@@ -41,8 +41,8 @@
 
 	<package name="com.internousdev.kairakutenichiba.action" extends="struts-default">
 
-		<!-- ログインアクション、SUCCESSならuser_mypage.jsp、ERRORならlogin.jsp、loginならadmin.top.jspに遷移する -->
-		<action name="loginAction" class="com.internousdev.kairakutenichiba.action.LoginAction"
+		<!-- ログインアクション、SUCCESSならuser_mypage.jsp、ERRORならlogin.jsp、loginならadmin_top.jspに遷移する -->
+		<action name="LoginAction" class="com.internousdev.kairakutenichiba.action.LoginAction"
 			method="execute">
 			<result name="success">index.jsp</result>
 			<result name="error">login_kato.jsp</result>
@@ -50,23 +50,18 @@
 		</action>
 
 		<!-- ログアウトアクション、SUCCESSならuser_top.jsp、ERRORならlogin.jspに遷移する -->
-		<action name="logoutAction" class="com.internousdev.kairakutenichiba.action.LogoutAction"
+		<action name="LogoutAction" class="com.internousdev.kairakutenichiba.action.LogoutAction"
 			method="execute">
 			<result name="success">logout_kato.jsp</result>
 			<result name="error">login_kato.jsp</result>
 		</action>
 
 		<!-- 商品詳細画面への遷移 -->
-		<action name="ItemAction" class="com.internousdev.kairakutenichiba.action.ItemAction"
-			method="execute">
-			<result name="success">detail_yamaguchi.jsp</result>
-			<result name="error">detail_yamaguchi.jsp</result>
-		</action>
-		<!-- 商品詳細画面への遷移 -->
 		<action name="GoItemDetailAction"
 			class="com.internousdev.kairakutenichiba.action.GoItemDetailAction" method="execute">
 			<result name="success">detail_yamaguchi.jsp</result>
 			<result name="error">detail_yamaguchi.jsp</result>
+			<result name="login">detail_yamaguchi.jsp</result>
 		</action>
 
 		<!-- カートに商品を追加する -->
@@ -74,13 +69,14 @@
 			method="execute">
 			<result name="success">cart_jo.jsp</result>
 			<result name="error">login_kato.jsp</result>
+			<result name="login">cart_jo.jsp</result>
 		</action>
 
 		<!-- カートに商品の数を増減する -->
 		<action name="UpdateCartAction" class="com.internousdev.kairakutenichiba.action.UpdateCartAction"
 			method="execute">
 			<result name="success">cart_jo.jsp</result>
-			<result name="error">stocksError.jsp</result>
+			<result name="error">cart_jo.jsp</result>
 			<result name="login">cart_jo.jsp</result>
 		</action>
 
@@ -89,7 +85,7 @@
 			method="execute">
 			<result name="success">cart_jo.jsp</result>
 			<result name="error">cart_jo.jsp</result>
-			<result name="login">sessionError.jsp</result>
+			<result name="login">cart_jo.jsp</result>
 		</action>
 
 		<!-- カート画面への遷移 -->
@@ -97,13 +93,14 @@
 			method="execute">
 			<result name="success">cart_jo.jsp</result>
 			<result name="error">cart_jo.jsp</result>
+			<result name="login">cart_jo.jsp</result>
 		</action>
 		<!-- 支払い画面への遷移 -->
 		<action name="GoSettlementAction"
 			class="com.internousdev.kairakutenichiba.action.GoSettlementAction" method="execute">
 			<result name="success">shiharai_takeshita.jsp</result>
 			<result name="error">cart_jo.jsp</result>
-			<result name="login">sessionError.jsp</result>
+			<result name="login">shiharai_takeshita.jsp</result>
 		</action>
 
 		<!-- 支払い画面。成功なら購入確認、エラーならクレジット情報の間違い、ログインならセッションエラーのページに飛ぶ -->
