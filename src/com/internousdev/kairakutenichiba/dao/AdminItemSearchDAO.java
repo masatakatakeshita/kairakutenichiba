@@ -41,7 +41,7 @@ public class AdminItemSearchDAO {
 
     public ArrayList<ItemDTO> generateItemList(String chkisDeleted,int chkCategoryId,String chkItemName) throws Exception{
         try{
-            final Connection con=new MySqlConnector("sundia").getConnection();
+            final Connection con=new MySqlConnector("kairakutenichiba").getConnection();
 
             sql1 ="SELECT * FROM items";
             sql2 ="SELECT * FROM items_images WHERE item_id=?";
@@ -77,7 +77,7 @@ public class AdminItemSearchDAO {
                 itemDTO.setStocks(rs1.getInt("stocks"));
                 itemDTO.setSales(rs1.getInt("sales"));
                 itemDTO.setItemDetail(rs1.getString("item_detail").replace("\n","<br>"));
-                itemDTO.setIsDeleted(rs1.getBoolean("is_deleted"));
+                itemDTO.setDelKey(rs1.getBoolean("boolean delKey"));
                 itemDTO.setCreatedAt(rs1.getTimestamp("created_at").toString());
                 itemDTO.setUpdatedAt(rs1.getTimestamp("updated_at").toString());
 
@@ -87,7 +87,7 @@ public class AdminItemSearchDAO {
                 int count=1;
                 if(rs2.next()){
                     while(rs2.getString("img_path"+count)!=null){
-                        itemDTO.setImagePath(count-1,rs2.getString("img_path"+count));
+                        itemDTO.setImgPath(count-1,rs2.getString("img_path"+count));
                         count++;
                     }
                 }
