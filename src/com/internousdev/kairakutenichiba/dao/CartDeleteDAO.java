@@ -1,53 +1,73 @@
-/**
- * 
- */
 package com.internousdev.kairakutenichiba.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
-
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * カートテーブル内情報の削除に関するクラス
- * @author MISA KIKUCHI
- * @since 2017/05/24
- * @version 1.0
+ * @author
+ * @since
+ * @version
  */
 public class CartDeleteDAO {
 
-	/**
-	 * カート内の商品を削除するメソッド
-	 * @author MISA KIKUCHI
-	 * @since 2017/05/24
-	 * @version 1.0
-	 * @param userId ユーザーID
-	 * @param cartId カートID
-	 * @return delCount 削除する件数
-	 */
+    /**
+     * カート内の商品を削除するメソッド
+     * @author
+     * @since
+     * @version
+     * @param userId ユーザーID
+     * @param cartId カートID
+     * @return delCount 削除する件数
+     */
 
-	public int delete(int userId,int cartId){
-		int delCount = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root","mysql");
-		Connection con = db.getConnection();
-		String sql = "delete from carts where user_id=? and cart_id=?";
-		try{
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, userId);
-			ps.setInt(2, cartId);
-			delCount = ps.executeUpdate();
-		}catch(SQLException e){
-			e.printStackTrace();
-		}finally{
-			try{
-				con.close();
-			}catch(SQLException e){
-				e.printStackTrace();
-			}
-		}
-		return delCount;
-	}
+    public int delete(int userId, int cartId) {
+        int delCount = 0;
+        MySqlConnector db = new MySqlConnector("sundia");
+        Connection con = db.getConnection();
+        String sql1 = "select * from carts where user_id=? and cart_id=?";
+        String sql2 = "delete from carts where user_id=? and cart_id=?";
+        String sql3 = "update items set stocks=stocks+? where item_id=?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql1);
+            ps.setInt(1, userId);
+            ps.setInt(2, cartId);System.out.println(ps.toString());
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()){
+                int itemId=rs.getInt("item_id");
+                int quantities=rs.getInt("quantities");
+                ps.close();
+                rs.close();
+                ps = con.prepareStatement(sql2);
+                ps.setInt(1, userId);
+                ps.setInt(2, cartId);System.out.println(ps.toString());
+                delCount = ps.executeUpdate();
+
+                if(delCount>0){
+                    ps.close();
+                    rs.close();
+                    ps = con.prepareStatement(sql3);
+                    ps.setInt(1, quantities);
+                    ps.setInt(2, itemId);
+                    delCount = ps.executeUpdate();
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return delCount;
+    }
 
 }

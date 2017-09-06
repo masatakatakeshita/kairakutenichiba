@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.internousdev.kairakutenichiba.dao;
 
 import java.sql.Connection;
@@ -11,151 +8,188 @@ import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
-import com.internousdev.util.DBConnector;
-
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * カートテーブル情報追加に関するクラス
- * @author MISA KIKUCHI
- * @since 2017/05/24
- * @version 1.0
+ * @author
+ * @since
+ * @version
  */
 
+public class AddToCartDAO {
 
-public class AddToCartDAO{
+    /**
+     * カートテーブルに追加する商品の情報を取得するメソッド
+     * @author  MISAKI AKIMOTO
+     * @since  2017/07/24
+     * @version 1.0
+     * @param itemId 商品ID
+     * @return itemStatus 成否を格納する変数
+     */
 
+    public ArrayList<ItemDTO> itemStatus(int itemId) {
 
-	/**
-	 * カートテーブルに追加する商品の情報を取得するメソッド
-	 * @author MISA KIKUCHI
-	 * @since 2017/05/24
-	 * @version 1.0
-	 * @param itemId 商品ID
-	 * @return itemStatus 商品情報
-	 */
+        MySqlConnector db = new MySqlConnector("sundia");
+        Connection con = db.getConnection();
+        ArrayList<ItemDTO> itemStatus = new ArrayList<ItemDTO>();
 
-	public ArrayList<ItemDTO> itemStatus(int itemId){
+        String sql = "select * from items where item_id = ?";
 
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","legmina","root","mysql");
-		Connection con =db.getConnection();
-		ArrayList<ItemDTO> itemStatus = new ArrayList<ItemDTO>();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, itemId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                ItemDTO dto = new ItemDTO();
+                dto.setItemName(rs.getString("item_name"));
+                dto.setPrice(rs.getFloat("price"));
+                dto.setQuantities(rs.getInt("quantities"));
+                itemStatus.add(dto);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return itemStatus;
+    }
 
-		String sql = "select * from items where item_id = ?";
+    /**
+     * カートテーブルへ情報をインサートするメソッド
+     * @author
+     * @since
+     * @version
+     * @param userId ユーザーID
+     * @param itemId 商品ID
+     * @return addCount 成否を格納する変数
+     */
 
-		try{
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, itemId);
-			ResultSet rs = ps.executeQuery();
-			while(rs.next()){
-				ItemDTO dto = new ItemDTO();
-				dto.setItemsName(rs.getString("items_name"));
-				dto.setPrice(rs.getFloat("price"));
-				dto.setStocks(rs.getInt("stocks"));
-				dto.setSales(rs.getInt("sales"));
-				dto.setItemDetail(rs.getString("items_detail"));
-				dto.setSortId(rs.getInt("sort_id"));
-				dto.setImgPath(rs.getString("img_path"));
-				itemStatus.add(dto);
-			}
-		}catch(SQLException e){
-			e.printStackTrace();
-		}finally{
-			try{
-				con.close();
-			}catch(SQLException e){
-				e.printStackTrace();
-			}
-		}
-		return itemStatus;
-	}
-
-
-		/**
-		 * カートテーブルへ情報をインサートするメソッド
-		 * @author MISA KIKUCHI
-		 * @since 2017/05/24
-		 * @version 1.0
-		 * @param userId ユーザーID
-		 * @param itemId 商品ID
-		 * @return addCount 成否を格納する変数
-		 */
+    public boolean addToCart(int userId, int itemId,int quantities) {
+        ResultSet rs;
+        int addCount = 0;
+        boolean errorCheck=true;
 
 
-		public int addToCart(int userId,int itemId){
-			int addCount = 0;
+        Connection con = new MySqlConnector("sundia").getConnection();
+        System.out.println(userId + "," + itemId);
+        String sql1 = "select * from items where item_id=?";
+        String sql2 = "select * from carts where user_id=? and item_id=?";
+        String sql3 = "insert into carts (user_id,item_id,quantities) values(?,?,?)";
+        String sql4 = "update items set stocks=stocks-? where item_id=?";
 
-			DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","legmina","root","mysql");
-			Connection con =db.getConnection();
-			String sql = "insert into carts (user_id,item_id) values(?,?)" ;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql1);
+            ps.setInt(1, itemId);
+            rs = ps.executeQuery();
 
-			try{
-	            PreparedStatement ps = con.prepareStatement(sql);
-	            ps.setInt(1, userId);//ユーザーID
-	            ps.setInt(2, itemId);//商品ID
-	            addCount = ps.executeUpdate();
-	        }catch (SQLException e){
-	            e.printStackTrace();
-	        }finally{
-	            if(con != null){
-	                try{
-	                    con.close();
-	                }catch (SQLException e){
-	                    e.printStackTrace();
-	                }
-	            }
-	        }
-			return addCount;
-		}
+            if(rs.next()){
+                if(quantities>rs.getInt("stocks")){
+                    return errorCheck;
+                }
+            }
 
-		/**
-		 * カート内の商品情報を取得しリストに格納するメソッド
-		 * @author MISA KIKUCHI
-		 * @since 2017/05/24
-		 * @version 1.0
-		 * @param userId ユーザーID
-		 * @return cartList カート情報
-		 */
-	  public ArrayList<CartDTO> selected(int userId){
+            CartDeleteDAO delete = new CartDeleteDAO();
+            ps.close();
+            rs.close();
+            ps = con.prepareStatement(sql2);
+            ps.setInt(1, userId);
+            ps.setInt(2, itemId);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                quantities += rs.getInt("quantities");
+                delete.delete(userId, rs.getInt("cart_id"));
+            }
 
-	    DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root","mysql");
-	    Connection con = db.getConnection();
-	    ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
+            if (quantities > 50){
+                quantities = 50;
+            }
 
-	    String sql = "select * from carts where user_id=?";
-	    String select2 = "SELECT * FROM items WHERE item_id = ?";
+            ps.close();
+            ps = con.prepareStatement(sql3);
+            ps.setInt(1, userId);
+            ps.setInt(2, itemId);
+            ps.setInt(3, quantities);
+            addCount = ps.executeUpdate();
 
-	    try{
-	    	PreparedStatement ps = con.prepareStatement(sql);
-	    	ps.setInt(1,userId);
-	    	ResultSet rs = ps.executeQuery();
-	    	while(rs.next()){
-	    		CartDTO dto = new CartDTO();
-	    		dto.setUserId(rs.getInt("user_id"));//ユーザーID
-	    		dto.setCartId(rs.getInt("cart_id"));//カートID
-	    		dto.setItemId(rs.getInt("item_id"));//商品ID
-	    		dto.setQuantities(rs.getInt("quantities"));//数量
-	    		cartList.add(dto);
+            if(addCount>0){
+                ps.close();
+                ps = con.prepareStatement(sql4);
+                ps.setInt(1,quantities);
+                ps.setInt(2,itemId);
 
-	    		PreparedStatement ps2 = con.prepareStatement(select2);
-				ps2.setInt(1, dto.getItemId());
-				ResultSet rs2 = ps2.executeQuery();
+                addCount = ps.executeUpdate();
+                if(addCount>0){
+                    errorCheck = false;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return errorCheck;
+    }
 
-				while (rs2.next()) {
+    /**
+     * カート内の商品情報を取得しリストに格納するメソッド
+     * @author
+     * @since
+     * @version
+     * @param userId ユーザーID
+     * @return cartList カート情報
+     */
+    public ArrayList<CartDTO> selected(int userId) {
 
-					dto.setItemsName(rs2.getString("items_name"));//商品名
-					dto.setPrice(rs2.getFloat("price")); //価格
-					dto.setImgPath(rs2.getString("img_path")); //イメージパス
-				}
-	    	}
-	    }catch(SQLException e){
-	    	e.printStackTrace();
-	    }finally {
-			try{
-				con.close();
-			}catch(Exception e){
-				e.printStackTrace();
-				}
-		}
-	     return cartList;
-	  }
+
+        MySqlConnector db = new MySqlConnector( "sundia");
+        Connection con = db.getConnection();
+        ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
+        String sql = "select * from carts where user_id=?";
+        String select2 = "SELECT * FROM items WHERE item_id = ?";
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, userId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                CartDTO dto = new CartDTO();
+                dto.setUserId(rs.getInt("user_id"));
+                dto.setCartId(rs.getInt("cart_id"));
+                dto.setItemId(rs.getInt("item_id"));
+                dto.setQuantities(rs.getInt("quantities"));
+                cartList.add(dto);
+
+                PreparedStatement ps2 = con.prepareStatement(select2);
+                ps2.setInt(1, dto.getItemId());
+                ResultSet rs2 = ps2.executeQuery();
+
+                while (rs2.next()) {
+
+                    dto.setItemName(rs2.getString("item_name"));
+                    dto.setPrice(rs2.getFloat("price"));
+                    dto.setStocks(rs.getInt("stocks"));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return cartList;
+    }
 }
