@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.dao;
 
@@ -13,9 +13,9 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 /**
  * カートインサート＆アップデートに関するクラス
- *@author Misa Kikuchi
- *@since 5/24
- *@version 1.0
+ *@author
+ *@since
+ *@version
  */
 public class CartUpdateDAO {
 
@@ -54,6 +54,11 @@ public class CartUpdateDAO {
 			}
 		}
 	return updateCount;
+	}
+
+	public int updateCart(int cartId, int userId, int quantities, int itemId, int prevQuantities) {
+		// TODO 自動生成されたメソッド・スタブ
+		return 0;
 	}
 
 

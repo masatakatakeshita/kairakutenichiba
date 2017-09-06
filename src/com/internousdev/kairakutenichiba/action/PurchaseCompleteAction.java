@@ -10,7 +10,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.kairakutenichiba.dao.CreditInsertDAO;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
-import com.internousdev.kairakutenichiba.dao.purchaseCompleteDAO;
+import com.internousdev.kairakutenichiba.dao.PurchaseCompleteDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.dto.CreditDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -99,7 +99,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 			userId = (int)session.get("userId");
 
 
-			purchaseCompleteDAO dao = new purchaseCompleteDAO();
+			PurchaseCompleteDAO dao = new PurchaseCompleteDAO();
 			CreditInsertDAO creDao = new CreditInsertDAO();
 			GoCartDAO dao3 = new GoCartDAO();
 
