@@ -1,24 +1,18 @@
 @CHARSET "UTF-8";
 
-
-
-
-body{
+body {
 	margin: 0px auto;
-	width:100%;
-	float:center;
+	width: 100%;
+	float: center;
 	line-height: 1.5;
 	color: #000000;
 	background: #EEE9ED;
-	font-family: 'メイリオ', Meiryo,sans-serif;
-	}
+	font-family: 'メイリオ', Meiryo, sans-serif;
+}
 
-
-
-
-#login,loginbox {
+#login, loginbox {
 	margin: 100px auto;
-	padding:50px;
+	padding: 50px;
 	background: #ffffff;
 	width: 300px;
 	height: 300px;
@@ -28,44 +22,41 @@ body{
 	border-radius: 15px;
 }
 
+.loginbutton {
+	background: #ffb5da;
+	border-color: transparent;
+	cursor: pointer;
+	font-family: 'メイリオ', Meiryo, sans-serif;
+	font-size: 150%;
+	width: 180px;
+	height: 50px;
+	webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	-moz-transition: -moz-transform 1s linear;
+	-webkit-transition: -webkit-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+}
 
-.loginbutton  {
+.loginbutton:hover {
+	position: relative;
+	top: 2px;
+	left: 2px;
+	opacity: 0.8;
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
 
-  background: #ffb5da;
-  border-color: transparent;
-  cursor: pointer;
-  font-family: 'メイリオ', Meiryo,sans-serif;
-  font-size:150%;
-  width: 180px;
-  height: 50px;
-  webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
--moz-transition: -moz-transform 1s linear;
-    -webkit-transition: -webkit-transform 1s linear;
-    -o-transition: -o-transform 1s linear;
-    -ms-transition: -ms-transform 1s linear;
-    transition: transform 1s linear;
-  }
-
-  .loginbutton:hover {
-  position:relative;
-  top:2px;
-  left:2px;
-  opacity: 0.8;
-  -moz-transform: rotate(30deg);
-    -webkit-transform: rotate(30deg);
-    -o-transform: rotate(30deg);
-    -ms-transform: rotate(30deg);
-    transform: rotate(30deg);
-  }
-
-#logincenter{
+#logincenter {
 	text-align: center;
 }
 
-#idpass{
+#idpass {
 	text-align: right;
 }
-
 
