@@ -27,7 +27,7 @@ public class CartDeleteDAO {
 
     public int delete(int userId, int cartId) {
         int delCount = 0;
-        MySqlConnector db = new MySqlConnector("sundia");
+        MySqlConnector db = new MySqlConnector("kairakutenichiba");
         Connection con = db.getConnection();
         String sql1 = "select * from carts where user_id=? and cart_id=?";
         String sql2 = "delete from carts where user_id=? and cart_id=?";

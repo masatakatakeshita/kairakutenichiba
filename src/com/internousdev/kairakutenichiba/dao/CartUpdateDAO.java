@@ -21,8 +21,8 @@ public class CartUpdateDAO {
 
 	/**
 	 *カート商品の数量を更新するメソッド
-	 *@author Misa Kikuchi
-	 *@since 5/24
+	 *@author
+	 *@since
 	 *@param cartId カートID
 	 *@param userId ユーザーID
 	 *@param quantities 数量
