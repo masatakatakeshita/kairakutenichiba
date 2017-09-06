@@ -220,7 +220,7 @@
 		<action name="UserPurchaseHistoryAction"
 			class="com.internousdev.kairakutenichiba.action.UserPurchaseHistoryAction"
 			method="execute">
-			<result name="success">admin_history_kato.jsp</result>
+			<result name="success">rireki_enju.jsp</result>
 			<result name="error">admin_history_kato.jsp</result>
 		</action>
 
