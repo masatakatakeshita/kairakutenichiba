@@ -24,6 +24,11 @@ public class LoginTwitterAction extends ActionSupport
         implements ServletResponseAware, ServletRequestAware, SessionAware {
 
     /**
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = -3929620322086976941L;
+
+	/**
      * コンシューマーキー
      */
     private static final String API_KEY = "J5xzZUUfzT3Ac4QXc9mEGegY5";
