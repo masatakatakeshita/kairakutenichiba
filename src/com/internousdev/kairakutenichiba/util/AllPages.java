@@ -1,17 +1,15 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.util;
 
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
-import com.internousdev.util.pagination.PageObject;
+
 
 /**
 * 渡されたリストに対してページネーションを行うクラス
-* @author RYO MAEDA
-* @since 2017/05/06
 * @version 1.0
 */
 public class AllPages {

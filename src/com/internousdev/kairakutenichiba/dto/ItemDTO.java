@@ -9,320 +9,338 @@ package com.internousdev.kairakutenichiba.dto;
  */
 public class ItemDTO {
 
-	   /**
-     * 商品ID
-     */
-    private int itemId;
 
-    /**
-     * 商品名
-     */
-    private String itemName;
+	/**
+	 * アイテム情報に関するDTOクラス
+	 * @version 1.0
+	 *
+	 */
 
-    /**
-     * カテゴリーID
-     */
-    private int categoryId;
+	/**
+	 * 商品名
+	 */
+	private String itemsName;
 
-    /**
-     * 価格
-     */
-    private float price;
+	/**
+	 * 商品ID
+	 */
+	private int itemId;
 
-    /**
-     * 在庫数
-     */
-    private int stocks;
-
-    /**
-     * 売り上げ
-     */
-    private int sales;
-
-    /**
-     * 商品詳細
-     */
-    private String itemDetail;
-
-    /**
-     * デリートキー
-     */
-    private boolean isDeleted;
-
-
-    private int quantities;
-
-    /**
-     * 登録日
-     */
-    private String createdAt;
-
-    /**
-     * 更新日
-     */
-    private String updatedAt;
+	/**
+	 * 単価
+	 */
+	private float price;
 
     /**
      * イメージパス
-     */
-    private String[] imagePath = { "", "", "", "", "" };
+	 */
+	private String imgPath;
 
-    /**
-     * 登録日イメージ
-     */
-    private String imageCreatedAt;
+	/**
+	 * 在庫数
+	 */
+	private int stocks;
 
-    /**
-     * 更新日イメージ
-     */
-    private String imageUpdatedAt;
+	/**
+	 * 商品詳細
+	 */
+	private String itemDetail;
 
-    /**
-     * インデックス
-     */
-    private int index;
+	/**
+	 * 売上数
+	 */
+	private int sales;
 
-    /**
-     * 商品IDを取得するメソッド
-     * @return itemId 商品ID
-     */
-    public int getItemId() {
-        return itemId;
-    }
+	/**
+	 * 登録日
+	 */
+	private String createdAt;
 
-    /**
-     * 商品IDを格納するメソッド
-     * @param itemId セットする 商品ID
-     */
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
-    }
+	/**
+	 * 更新日
+	 */
+	private String updatedAt;
 
-    /**
-     * 商品名を取得するメソッド
-     * @return itemName 商品名
-     */
-    public String getItemName() {
-        return itemName;
-    }
+	/**
+	 * 商品画像01
+	 */
+	private String itemImg01;
 
-    /**
-     * 商品名を格納するメソッド
-     * @param itemName セットする 商品名
-     */
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
+	/**
+	 * 商品画像02
+	 */
+	private String itemImg02;
 
-    /**
-     * カテゴリーIDを取得するメソッド
-     * @return categoryId カテゴリーID
-     */
-    public int getCategoryId() {
-        return categoryId;
-    }
+	/**
+	 * 種類ID
+	 */
+	private int sortId;
 
-    /**
-     * カテゴリーIDを格納するメソッド
-     * @param categoryId セットする カテゴリーID
-     */
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
+	/**
+	 * 種類
+	 */
+	private String itemGenre;
 
-    /**
-     * 価格を取得するメソッド
-     * @return price 価格
-     */
-    public float getPrice() {
-        return price;
-    }
+	/**
+	 * デリートキー
+	 */
+	private boolean delKey;
 
-    /**
-     * 価格を格納するメソッド
-     * @param price セットする 価格
-     */
-    public void setPrice(float price) {
-        this.price = price;
-    }
+	private int CategoryId;
 
-    /**
-     * 在庫数を取得するメソッド
-     * @return stocks 在庫数
-     */
-    public int getStocks() {
-        return stocks;
-    }
+	private String ItemName;
 
-    /**
-     * 在庫数を格納するメソッド
-     * @param stocks セットする 在庫数
-     */
-    public void setStocks(int stocks) {
-        this.stocks = stocks;
-    }
 
-    /**
-     * 売り上げを取得するメソッド
-     * @return sales 売り上げ
-     */
-    public int getSales() {
-        return sales;
-    }
+	//以下アクセサリー
 
-    /**
-     * 売り上げを格納するメソッド
-     * @param sales セットする 売り上げ
-     */
-    public void setSales(int sales) {
-        this.sales = sales;
-    }
 
-    /**
-     * 商品詳細を取得するメソッド
-     * @return itemDetail 商品詳細
-     */
-    public String getItemDetail() {
-        return itemDetail;
-    }
+	/**
+	 * 商品名を取得するメソッド
+	 * @return itemsName
+	 */
+	public String getItemsName() {
+		return itemsName;
+	}
 
-    /**
-     * 商品詳細を格納するメソッド
-     * @param itemDetail セットする 商品詳細
-     */
-    public void setItemDetail(String itemDetail) {
-        this.itemDetail = itemDetail;
-    }
+	/**
+	 * 商品名を格納するメソッド
+	 * @param itemsName セットする itemsName
+	 */
+	public void setItemsName(String itemsName) {
+		this.itemsName = itemsName;
+	}
 
-    /**
-     * デリートキーを取得するメソッド
-     * @return isDeleted デリートキー
-     */
-    public boolean getIsDeleted() {
-        return isDeleted;
-    }
+	/**
+	 * アイテムIDを取得するメソッド
+	 * @return itemId
+	 */
+	public int getItemId() {
+		return itemId;
+	}
 
-    /**
-     * デリートキーを格納するメソッド
-     * @param isDeleted セットする デリートキー
-     */
-    public void setIsDeleted(boolean isDeleted) {
-        this.isDeleted = isDeleted;
-    }
+	/**
+	 * アイテムIDを格納するメソッド
+	 * @param itemId セットする itemId
+	 */
+	public void setItemId(int itemId) {
+		this.itemId = itemId;
+	}
 
-    /**
-     * 登録日を取得するメソッド
-     * @return createdAt 登録日
-     */
-    public String getCreatedAt() {
-        return createdAt;
-    }
+	/**
+	 * 単価を取得するメソッド
+	 * @return price
+	 */
+	public float getPrice() {
+		return price;
+	}
 
-    /**
-     * 登録日を格納するメソッド
-     * @param createdAt セットする 登録日
-     */
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
+	/**
+	 * 単価を格納するメソッド
+	 * @param price セットする price
+	 */
+	public void setPrice(float price) {
+		this.price = price;
+	}
 
-    /**
-     * 更新日を取得するメソッド
-     * @return updatedAt 更新日
-     */
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
+	/**
+	 * イメージパスを取得するメソッド
+	 * @return imgPath
+	 */
+	public String getImgPath() {
+		return imgPath;
+	}
 
-    /**
-     * 更新日を格納するメソッド
-     * @param updatedAt セットする 更新日
-     */
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
-    }
+	/**
+	 * イメージパスを格納するメソッド
+	 * @param imgPath セットする imgPath
+	 */
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
+	}
 
-    /**
-     * イメージパスを取得するメソッド
-     * @return imagePath イメージパス
-     */
-    public String[] getImagePath() {
-        return imagePath;
-    }
+	/**
+	 * 在庫数を取得するメソッド
+	 * @return stocks
+	 */
+	public int getStocks() {
+		return stocks;
+	}
 
-    /**
-     * イメージパスを格納するメソッド
-     * @param imagePath セットする イメージパス
-     */
-    public void setImagePath(String[] imagePath) {
-        this.imagePath = imagePath;
-    }
+	/**
+	 * 在庫数を格納するメソッド
+	 * @param stocks セットする stocks
+	 */
+	public void setStocks(int stocks) {
+		this.stocks = stocks;
+	}
 
-    public void setImagePath(int num, String imagePath) {
-        this.imagePath[num] = imagePath;
-    }
+	/**
+	 * 商品詳細を取得するメソッド
+	 * @return itemDetail
+	 */
+	public String getItemDetail() {
+		return itemDetail;
+	}
 
-    /**
-     * 登録日イメージを取得するメソッド
-     * @return imageCreatedAt 登録日イメージ
-     */
-    public String getImageCreatedAt() {
-        return imageCreatedAt;
-    }
+	/**
+	 * 商品詳細を格納するメソッド
+	 * @param itemDetail セットする itemDetail
+	 */
+	public void setItemDetail(String itemDetail) {
+		this.itemDetail = itemDetail;
+	}
 
-    /**
-     * 登録日イメージを格納するメソッド
-     * @param imageCreatedAt セットする 登録日イメージ
-     */
-    public void setImageCreatedAt(String imageCreatedAt) {
-        this.imageCreatedAt = imageCreatedAt;
-    }
+	/**
+	 * 売上数を取得するメソッド
+	 * @return sales
+	 */
+	public int getSales() {
+		return sales;
+	}
 
-    /**
-     * 更新日イメージを取得するメソッド
-     * @return imageUpdatedAt 更新日イメージ
-     */
-    public String getImageUpdatedAt() {
-        return imageUpdatedAt;
-    }
+	/**
+	 * 売上数を格納するメソッド
+	 * @param sales セットする sales
+	 */
+	public void setSales(int sales) {
+		this.sales = sales;
+	}
 
-    /**
-     * 更新日イメージを格納するメソッド
-     * @param imageUpdatedAt セットする 更新日イメージ
-     */
-    public void setImageUpdatedAt(String imageUpdatedAt) {
-        this.imageUpdatedAt = imageUpdatedAt;
-    }
+	/**
+	 *	登録日を取得するメソッド
+	 * @return createdAt
+	 */
+	public String getCreatedAt() {
+		return createdAt;
+	}
 
-    /**
-     * インデックスを取得するメソッド
-     * @return index インデックス
-     */
-    public int getIndex() {
-        return index;
-    }
+	/**
+	 * 登録日を格納するメソッド
+	 * @param createdAt セットする createdAt
+	 */
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
+	}
 
-    /**
-     * インデックスを格納するメソッド
-     * @param index セットする インデックス
-     */
-    public void setIndex(int index) {
-        this.index = index;
-    }
+	/**
+	 * 更新日を取得するメソッド
+	 * @return updatedAt
+	 */
+	public String getUpdatedAt() {
+		return updatedAt;
+	}
 
-    /**
-     * @return quantities
-     */
-    public int getQuantities() {
-        return quantities;
-    }
+	/**
+	 * 更新日を格納するメソッド
+	 * @param updatedAt セットする updatedAt
+	 */
+	public void setUpdatedAt(String updatedAt) {
+		this.updatedAt = updatedAt;
+	}
 
-    /**
-     * @param quantities セットする quantities
-     */
-    public void setQuantities(int quantities) {
-        this.quantities = quantities;
-    }
+	/**
+	 * 商品画像01を取得するメソッド
+	 * @return itemImg01
+	 */
+	public String getItemImg01() {
+		return itemImg01;
+	}
+
+	/**
+	 * 商品画像01を格納するメソッド
+	 * @param itemImg01 セットする itemImg01
+	 */
+	public void setItemImg01(String itemImg01) {
+		this.itemImg01 = itemImg01;
+	}
+
+	/**
+	 * 商品画像02を取得するメソッド
+	 * @return itemImg02
+	 */
+	public String getItemImg02() {
+		return itemImg02;
+	}
+
+	/**
+	 * 商品画像02を格納するメソッド
+	 * @param itemImg02 セットする itemImg02
+	 */
+	public void setItemImg02(String itemImg02) {
+		this.itemImg02 = itemImg02;
+	}
+
+	/**
+	 * 種類IDを取得するメソッド
+	 * @return sortId
+	 */
+	public int getSortId() {
+		return sortId;
+	}
+
+	/**
+	 * 種類IDを格納するメソッド
+	 * @param sortId セットする sortId
+	 */
+	public void setSortId(int sortId) {
+		this.sortId = sortId;
+	}
+
+	/**
+	 * 種類を取得するメソッド
+	 * @return itemGenre
+	 */
+	public String getItemGenre() {
+		return itemGenre;
+	}
+
+	/**
+	 * 種類を格納するメソッド
+	 * @param itemGenre セットする itemGenre
+	 */
+	public void setItemGenre(String itemGenre) {
+		this.itemGenre = itemGenre;
+	}
+
+	/**
+	 * デリートキーを取得するメソッド
+	 * @return delKey
+	 */
+	public boolean isDelKey() {
+		return delKey;
+	}
+
+	/**
+	 * デリートキーを格納するメソッド
+	 * @param delKey セットする delKey
+	 */
+	public void setDelKey(boolean delKey) {
+		this.delKey = delKey;
+	}
+
+
+	public int getCategoryId(){
+		return CategoryId;
+	}
+	public void setCategoryId(int CategoryId){
+		this.CategoryId = CategoryId;
+	}
+
+	public String getItemName(){
+		return ItemName;
+	}
+
+	public void setItemName(String ItemName){
+		this.ItemName = ItemName;
+	}
+
+
+
+
+
+
+
+
+
 
 }
-

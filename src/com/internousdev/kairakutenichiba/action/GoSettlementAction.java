@@ -13,6 +13,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
+import com.internousdev.kairakutenichiba.util.CartAssist;
 
 /**決済入力画面に遷移するためのクラス
  * @version 1.0

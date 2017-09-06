@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.action;
 
@@ -7,14 +7,12 @@ import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dao.AdminItemDAO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
-import com.internousdev.util.pagination.AllPages;
-import com.internousdev.util.pagination.PageObject;
+import com.internousdev.kairakutenichiba.util.AllPages;
+import com.internousdev.kairakutenichiba.util.PageObject;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
 * 商品一覧を表示するクラス
-* @author Ryo Maeda
-* @since 2017/05/16
 * @version 1.0
 *
 */

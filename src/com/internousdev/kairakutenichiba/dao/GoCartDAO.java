@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.dao;
 import java.sql.Connection;
@@ -14,8 +14,6 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 /**
  * カート遷移に関するクラス
- *@author Misa Kikuchi
- * @since 2017/05/18
  * @version 1.0
  */
 public class GoCartDAO{
@@ -31,7 +29,7 @@ public class GoCartDAO{
 	 */
   public ArrayList<CartDTO> selectedItem(int userId){
 
-    DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root","mysql");
+    DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
     Connection con = db.getConnection();
     ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
@@ -56,7 +54,7 @@ public class GoCartDAO{
 
 			while (rs2.next()) {
 
-				dto.setItemsName(rs2.getString("items_name"));//商品名
+				dto.setItemName(rs2.getString("items_name"));//商品名
 				dto.setPrice(rs2.getFloat("price")); //価格
 				dto.setSubtotal(dto.getPrice()*dto.getQuantities()); //小計
 				dto.setImgPath(rs2.getString("img_path")); //イメージパス
