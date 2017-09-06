@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.internousdev.kairakutenichiba.action;
 
 import java.util.Map;
@@ -8,16 +5,18 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.struts2.interceptor.ServletRequestAware;
+import org.apache.struts2.interceptor.ServletResponseAware;
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.util.oauth.google.GoogleOauth;
+import com.internousdev.kairakutenichiba.util.GoogleOauth;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * @author internousdev
  *
  */
-public class GoGoogleAction extends ActionSupport implements SessionAware{
+public class GoGoogleAction extends ActionSupport implements ServletResponseAware,ServletRequestAware,SessionAware {
 
 
 	/**

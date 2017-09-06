@@ -8,16 +8,17 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts2.interceptor.SessionAware;
+import org.apache.struts2.interceptor.ServletRequestAware;
+import org.apache.struts2.interceptor.ServletResponseAware;
 
-import com.internousdev.util.oauth.twitter.TwitterOauth;
+import com.internousdev.kairakutenichiba.util.TwitterOauth;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * @author internousdev
  *
  */
-public class GoTwitterAction extends ActionSupport implements SessionAware{
+public class GoTwitterAction extends ActionSupport implements ServletResponseAware, ServletRequestAware {
 
 	/**
 	 *

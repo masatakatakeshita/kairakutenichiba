@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.internousdev.kairakutenichiba.action;
 
 import java.util.Map;
@@ -8,20 +5,24 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.struts2.interceptor.ServletRequestAware;
+import org.apache.struts2.interceptor.ServletResponseAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.Definition;
-import com.internousdev.LoginUtil;
 import com.internousdev.kairakutenichiba.dao.LoginOauthDAO;
 import com.internousdev.kairakutenichiba.dto.MyPageDTO;
-import com.internousdev.util.oauth.facebook.FacebookOauth;
+import com.internousdev.kairakutenichiba.util.FacebookOauth;
+import com.internousdev.kairakutenichiba.util.LoginUtil;
 import com.opensymphony.xwork2.ActionSupport;
+
 
 /**
  * @author internousdev
  * LoginFacebookAction　FACEBOOKでログインする為のクラス
  */
-public class LoginFacebookAction extends ActionSupport implements SessionAware{
+public class LoginFacebookAction extends ActionSupport implements SessionAware,
+ServletResponseAware, ServletRequestAware{
 
 	/**
 	 *シリアルバージョンIDの生成
