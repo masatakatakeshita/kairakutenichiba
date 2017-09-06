@@ -5,13 +5,12 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.kairakutenichiba.dao.UserPurchaseHistoryDAO;
 import com.internousdev.kairakutenichiba.dto.HistoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 商品一覧から商品の一覧を取得するクラス
- * @author Takuya Kishimoto
- * @since 2017/05/19
  * @version 1.0
  */
 public class UserPurchaseHistoryAction extends ActionSupport implements SessionAware{
@@ -102,8 +101,8 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 
 
 
-		ArrayList<com.internousdev.kairakutenichiba.dto.HistoryDTO> allList = new ArrayList<HistoryDTO>();
-		UserPurchaseHistoryAction dao=new UserPurchaseHistoryAction();
+		ArrayList<HistoryDTO> allList = new ArrayList<HistoryDTO>();
+		UserPurchaseHistoryDAO dao=new UserPurchaseHistoryDAO();
 		allList=dao.UserPurchaseHistoryList(userId,"");
 		int all=allList.size();
 		for(int i=0;i<all;i++){

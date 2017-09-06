@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.action;
 import java.util.ArrayList;
@@ -7,14 +7,12 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.kairakutenichiba.dao.MypageDAO;
-import com.internousdev.kairakutenichiba.dto.MypageDTO;
+import com.internousdev.kairakutenichiba.dao.MyPageDAO;
+import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
 * ユーザーがマイページでユーザー情報を取得するクラス
-* @author Miyauchi Akitomo
-* @since 2017/5/18
 * @version 1.0
 *
 */
@@ -32,7 +30,7 @@ public class UserAction extends ActionSupport implements SessionAware{
 		/**
 		 * ユーザーリスト
 		 */
-		private ArrayList<MypageDTO> User = new ArrayList<MypageDTO>();
+		private ArrayList<MyPageDTO> User = new ArrayList<MyPageDTO>();
 		/**
 		 * ユーザID
 		 */
@@ -51,9 +49,9 @@ public class UserAction extends ActionSupport implements SessionAware{
 			 * sessionからユーザーIDを取得
 			 */
 			userId = (int) session.get("userId");
-			MypageDAO mypagedao = new MypageDAO();
+			MyPageDAO MyPageDAO = new MyPageDAO();
 
-			User = mypagedao.select(userId);
+			User = MyPageDAO.select(userId);
 
 			if (User.size() == 0) {
 
@@ -84,7 +82,7 @@ public class UserAction extends ActionSupport implements SessionAware{
 		 * ユーザリストを取得
 		 * @return UserList ユーザリスト
 		 */
-		public ArrayList<MypageDTO> getUser() {
+		public ArrayList<MyPageDTO> getUser() {
 			return User;
 		}
 
@@ -93,7 +91,7 @@ public class UserAction extends ActionSupport implements SessionAware{
 		 * @author Miyauchi
 		 * @param userList セットする userList
 		 */
-		public void setUserList(ArrayList<MypageDTO> userList) {
+		public void setUserList(ArrayList<MyPageDTO> userList) {
 			User = userList;
 		}
 

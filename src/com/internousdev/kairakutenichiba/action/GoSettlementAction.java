@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.action;
 
@@ -13,11 +13,8 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
-import com.internousdev.kairakutenichiba.util.CartAssist;
 
 /**決済入力画面に遷移するためのクラス
- * @author Misa Kikuchi
- * @since 2017/05/18
  * @version 1.0
  */
 public class GoSettlementAction extends CartAssist implements SessionAware {
@@ -60,8 +57,6 @@ public class GoSettlementAction extends CartAssist implements SessionAware {
 
 	/**
 	 * 決済画面の遷移を実行するメソッド
-	 * @author Misa Kikuchi
-	 * @since 2017/05/18
 	 * @version 1.0
 	 */
 	public String execute() throws SQLException{

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.dao;
 
@@ -38,7 +38,7 @@ public class UserPurchaseHistoryDAO {
 	 */
 	public ArrayList<HistoryDTO> UserPurchaseHistoryList(int userId,String itemsName){
 
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "legmina", "root","mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<HistoryDTO> UserPurchaseHistoryList = new ArrayList<HistoryDTO>();
 		int k=1;

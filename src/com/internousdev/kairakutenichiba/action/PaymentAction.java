@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.action;
 
@@ -11,16 +11,14 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.kairakutenichiba.dao.CreditCheckDAO;
 import com.internousdev.kairakutenichiba.dao.CreditInsertDAO;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
-import com.internousdev.kairakutenichiba.dao.MypageDAO;
+import com.internousdev.kairakutenichiba.dao.MyPageDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.dto.CreditDTO;
-import com.internousdev.kairakutenichiba.dto.MypageDTO;
+import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * クレジットの情報を照合し、情報を格納するクラス
- * @author MISA KIKUCHI
- * @since 5/19
  * @version 1.0
  */
 
@@ -28,97 +26,97 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 
 	/**
 	 * シリアルID
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
 	 * ユーザーID
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private int userId;
 	/**
 	 * クレジット種類
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private int creditId;
 	/**
 	 * クレジット番号
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private String creditNumber;
 	/**
 	 * クレジット名義
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private String nameE;
 	/**
 	 * セキュリティコード
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private String securityCode;
 	/**
 	 * 有効期限（月）
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private int expirationMonth;
 	/**
 	 * 有効期限（年）
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private int expirationYear;
 	/**
 	 * セッション情報
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private Map<String,Object>session;
 	/**
 	 * カード番号上6ケタ
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private String checkNumber;
 	/**
 	 * 合計金額
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	private float amountAll;
 
 	/**
 	 * 上からユーザー情報、クレジット情報、カート情報を入れるアレイリストたち
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
-	public ArrayList<MypageDTO> usersList = new ArrayList<MypageDTO>();
+	public ArrayList<MyPageDTO> usersList = new ArrayList<MyPageDTO>();
 	private ArrayList<CreditDTO> creditList = new ArrayList<CreditDTO>();
 	private ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
 
 	/**
 	 * クレジットカード情報の照合、格納を実行するメソッド
-	 * @author MISA KIKUCHI
-	 * @since 5/19
+	 *
+	 *
 	 * @version 1.0
 	 */
 	public String execute() {
@@ -127,7 +125,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 		Boolean loginFlg = false;
 		Boolean creditFlg = false;
 		CreditDTO userInfoDto = null;
-		MypageDAO myDao = new MypageDAO();
+		MyPageDAO myDao = new MyPageDAO();
 		GoCartDAO goCartDao = new GoCartDAO();
 
 		CreditCheckDAO daoC = new CreditCheckDAO();
@@ -367,7 +365,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 * ユーザー情報リストを取得するメソッド
 	 * @return usersList　ユーザー情報リスト
 	 */
-	public ArrayList<MypageDTO> getUsersList() {
+	public ArrayList<MyPageDTO> getUsersList() {
 		return usersList;
 	}
 
@@ -375,7 +373,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 * ユーザー情報リストを格納するメソッド
 	 * @param usersList セットする usersList
 	 */
-	public void setUsersList(ArrayList<MypageDTO> usersList) {
+	public void setUsersList(ArrayList<MyPageDTO> usersList) {
 		this.usersList = usersList;
 	}
 
