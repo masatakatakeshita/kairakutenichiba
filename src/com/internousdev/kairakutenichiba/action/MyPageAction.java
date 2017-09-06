@@ -14,8 +14,13 @@ import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
-@SuppressWarnings("serial")
+
 public class MyPageAction extends ActionSupport implements SessionAware{
+
+	/**
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = -4224690986696875933L;
 
 	private Map<String,Object> session;
 
