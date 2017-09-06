@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.dao;
 
@@ -16,16 +16,12 @@ import com.mongodb.DBObject;
 
 	/**
 	 * 問い合わせフォームに関するクラス
-	 * @author Soshi Azuma
-	 * @since 2017/05/16
 	 * @version 1.0
 	 */
 public class ContactDAO {
 
 	/**
 	 * mongoDBにデータをインサートするメソッド
-	 * @author Soshi Azuma
-	 * @since 2017/05/16
 	 * @version 1.0
 	 * @param title 問い合わせ項目
 	 * @param userName 問い合わせ者名

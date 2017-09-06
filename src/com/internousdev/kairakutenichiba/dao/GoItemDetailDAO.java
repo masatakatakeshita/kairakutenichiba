@@ -64,8 +64,6 @@ public class GoItemDetailDAO {
 	 *商品IDで商品詳細を取得しリストに格納するメソッド
 	 * @param itemId 商品ID
 	 * @return searchList 商品情報
-	 * @author Misa Kikuchi
-	 * @since 2017/05/19
 	 * @version 1.0
 	 */
 	public ArrayList<ItemDTO> selectbyItem(int itemId) {

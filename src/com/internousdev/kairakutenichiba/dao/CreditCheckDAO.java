@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.internousdev.kairakutenichiba.dao;
 
@@ -74,8 +74,6 @@ public class CreditCheckDAO {
 	 * @param creditId クレジットの種類
 	 * @param creditNumber クレジット番号
 	 * @return userInfoDto クレジットカード情報
-	 * @author MISA KIKUCHI
-	 * @since 5/19
 	 * @version 1.0
 	 */
 	public CreditDTO selectUserInfo(int creditId, String creditNumber){

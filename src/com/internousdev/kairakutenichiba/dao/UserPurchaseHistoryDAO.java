@@ -16,8 +16,6 @@ import com.internousdev.util.DBConnector;
 
 /**
 * 購入情報に関するクラス
-* @author Takuya Kishimoto
-* @since 2017/05/19
 * @version 1.0
 */
 public class UserPurchaseHistoryDAO {
@@ -32,8 +30,6 @@ public class UserPurchaseHistoryDAO {
 	 * @param userId ユーザーID
 	 * @param itemsName 商品名
 	 * @return UserPurchaseHistoryList アレイリストの値を返す
-	 * @author Takuya Kishimoto
-	 * @since 2017/05/19
 	 * @version 1.0
 	 */
 	public ArrayList<HistoryDTO> UserPurchaseHistoryList(int userId,String itemsName){
