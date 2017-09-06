@@ -63,7 +63,7 @@ VISA(ロゴ) カード番号 **** **** **** 1234
 東京都A区B 1-2-3　山田荘101
 </p>
 
-<h4><a href="finish_shoji.jsp">確認</a></h4>
+<h4><a href="finish_shoji.jsp">注文を確定する。</a></h4>
 <div class="a">*購入手続きされません</div> <!-- floatの処理のために順番が前後している。 -->
 <div class="b"><a href="cart_jo.jsp">カートへ戻る</a></div> <br>
 <div class="a"> *購入手続きされません</div>
