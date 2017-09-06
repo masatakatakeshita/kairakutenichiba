@@ -339,6 +339,21 @@ public class ItemDTO {
 
 	}
 
+	public void setIsDeleted(boolean boolean1) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+	public void setImagePath(int i, String string) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+	public void setImgPath(int i, String string) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
 
 
 
