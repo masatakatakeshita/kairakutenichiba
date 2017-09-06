@@ -29,11 +29,11 @@
 
     　　　<a href="admin_history_kato.jsp" class="header_btn">販売履歴</a>
 
-    　　　<a href="admin_shouhinkanri_yama.jsp" class="header_btn">商品管理</a>
+    　　　<a href="admin_item_yama.jsp" class="header_btn">商品管理</a>
 
-    　　　<a href="help_admin_syousai.jsp" class="header_btn">お問い合わせ</a>
+    　　　<a href="admin_help.jsp" class="header_btn">お問い合わせ</a>
 
- 　　　<a href="admin_top_yama.jsp" class="header_btn">log out</a>
+ 　　　<a href="logout_kato.jsp" class="header_btn">log out</a>
 
 </header>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

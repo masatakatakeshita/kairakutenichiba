@@ -1,42 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="CSS/Admin_header.css">
 
-<title>Insert title here</title>
+<title>商品管理画面</title>
 </head>
 <body>
 <header>
+		<s:include value="admin_header.jsp" />
+	</header>
+	<br><br><br><br><br>
 
-
-  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-　　　
-
-
-
-    　　　<a href="admin_top_yama.jsp" class="header_btn">TOP</a>
-
-
-
-    　　　<a href="admin_customer.jsp" class="header_btn">顧客情報</a>
-
-
-
-    　　　<a href="admin_history_kato.jsp" class="header_btn">販売履歴</a>
-
-    　　　<a href="admin_shouhinkanri_yama.jsp" class="header_btn">商品管理</a>
-
-    　　　<a href="help_admin_syousai.jsp" class="header_btn">お問い合わせ</a>
-
- 　　　<a href="admin_top_yama.jsp" class="header_btn">log out</a>
-
-</header>
-
-<footer>
-</footer>
 
 
 <h1>商品管理画面</h1>
@@ -50,7 +29,7 @@
 
 
 
-<p><h2>商品一覧</h2></p>
+<h2>商品一覧</h2>
 
 <table border="1">
 
@@ -91,21 +70,16 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
 
 
 
+<p><a href="detail_yamaguchi.jsp" >商品情報を追加する</a></p>
 
-<a href="detail_yamaguchi.jsp" ><p>商品情報を追加する</p></a>
+<p><a href="detail_yamaguchi.jsp" >商品情報を編集する</a></p>
 
-<a href="detail_yamaguchi.jsp" ><p>商品情報を編集する</p></a>
+<p><a href="detail_yamaguchi.jsp" >商品情報を削除する</a></p>
 
-<a href="detail_yamaguchi.jsp" ><p>商品情報を削除する</p></a>
-
-<a href="detail_yamaguchi.jsp" >商品詳細</a>
+<p><a href="detail_yamaguchi.jsp" >商品詳細</a></p>
 
 
 

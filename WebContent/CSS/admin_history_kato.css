@@ -22,7 +22,6 @@ table td {
 }
 
 table th {
-	align: center;
 	height: 20px;
 	padding: 4px;
 	text-align: left;
@@ -36,7 +35,7 @@ table th {
 	border-color: black;
 }
 
-body {
+.container {
 	text-align: center;
 }
 

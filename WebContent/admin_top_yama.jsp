@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 
 
 
@@ -21,28 +23,29 @@
 <div class="header-logo"><h1>快楽店市場</h1></div>
 <div class="message"><h2>管理者TOP</h2></div>
 
-<ul>
+
 
 <div class="menulist">
-<li>顧客情報</li>
-<li>販売履歴</li>
-<li>商品管理</li>
-<li><a href="help_togashi.jsp">お問い合わせ</a></li>
-<li>Log out</li>
+
+<ul>
+
+<li><a href="admin_customer.jsp">顧客情報</a></li>
+<li><a href="admin_history_kato.jsp">販売履歴</a></li>
+<li><a href="admin_item_yama.jsp">商品管理</a></li>
+<li><a href="admin_help.jsp">お問い合わせ</a></li>
+<li><a href="logout_kato.jsp">Log out</a></li>
+
 </ul>
+
 </div>
 
 
 </div>
-<footer>
+
 <a href="index.jsp">top</a>
 
 <a href="login.kato.jsp">Login</a>
 
-
-
-
-</footer>
 
 
 </body>

@@ -11,11 +11,11 @@
 
 </head>
 
-
-
-
-
 <body>
+	<header>
+		<s:include value="admin_header.jsp" />
+	</header>
+	<br><br><br><br><br>
 	<!--
 tr table row 行←横に長い長方形。
 td table date セル←長方形の内部データ。小さい四角
