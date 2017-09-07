@@ -6,38 +6,6 @@
 <struts>
 	<constant name="struts.devMode" value="true" />
 
-	<!-- 国際化 -->
-	<constant name="struts.custom.i18n.resources"
-		value="com.internousdev.kairakutenichiba.property.history
-			   com.internousdev.kairakutenichiba.property.header
-			   com.internousdev.kairakutenichiba.property.admin_user
-			   com.internousdev.kairakutenichiba.property.admin_header
-			   com.internousdev.kairakutenichiba.property.mypage
-			   com.internousdev.kairakutenichiba.property.Id
-			   com.internousdev.kairakutenichiba.property.item
-			   com.internousdev.kairakutenichiba.property.contact
-			   com.internousdev.kairakutenichiba.property.admin_contact
-			   com.internousdev.kairakutenichiba.property.admin_history
-			   com.internousdev.kairakutenichiba.property.cart
-			   com.internousdev.kairakutenichiba.property.payment
-			   com.internousdev.kairakutenichiba.property.paymentComplete
-			   com.internousdev.kairakutenichiba.property.paymentConfirm
-			   com.internousdev.kairakutenichiba.property.stocksError
-			   com.internousdev.kairakutenichiba.property.loginSuccess
-			   com.internousdev.kairakutenichiba.property.loginError
-			   com.internousdev.kairakutenichiba.property.logout
-			   com.internousdev.kairakutenichiba.property.cartEmpty
-			   com.internousdev.kairakutenichiba.property.creditError
-			   com.internousdev.kairakutenichiba.property.index
-			   com.internousdev.kairakutenichiba.property.sessionError
-			   com.internousdev.kairakutenichiba.property.itemdetail
-			   com.internousdev.kairakutenichiba.property.contact_complete
-			   com.internousdev.kairakutenichiba.property.admin_add
-			   com.internousdev.kairakutenichiba.property.admin_delete
-			   com.internousdev.kairakutenichiba.property.admin_top
-			   com.internousdev.kairakutenichiba.property.about
-			   com.internousdev.kairakutenichiba.property.admin_update
-			   com.internousdev.kairakutenichiba.property.admin_item" />
 
 	<package name="com.internousdev.kairakutenichiba.action" extends="struts-default">
 
