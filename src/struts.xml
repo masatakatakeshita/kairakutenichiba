@@ -160,7 +160,7 @@
 			<result name="success">admin_customer.jsp</result>
 			<result name="error">admin_customer.jsp</result>
 			<result name="login">admin_customer.jsp</result>
-			
+
 
 		</action>
 
@@ -169,7 +169,7 @@
 			class="com.internousdev.kairakutenichiba.action.AdminHistoryAction" method="execute">
 			<result name="success">admin_history_kato.jsp</result>
 			<result name="error">admin_history_kato.jsp</result>
-　　　　　　<result name="login">admin_history_kato.jsp</result>
+			<result name="login">admin_history_kato.jsp</result>
 		</action>
 
 		<!-- 管理者商品一覧 -->
@@ -178,8 +178,8 @@
 			<result name="success">admin_shouhinkanri_yama.jsp</result>
 			<result name="error">admin_shouhinkanri_yama.jsp</result>
 		</action>
-		
-		
+
+
 		<!-- 購入履歴 -->
 		<action name="UserPurchaseHistoryAction"
 			class="com.internousdev.kairakutenichiba.action.UserPurchaseHistoryAction"
