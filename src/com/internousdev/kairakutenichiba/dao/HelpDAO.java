@@ -31,8 +31,8 @@ public class HelpDAO {
             boolean login) {
         int count = 0;
 
-        Connection con = new MySqlConnector("sundia").getConnection();
-        String sql = "INSERT INTO inquiry_histories(user_name,user_address,user_tellnumber,title,comment,login)VALUES(?,?,?,?,?,?)";
+        Connection con = new MySqlConnector("kairakutenichiba").getConnection();
+        String sql = "INSERT INTO inquiry_histories(user_name,user_address,user_mail,category,comment,login)VALUES(?,?,?,?,?,?)";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
