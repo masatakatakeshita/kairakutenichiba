@@ -43,6 +43,17 @@ public class HelpDTO {
 	    private String userMail;
 
 
+	    /**
+	     * ログインフラグ
+	     */
+	    private boolean loginFlg;
+
+	    /**
+	     * ユーザーフラグ
+	     */
+	    private int userFlg;
+
+
 
 	    /**
 	     * 登録日
@@ -158,6 +169,40 @@ public class HelpDTO {
 	    public void setuserMail(String userMail) {
 	        this.userMail = userMail;
 	    }
+
+
+	    /**
+	     * ログインフラグを取得
+	     * @return ログインフラグ
+	     */
+	    public boolean isLoginFlg() {
+	        return loginFlg;
+	    }
+
+	    /**
+	     * ログインフラグを格納
+	     * @param loginFlg ログインフラグ
+	     */
+	    public void setLoginFlg(boolean loginFlg) {
+	        this.loginFlg = loginFlg;
+	    }
+
+	    /**
+	     * ユーザーフラグを取得
+	     * @return ユーザーフラグ
+	     */
+	    public int getUserFlg() {
+	        return userFlg;
+	    }
+
+	    /**
+	     * ユーザーフラグを格納
+	     * @param userFlg ユーザーフラグ
+	     */
+	    public void setUserFlg(int userFlg) {
+	        this.userFlg = userFlg;
+	    }
+
 
 	    /**
 	     * 登録日を取得

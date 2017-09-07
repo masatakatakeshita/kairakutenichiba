@@ -49,6 +49,12 @@ private String category;
  */
 private String comment;
 
+/**
+ * ログイン情報
+ */
+private boolean login;
+
+
 
 /**
  * セッション情報
@@ -59,7 +65,7 @@ private Map<String, Object> session;
 /**
  * ユーザーID
  */
-private boolean userId;
+private int userId;
 
 
 
@@ -76,21 +82,21 @@ public String execute() {
     int count = 0;
 
     if (session.get("userId") != null) {
-        userId = (boolean) session.get("userId");
-        userId = true;
+        userId = (int) session.get("userId");
+        login = true;
     }
 
-    if (userId) {
-        count = dao.insertDAO(userName, userAddress, userMail, category, comment, userId);
+    if (login) {
+        count = dao.insertDAO(userName, userAddress, userMail, category, comment, login, userId);
+    } else {
+        count = dao.insertDAO(userName, userAddress, userMail, category, comment, login);
     }
     if (count > 0) {
         result = SUCCESS;
     }
     return result;
+
 }
-
-
-
 
 
 
@@ -177,6 +183,22 @@ public void setComment(String comment) {
     this.comment = comment;
 }
 
+/**
+ * ログインフラグを取得するメソッド
+ * @return　login ログインフラグ
+ */
+public boolean getLogin() {
+    return login;
+}
+
+/**
+ * ログインフラグを格納するメソッド
+ * @param login　セットする　ログインフラグ
+ */
+public void setLogin(boolean login) {
+    this.login = login;
+}
+
 
 
 /**
@@ -199,7 +221,7 @@ public void setSession(Map<String, Object> session) {
  * ユーザーIDを取得するメソッド
  * @return userId ユーザーID
  */
-public boolean getUserId() {
+public int getUserId() {
     return userId;
 }
 
@@ -207,7 +229,7 @@ public boolean getUserId() {
  * ユーザーIDを格納するメソッド
  * @param userId　セットする　ユーザーID
  */
-public void setUser_int(boolean userId) {
+public void setUser_int(int userId) {
     this.userId = userId;
 }
 
