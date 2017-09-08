@@ -97,10 +97,8 @@ create table inquiry_histories (
 	inquiry_no int not null auto_increment primary key,/*問い合わせ番号*/
 	user_name varchar(50) not null,/*氏名*/
 	user_address varchar(255),/*住所*/
-	user_telnumber varchar(50) not null,/*電話番号*/
 	user_mail varchar(255) not null,/*メールアドレス*/
 	category enum('アカウントについて','お支払い方法について','注文内容について','その他') not null,/*問い合わせ種類*/
-	title varchar(100) not null,/*問い合わせ題名*/
 	comment text not null,/*問い合わせ内容*/
 	is_deleted boolean default false,/*問い合わせ削除*/
 	inquiried_at datetime not null default current_timestamp,/*問い合わせ日時*/
