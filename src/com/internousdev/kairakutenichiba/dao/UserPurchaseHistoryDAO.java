@@ -32,7 +32,7 @@ public class UserPurchaseHistoryDAO {
 	 * @return UserPurchaseHistoryList アレイリストの値を返す
 	 * @version 1.0
 	 */
-	public ArrayList<HistoryDTO> UserPurchaseHistoryList(int userId,String itemsName){
+	public ArrayList<HistoryDTO> UserPurchaseHistoryList(int user_id,String itemsName){
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con = db.getConnection();
@@ -49,7 +49,7 @@ public class UserPurchaseHistoryDAO {
 			sql= "select * from purchases left join items on purchases.item_id = items.item_id where user_id=?";
 			k=2;
 		}
-		if(userId == 0){
+		if(user_id == 0){
 			k=0;
 			sql ="";
 		}
@@ -64,11 +64,11 @@ public class UserPurchaseHistoryDAO {
 		PreparedStatement ps = con.prepareStatement(sql);
 
 		if(k==1){
-			ps.setInt(1,userId);
+			ps.setInt(1,user_id);
 		ps.setString(2,itemsName);
 		}
 		if(k==2){
-			ps.setInt(1,userId);
+			ps.setInt(1,user_id);
 		}
 
 		ResultSet rs = ps.executeQuery();
@@ -78,8 +78,8 @@ public class UserPurchaseHistoryDAO {
 			HistoryDTO dto = new HistoryDTO();
 
 
-			dto.setUserId(rs.getInt("user_id")); //購入者ID
-			dto.setItemId(rs.getInt("item_id"));  //商品ID
+			dto.setUser_id(rs.getInt("user_id")); //購入者ID
+			dto.setItem_id(rs.getInt("item_id"));  //商品ID
 			dto.setQuantities(rs.getInt("quantities"));  //数量
 			dto.setCreatedAt(rs.getString("created_at"));  //登録日
 			UserPurchaseHistoryList.add(dto);
@@ -89,7 +89,7 @@ public class UserPurchaseHistoryDAO {
 
 				dto.setItemsName(rs.getString("items_name")); //商品名
 				dto.setPrice(rs.getFloat("price")); //価格
-				dto.setSubtotal(dto.getPrice()*dto.getQuantities()); //小計
+				dto.setTotal_price(dto.getPrice()*dto.getQuantities()); //小計
 			}
 
 

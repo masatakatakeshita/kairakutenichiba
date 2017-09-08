@@ -9,12 +9,12 @@ use kairakutenichiba;
 #--------------------------各テーブルの作成--------------------------
 
 create table items(
-	item_id int not null aury_id int not null,/*カテゴリ*/
-	release_day date notto_increment primary key,/*商品ID*/
+	item_id int not null primary key,/*商品ID*/
 	item_name varchar(100) not null,/*商品名*/
-	catego null,/*発売日*/
+	category_id int not null,/*カテゴリ番号*/
+	release_day date not null /*発売日*/
 	author varchar(100) not null,/*著者*/
-	publisher varchar(100),	/*出版社*/
+	publisher varchar(100),not null/*出版社*/
 	publish_type varchar(100) not null,/*発行形態*/
 	pages int not null,/*ページ数*/
 	isbn int not null,/*ISBNコード*/
@@ -22,7 +22,7 @@ create table items(
 	stocks int not null,/*在庫数*/
 	sales int,/*売り上げ数*/
 	item_datail text not null,/*商品詳細*/
-	is_deleted boolean not null default FALSE,/*商品削除*/
+	is_deleted boolean default FALSE,/*商品削除*/
 	created_at datetime not null default current_timestamp,/*登録日*/
 	updated_at datetime not null default current_timestamp,/*更新日*/
 
@@ -50,7 +50,7 @@ create table items_images (
 );
 
 create table purchases_outlines (
-	purchase_id int not null primary key,/*購入ID*/
+	purchase_id int not null  auto_increment primary key,/*購入ID*/
 	user_id int not null,/*ユーザーID*/
 	total_price decimal(9,2) not null,/*価格合計*/
 	delivery enum('mail','rapid'),/*配送方法*/
@@ -65,7 +65,7 @@ create table purchases_outlines (
 
 create table purchases_details (
 	purchase_id int not null,/*購入ID*/
-	purchase_no int not null primary key,/*購入NO*/
+	purchase_no int not null auto_increment primary key,/*購入NO*/
 	user_id int not null,/*ユーザーID*/
 	item_id int not null,/*商品ID*/
 	quantities int not null default 1,/*数量*/
@@ -139,8 +139,8 @@ values
 (11,'ノルウェイの林(上)',4,'20XX年XX月YY日','村上冬樹','快楽社','文庫','300P','ISBN9874456987321',600,100,100,"商品情報"),
 (12,'ノルウェイの林(下)',4,'20XX年XX月YY日','村上冬樹','快楽社','文庫','300P','ISBN9874456986321',600,100,100,"商品情報"),
 (13,'俺の姉がこんなに可愛いわけがない',3,'20XX年XX月YY日','伏目つかさ','快楽社','文庫','264P','ISBN92874197842136',460,130,70,"商品情報"),
-(14,'題名',1,'20XX年XX月YY日','著者','快楽社','漫画','196P','ISBN9874102365478',420,125,75,"商品情報"),
-(15,'題名',2,'20XX年XX月YY日','著者','快楽社','漫画','192P','ISBN9874102512305',420,136,64,"商品情報");
+(14,'頭文字C',1,'20XX年XX月YY日','しげの秀二','快楽社','漫画','196P','ISBN9874102365478',420,125,75,"商品情報"),
+(15,'ねだめ　カンタービレ',2,'20XX年XX月YY日','三ノ宮知子','快楽社','漫画','192P','ISBN9874102512305',420,136,64,"商品情報");
 
 
 #--------------------------商品情報(画像パス)--------------------------
@@ -158,10 +158,10 @@ insert into items_images(item_id,img_path1,img_path2,img_path3,img_path4,img_pat
 (6,"img/items/世界の絶景.png",default,default,default,default),
 (7,"img/items/正しい寿司の握り方.png",default,default,default,default),
 (8,"img/items/美しい骨.png",default,default,default,default),
-(9,"img/items/.png",default,default,default,default),
-(10,"img/items/.png",default,default,default,default),
-(11,"img/items/.png",default,default,default,default),
-(12,"img/items/.png",default,default,default,default),
-(13,"img/items/.png",default,default,default,default),
-(14,"img/items/.png",default,default,default,default),
-(15,"img/items/.png",default,default,default,default),
+(9,"img/items/名探偵コナソ.png",default,default,default,default),
+(10,"img/items/僕に届け.png",default,default,default,default),
+(11,"img/items/ノルウェイの林（上）.png",default,default,default,default),
+(12,"img/items/ノルウェイの林（下）.png",default,default,default,default),
+(13,"img/items/俺の姉が.png",default,default,default,default),
+(14,"img/items/頭文字C.png",default,default,default,default),
+(15,"img/items/ねだめ カンタービレ.png",default,default,default,default);

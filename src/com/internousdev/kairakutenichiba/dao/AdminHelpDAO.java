@@ -49,11 +49,13 @@ public class AdminHelpDAO {
 	            while (rs.next()) {
 	                AdminHelpDTO dto = new AdminHelpDTO();
 	                dto.setInquiryNo(rs.getInt("inquiry_no"));
+	                dto.setLogin(rs.getBoolean("login"));
 	                dto.setUserId(rs.getInt("user_id"));
 	                dto.setUserName(rs.getString("user_name"));
 	                dto.setUserMail(rs.getString("user_mail"));
 	                dto.setCategory(rs.getString("category"));
 	                dto.setComment(rs.getString("comment"));
+	                dto.setIsDeleted(rs.getBoolean("is_Deleted"));
 	                dto.setInquiriedAt(rs.getTimestamp("inquiried_at").toString());
 	                SearchList.add(dto);
 	            }

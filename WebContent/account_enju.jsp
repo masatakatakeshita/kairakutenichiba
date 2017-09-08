@@ -26,6 +26,8 @@
  	<header>
 		<s:include value="header.jsp" />
 	</header>
+<!-- アクション -->
+    <s:action var="select" name="MyPageAction" />
 
 
 <div class="main">

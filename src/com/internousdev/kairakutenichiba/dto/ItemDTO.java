@@ -19,17 +19,47 @@ public class ItemDTO {
 	/**
 	 * 商品名
 	 */
-	private String itemsName;
+	private String item_name;
 
 	/**
 	 * 商品ID
 	 */
-	private int itemId;
+	private int item_id;
 
 	/**
 	 * 単価
 	 */
 	private float price;
+
+	/**
+	 * 発売日
+	 */
+	private int release_day;
+
+	/**
+	 * 著者
+	 */
+	private String author;
+
+	/**
+	 * 出版社
+	 */
+	private String publisher;
+
+	/**
+	 * 発行形態
+	 */
+	private String publish_type;
+
+	/**
+	 * ページ数
+	 */
+	private int pages;
+
+	/**
+	 * コード
+	 */
+	private int isbn;
 
     /**
      * イメージパス
@@ -54,12 +84,12 @@ public class ItemDTO {
 	/**
 	 * 登録日
 	 */
-	private String createdAt;
+	private String created_at;
 
 	/**
 	 * 更新日
 	 */
-	private String updatedAt;
+	private String updated_at;
 
 	/**
 	 * 商品画像01
@@ -72,9 +102,9 @@ public class ItemDTO {
 	private String itemImg02;
 
 	/**
-	 * 種類ID
+	 * カテゴリID
 	 */
-	private int sortId;
+	private int category_id;
 
 	/**
 	 * 種類
@@ -84,11 +114,7 @@ public class ItemDTO {
 	/**
 	 * デリートキー
 	 */
-	private boolean delKey;
-
-	private int CategoryId;
-
-	private String ItemName;
+	private boolean is_deleted;
 
 
 	//以下アクセサリー
@@ -96,34 +122,34 @@ public class ItemDTO {
 
 	/**
 	 * 商品名を取得するメソッド
-	 * @return itemsName
+	 * @return item_name
 	 */
-	public String getItemsName() {
-		return itemsName;
+	public String getItem_name() {
+		return item_name;
 	}
 
 	/**
 	 * 商品名を格納するメソッド
-	 * @param itemsName セットする itemsName
+	 * @param item_name セットする item_name
 	 */
-	public void setItemsName(String itemsName) {
-		this.itemsName = itemsName;
+	public void setItem_name(String item_name) {
+		this.item_name = item_name;
 	}
 
 	/**
 	 * アイテムIDを取得するメソッド
-	 * @return itemId
+	 * @return item_id
 	 */
-	public int getItemId() {
-		return itemId;
+	public int getItem_id() {
+		return item_id;
 	}
 
 	/**
 	 * アイテムIDを格納するメソッド
-	 * @param itemId セットする itemId
+	 * @param item_id セットする item_id
 	 */
-	public void setItemId(int itemId) {
-		this.itemId = itemId;
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
 	}
 
 	/**
@@ -132,6 +158,97 @@ public class ItemDTO {
 	 */
 	public float getPrice() {
 		return price;
+	}
+
+	/**
+	 * 発売日を取得するメソッド
+	 * @return release_day
+	 */
+	public int getRelease_day() {
+		return release_day;
+	}
+
+	/**
+	 * 発売日を格納するメソッド
+	 */
+	public void setRelease_day(int release_day) {
+		this.release_day = release_day;
+	}
+
+	/**
+	 * 著者名を取得するメソッド
+	 * @return author
+	 */
+	public String getAuthor() {
+		return author;
+	}
+
+	/**
+	 * 著者名を格納するメソッド
+	 * @param price セットする price
+	 */
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	/**
+	 * 出版社を取得するメソッド
+	 * @return publisher
+	 */
+	public String getPublisher(){
+		return publisher;
+	}
+	/**
+	 * 出版社を格納するメソッド
+	 * @param publisher
+	 */
+	public void setPublisher(String publisher){
+		this.publisher = publisher;
+	}
+
+	/**
+	 * 発行形態を取得するメソッド
+	 * @return publish_type
+	 */
+	public String getpublish_type(){
+		return publish_type;
+	}
+	/**
+	 * 発行形態を格納するメソッド
+	 * @param publish_type
+	 */
+	public void setPublish_type(String publish_type){
+		this.publish_type = publish_type;
+	}
+
+	/**
+	 * ページ数を取得するメソッド
+	 * @return publish_type
+	 */
+	public int getPages(){
+		return pages;
+	}
+	/**
+	 * ページ数を格納するメソッド
+	 * @param publish_type
+	 */
+	public void setPages(int pages){
+		this.pages = pages;
+	}
+
+	/**
+	 * コードを取得するメソッド
+	 * @return publish_type
+	 */
+	public int getIsbn(){
+		return isbn;
+	}
+	/**
+	 * コードを格納するメソッド
+	 * @param publish_type
+	 */
+	public void setIsbn(int isbn){
+		this.isbn = isbn;
 	}
 
 	/**
@@ -208,34 +325,34 @@ public class ItemDTO {
 
 	/**
 	 *	登録日を取得するメソッド
-	 * @return createdAt
+	 * @return created_at
 	 */
-	public String getCreatedAt() {
-		return createdAt;
+	public String getCreated_at() {
+		return created_at;
 	}
 
 	/**
 	 * 登録日を格納するメソッド
-	 * @param createdAt セットする createdAt
+	 * @param created_at セットする created_at
 	 */
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
+	public void setCreated_at(String created_at) {
+		this.created_at = created_at;
 	}
 
 	/**
 	 * 更新日を取得するメソッド
-	 * @return updatedAt
+	 * @return updated_at
 	 */
-	public String getUpdatedAt() {
-		return updatedAt;
+	public String getUpdated_at() {
+		return updated_at;
 	}
 
 	/**
 	 * 更新日を格納するメソッド
-	 * @param updatedAt セットする updatedAt
+	 * @param updated_at セットする updated_at
 	 */
-	public void setUpdatedAt(String updatedAt) {
-		this.updatedAt = updatedAt;
+	public void setUpdated_at(String updated_at) {
+		this.updated_at = updated_at;
 	}
 
 	/**
@@ -271,19 +388,19 @@ public class ItemDTO {
 	}
 
 	/**
-	 * 種類IDを取得するメソッド
-	 * @return sortId
+	 * カテゴリIDを取得するメソッド
+	 * @return category_id
 	 */
-	public int getSortId() {
-		return sortId;
+	public int getCategory_id() {
+		return category_id;
 	}
 
 	/**
-	 * 種類IDを格納するメソッド
-	 * @param sortId セットする sortId
+	 * カテゴリIDを格納するメソッド
+	 * @param category_id セットする category_id
 	 */
-	public void setSortId(int sortId) {
-		this.sortId = sortId;
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
 	}
 
 	/**
@@ -304,34 +421,18 @@ public class ItemDTO {
 
 	/**
 	 * デリートキーを取得するメソッド
-	 * @return delKey
+	 * @return is_deleted
 	 */
-	public boolean isDelKey() {
-		return delKey;
+	public boolean is_deleted() {
+		return is_deleted;
 	}
 
 	/**
 	 * デリートキーを格納するメソッド
-	 * @param delKey セットする delKey
+	 * @param is_deleted セットする is_deleted
 	 */
-	public void setDelKey(boolean delKey) {
-		this.delKey = delKey;
-	}
-
-
-	public int getCategoryId(){
-		return CategoryId;
-	}
-	public void setCategoryId(int CategoryId){
-		this.CategoryId = CategoryId;
-	}
-
-	public String getItemName(){
-		return ItemName;
-	}
-
-	public void setItemName(String ItemName){
-		this.ItemName = ItemName;
+	public void setIs_deleted(boolean is_deleted) {
+		this.is_deleted = is_deleted;
 	}
 
 	public void setQuantities(int int1) {

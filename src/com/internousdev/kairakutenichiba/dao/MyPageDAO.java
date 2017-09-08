@@ -29,13 +29,13 @@ public class MyPageDAO {
 
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				dto.setUserId(rs.getInt("user_id"));
+				dto.setUser_id(rs.getInt("user_id"));
 
-				dto.setname(rs.getString("name"));
+				dto.setName(rs.getString("name"));
 
-				dto.sethurigana(rs.getString("hurigana"));
+				dto.setHurigana(rs.getString("hurigana"));
 
-				dto.setPhoneEmail(rs.getString("phoneEmail"));
+				dto.setMail(rs.getString("mail"));
 
 				dto.setAddress(rs.getString("address"));
 

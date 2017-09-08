@@ -24,7 +24,7 @@ public class AdminUserDAO {
 	* @return itemList 顧客情報
 	* @version 1.0
 	*/
-	public ArrayList<MyPageDTO> select(int userId) {
+	public ArrayList<MyPageDTO> select(int user_id) {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		MyPageDTO dto = new MyPageDTO();
@@ -36,12 +36,12 @@ public class AdminUserDAO {
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, userId);
+			ps.setInt(1, user_id);
 
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 
-				dto.setUserId(rs.getInt("user_id"));
+				dto.setUser_id(rs.getInt("user_id"));
 
 				dto.setFamilyName(rs.getString("family_name"));
 

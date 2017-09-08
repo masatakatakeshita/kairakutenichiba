@@ -27,7 +27,8 @@
 		<s:include value="header.jsp" />
 	</header>
 
-
+<!-- アクション -->
+    <s:action var="select" name="GoItemDetailAction" />
  <div class="relative">
 <img class="photo" src="img/kemono1.jpg">
 <img class="center" src="img/1.jpg" alt=""class="absolute" />
