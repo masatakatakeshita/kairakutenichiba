@@ -66,9 +66,9 @@
 		<!-- 支払い画面への遷移 -->
 		<action name="GoSettlementAction"
 			class="com.internousdev.kairakutenichiba.action.GoSettlementAction" method="execute">
-			<result name="success">shiharai_takeshita.jsp</result>
+			<result name="success">payment_takeshita.jsp</result>
 			<result name="error">cart_jo.jsp</result>
-			<result name="login">shiharai_takeshita.jsp</result>
+			<result name="login">payment_takeshita.jsp</result>
 		</action>
 
 		<!-- 支払い画面。成功なら購入確認、エラーならクレジット情報の間違いのページに飛ぶ -->
@@ -108,17 +108,17 @@
 		<!-- 管理者商品管理画面 -->
 		<action name="AdminItemAction" class="com.internousdev.kairakutenichiba.action.AdminItemAction"
 			method="execute">
-			<result name="success">admin_shouhinkanri_yama.jsp</result>
-			<result name="error">admin_shouhinkanri_yama.jsp</result>
-			<result name="login">admin_shouhinkanri_yama.jsp</result>
+			<result name="success">admin_item_yama.jsp</result>
+			<result name="error">admin_item_yama.jsp</result>
+			<result name="login">admin_item_yama.jsp</result>
 		</action>
 
 		<!-- 管理者商品管理画面 -->
 		<action name="AdminAddAction" class="com.internousdev.kairakutenichiba.action.AdminAddAction"
 			method="execute">
-			<result name="success">admin_shouhinkanri_yama.jsp</result>
-			<result name="error">admin_shouhinkanri_yama.jsp</result>
-			<result name="login">admin_shouhinkanri_yama.jsp</result>
+			<result name="success">admin_item_yama.jsp</result>
+			<result name="error">admin_item_yama.jsp</result>
+			<result name="login">admin_item_yama.jsp</result>
 		</action>
 
 
@@ -143,8 +143,8 @@
 		<!-- 管理者商品一覧 -->
 		<action name="ItemAction" class="com.internousdev.kairakutenichiba.action.ItemAction"
 			method="execute">
-			<result name="success">admin_shouhinkanri_yama.jsp</result>
-			<result name="error">admin_shouhinkanri_yama.jsp</result>
+			<result name="success">admin_item_yama.jsp</result>
+			<result name="error">admin_item_yama.jsp</result>
 		</action>
 
 
@@ -152,8 +152,8 @@
 		<action name="UserPurchaseHistoryAction"
 			class="com.internousdev.kairakutenichiba.action.UserPurchaseHistoryAction"
 			method="execute">
-			<result name="success">rireki_enju.jsp</result>
-			<result name="error">rireki_enju.jsp</result>
+			<result name="success">history_enju.jsp</result>
+			<result name="error">history_enju.jsp</result>
 			<result name="login">admin_history_kato.jsp</result>
 		</action>
 
@@ -162,7 +162,7 @@
 		<!-- Mypageの情報を表示させるアクション -->
 		<action name="UserAction" class="com.internousdev.kairakutenichiba.action.UserAction"
 			method="execute">
-			<result name="success">touroku_enju.jsp</result>
+			<result name="success">account_enju.jsp</result>
 			<result name="error">index.jsp</result>
 			<result name="login">admin_customer.jsp</result>
 		</action>
