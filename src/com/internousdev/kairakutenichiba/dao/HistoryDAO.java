@@ -76,8 +76,8 @@ public class HistoryDAO {
 			HistoryDTO dto = new HistoryDTO();
 
 
-			dto.setUserId(rs.getInt("user_id")); //購入者ID
-			dto.setItemId(rs.getInt("item_id"));  //商品ID
+			dto.setUser_id(rs.getInt("user_id")); //購入者ID
+			dto.setItem_id(rs.getInt("item_id"));  //商品ID
 			dto.setQuantities(rs.getInt("quantities"));  //数量
 			dto.setCreatedAt(rs.getString("created_at"));  //登録日
 			HistoryList.add(dto);
