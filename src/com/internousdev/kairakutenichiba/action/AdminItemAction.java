@@ -127,7 +127,7 @@ public class AdminItemAction extends ActionSupport{
 		for(int i=0;i<all;i++){
 			ItemDTO dto = new ItemDTO();
 			dto= allList.get(i);
-			String str=dto.getItemsName();
+			String str=dto.getItem_name();
 			if(str.startsWith(itemsName)){
 				itemList.add(dto);
 			}

@@ -52,7 +52,7 @@ public class PurchaseCompleteDAO {
 
 					//在庫切れのものがある場合は商品名をリストに格納する
 					dto.setStocks(rs.getInt("stocks"));// 在庫数
-					dto.setItemName(rs.getString("items_name"));//商品名
+					dto.setItem_name(rs.getString("items_name"));//商品名
 					itemList.add(dto);
 				}
 			} catch (SQLException e) {
@@ -60,7 +60,7 @@ public class PurchaseCompleteDAO {
 			}
 
 			if (dto.getStocks() < add) {
-				check = dto.getItemName();
+				check = dto.getItem_name();
 				break;
 
 			}

@@ -36,7 +36,7 @@ public class ItemDAO {
     		while(rs.next()){
     			ItemDTO dto = new ItemDTO();;
     			dto.setItemGenre(rs.getString("sorts")); //種類
-    			dto.setSortId(rs.getInt("sort_id")); //種類ID
+    			dto.setCategory_id(rs.getInt("sort_id")); //種類ID
     			dto.setImgPath(rs.getString("sort_img")); //イメージパス
     			Item.add(dto);
        		}

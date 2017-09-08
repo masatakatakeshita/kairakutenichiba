@@ -36,17 +36,17 @@ public class AdminItemEditDAO {
 
             if (rs.next()) {
 
-                dto.setItemId(rs.getInt("item_id"));
-                dto.setCategoryId(rs.getInt("category_id"));
-                dto.setItemName(rs.getString("item_name"));
+                dto.setItem_id(rs.getInt("item_id"));
+                dto.setCategory_id(rs.getInt("category_id"));
+                dto.setItem_name(rs.getString("item_name"));
                 dto.setPrice(rs.getFloat("price"));
                 dto.setStocks(rs.getInt("stocks"));
                 dto.setItemDetail(rs.getString("item_detail"));
-                dto.setItemId(rs.getInt("item_id"));
-                dto.setItemId(rs.getInt("item_id"));
+                dto.setItem_id(rs.getInt("item_id"));
+                dto.setItem_id(rs.getInt("item_id"));
 
                 ps = con.prepareStatement(sql2);
-                ps.setInt(1, dto.getItemId());
+                ps.setInt(1, dto.getItem_id());
                 rs = ps.executeQuery();
                 int count = 1;
                 if (rs.next()) {

@@ -42,7 +42,7 @@ public class AddToCartDAO {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 ItemDTO dto = new ItemDTO();
-                dto.setItemName(rs.getString("item_name"));
+                dto.setItem_name(rs.getString("item_name"));
                 dto.setPrice(rs.getFloat("price"));
                 dto.setQuantities(rs.getInt("quantities"));
                 itemStatus.add(dto);
