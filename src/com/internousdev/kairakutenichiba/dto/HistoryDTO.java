@@ -32,7 +32,7 @@ public class HistoryDTO {
 	/**
 	 * 小計
 	 */
-	private float subtotal;
+	private float total_price;
 
 	/**
 	 * 登録日
@@ -114,18 +114,18 @@ public class HistoryDTO {
 
 	/**
 	 * 小計を取得するメソッド
-	 * @return subtotal
+	 * @return total_price
 	 */
-	public float getSubtotal() {
-		return subtotal;
+	public float getTotal_price() {
+		return total_price;
 	}
 
 	/**
 	 * 小計を格納するメソッド
-	 * @param subtotal セットする subtotal
+	 * @param total_price セットする total_price
 	 */
-	public void setSubtotal(float subtotal) {
-		this.subtotal = subtotal;
+	public void setTotal_price(float total_price) {
+		this.total_price = total_price;
 	}
 
 	/**

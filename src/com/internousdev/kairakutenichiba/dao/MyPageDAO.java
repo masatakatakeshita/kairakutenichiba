@@ -35,7 +35,7 @@ public class MyPageDAO {
 
 				dto.setHurigana(rs.getString("hurigana"));
 
-				dto.setPhoneEmail(rs.getString("phoneEmail"));
+				dto.setMail(rs.getString("mail"));
 
 				dto.setAddress(rs.getString("address"));
 

@@ -89,7 +89,7 @@ public class UserPurchaseHistoryDAO {
 
 				dto.setItemsName(rs.getString("items_name")); //商品名
 				dto.setPrice(rs.getFloat("price")); //価格
-				dto.setSubtotal(dto.getPrice()*dto.getQuantities()); //小計
+				dto.setTotal_price(dto.getPrice()*dto.getQuantities()); //小計
 			}
 
 

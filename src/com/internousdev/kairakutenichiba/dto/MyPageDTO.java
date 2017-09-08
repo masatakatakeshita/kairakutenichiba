@@ -69,7 +69,7 @@ public class MyPageDTO {
 		/**
 		 * メールアドレス
 		 */
-		private String phoneEmail;
+		private String mail;
 
 		/**
 		 * 携帯電話番号
@@ -294,17 +294,17 @@ public class MyPageDTO {
 		}
 		/**
 		 * メールアドレスを収納するメソッド
-		 * @return phoneEmail
+		 * @return mail
 		 */
-		public String getPhoneEmail() {
-			return phoneEmail;
+		public String getMail() {
+			return mail;
 		}
 		/**
 		 * メールアドレスを格納するメソッド
-		 * @param phoneEmail セットする phoneEmail
+		 * @param mail セットする mail
 		 */
-		public void setPhoneEmail(String phoneEmail) {
-			this.phoneEmail = phoneEmail;
+		public void setMail(String mail) {
+			this.mail = mail;
 		}
 		/**
 		 * 携帯電話番号を収納するメソッド
