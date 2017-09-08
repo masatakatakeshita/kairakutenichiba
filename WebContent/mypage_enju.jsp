@@ -27,7 +27,7 @@
 	</header>
 
 <!-- アクション -->
-    <s:action var="select" name="UserAction" />
+    <s:action var="select" name="MyPageAction" />
 
 <div class="main">
 
