@@ -21,15 +21,6 @@ public class HelpDTO {
 	     */
 	    private String userName;
 
-	    /**
-	     * 氏名（カナ）
-	     */
-	    private String userNameKana;
-
-	    /**
-	     * 郵便番号
-	     */
-	    private String postal;
 
 	    /**
 	     * 住所
@@ -96,23 +87,6 @@ public class HelpDTO {
 	        return userName;
 	    }
 
-
-	    /**
-	     * 氏名（カナ）を取得
-	     * @return 氏名（カナ）
-	     */
-	    public String getuserNameKana() {
-	        return userNameKana;
-	    }
-
-	    /**
-	     * 氏名（かな）を格納
-	     * @param userNameKana 氏名（カナ）
-	     */
-	    public void setUserNameKana(String userNameKana) {
-	        this.userNameKana = userNameKana;
-	    }
-
 	    /**
 	     * 氏名を格納
 	     * @param userName 氏名
@@ -121,21 +95,6 @@ public class HelpDTO {
 	        this.userName = userName;
 	    }
 
-	    /**
-	     * 郵便番号を取得
-	     * @return 郵便番号
-	     */
-	    public String getPostal() {
-	        return postal;
-	    }
-
-	    /**
-	     * 郵便番号を格納
-	     * @param postal 郵便番号
-	     */
-	    public void setPostal(String postal) {
-	        this.postal = postal;
-	    }
 
 	    /**
 	     * 住所を取得

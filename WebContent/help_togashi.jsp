@@ -41,7 +41,11 @@
 などをすぐに確認できるため、スムーズなご対応が可能です。
 </p>
 
+
+
+
 <form action="helplink_togashi.jsp" id="form2">
+
 <div class="boxA">
 
 
@@ -53,13 +57,6 @@
 </a>
 </p>
 
-<br>
-<p>
-<span>氏名(カナ)(必須)</span>
-<a class="box2">
-<input type="text" name="氏名(カナ)">
-</a>
-</p>
 <br>
 <p>
 <span>住所</span>

@@ -29,15 +29,6 @@ public class HelpAction extends ActionSupport  implements SessionAware {
 	 */
 private String userName;
 
-/**
- * 問い合わせ者氏名（カナ）
- */
-
-private String userNameKana;
-
-/**
- *
- */
 
 /**
  * 住所
@@ -97,9 +88,9 @@ public String execute() {
     }
 
     if (login) {
-        count = dao.insertDAO(userName, userAddress, userMail, category, comment, login, userId);
+        count = dao.insertDAO(userName, userAddress, userMail, category, comment);
     } else {
-        count = dao.insertDAO(userName, userAddress, userMail, category, comment, login);
+        count = dao.insertDAO(userName, userAddress, userMail, category, comment);
     }
     if (count > 0) {
         result = SUCCESS;
@@ -126,21 +117,6 @@ public String getUserName() {
 
 public void setUserName(String userName) {
 	this.userName = userName;
-}
-
-/**
- * 氏名（カナ）を取得するメソッド
- */
-public String getUserNameKana() {
-	return userNameKana;
-}
-
-
-/**
- * 氏名（カナ）を格納するメソッド
- */
-public void setUserNameKana(String userNameKana) {
-	this.userNameKana = userNameKana;
 }
 
 
