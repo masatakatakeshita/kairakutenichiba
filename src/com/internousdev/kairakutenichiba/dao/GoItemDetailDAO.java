@@ -26,21 +26,27 @@ public class GoItemDetailDAO {
 	 * @return searchList 商品情報
 	 * @version 1.0
 	 */
-	public ArrayList<ItemDTO> select(int sortId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","openconnect", "root","mysql");
+	public ArrayList<ItemDTO> select(int category_id) {
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","kairakutenichiba", "root","mysql");
 		Connection con = db.getConnection();
 		String sql;
-		 sql = "select * from items where sort_id=? and del_key =false";
+		 sql = "select * from items where category_id=? and del_key =false";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql) ;
-			ps.setInt(1, sortId);
+			ps.setInt(1, category_id);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()){
 				ItemDTO dto=new ItemDTO();
-				dto.setSortId(rs.getInt("sort_id"));
-				dto.setItemId(rs.getInt("item_id"));
-				dto.setItemsName(rs.getString("items_name"));
+				dto.setCategory_id(rs.getInt("category_id"));
+				dto.setItem_id(rs.getInt("item_id"));
+				dto.setItem_name(rs.getString("item_name"));
 				dto.setPrice(rs.getFloat("price"));
+				dto.setRelease_day(rs.getInt("release_day"));
+				dto.setAuthor(rs.getString("author"));
+				dto.setPublisher(rs.getString("publisher"));
+				dto.setPublish_type(rs.getString("publish_type"));
+				dto.setPages(rs.getInt("pages"));
+				dto.setIsbn(rs.getInt("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
 				dto.setItemDetail(rs.getString("items_detail"));
 				dto.setItemImg01(rs.getString("item_img01"));
@@ -78,9 +84,16 @@ public class GoItemDetailDAO {
 			ps.setInt(1, itemId);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()){
-				dto.setItemId(rs.getInt("item_id"));
-				dto.setItemsName(rs.getString("items_name"));
+				dto.setCategory_id(rs.getInt("category_id"));
+				dto.setItem_id(rs.getInt("item_id"));
+				dto.setItem_name(rs.getString("item_name"));
 				dto.setPrice(rs.getFloat("price"));
+				dto.setRelease_day(rs.getInt("release_day"));
+				dto.setAuthor(rs.getString("author"));
+				dto.setPublisher(rs.getString("publisher"));
+				dto.setPublish_type(rs.getString("publish_type"));
+				dto.setPages(rs.getInt("pages"));
+				dto.setIsbn(rs.getInt("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
 				dto.setItemDetail(rs.getString("items_detail"));
 				dto.setImgPath(rs.getString("img_path"));
