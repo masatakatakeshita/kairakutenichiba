@@ -1,0 +1,53 @@
+.search{
+	float:right;
+	padding-top:20px;
+}
+
+body{
+
+	font-family:'ÉÅÉCÉäÉI';
+
+}
+
+.image{
+	padding:18px 0px 10px 150px;
+	width:35%;
+
+}
+h1{
+	float:left;
+
+}
+p{
+	padding:20px 10px;
+	font-size:20px;
+}
+.button{
+	padding:500px 500px 100px;
+}
+
+
+
+table{
+	width: 500px;
+	height: 150px;
+}
+
+th{
+	padding:0px 20px;
+}
+
+
+td{
+	width: 20px 150px;
+}
+
+
+.main{
+
+	margin-top: 80px;
+}
+
+.gif{
+	padding:10px;
+}

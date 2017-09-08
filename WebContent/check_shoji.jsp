@@ -1,33 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+    <!-- ここから国際化 -->
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <!-- ここまで国際化 -->
+
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- 国際化 ロケールID取得 -->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<!-- 国際化 propertyファイルの場所の定義 -->
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.check" var="lang" />
+
+<meta charset="utf-8">
 <link rel="stylesheet" type="text/css"  href="CSS/check.css">
-<link rel="stylesheet" type="text/css"  href="CSS/header.css">
+
 <title>購入確認</title>
 </head>
 <body>
 
-<header>
-
-  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-
-
-    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
-
-
-
-    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
-
-
-
-    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
-
-    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
-
-</header>
+	<header>
+		<s:include value="header.jsp" />
+	</header>
 <div class="main">
 <h1>購入内容の確認</h1>
 

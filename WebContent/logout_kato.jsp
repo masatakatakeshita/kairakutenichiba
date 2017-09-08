@@ -8,7 +8,6 @@
 <meta charset="utf-8">
 
 <!-- Stylesheet -->
-<link rel="stylesheet" type="text/css" href="CSS/header.css">
 <link rel="stylesheet" type="text/css" href="CSS/logout_kato.css">
 
 <title>ログアウト</title>

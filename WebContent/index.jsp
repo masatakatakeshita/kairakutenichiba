@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
+<html lang="ja">
 
-<html>
 <head>
-<meta charset="UTF-8">
-<title>TOP</title>
+<meta charset="utf-8">
+<title>快楽天市場トップ</title>
 
 <link rel="stylesheet" type="text/css"
 	href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 <!-- <link rel="stylesheet" type="text/css" href="CSS/index.css">  -->
 
 <link rel="stylesheet" type="text/css" href="CSS/index.css">
-<link rel="stylesheet" type="text/css" href="CSS/header.css">
+
 <!-- indexのcssのディレクトリ入れる 階層ごとに../が必要な場合がある。
     本当にディレクトリまでのパスがあっているか確かめる。-->
 </head>
@@ -22,12 +22,8 @@
 
 <body>
 <!--  -->
-	<header> <a href="index.jsp"><img class="logo"
-		src="img/logo.jpg"></a>
-	　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
-	　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
-	　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
-	　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+	<header>
+		<s:include value="header.jsp" />
 	</header>
 
 
@@ -86,14 +82,14 @@
 						alt="下位楽天市場だから上位楽天市場のリンクは当たり前だよなぁ？" width="360" height="155" /></a>
 				</p>
 
-				<p>
+
 				<div class="manga">
 					<a href="detail_yamaguchi.jsp"><img src="img/1.jpg"
 						alt="下位楽天市場だから上位楽天市場のリンクは当たり前だよなぁ？" width="300" height="400" /></a>
 					<a href="detail_yamaguchi.jsp"><img src="img/2.jpg"
 						alt="下位楽天市場だから上位楽天市場のリンクは当たり前だよなぁ？" width="300" height="400" /></a>
 				</div>
-				</p>
+
 
 
 				<hr />

@@ -8,12 +8,10 @@
 <meta charset="utf-8">
 
 <!-- Stylesheet -->
-<link rel="stylesheet" type="text/css" href="CSS/header.css">
+
 <link rel="stylesheet" type="text/css" href="CSS/login_kato.css">
 
 <title>会員ログイン</title>
-<meta http-equiv="Content-Style-Type" content="text/css">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
 
 
 <!-- Javascripts -->

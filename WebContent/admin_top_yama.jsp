@@ -19,32 +19,36 @@
 
 
 
-<div class="header">
-<div class="header-logo"><h1>快楽店市場</h1></div>
-<div class="message"><h2>管理者TOP</h2></div>
+	<div class="header">
+		<div class="header-logo">
+			<h1>快楽店市場</h1>
+		</div>
+		<div class="message">
+			<h2>管理者TOP</h2>
+		</div>
 
 
 
-<div class="menulist">
+		<div class="menulist">
 
-<ul>
+			<ul>
 
-<li><a href="admin_customer.jsp">顧客情報</a></li>
-<li><a href="admin_history_kato.jsp">販売履歴</a></li>
-<li><a href="admin_item_yama.jsp">商品管理</a></li>
-<li><a href="admin_help.jsp">お問い合わせ</a></li>
-<li><a href="logout_kato.jsp">Log out</a></li>
+				<li><a href="admin_customer.jsp">顧客情報</a></li>
+				<li><a href="admin_history_kato.jsp">販売履歴</a></li>
+				<li><a href="admin_item_yama.jsp">商品管理</a></li>
+				<li><a href="admin_help.jsp">お問い合わせ</a></li>
+				<li><a href="logout_kato.jsp">Log out</a></li>
 
-</ul>
+			</ul>
 
-</div>
+		</div>
 
 
-</div>
+	</div>
 
-<a href="index.jsp">top</a>
+	<a href="index.jsp">top</a>
 
-<a href="login.kato.jsp">Login</a>
+	<a href="login_kato.jsp">Login</a>
 
 
 

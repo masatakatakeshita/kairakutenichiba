@@ -1,6 +1,8 @@
 
 
 
-center{
+#center{
+	margin: 0px auto;
 	margin-top:150px;
+	text-align: center;
 }

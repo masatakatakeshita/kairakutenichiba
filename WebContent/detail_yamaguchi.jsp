@@ -1,35 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+    <!-- ここから国際化 -->
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <!-- ここまで国際化 -->
+
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 国際化 ロケールID取得 -->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<!-- 国際化 propertyファイルの場所の定義 -->
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.detail" var="lang" />
+
+<meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="CSS/detail_yamaguchi.css">
-<link rel="stylesheet" type="text/css" href="CSS/header.css">
+
 
 <title>商品詳細</title>
 </head>
 <body>
-<header>
- <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-
-    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
-
-
-
-    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
-
-
-
-    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
-
-    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
-
-</header>
-
-
-
+	<header>
+		<s:include value="header.jsp" />
+	</header>
 
 
  <div class="relative">
@@ -38,7 +34,7 @@
 </div>
 
 <div class="navi">
-<div class="navibox"><p><h1>ONE PIECE 巻一</h1></p></div>
+<div class="navibox"><h1>ONE PIECE 巻一</h1></div>
 <div class="navibox"><p>尾田栄一郎</p></div>
 <div class="navibox"><p>集英社</p></div>
 </div>
@@ -46,9 +42,9 @@
 
 
 <div class="cart">
-<p><h1>価格</h1></p>
+<h1>価格</h1>
 <div class="price"><p>500円(税込)</p></div>
-<a href="cart_jo.jsp"><input type="submit"value="カートに商品を追加"></a></p>
+<a href="cart_jo.jsp"><input type="submit"value="カートに商品を追加"></a>
 
 </div>
 
@@ -63,11 +59,6 @@
 <p>ページ数　：207P</p>
 <p>ISBNコード：9784088725093</p>
 </div>
-
-
-
-
-
 
 
 

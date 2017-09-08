@@ -13,7 +13,11 @@
 	<header>
 		<s:include value="admin_header.jsp" />
 	</header>
-	<br><br><br><br><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<h2>管理者・問い合わせ内容詳細</h2>
 	<p>
 	<table border="1" cellspacing="0">

@@ -3,7 +3,6 @@ margin-top:100px;
 }
 table.type01 {
     border-collapse: collapse;
-    text-align: left;
     line-height: 1.5;
     border-left: 1px solid #ccc;
     text-align: right;
@@ -64,4 +63,7 @@ table.type02 td {
 	border-bottom: 1px solid #ccc;
 }
 
-
+#submit{
+	position:absolute;
+	margin-left:562px;
+}

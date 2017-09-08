@@ -22,12 +22,16 @@
 	<header>
 		<s:include value="admin_header.jsp" />
 	</header>
-	<br><br><br><br><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 
 	<div class="container">
 
-<h1>販売履歴</h1>
+		<h1>販売履歴</h1>
 
 
 		<table>

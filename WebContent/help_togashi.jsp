@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 <title>ヘルプ：お問い合わせ方法</title>
 
 
@@ -14,28 +16,11 @@
 </head>
 <body>
 
-<header>
+	<header>
+		<s:include value="header.jsp" />
+	</header>
 
-  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-　　　
-
-
-
-    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
-
-
-
-    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
-
-
-
-    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
-
-    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
-
-</header>
-
-<center>
+<div id="center">
 
 <a href=""></a>
 <h1>ヘルプ＆カスタマーサービス</h1>
@@ -48,61 +33,59 @@
 
 <form action="helplink_togashi.jsp" id="form2">
 <div class="boxA">
-<div class="box1"></div>
-<div class="box2"></div>
-<div class="box3"></div>
+
 
 
 <p>
 <span>氏名(必須)</span>
-<box1>
+<a class="box1">
 <input type="text" name="氏名">
-</box1>
+</a>
 </p>
 
 <br>
 <p>
 <span>氏名(カナ)(必須)</span>
-<box2>
+<a class="box2">
 <input type="text" name="氏名(カナ)">
-</box2>
+</a>
 </p>
 <br>
 <p>
 <span>住所</span>
-<box3>
+<a class ="box3">
 〒<input type="text" name="郵便番号" size="10">
-</box3>
+</a>
 <br>
-<box4>
+<a class="box4">
 <span>　</span>
 <input type="text" name="住所" size="30" placeholder="例)東京都千代田区～" >
-</box4>
+</a>
 </p>
 <br>
 
 <p>
 <span>メールアドレス(必須)</span>
-<box6>
+<a class="box6">
 <input type="text" name="メールアドレス" size="30">
-</box6>
+</a>
 <br>
 <span>　</span>
-<box7>
+<a class="box7">
 <input type="text" name="メールアドレス" size="30"  placeholder="確認のため再度入力">
-</box7>
+</a>
 </p>
 <br>
 <p>
 <span>お問い合わせ種類(必須)</span>
-<box8>
+<a class="box8">
 <select name="お問い合わせ種類">
 <option value="お問い合わせ種類">アカウントについて</option>
 <option value="お問い合わせ種類">お支払い方法について</option>
 <option value="お問い合わせ種類">注文内容について</option>
 <option value="お問い合わせ種類">その他</option>
 </select>
-</box8>
+</a>
 </p>
 <br>
 <p>
@@ -128,7 +111,7 @@
 <br><br><br>
 
 
-</center>
+</div>
 
 </body>
 </html>

@@ -1,45 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+    <!-- ここから国際化 -->
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <!-- ここまで国際化 -->
+
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 国際化 ロケールID取得 -->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<!-- 国際化 propertyファイルの場所の定義 -->
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.category" var="lang" />
+
+<meta charset="utf-8">
 <link rel="stylesheet" type="text/css"  href="CSS/category.css">
 
-<link rel="stylesheet" type="text/css"  href="CSS/header.css">
+
 <title>カテゴリ別ページ</title>
 </head>
 <body>
-<header>
-
-  <a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-　　　
-    <select name="検索窓">
-        <option value="">カテゴリー1</option>
-        <option value="">カテゴリー2</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-        <option value="">category3</option>
-    </select>
-     <a href="category_shojidairi.jsp">
-    	<input type="text" name="example" autocomplete="off"><input type="submit" value="検索"></a>
-
-
-    　　　<a href="login_kato.jsp" class="header_btn">ログイン</a>
-
-
-
-    　　　<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
-
-
-
-    　　　<a href="cart_jo.jsp" class="header_btn">カート</a>
-
-    　　　<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
-
-</header>
+	<header>
+		<s:include value="header.jsp" />
+	</header>
 
 <div class="main">
 <h3>"ワンピース"の検索結果</h3>
