@@ -55,11 +55,16 @@ public class AdminHelpAction  extends ActionSupport implements SessionAware{
 
 
 	    /**
+	     * 対応状況
+	     */
+        private String isDeleted;
+
+	    /**
 	     *セッション情報
 	     */
 	    private Map<String, Object> session;
 
-		private Object isDeleted;
+
 
 	    /**
 	     * 実行メソッド

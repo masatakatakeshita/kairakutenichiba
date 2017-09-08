@@ -30,6 +30,16 @@ public class HelpAction extends ActionSupport  implements SessionAware {
 private String userName;
 
 /**
+ * 問い合わせ者氏名（カナ）
+ */
+
+private String userNameKana;
+
+/**
+ *
+ */
+
+/**
  * 住所
  */
 private String userAddress;
@@ -117,6 +127,22 @@ public String getUserName() {
 public void setUserName(String userName) {
 	this.userName = userName;
 }
+
+/**
+ * 氏名（カナ）を取得するメソッド
+ */
+public String getUserNameKana() {
+	return userNameKana;
+}
+
+
+/**
+ * 氏名（カナ）を格納するメソッド
+ */
+public void setUserNameKana(String userNameKana) {
+	this.userNameKana = userNameKana;
+}
+
 
 /**
  * 住所を取得するメソッド
@@ -237,17 +263,6 @@ public void setUser_int(int userId) {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

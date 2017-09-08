@@ -21,7 +21,10 @@ public class AdminHelpDTO {
      */
     private int userId;
 
-
+    /**
+     * ログインフラグ
+     */
+    private boolean login;
     /**
      * 氏名
      */
@@ -86,7 +89,18 @@ public class AdminHelpDTO {
         this.userId = userId;
     }
 
-
+    /**
+     * ログインフラグを取得
+     */
+    public boolean getLogin() {
+    return login;
+    }
+    /**
+     * ログインフラグを格納
+     */
+    public void setLogin(boolean login) {
+    	this.login = login;
+    }
     /**
      * 氏名を取得する
      * @return userName

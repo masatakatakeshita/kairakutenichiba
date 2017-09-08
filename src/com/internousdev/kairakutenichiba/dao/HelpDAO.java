@@ -61,7 +61,7 @@ public class HelpDAO {
 
 
 	  /**
-     * 問い合わせフォームから送信された時に実行するメソッド
+     * ログインしている状態で問い合わせフォームから送信された時に実行するメソッド
      * @param userName 問い合わせ者の名前
      * @param userAdress 住所
      * @param userMail メールアドレス
