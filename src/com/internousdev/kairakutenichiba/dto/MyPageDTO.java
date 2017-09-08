@@ -14,7 +14,7 @@ public class MyPageDTO {
 		/**
 		 * ユーザーID
 		 */
-		private int userId;
+		private int user_id;
 
 		/**
 		 * パスワード
@@ -140,17 +140,17 @@ public class MyPageDTO {
 
 		/**
 		 * ユーザーIDを収納するメソッド
-		 * @return userId
+		 * @return user_id
 		 */
-		public int getUserId() {
-			return userId;
+		public int getUser_id() {
+			return user_id;
 		}
 		/**
 		 * ユーザーIDを格納するメソッド
-		 * @param userId セットする userId
+		 * @param user_id セットする user_id
 		 */
-		public void setUserId(int userId) {
-			this.userId = userId;
+		public void setUser_id(int user_id) {
+			this.user_id = user_id;
 		}
 		/**
 		 * パスワードを収納するメソッド
@@ -198,28 +198,28 @@ public class MyPageDTO {
 		 * 姓(漢字)を収納するメソッド
 		 * @return name
 		 */
-		public String getname() {
+		public String getName() {
 			return name;
 		}
 		/**
 		 * 姓(漢字)を格納するメソッド
 		 * @param name セットする name
 		 */
-		public void setname(String name) {
+		public void setName(String name) {
 			this.name = name;
 		}
 		/**
 		 * 姓(ひらがな)を収納するメソッド
 		 * @return hurigana
 		 */
-		public String gethurigana() {
+		public String getHurigana() {
 			return hurigana;
 		}
 		/**
 		 * 姓(ひらがな)を格納するメソッド
 		 * @param hurigana セットする hurigana
 		 */
-		public void sethurigana(String hurigana) {
+		public void setHurigana(String hurigana) {
 			this.hurigana = hurigana;
 		}
 		/**

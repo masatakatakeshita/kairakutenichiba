@@ -12,12 +12,12 @@ public class HistoryDTO {
 	/**
 	 * ユーザーID
 	 */
-	private int userId;
+	private int user_id;
 
 	/**
 	 *商品ID
 	 */
-	private int itemId;
+	private int item_id;
 
 	/**
 	 * 単価
@@ -50,34 +50,34 @@ public class HistoryDTO {
 
 	/**
 	 * ユーザーIDを取得するメソッド
-	 * @return userId
+	 * @return user_id
 	 */
-	public int getUserId() {
-		return userId;
+	public int getUser_id() {
+		return user_id;
 	}
 
 	/**
 	 * ユーザーIDを格納するメソッド
-	 * @param userId セットする userId
+	 * @param user_id セットする user_id
 	 */
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
 	}
 
 	/**
 	 * アイテムIDを取得するメソッド
-	 * @return itemId
+	 * @return item_id
 	 */
-	public int getItemId() {
-		return itemId;
+	public int getItem_id() {
+		return item_id;
 	}
 
 	/**
 	 * アイテムIDを格納するメソッド
-	 * @param itemId セットする itemId
+	 * @param item_id セットする item_id
 	 */
-	public void setItemId(int itemId) {
-		this.itemId = itemId;
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
 	}
 
 	/**
