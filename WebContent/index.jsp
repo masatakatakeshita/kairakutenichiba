@@ -16,6 +16,9 @@
 <fmt:setBundle basename="com.internousdev.kairakutenichiba.property.index" var="lang" />
 
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>快楽天市場トップ</title>
 
 <link rel="stylesheet" type="text/css"
@@ -23,6 +26,16 @@
 <!-- <link rel="stylesheet" type="text/css" href="CSS/index.css">  -->
 
 <link rel="stylesheet" type="text/css" href="CSS/index.css">
+<link rel="stylesheet" type="text/css"  href="CSS/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="CSS/slick.css">
+<link rel="stylesheet" type="text/css" href="CSS/slick-theme.css">
+
+
+<!-- Javascripts -->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- indexのcssのディレクトリ入れる 階層ごとに../が必要な場合がある。
     本当にディレクトリまでのパスがあっているか確かめる。-->
@@ -31,7 +44,7 @@
 
 
 <body>
-<!--  -->
+<!-- header読み込み -->
 	<header>
 		<s:include value="header.jsp" />
 	</header>
@@ -61,7 +74,7 @@
 			<div id="news">
 				<h2>Welcome to the Underground</h2>
 				<h3>体が、、、か。。ら・・だが求める・・・・・・・・・・・・・・・。</h3>
-				<p>
+
 					<br>
 					<br>
 					<br>
@@ -76,6 +89,41 @@
 					<br>
 					<br>
 					<br>
+<div>
+<ul class="slider">
+    <li><a href='<s:url action="GoItemDetailAction" ><s:param name="sortId" >5</s:param></s:url>'><img src="img/item/チビモン.png" class="img-responsive"></a></li>
+    <li><a href='<s:url action="GoItemDetailAction" ><s:param name="sortId" >6</s:param></s:url>'><img src="img/item/名探偵コナソ.png" class="img-responsive"></a></li>
+    <li><a href='<s:url action="GoItemDetailAction" ><s:param name="sortId" >4</s:param></s:url>'><img src="img/item/頭文字C.png" class="img-responsive"></a></li>
+</ul>
+
+<ul class="slider-nav">
+    <li><img src="img/item/チビモン.png" alt="" width="70" height="112"></li>
+    <li><img src="img/item/ねだめ カンタービレ.png" alt="" width="70" height="112"></li>
+    <li><img src="img/item/メガネ.png" alt="" width="70" height="112"></li>
+</ul>
+</div>
+
+  <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+  $(function() {
+	    $('.center-item').slick({
+	          infinite: true,
+	          dots:true,
+	          slidesToShow: 1,
+	          centerMode: true, //要素を中央寄せ
+	          centerPadding:'100px', //両サイドの見えている部分のサイズ
+	          autoplay:true, //自動再生
+	          responsive: [{
+	               breakpoint: 480,
+	                    settings: {
+	                         centerMode: false,
+	               }
+	          }]
+	     });
+	});
+    	</script>
+
+
 　　　　　　　　　＿＿＿_　<br>
 　　　　　　　／　　 　 　＼　<br>
 　　　　 　／　　ｒデﾐ　　 　＼ 楽天という快楽を<br>
@@ -86,7 +134,7 @@
 　 ／´　　　　　　　　　　　　 　　ヽ<br>
 　|　　　　                     ｌ<br>
 <br>
-				</p>
+
 				<p>
 					<a href="detail_yamaguchi.jsp"><img src="img/rakuten.png"
 						alt="下位楽天市場だから上位楽天市場のリンクは当たり前だよなぁ？" width="360" height="155" /></a>
