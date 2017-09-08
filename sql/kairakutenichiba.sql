@@ -51,7 +51,7 @@ create table items_images (
 );
 
 create table purchases_outlines (
-	purchase_id int not null primary key,/*購入ID*/
+	purchase_id int not null  auto_increment primary key,/*購入ID*/
 	user_id int not null,/*ユーザーID*/
 	total_price decimal(9,2) not null,/*価格合計*/
 	delivery enum('mail','rapid'),/*配送方法*/
@@ -66,7 +66,7 @@ create table purchases_outlines (
 
 create table purchases_details (
 	purchase_id int not null,/*購入ID*/
-	purchase_no int not null primary key,/*購入NO*/
+	purchase_no int not null auto_increment primary key,/*購入NO*/
 	user_id int not null,/*ユーザーID*/
 	item_id int not null,/*商品ID*/
 	quantities int not null default 1,/*数量*/
