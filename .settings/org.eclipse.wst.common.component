@@ -2,6 +2,7 @@
     <wb-module deploy-name="kairakutenichiba">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/"/>
         <property name="context-root" value="kairakutenichiba"/>
         <property name="java-output-path" value="/kairakutenichiba/bin"/>
     </wb-module>

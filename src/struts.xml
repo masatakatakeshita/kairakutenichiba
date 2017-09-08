@@ -9,7 +9,7 @@
 
 	<package name="com.internousdev.kairakutenichiba.action" extends="struts-default">
 
-		<!-- ログインアクション、SUCCESSならuser_mypage.jsp、ERRORならlogin.jsp、loginならadmin_top.jspに遷移する -->
+		<!-- あああログインアクション、SUCCESSならindex.jsp、ERRORならlogin.jsp、loginならadmin_top.jspに遷移する -->
 		<action name="LoginAction" class="com.internousdev.kairakutenichiba.action.LoginAction"
 			method="execute">
 			<result name="success">index.jsp</result>
@@ -17,7 +17,7 @@
 			<result name="login">admin_top_yama.jsp</result>
 		</action>
 
-		<!-- ログアウトアクション、SUCCESSならuser_top.jsp、ERRORならlogin.jspに遷移する -->
+		<!-- ログアウトアクション、SUCCESSならlogout_kato.jsp、ERRORならlogin.jspに遷移する -->
 		<action name="LogoutAction" class="com.internousdev.kairakutenichiba.action.LogoutAction"
 			method="execute">
 			<result name="success">logout_kato.jsp</result>
@@ -41,7 +41,7 @@
 		</action>
 
 		<!-- カートに商品の数を増減する -->
-		<action name="UpdateCartAction" class="com.internousdev.kairakutenichiba.action.UpdateCartAction"
+		<action name="CartUpdateAction" class="com.internousdev.kairakutenichiba.action.CartUpdateAction"
 			method="execute">
 			<result name="success">cart_jo.jsp</result>
 			<result name="error">cart_jo.jsp</result>
@@ -72,7 +72,7 @@
 		</action>
 
 		<!-- 支払い画面。成功なら購入確認、エラーならクレジット情報の間違いのページに飛ぶ -->
-		<action name="Payment" class="com.internousdev.kairakutenichiba.action.PaymentAction"
+		<action name="PaymentAction" class="com.internousdev.kairakutenichiba.action.PaymentAction"
 			method="execute">
 			<result name="success">check_shoji.jsp</result>
 			<result name="error">creditError.jsp</result>
