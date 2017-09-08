@@ -56,9 +56,9 @@ public class AdminItemDAO {
 			while (rs.next()) {
 				ItemDTO dto= new ItemDTO();
 
-				dto.setItemId(rs.getInt("item_id"));
+				dto.setItem_id(rs.getInt("item_id"));
 
-				dto.setItemsName(rs.getString("items_name"));
+				dto.setItem_name(rs.getString("items_name"));
 
 				dto.setPrice(rs.getFloat("price"));
 
@@ -70,15 +70,15 @@ public class AdminItemDAO {
 
 				dto.setImgPath(rs.getString("img_path"));
 
-				dto.setSortId(rs.getInt("sort_id"));
+				dto.setCategory_id(rs.getInt("sort_id"));
 
-				dto.setCreatedAt(rs.getString("created_at"));
+				dto.setCreated_at(rs.getString("created_at"));
 
-				dto.setUpdatedAt(rs.getString("updated_at"));
+				dto.setUpdated_at(rs.getString("updated_at"));
 
-				dto.setDelKey(rs.getBoolean("del_key"));
+				dto.setIs_deleted(rs.getBoolean("del_key"));
 
-				switch(dto.getSortId()){
+				switch(dto.getCategory_id()){
 				case 1:dto.setItemGenre(""); break;
 				case 2:dto.setItemGenre(""); break;
 				case 3:dto.setItemGenre(""); break;

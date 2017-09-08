@@ -59,19 +59,19 @@ public class AdminItemDisplayDAO {
 
             while (rs1.next()) {
                 itemDTO = new ItemDTO();
-                itemDTO.setItemId(rs1.getInt("item_id"));
-                itemDTO.setCategoryId(rs1.getInt("category_id"));
-                itemDTO.setItemName(rs1.getString("item_name"));
+                itemDTO.setItem_id(rs1.getInt("item_id"));
+                itemDTO.setCategory_id(rs1.getInt("category_id"));
+                itemDTO.setItem_name(rs1.getString("item_name"));
                 itemDTO.setPrice(rs1.getFloat("price"));
                 itemDTO.setStocks(rs1.getInt("stocks"));
                 itemDTO.setSales(rs1.getInt("sales"));
                 itemDTO.setItemDetail(rs1.getString("item_detail").replace("\n", "<br>"));
                 itemDTO.setIsDeleted(rs1.getBoolean("is_deleted"));
-                itemDTO.setCreatedAt(rs1.getTimestamp("created_at").toString());
-                itemDTO.setUpdatedAt(rs1.getTimestamp("updated_at").toString());
+                itemDTO.setCreated_at(rs1.getTimestamp("created_at").toString());
+                itemDTO.setUpdated_at(rs1.getTimestamp("updated_at").toString());
 
                 ps2 = con.prepareStatement(sql2);
-                ps2.setInt(1, itemDTO.getItemId());
+                ps2.setInt(1, itemDTO.getItem_id());
                 rs2 = ps2.executeQuery();
                 int count = 1;
                 if (rs2.next()) {

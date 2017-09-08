@@ -41,7 +41,7 @@ public class AdminUserDAO {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 
-				dto.setUser_id(rs.getInt("user_id"));
+				dto.setUserId(rs.getInt("userId"));
 
 				dto.setFamilyName(rs.getString("family_name"));
 
