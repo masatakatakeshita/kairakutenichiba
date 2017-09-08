@@ -34,12 +34,12 @@ public class MyPageDTO {
 		/**
 		 * 姓(漢字)
 		 */
-		private String familyNameKanji;
+		private String name;
 
 		/**
 		 * 姓(ひらがな)
 		 */
-		private String familyNameKana;
+		private String hurigana;
 
 		/**
 		 * 名(漢字)
@@ -196,31 +196,31 @@ public class MyPageDTO {
 		}
 		/**
 		 * 姓(漢字)を収納するメソッド
-		 * @return familyNameKanji
+		 * @return name
 		 */
-		public String getFamilyNameKanji() {
-			return familyNameKanji;
+		public String getname() {
+			return name;
 		}
 		/**
 		 * 姓(漢字)を格納するメソッド
-		 * @param familyNameKanji セットする familyNameKanji
+		 * @param name セットする name
 		 */
-		public void setFamilyNameKanji(String familyNameKanji) {
-			this.familyNameKanji = familyNameKanji;
+		public void setname(String name) {
+			this.name = name;
 		}
 		/**
 		 * 姓(ひらがな)を収納するメソッド
-		 * @return familyNameKana
+		 * @return hurigana
 		 */
-		public String getFamilyNameKana() {
-			return familyNameKana;
+		public String gethurigana() {
+			return hurigana;
 		}
 		/**
 		 * 姓(ひらがな)を格納するメソッド
-		 * @param familyNameKana セットする familyNameKana
+		 * @param hurigana セットする hurigana
 		 */
-		public void setFamilyNameKana(String familyNameKana) {
-			this.familyNameKana = familyNameKana;
+		public void sethurigana(String hurigana) {
+			this.hurigana = hurigana;
 		}
 		/**
 		 * 名(漢字)を収納するメソッド
