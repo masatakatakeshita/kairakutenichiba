@@ -13,7 +13,7 @@
 <!-- 国際化 ロケールID取得 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <!-- 国際化 propertyファイルの場所の定義 -->
-<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.detail" var="lang" />
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.help" var="lang" />
 
 <meta charset="utf-8">
 <title>ヘルプ：お問い合わせ方法</title>

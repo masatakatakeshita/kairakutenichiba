@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
 <meta charset="utf-8">
