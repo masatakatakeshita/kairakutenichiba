@@ -160,7 +160,7 @@
 
 
 		<!-- Mypageの情報を表示させるアクション -->
-		<action name="UserAction" class="com.internousdev.kairakutenichiba.action.UserAction"
+		<action name="MyPageAction" class="com.internousdev.kairakutenichiba.action.MyPageAction"
 			method="execute">
 			<result name="success">account_enju.jsp</result>
 			<result name="error">index.jsp</result>
