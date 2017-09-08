@@ -9,13 +9,12 @@ use kairakutenichiba;
 #--------------------------各テーブルの作成--------------------------
 
 create table items(
-	item_id int not null aury_id int not null,/*カテゴリ*/
-	release_day date notto_increment primary key,/*商品ID*/
+	item_id int not null primary key,/*商品ID*/
 	item_name varchar(100) not null,/*商品名*/
 	category_id int not null,/*カテゴリ番号*/
 	release_day date not null /*発売日*/
 	author varchar(100) not null,/*著者*/
-	publisher varchar(100),	/*出版社*/
+	publisher varchar(100),not null/*出版社*/
 	publish_type varchar(100) not null,/*発行形態*/
 	pages int not null,/*ページ数*/
 	isbn int not null,/*ISBNコード*/
@@ -23,7 +22,7 @@ create table items(
 	stocks int not null,/*在庫数*/
 	sales int,/*売り上げ数*/
 	item_datail text not null,/*商品詳細*/
-	is_deleted boolean not null default FALSE,/*商品削除*/
+	is_deleted boolean default FALSE,/*商品削除*/
 	created_at datetime not null default current_timestamp,/*登録日*/
 	updated_at datetime not null default current_timestamp,/*更新日*/
 
