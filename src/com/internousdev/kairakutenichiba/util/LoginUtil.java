@@ -29,8 +29,8 @@ public class LoginUtil extends ActionSupport{
 	 */
 	public String validate(MyPageDTO dto, Map<String, Object> session) {
 		String errorMsg = null;
-		if (session.containsKey("user_id")) {
-			if ((int) (session.get("user_id")) == (dto.getUserId())) {
+		if (session.containsKey("userId")) {
+			if ((int) (session.get("userId")) == (dto.getUserId())) {
 				errorMsg = getText("lang.login.notDouble");
 			} else {
 				errorMsg = getText("lang.login.notSameTime");
