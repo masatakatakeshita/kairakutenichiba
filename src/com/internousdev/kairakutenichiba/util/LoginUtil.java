@@ -25,14 +25,12 @@ public class LoginUtil extends ActionSupport{
 	 * @param dto DBから抽出したユーザーDTOのインスタンス
 	 * @param session セッション
 	 * @return errorMsg
-	 * @author Kaito Fukutani
-	 * @since 2017/5/22
 	 * @version 1.0
 	 */
 	public String validate(MyPageDTO dto, Map<String, Object> session) {
 		String errorMsg = null;
-		if (session.containsKey("userId")) {
-			if ((int) (session.get("userId")) == (dto.getUserId())) {
+		if (session.containsKey("user_id")) {
+			if ((int) (session.get("user_id")) == (dto.getUser_id())) {
 				errorMsg = getText("lang.login.notDouble");
 			} else {
 				errorMsg = getText("lang.login.notSameTime");
@@ -52,8 +50,6 @@ public class LoginUtil extends ActionSupport{
 	 * @param dto DBから抽出したユーザーDTOのインスタンス
 	 * @param session セッション
 	 * @return errorMsg
-	 * @author Kaito Fukutani
-	 * @since 2017/5/22
 	 * @version 1.0
 	 */
 	public String validate(String email, String password, MyPageDTO dto, Map<String, Object> session) {
