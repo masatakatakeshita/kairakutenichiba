@@ -162,7 +162,7 @@
 		<!-- Mypageの情報を表示させるアクション -->
 		<action name="UserAction" class="com.internousdev.kairakutenichiba.action.UserAction"
 			method="execute">
-			<result name="success">mypage_enju.jsp</result>
+			<result name="success">touroku_enju.jsp</result>
 			<result name="error">index.jsp</result>
 			<result name="login">admin_customer.jsp</result>
 		</action>
