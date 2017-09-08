@@ -8,33 +8,34 @@ use kairakutenichiba;
 
 #--------------------------各テーブルの作成--------------------------
 
-create table items(
-	item_id int not null primary key,/*商品ID*/
-	item_name varchar(100) not null,/*商品名*/
-	category_id int not null,/*カテゴリ番号*/
-	release_day date not null /*発売日*/
-	author varchar(100) not null,/*著者*/
-	publisher varchar(100),not null/*出版社*/
-	publish_type varchar(100) not null,/*発行形態*/
-	pages int not null,/*ページ数*/
-	isbn int not null,/*ISBNコード*/
-	price decimal(9,2) not null,/*単価*/
-	stocks int not null,/*在庫数*/
-	sales int,/*売り上げ数*/
-	item_datail text not null,/*商品詳細*/
-	is_deleted boolean default FALSE,/*商品削除*/
-	created_at datetime not null default current_timestamp,/*登録日*/
-	updated_at datetime not null default current_timestamp,/*更新日*/
-
-	foreign key(category_id)references categories(category_id)
-);
-
 create table categories (
 	category_id int not null auto_increment primary key,/*カテゴリ番号*/
 	category_name varchar(20) not null,/*カテゴリ名*/
 	created_at datetime not null default current_timestamp,/*登録日*/
 	updated_at datetime not null default current_timestamp/*更新日*/
 );
+
+create table items(
+	item_id int not null primary key,/*商品ID*/
+	item_name varchar(100) not null,/*商品名*/
+	category_id int not null,/*カテゴリ番号*/
+	release_day date not null,/*発売日*/
+	author varchar(100) not null,/*著者*/
+	publisher varchar(100)not null,/*出版社*/
+	publish_type varchar(100) not null,/*発行形態*/
+	pages int not null,/*ページ数*/
+	isbn long not null,/*ISBNコード*/
+	price decimal(9,2) not null,/*単価*/
+	stocks int not null,/*在庫数*/
+	sales int default 0,/*売り上げ数*/
+	item_datail text not null,/*商品詳細*/
+	is_deleted boolean default false,/*商品削除*/
+	created_at datetime not null default current_timestamp,/*登録日*/
+	updated_at datetime not null default current_timestamp,/*更新日*/
+
+	foreign key(category_id)references categories(category_id)
+);
+
 
 create table items_images (
 	item_id int not null,/*商品ID*/
@@ -124,23 +125,23 @@ Templete:(商品ID,'商品名','カテゴリ番号','発売日','著者','出版
 単価,在庫数,売り上げ数,"詳細説明文")
 */
 insert into items(
-item_id,item_name,category_id,release_day,author,publisher,publish_type,pages,isbn,price,stocks,sales,item_detail)
+item_id,item_name,category_id,release_day,author,publisher,publish_type,pages,isbn,price,stocks,item_datail)
 values
-(1,'チビモン',1,'20XX年XX月YY日','佐藤次郎','快楽社','漫画','178P','ISBN9784123456789',480,150,50,"商品詳細"),
-(2,'メガネ',4,'19XX年XX月YY日','鈴木花子','快楽社','文庫','382P','ISBN9784123789456',650,180,20,"商品詳細"),
-(3,'ライオンの飼育方法',3,'20XX年XX月YY日','佐藤次郎','快楽社','文庫','282P','ISBN9784789456123',480,130,70,"商品詳細"),
-(4,'ワイルドフラワー',2,'20XX年XX月YY日','山田太郎','快楽社','漫画','180P','ISBN9874159324786',440,160,40,"商品詳細"),
-(5,'快楽店市場の歴史',5,'20XX年XX月YY日','山田太郎','快楽社','雑誌','60P','ISBN9874741236985',440,100,100,"商品詳細"),
-(6,'世界の絶景',5,'20XX年XX月YY日','山田太郎','快楽社','雑誌','64P','ISBN9874147896325',520,165.35,"商品詳細"),
-(7,'正しい寿司の握り方',5,'20XX年XX月YY日','鈴木花子','快楽社','雑誌','45P','ISBN9874852147963',490,177,23,"商品詳細"),
-(8,'美しいホネ',3,'20XX年XX月YY日','山田太郎','快楽社','文庫','215050P','ISBN9874963258741',620,146,54,"商品詳細"),
-(9,'名探偵コナソ',1,'20XX年XX月YY日','赤山剛昌','快楽社','漫画','186P','ISBN9874147963258',460,152,48,"商品詳細"),
-(10,'僕に届け',2,'20XX年XX月YY日','椎名重穂','快楽社','漫画','186P','ISBN9874951463782',460,140,60,"商品情報"),
-(11,'ノルウェイの林(上)',4,'20XX年XX月YY日','村上冬樹','快楽社','文庫','300P','ISBN9874456987321',600,100,100,"商品情報"),
-(12,'ノルウェイの林(下)',4,'20XX年XX月YY日','村上冬樹','快楽社','文庫','300P','ISBN9874456986321',600,100,100,"商品情報"),
-(13,'俺の姉がこんなに可愛いわけがない',3,'20XX年XX月YY日','伏目つかさ','快楽社','文庫','264P','ISBN92874197842136',460,130,70,"商品情報"),
-(14,'頭文字C',1,'20XX年XX月YY日','しげの秀二','快楽社','漫画','196P','ISBN9874102365478',420,125,75,"商品情報"),
-(15,'ねだめ　カンタービレ',2,'20XX年XX月YY日','三ノ宮知子','快楽社','漫画','192P','ISBN9874102512305',420,136,64,"商品情報");
+(1,'チビモン',1,'2099-12-31','佐藤次郎','快楽社','漫画',178,9784123456789,480,1000,"商品詳細"),
+(2,'メガネ',4,'2099-12-31','鈴木花子','快楽社','文庫',382,9784123789456,650,1000,"商品詳細"),
+(3,'ライオンの飼育方法',3,'2099-12-31','佐藤次郎','快楽社','文庫',282,9784789456123,480,1000,"商品詳細"),
+(4,'ワイルドフラワー',2,'2099-12-31','山田太郎','快楽社','漫画',180,9874159324786,440,1000,"商品詳細"),
+(5,'快楽店市場の歴史',5,'2099-12-31','山田太郎','快楽社','雑誌',60,9874741236985,440,1000,"商品詳細"),
+(6,'世界の絶景',5,'2099-12-31','山田太郎','快楽社','雑誌',64,9874147896325,520,1000,"商品詳細"),
+(7,'正しい寿司の握り方',5,'2099-12-31','鈴木花子','快楽社','雑誌',45,9874852147963,490,1000,"商品詳細"),
+(8,'美しいホネ',3,'2099-12-31','山田太郎','快楽社','文庫',215,9874963258741,620,1000,"商品詳細"),
+(9,'名探偵コナソ',1,'2099-12-31','赤山剛昌','快楽社','漫画',186,9874147963258,460,1000,"商品詳細"),
+(10,'僕に届け',2,'2099-12-31','椎名重穂','快楽社','漫画',186,9874951463782,460,1000,"商品情報"),
+(11,'ノルウェイの林(上)',4,'2099-12-31','村上冬樹','快楽社','文庫',300,9874456987321,600,1000,"商品情報"),
+(12,'ノルウェイの林(下)',4,'2099-12-31','村上冬樹','快楽社','文庫',300,9874456986321,600,1000,"商品情報"),
+(13,'俺の姉がこんなに可愛いわけがない',3,'2099-12-31','伏目つかさ','快楽社','文庫',264,92874197842136,460,1000,"商品情報"),
+(14,'頭文字C',1,'2099-12-31','しげの秀二','快楽社','漫画',196,9874102365478,420,1000,"商品情報"),
+(15,'ねだめ　カンタービレ',2,'2099-12-31','三ノ宮知子','快楽社','漫画',192,9874102512305,420,1000,"商品情報");
 
 
 #--------------------------商品情報(画像パス)--------------------------
