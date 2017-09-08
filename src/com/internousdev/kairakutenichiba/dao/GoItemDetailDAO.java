@@ -73,7 +73,7 @@ public class GoItemDetailDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<ItemDTO> selectbyItem(int itemId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","openconnect", "root","mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","kairakutenichiba", "root","mysql");
 		Connection con = db.getConnection();
 		ItemDTO dto = new ItemDTO();
 		ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
