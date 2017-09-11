@@ -37,7 +37,7 @@ public class GoItemDetailDAO {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()){
 				ItemDTO dto=new ItemDTO();
-				dto.setCategory_id(rs.getInt("category_id"));
+				dto.setCategory(rs.getString("category"));
 				dto.setItem_id(rs.getInt("item_id"));
 				dto.setItem_name(rs.getString("item_name"));
 				dto.setPrice(rs.getFloat("price"));
@@ -48,10 +48,9 @@ public class GoItemDetailDAO {
 				dto.setPages(rs.getInt("pages"));
 				dto.setIsbn(rs.getInt("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
-				dto.setItemDetail(rs.getString("items_detail"));
-				dto.setItemImg01(rs.getString("item_img01"));
-				dto.setItemImg02(rs.getString("item_img02"));
-				dto.setImgPath(rs.getString("img_path"));
+				dto.setItemDetail(rs.getString("item_detail"));
+				dto.setItemImg01(rs.getString("item_image"));
+			
 				searchList.add(dto);
 			}
 		} catch (SQLException e ) {
@@ -84,7 +83,7 @@ public class GoItemDetailDAO {
 			ps.setInt(1, itemId);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()){
-				dto.setCategory_id(rs.getInt("category_id"));
+				dto.setCategory(rs.getString("category"));
 				dto.setItem_id(rs.getInt("item_id"));
 				dto.setItem_name(rs.getString("item_name"));
 				dto.setPrice(rs.getFloat("price"));
@@ -96,7 +95,7 @@ public class GoItemDetailDAO {
 				dto.setIsbn(rs.getInt("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
 				dto.setItemDetail(rs.getString("items_detail"));
-				dto.setImgPath(rs.getString("img_path"));
+				dto.setItemImg01(rs.getString("item_image"));
 				itemList.add(dto);
 			}
 		} catch (SQLException e ) {
