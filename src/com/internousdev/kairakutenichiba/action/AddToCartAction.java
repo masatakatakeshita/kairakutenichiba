@@ -80,7 +80,8 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     */
 
     /**
-    * 実行メソッド 処理内容と順番 1：セッション情報を持っているか判断 2：購入数が在庫数を超えていないか判断
+    * 実行メソッド 処理内容と順番 1：セッション情報を持っているか判断→ログインしているかどうかに変更したい
+    *  2：購入数が在庫数を超えていないか判断
     * 3：遷移元のitemId,itemName,price,quantity,imgPathとsession内のuserIdを使用し、
     * カートへ指定商品を登録 4：カートへ登録された情報を取得 5：カート内の情報を元に購入商品の合計金額金額を算出
     */
@@ -91,7 +92,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
         if (session.containsKey("userId")) {
             userId = (int) session.get("userId");
             AddToCartDAO dao = new AddToCartDAO();
-            itemStatus = (dao).itemStatus(itemId);
+            itemStatus = dao.itemStatus(itemId);
 
             if(dao.addToCart(userId, itemId, quantities)){
                 return result;

@@ -39,7 +39,7 @@
 			<tr align="center">
 
 
-				<!-- table表示項目 -->
+				<!-- （荘司）table表示項目 -->
 
 				<th>販売日</th>
 				<th>ユーザID</th>
