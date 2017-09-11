@@ -70,24 +70,13 @@ public class AdminItemDAO {
 
 				dto.setImgPath(rs.getString("img_path"));
 
-				dto.setCategory_id(rs.getInt("sort_id"));
+				dto.setCategory(rs.getString("category"));
 
 				dto.setCreated_at(rs.getString("created_at"));
 
 				dto.setUpdated_at(rs.getString("updated_at"));
 
 				dto.setIs_deleted(rs.getBoolean("del_key"));
-
-				switch(dto.getCategory_id()){
-				case 1:dto.setItemGenre(""); break;
-				case 2:dto.setItemGenre(""); break;
-				case 3:dto.setItemGenre(""); break;
-				case 4:dto.setItemGenre(""); break;
-				case 5:dto.setItemGenre(""); break;
-				case 6:dto.setItemGenre(""); break;
-				case 7:dto.setItemGenre(""); break;
-				case 8:dto.setItemGenre(""); break;
-				}
 
 				itemList.add(dto);
 			}
