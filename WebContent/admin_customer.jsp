@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 
 <head>
+<fmt:setBundle basename="com.internousdev.legmina.property.admin_customer"
+	var="lang" />
 <meta charset="utf-8">
-<title>管理者画面 顧客情報</title>
+<!-- 顧客情報 -->
+<title><s:text name="com.lang.admin_customer.topTitle"/></title>
 <link rel="stylesheet" type="text/css" href="CSS/admin_customer.css">
 
 </head>
@@ -24,39 +28,58 @@
 tr table row 行←横に長い長方形。
 td table date セル←長方形の内部データ。小さい四角
 -->
-	<a href="xxx.html">管理者画面トップ</a>
-	<a href="xxx.html"></a>
-	<a href="xxx.html"></a>
-	<a href="xxx.html"></a>
-	<a href="xxx.html"></a>
-	<h1>管理者画面 顧客情報</h1>
-	<p>
-		<input type="text" name="検索" maxlength="40" placeholder="検索">
-	</p>
-	<p>
-		<input type="submit" value="検索">
-	</p>
+
+	<h1>
+		<s:text name="lang.admin_customer.topTitle"/>
+	</h1>
+	<hr>
+	
+	
+	<s:form action = "AdminUserAction">
+		<s:textfield name="userId" size="50" placeholder="userId" type ="number" min="0" max="100000"/>
+		<s:submit value="Search"></s:submit>
+	</s:form>
+<br>
+	
 	<table>
 		<tr>
-			<td>ID</td>
-			<td>氏名</td>
-			<td>氏名かな</td>
-			<td>パスワード</td>
-			<td>メールアドレス</td>
-			<td>住所</td>
-			<td>登録日</td>
-			<td>更新日</td>
+			<!-- ID -->
+			<td><s:text name="lang.admin_customer.id"/></td>
+			<!-- 氏名 -->
+			<td><s:text name="lang.admin_customer.userName"/></td>
+			<!-- 性別 -->
+			<td><s:text name="lang.admin_customer.Sex"/></td>
+			<!-- 生年月日 -->
+			<td><s:text name="lang.admin_customer.update"/></td>
+			<!-- パスワード -->
+			<td><s:text name="lang.admin_customer.password"/></td>
+			<!-- メールアドレス -->
+			<td><s:text name="lang.admin_customer.email"/></td>
+			<!-- 電話番号 -->
+			<td><s:text name="lang.admin_customer.PhoneNumber"/></td>
+			<!-- 郵便番号-->
+			<td><s:text name="lang.admin_customer.postal"/></td>
+			<!-- 住所 -->
+			<td><s:text name="lang.admin_customer.streetaddress"/></td>
+			<!-- 登録日 -->
+			<td><s:text name="lang.admin_customer.dt"/></td>
 		</tr>
+		
 		<tr>
-			<td>1</td>
-			<td>john</td>
-			<td>ジョン</td>
-			<td>password</td>
-			<td>john@gmail.com</td>
-			<td>地球</td>
-			<td>0年1月1日</td>
-			<td>明日</td>
-
+<!-- itemListはDAOで定義された配列オブジェクト -->
+			<s:iterator value = "itemList">		
+<!-- s:property は変数内のvalue(値のこと)をgetするタグ -->
+				<td><s:property value="userId" /></td>
+				<td><s:property value="familyName" /></td>
+				<td><s:property value="sex" /></td>
+				<td><s:property value="birthday" /></td>
+				<td><s:property value="password" /></td>
+				<td><s:property value="phoneNumber" /></td>
+				<td><s:property value="phoneEmail" /></td>
+				<td><s:property value="postal" /></td>
+				<td><s:property value="address" /></td>
+				<td><s:property value="registerDay" /></td>
+			</s:iterator>
 		</tr>
 	</table>
 
