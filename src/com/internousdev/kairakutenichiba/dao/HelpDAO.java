@@ -22,7 +22,6 @@ public class HelpDAO {
      * @param userMail メールアドレス
      * @param category 問い合わせ種類
      * @param comment 本文
-     * @param login ログイン情報
      * @return countをactionに返す
      */
     public int insertDAO(String userName, String userAddress, String userMail, String category, String comment) {

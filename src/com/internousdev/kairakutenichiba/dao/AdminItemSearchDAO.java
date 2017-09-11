@@ -71,7 +71,7 @@ public class AdminItemSearchDAO {
             while(rs1.next()){
                 itemDTO = new ItemDTO();
                 itemDTO.setItem_id(rs1.getInt("item_id"));
-                itemDTO.setCategory_id(rs1.getInt("category_id"));
+                itemDTO.setCategory(rs1.getString("category_id"));
                 itemDTO.setItem_name(rs1.getString("item_name"));
                 itemDTO.setPrice(rs1.getFloat("price"));
                 itemDTO.setStocks(rs1.getInt("stocks"));

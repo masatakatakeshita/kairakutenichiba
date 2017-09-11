@@ -104,7 +104,7 @@ public class ItemDTO {
 	/**
 	 * カテゴリID
 	 */
-	private int category_id;
+	private String category;
 
 	/**
 	 * 種類
@@ -391,16 +391,16 @@ public class ItemDTO {
 	 * カテゴリIDを取得するメソッド
 	 * @return category_id
 	 */
-	public int getCategory_id() {
-		return category_id;
+	public String getCategory() {
+		return category;
 	}
 
 	/**
 	 * カテゴリIDを格納するメソッド
 	 * @param category_id セットする category_id
 	 */
-	public void setCategory_id(int category_id) {
-		this.category_id = category_id;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	/**

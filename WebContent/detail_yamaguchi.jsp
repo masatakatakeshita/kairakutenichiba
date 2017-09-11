@@ -45,7 +45,10 @@
 <div class="cart">
 <h1>価格</h1>
 <div class="price"><p>500円(税込)</p></div>
-<a href="cart_jo.jsp"><input type="submit"value="カートに商品を追加"></a>
+
+<s:form action = "AddToCartAction">
+ <s:submit value="商品をカートに追加"/>
+</s:form>
 
 </div>
 

@@ -31,7 +31,7 @@ public class CartDeleteDAO {
         Connection con = db.getConnection();
         String sql1 = "select * from carts where user_id=? and cart_id=?";
         String sql2 = "delete from carts where user_id=? and cart_id=?";
-        String sql3 = "update items set stocks=stocks+? where item_id=?";
+       
         try {
             PreparedStatement ps = con.prepareStatement(sql1);
             ps.setInt(1, userId);
@@ -39,25 +39,14 @@ public class CartDeleteDAO {
             ResultSet rs = ps.executeQuery();
 
             if(rs.next()){
-                int itemId=rs.getInt("item_id");
-                int quantities=rs.getInt("quantities");
+               
                 ps.close();
                 rs.close();
                 ps = con.prepareStatement(sql2);
                 ps.setInt(1, userId);
                 ps.setInt(2, cartId);System.out.println(ps.toString());
-                delCount = ps.executeUpdate();
-
-                if(delCount>0){
-                    ps.close();
-                    rs.close();
-                    ps = con.prepareStatement(sql3);
-                    ps.setInt(1, quantities);
-                    ps.setInt(2, itemId);
-                    delCount = ps.executeUpdate();
                 }
-            }
-
+            
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

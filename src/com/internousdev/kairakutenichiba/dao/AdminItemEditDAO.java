@@ -37,7 +37,7 @@ public class AdminItemEditDAO {
             if (rs.next()) {
 
                 dto.setItem_id(rs.getInt("item_id"));
-                dto.setCategory_id(rs.getInt("category_id"));
+                dto.setCategory(rs.getString("category"));
                 dto.setItem_name(rs.getString("item_name"));
                 dto.setPrice(rs.getFloat("price"));
                 dto.setStocks(rs.getInt("stocks"));
