@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 
 <head>
+<fmt:setBundle basename="com.internousdev.legmina.property.admin_help" var="lang" />
 <meta charset="utf-8">
-<title>ヘルプ・お問い合わせ管理者</title>
+<title><s:text name="lang.admin_contact.topTitle" /></title>
 
 </head>
 <body>
@@ -19,10 +21,10 @@
 	<br>
 	<br>
 
-	<h1>管理者・問い合わせ</h1>
+	<h1><s:text name="lang.admin_contact.h1title" /></h1>
 	<p>
-
-		検索したいキーワードを入力してください。 <br> <input type="text" name="検索" size="30"
+		検索したいキーワードを入力してください。 
+		<br> <input type="text" name="検索" size="30"
 			placeholder="キーワードを入力"> <input type="submit" value="検索">
 	<p>お問い合わせ一覧
 	<table border="1" cellspacing="0">
