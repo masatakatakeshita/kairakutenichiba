@@ -14,6 +14,7 @@ h2 {
 
 }
 
+
 form#form2 {
 	margin: 0px auto;
 	color: #666;
@@ -21,7 +22,7 @@ form#form2 {
 	margin-bottom: 15px;
 	border: 3px solid #EEE9ED;
 	border-radius: 15px;
-	width: 800px;
+	width: 725px;
 }
 
 form#form2 p {
@@ -119,7 +120,7 @@ form#form2 .box6 {
 }
 
 form#form2 .box7 {
-	margin-right: 130px;
+	margin-right: 135px;
 }
 
 form#form2 .box8 {

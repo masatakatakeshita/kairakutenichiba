@@ -82,16 +82,8 @@ public String execute() {
     HelpDAO dao = new HelpDAO();
     int count = 0;
 
-    if (session.get("userId") != null) {
-        userId = (int) session.get("userId");
-        login = true;
-    }
 
-    if (login) {
         count = dao.insertDAO(userName, userAddress, userMail, category, comment);
-    } else {
-        count = dao.insertDAO(userName, userAddress, userMail, category, comment);
-    }
     if (count > 0) {
         result = SUCCESS;
     }

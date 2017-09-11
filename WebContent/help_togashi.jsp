@@ -6,6 +6,7 @@
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <!-- ここまで国際化 -->
 
+
 <!DOCTYPE html>
 <html>
 
@@ -22,6 +23,8 @@
 <link rel="stylesheet" type="text/css" href="http://localhost:8080/kairakutenichiba/CSS/help.css">
 
 <link rel="stylesheet" type="text/css"  href="CSS/header.css">
+
+
 
 </head>
 <body>
@@ -46,14 +49,16 @@
 
 <form action="helplink_togashi.jsp" id="form2">
 
+
 <div class="boxA">
 
 
 
 <p>
-<span>氏名(必須)</span>
+<span>氏名<font color="red">(必須)</font></span>
 <a class="box1">
-<input type="text" name="氏名">
+<input type="text" name="氏名"required autofocus>
+
 </a>
 </p>
 
@@ -61,7 +66,8 @@
 <p>
 <span>住所</span>
 <a class ="box3">
-〒<input type="text" name="郵便番号" size="10">
+〒<input type="text" name="郵便番号" size="10" pattern="\d{3}-?\d{4}"placeholder="123-4567">
+
 </a>
 <br>
 <a class="box4">
@@ -72,21 +78,21 @@
 <br>
 
 <p>
-<span>メールアドレス(必須)</span>
+<span>メールアドレス<font color="red">(必須)</font></span>
 <a class="box6">
-<input type="text" name="メールアドレス" size="30">
+<input type="text" name="メールアドレス" size="30"required>
 </a>
 <br>
 <span>　</span>
 <a class="box7">
-<input type="text" name="メールアドレス" size="30"  placeholder="確認のため再度入力">
+<input type="text" name="メールアドレス" size="30"  placeholder="確認のため再度入力"required>
 </a>
 </p>
 <br>
 <p>
-<span>お問い合わせ種類(必須)</span>
+<span>お問い合わせ種類<font color="red">(必須)</font></span>
 <a class="box8">
-<select name="お問い合わせ種類">
+<select name="お問い合わせ種類"required>
 <option value="お問い合わせ種類">アカウントについて</option>
 <option value="お問い合わせ種類">お支払い方法について</option>
 <option value="お問い合わせ種類">注文内容について</option>
@@ -96,8 +102,8 @@
 </p>
 <br>
 <p>
-<span>お問い合わせ内容(必須)</span>
-<textarea name="△" rows="10" cols="50"></textarea>
+<span>お問い合わせ内容<font color="red">(必須)</font></span>
+<textarea name="△" rows="10" cols="50"required></textarea>
 <br>
 </p>
 <p>
@@ -106,7 +112,11 @@
 
 </div>
 
+
+
+
 </form>
+
 
 
 
