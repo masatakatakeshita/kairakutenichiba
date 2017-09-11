@@ -34,8 +34,8 @@ public class AddToCartDAO {
         Connection con = db.getConnection();
         ArrayList<ItemDTO> itemStatus = new ArrayList<ItemDTO>();
 
-        String sql = "select * from items where item_id = ?";
-
+        String sql= "select * from items where item_id = ?";
+        
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, itemId);
@@ -46,6 +46,7 @@ public class AddToCartDAO {
                 dto.setPrice(rs.getFloat("price"));
                 dto.setQuantities(rs.getInt("quantities"));
                 itemStatus.add(dto);
+               
             }
         } catch (SQLException e) {
             e.printStackTrace();
