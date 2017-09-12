@@ -10,10 +10,7 @@ import com.internousdev.kairakutenichiba.dao.GoItemDetailDAO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 /**
-* ジャンル別に商品一覧を表示するクラス
-* @author Tatsuhiro Saito
-* @since 2017/05/19
-* @version 1.0
+* 商品詳細を表示するクラス
 */
 public class GoItemDetailAction extends ActionSupport {
 
@@ -34,11 +31,6 @@ public class GoItemDetailAction extends ActionSupport {
     */
 
 	private String itemsName;
-
-	/**
-	 * 種類ID
-    */
-	private int sortId;
 
 	/**
 	 * 単価
@@ -71,12 +63,12 @@ public class GoItemDetailAction extends ActionSupport {
 
 
 	/**
-	 * 商品一覧表示用リストの生成
+	 * 商品情報表示用リストの生成
     */
 	public String execute() throws SQLException {
 		String result = ERROR;
 		GoItemDetailDAO dao = new GoItemDetailDAO();
-		displayList = dao.select(sortId);
+		displayList = dao.select(itemId);
 		if(displayList.size() != 0) {
 			result = SUCCESS;
 		}
@@ -130,24 +122,6 @@ public class GoItemDetailAction extends ActionSupport {
 
 
 
-	/**
-	 * 種類IDを取得するメソッド
-	 * @return sortId　種類ID
-	 */
-	public int getSortId() {
-		return sortId;
-	}
-
-
-
-
-	/**
-	 * 種類IDを格納するメソッド
-	 * @param sortId セットする sortId
-	 */
-	public void setSortId(int sortId) {
-		this.sortId = sortId;
-	}
 
 
 

@@ -74,7 +74,7 @@ public class CartAssist extends ActionSupport{
 	public int totalNumber(int cartId,int quantities, int itemId) throws SQLException {
 		GoItemDetailDAO itemStock = new GoItemDetailDAO();
 		List<ItemDTO> itemList = new ArrayList<>();
-		itemList = itemStock.selectbyItem(itemId);
+		itemList = itemStock.select(itemId);
 		int stock = Math.min(itemList.get(0).getStocks(), 99);
 		this.totalNumber = Math.min(cartId + quantities, stock);
 		return this.totalNumber;

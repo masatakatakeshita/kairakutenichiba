@@ -21,25 +21,25 @@ public class GoItemDetailDAO {
 	public ArrayList<ItemDTO> searchList=new ArrayList<ItemDTO>();
 
 	/**
-	 *種類IDで商品詳細を取得しリストに格納するメソッド
-	 * @param sortId 種類ID
+	 * 商品IDで商品詳細を取得しリストに格納するメソッド
+	 * @param item_id 商品ID
 	 * @return searchList 商品情報
 	 * @version 1.0
 	 */
-	public ArrayList<ItemDTO> select(int category_id) {
+	public ArrayList<ItemDTO> select(int itemId) {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","kairakutenichiba", "root","mysql");
 		Connection con = db.getConnection();
 		String sql;
-		 sql = "select * from items where category_id=? and del_key =false";
+		 sql = "select * from items where item_id=? and is_deleted =false";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql) ;
-			ps.setInt(1, category_id);
+			ps.setInt(1, itemId);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()){
 				ItemDTO dto=new ItemDTO();
-				dto.setCategory(rs.getString("category"));
 				dto.setItem_id(rs.getInt("item_id"));
 				dto.setItem_name(rs.getString("item_name"));
+				dto.setCategory(rs.getString("category"));
 				dto.setPrice(rs.getFloat("price"));
 				dto.setRelease_day(rs.getInt("release_day"));
 				dto.setAuthor(rs.getString("author"));
@@ -48,7 +48,6 @@ public class GoItemDetailDAO {
 				dto.setPages(rs.getInt("pages"));
 				dto.setIsbn(rs.getInt("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
-				dto.setItemDetail(rs.getString("item_detail"));
 				dto.setItemImg01(rs.getString("item_image"));
 			
 				searchList.add(dto);
@@ -65,50 +64,6 @@ public class GoItemDetailDAO {
 		return searchList;
 	}
 
-	/**
-	 *商品IDで商品詳細を取得しリストに格納するメソッド
-	 * @param itemId 商品ID
-	 * @return searchList 商品情報
-	 * @version 1.0
-	 */
-	public ArrayList<ItemDTO> selectbyItem(int itemId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","kairakutenichiba", "root","mysql");
-		Connection con = db.getConnection();
-		ItemDTO dto = new ItemDTO();
-		ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
-		String sql;
-		 sql = "select * from items where item_id=?";
-		try{
-			PreparedStatement ps = con.prepareStatement(sql) ;
-			ps.setInt(1, itemId);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()){
-				dto.setCategory(rs.getString("category"));
-				dto.setItem_id(rs.getInt("item_id"));
-				dto.setItem_name(rs.getString("item_name"));
-				dto.setPrice(rs.getFloat("price"));
-				dto.setRelease_day(rs.getInt("release_day"));
-				dto.setAuthor(rs.getString("author"));
-				dto.setPublisher(rs.getString("publisher"));
-				dto.setPublish_type(rs.getString("publish_type"));
-				dto.setPages(rs.getInt("pages"));
-				dto.setIsbn(rs.getInt("isbn"));
-				dto.setStocks(rs.getInt("stocks"));
-				dto.setItemDetail(rs.getString("items_detail"));
-				dto.setItemImg01(rs.getString("item_image"));
-				itemList.add(dto);
-			}
-		} catch (SQLException e ) {
-		   e.printStackTrace() ;
-		} finally {
-			try{
-				con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
-			}
-	}
-		return itemList;
-	}
 }
 
 

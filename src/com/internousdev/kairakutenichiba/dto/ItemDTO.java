@@ -74,7 +74,7 @@ public class ItemDTO {
 	/**
 	 * 商品詳細
 	 */
-	private String itemDetail;
+	
 
 	/**
 	 * 売上数
@@ -102,14 +102,11 @@ public class ItemDTO {
 	private String itemImg02;
 
 	/**
-	 * カテゴリID
+	 * カテゴリ
 	 */
 	private String category;
 
-	/**
-	 * 種類
-	 */
-	private String itemGenre;
+
 
 	/**
 	 * デリートキー
@@ -292,22 +289,6 @@ public class ItemDTO {
 	}
 
 	/**
-	 * 商品詳細を取得するメソッド
-	 * @return itemDetail
-	 */
-	public String getItemDetail() {
-		return itemDetail;
-	}
-
-	/**
-	 * 商品詳細を格納するメソッド
-	 * @param itemDetail セットする itemDetail
-	 */
-	public void setItemDetail(String itemDetail) {
-		this.itemDetail = itemDetail;
-	}
-
-	/**
 	 * 売上数を取得するメソッド
 	 * @return sales
 	 */
@@ -388,42 +369,26 @@ public class ItemDTO {
 	}
 
 	/**
-	 * カテゴリIDを取得するメソッド
-	 * @return category_id
+	 * カテゴリを取得するメソッド
+	 * @return category
 	 */
 	public String getCategory() {
 		return category;
 	}
 
 	/**
-	 * カテゴリIDを格納するメソッド
-	 * @param category_id セットする category_id
+	 * カテゴリを格納するメソッド
+	 * @param category セットする category
 	 */
 	public void setCategory(String category) {
 		this.category = category;
 	}
 
 	/**
-	 * 種類を取得するメソッド
-	 * @return itemGenre
-	 */
-	public String getItemGenre() {
-		return itemGenre;
-	}
-
-	/**
-	 * 種類を格納するメソッド
-	 * @param itemGenre セットする itemGenre
-	 */
-	public void setItemGenre(String itemGenre) {
-		this.itemGenre = itemGenre;
-	}
-
-	/**
 	 * デリートキーを取得するメソッド
 	 * @return is_deleted
 	 */
-	public boolean is_deleted() {
+	public boolean getis_deleted() {
 		return is_deleted;
 	}
 
@@ -435,26 +400,8 @@ public class ItemDTO {
 		this.is_deleted = is_deleted;
 	}
 
-	public void setQuantities(int int1) {
-		// TODO 自動生成されたメソッド・スタブ
 
-	}
-
-	public void setIsDeleted(boolean boolean1) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
-	public void setImagePath(int i, String string) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
-	public void setImgPath(int i, String string) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
+	
 
 
 

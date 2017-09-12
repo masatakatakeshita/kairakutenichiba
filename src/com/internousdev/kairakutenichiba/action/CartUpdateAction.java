@@ -100,7 +100,7 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
             CartUpdateDAO cartUpDao = new CartUpdateDAO();
             GoItemDetailDAO goItemDao = new GoItemDetailDAO();
             GoCartDAO goCartDao = new GoCartDAO();
-            itemStatus = goItemDao.selectbyItem(itemId);
+            itemStatus = goItemDao.select(itemId);
 
             
             updateCount = cartUpDao.updateCart(cartId, userId, quantities, itemId, prevQuantities);
