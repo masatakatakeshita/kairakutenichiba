@@ -45,14 +45,14 @@ public class AdminItemDisplayDAO {
     private String sql1, sql2;
     private PreparedStatement ps1, ps2;
     private ResultSet rs1, rs2;
-    private int numImgPath = 5;
+  
 
     public ArrayList<ItemDTO> generateItemList() throws Exception {
         try {
             final Connection con = new MySqlConnector("kairakutenichiba").getConnection();
 
             sql1 = "SELECT * FROM items";
-            sql2 = "SELECT * FROM items_images WHERE item_id=?";
+            sql2 = "SELECT * FROM items_image WHERE item_id=?";
 
             ps1 = con.prepareStatement(sql1);
             rs1 = ps1.executeQuery();
@@ -65,21 +65,14 @@ public class AdminItemDisplayDAO {
                 itemDTO.setPrice(rs1.getFloat("price"));
                 itemDTO.setStocks(rs1.getInt("stocks"));
                 itemDTO.setSales(rs1.getInt("sales"));
-                itemDTO.setItemDetail(rs1.getString("item_detail").replace("\n", "<br>"));
-                itemDTO.setIsDeleted(rs1.getBoolean("is_deleted"));
+                itemDTO.setis_deleted(rs1.getBoolean("is_deleted"));
                 itemDTO.setCreated_at(rs1.getTimestamp("created_at").toString());
                 itemDTO.setUpdated_at(rs1.getTimestamp("updated_at").toString());
 
                 ps2 = con.prepareStatement(sql2);
                 ps2.setInt(1, itemDTO.getItem_id());
                 rs2 = ps2.executeQuery();
-                int count = 1;
-                if (rs2.next()) {
-                    while (count <= numImgPath && rs2.getString("img_path" + count) != null) {
-                        itemDTO.setImagePath(count - 1, rs2.getString("img_path" + count));
-                        count++;
-                    }
-                }
+               //画像を５つ探してくる的な意味不明なコードが書いてあった。
 
                 itemList.add(itemDTO);
 
