@@ -44,7 +44,6 @@
 	        moveSlides: 1,
 	        slideWidth: 150,
 	        slideMargin: 5,
-
 	    });
 	});
 
