@@ -102,6 +102,14 @@ public class GoItemDetailAction extends ActionSupport {
 		}
 		return result;
 	}
+	
+	public ArrayList<ItemDTO> getdisplayList(){
+		return displayList;
+	}
+	
+	public void setdisplayList(ArrayList<ItemDTO> displayList){
+		this.displayList=displayList;
+	}
 
 
 

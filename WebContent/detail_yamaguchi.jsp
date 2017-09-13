@@ -31,20 +31,20 @@
     <s:action name="GoItemDetailAction" />
  <div class="relative">
 
-<img class="center" src=<s:property value="imgPath" /> alt=""class="absolute" />
+<img class="center" src=<s:property value="displayList.item_image" /> alt=""class="absolute" />
 </div>
 
 <div class="navi">
-<div class="navibox"><h1><s:property value="item_name" /></h1></div>
-<div class="navibox"><p><s:property value="author" /></p></div>
-<div class="navibox"><p><s:property value="publisher" /></p></div>
+<div class="navibox"><h1><s:property value="displayList.item_name" /></h1></div>
+<div class="navibox"><p><s:property value="displayList.author" /></p></div>
+<div class="navibox"><p><s:property value="displayList.publisher" /></p></div>
 </div>
 <div class = "clear"></div>
 
 
 <div class="cart">
 <h1>価格</h1>
-<div class="price"><p><s:property value="price" /></p></div>
+<div class="price"><p><s:property value="displayList.price" /></p></div>
 
 <s:form action = "AddToCartAction">
  <s:submit value="商品をカートに追加"/>
@@ -56,12 +56,12 @@
 
 <div class="info">
 <h1>商品基本情報</h1>
-<p>発売日　　：<s:property value="release_day" /></p>
-<p>著者　　　：<s:property value="author" /></p>
-<p>出版社　　：<s:property value="publisher" /></p>
-<p>発行形態　：<s:property value="publish_type" /></p>
-<p>ページ数　：<s:property value="pages" /></p>
-<p>ISBNコード：<s:property value="isbn" /></p>
+<p>発売日　　：<s:property value="displayList.release_day" /></p>
+<p>著者　　　：<s:property value="displayList.author" /></p>
+<p>出版社　　：<s:property value="displayList.publisher" /></p>
+<p>発行形態　：<s:property value="displayList.publish_type" /></p>
+<p>ページ数　：<s:property value="displayList.pages" /></p>
+<p>ISBNコード：<s:property value="displayList.isbn" /></p>
 </div>
 
 
