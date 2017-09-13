@@ -125,35 +125,35 @@
 
 		<ul class="bxslider">
 
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >1</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >1</s:param></s:url>'><img
 					src="img/item/チビモン.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >15</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >15</s:param></s:url>'><img
 					src="img/item/ねだめ カンタービレ.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >11</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >11</s:param></s:url>'><img
 					src="img/item/ノルウェイの林（上）.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >12</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >12</s:param></s:url>'><img
 					src="img/item/ノルウェイの林（下）.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >2</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >2</s:param></s:url>'><img
 					src="img/item/メガネ.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >3</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >3</s:param></s:url>'><img
 					src="img/item/ライオンの飼育方法.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >4</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >4</s:param></s:url>'><img
 					src="img/item/ワイルドフラワー.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >13</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >13</s:param></s:url>'><img
 					src="img/item/俺の姉が.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >5</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >5</s:param></s:url>'><img
 					src="img/item/快楽店市場の歴史.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >6</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >6</s:param></s:url>'><img
 					src="img/item/世界の絶景.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >7</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >7</s:param></s:url>'><img
 					src="img/item/正しい寿司の握り方.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >14</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >14</s:param></s:url>'><img
 					src="img/item/頭文字C.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >8</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >8</s:param></s:url>'><img
 					src="img/item/美しいホネ.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >10</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >10</s:param></s:url>'><img
 					src="img/item/僕に届け.png" class="img-responsive"></a></li>
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >9</s:param></s:url>'><img
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >9</s:param></s:url>'><img
 					src="img/item/名探偵コナソ.png" class="img-responsive"></a></li>
 
 		</ul>
@@ -162,11 +162,11 @@
 	<div id="jump-boy">
 		<h2 id="boy">少年マンガ</h2>
 		<div class="boy-item">
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >1</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >1</s:param></s:url>'><img
 					src="img/item/チビモン.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >14</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >14</s:param></s:url>'><img
 					src="img/item/頭文字C.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >9</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >9</s:param></s:url>'><img
 					src="img/item/名探偵コナソ.png" class="img"></a>
 			<a href='#top' class="go-top">▲トップへ</a>
 		</div>
@@ -175,11 +175,11 @@
 	<div id="jump-girl">
 		<h2 id="girl">少女マンガ</h2>
 		<div class="girl-item">
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >15</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >15</s:param></s:url>'><img
 					src="img/item/ねだめ カンタービレ.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >4</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >4</s:param></s:url>'><img
 					src="img/item/ワイルドフラワー.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >10</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >10</s:param></s:url>'><img
 					src="img/item/僕に届け.png" class="img"></a>
 			<a href='#top' class="go-top">▲トップへ</a>
 		</div>
@@ -188,11 +188,11 @@
 	<div id="jump-novel">
 		<h2 id="novel">ライトノベル</h2>
 		<div class="novel-item">
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >3</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >3</s:param></s:url>'><img
 					src="img/item/ライオンの飼育方法.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >8</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >8</s:param></s:url>'><img
 					src="img/item/美しいホネ.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >13</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >13</s:param></s:url>'><img
 					src="img/item/俺の姉が.png" class="img"></a>
 			<a href='#top' class="go-top">▲トップへ</a>
 		</div>
@@ -201,11 +201,11 @@
 	<div id="jump-paperback">
 		<h2 id="paperback">文庫本</h2>
 		<div class="paperback-item">
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >11</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >11</s:param></s:url>'><img
 					src="img/item/ノルウェイの林（上）.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >12</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >12</s:param></s:url>'><img
 					src="img/item/ノルウェイの林（下）.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >2</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >2</s:param></s:url>'><img
 					src="img/item/メガネ.png" class="img"></a>
 		<a href='#top' class="go-top">▲トップへ</a>
 		</div>
@@ -214,11 +214,11 @@
 	<div id="jump-magazine">
 		<h2 id="magazine">雑誌</h2>
 		<div class="magazine-item">
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >5</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >5</s:param></s:url>'><img
 					src="img/item/快楽店市場の歴史.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >6</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >6</s:param></s:url>'><img
 					src="img/item/世界の絶景.png" class="img"></a>
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="itemId" >7</s:param></s:url>'><img
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >7</s:param></s:url>'><img
 					src="img/item/正しい寿司の握り方.png" class="img"></a>
 		<a href='#top' class="go-top">▲トップへ</a>
 		</div>

@@ -65,7 +65,7 @@ public class AdminItemDisplayDAO {
                 itemDTO.setPrice(rs1.getFloat("price"));
                 itemDTO.setStocks(rs1.getInt("stocks"));
                 itemDTO.setSales(rs1.getInt("sales"));
-                itemDTO.setImgPath(rs1.getString("item_image"));
+                itemDTO.setitem_image(rs1.getString("item_image"));
                 itemDTO.setis_deleted(rs1.getBoolean("is_deleted"));
                 itemDTO.setCreated_at(rs1.getTimestamp("created_at").toString());
                 itemDTO.setUpdated_at(rs1.getTimestamp("updated_at").toString());

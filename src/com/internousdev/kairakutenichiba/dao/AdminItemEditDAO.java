@@ -40,7 +40,7 @@ public class AdminItemEditDAO {
                 dto.setItem_name(rs.getString("item_name"));
                 dto.setPrice(rs.getFloat("price"));
                 dto.setStocks(rs.getInt("stocks"));
-                dto.setImgPath(rs.getString("item_image"));
+                dto.setitem_image(rs.getString("item_image"));
                 dto.setItem_id(rs.getInt("item_id"));
                 dto.setItem_id(rs.getInt("item_id"));
 

@@ -48,7 +48,7 @@ public class GoItemDetailDAO {
 				dto.setPages(rs.getInt("pages"));
 				dto.setIsbn(rs.getInt("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
-				dto.setItemImg01(rs.getString("item_image"));
+				dto.setitem_image(rs.getString("item_image"));
 			
 				searchList.add(dto);
 			}

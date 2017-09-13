@@ -66,7 +66,7 @@ public class AdminItemDAO {
 
 				dto.setSales(rs.getInt("sales"));
 
-				dto.setImgPath(rs.getString("img_path"));
+				dto.setitem_image(rs.getString("img_path"));
 
 				dto.setCategory(rs.getString("category"));
 
