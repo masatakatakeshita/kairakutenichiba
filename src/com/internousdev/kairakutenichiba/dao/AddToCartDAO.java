@@ -44,7 +44,6 @@ public class AddToCartDAO {
                 ItemDTO dto = new ItemDTO();
                 dto.setItem_name(rs.getString("item_name"));
                 dto.setPrice(rs.getFloat("price"));
-                dto.setQuantities(rs.getInt("quantities"));
                 itemStatus.add(dto);
                
             }

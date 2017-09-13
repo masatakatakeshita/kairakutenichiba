@@ -42,9 +42,9 @@ public class AdminItemDisplayDAO {
      */
     private CategoryDTO categoryDTO = new CategoryDTO();
 
-    private String sql1, sql2;
-    private PreparedStatement ps1, ps2;
-    private ResultSet rs1, rs2;
+    private String sql1;
+    private PreparedStatement ps1;
+    private ResultSet rs1;
   
 
     public ArrayList<ItemDTO> generateItemList() throws Exception {
@@ -52,7 +52,7 @@ public class AdminItemDisplayDAO {
             final Connection con = new MySqlConnector("kairakutenichiba").getConnection();
 
             sql1 = "SELECT * FROM items";
-            sql2 = "SELECT * FROM items_image WHERE item_id=?";
+           
 
             ps1 = con.prepareStatement(sql1);
             rs1 = ps1.executeQuery();
@@ -65,13 +65,12 @@ public class AdminItemDisplayDAO {
                 itemDTO.setPrice(rs1.getFloat("price"));
                 itemDTO.setStocks(rs1.getInt("stocks"));
                 itemDTO.setSales(rs1.getInt("sales"));
+                itemDTO.setImgPath(rs1.getString("item_image"));
                 itemDTO.setis_deleted(rs1.getBoolean("is_deleted"));
                 itemDTO.setCreated_at(rs1.getTimestamp("created_at").toString());
                 itemDTO.setUpdated_at(rs1.getTimestamp("updated_at").toString());
 
-                ps2 = con.prepareStatement(sql2);
-                ps2.setInt(1, itemDTO.getItem_id());
-                rs2 = ps2.executeQuery();
+               
                //画像を５つ探してくる的な意味不明なコードが書いてあった。
 
                 itemList.add(itemDTO);

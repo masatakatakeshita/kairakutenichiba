@@ -74,7 +74,7 @@ public class AdminItemDAO {
 
 				dto.setUpdated_at(rs.getString("updated_at"));
 
-				dto.setIs_deleted(rs.getBoolean("del_key"));
+				dto.setis_deleted(rs.getBoolean("del_key"));
 
 				itemList.add(dto);
 			}
