@@ -5,6 +5,22 @@
 
 <struts>
 	<constant name="struts.devMode" value="true" />
+	<!-- 国際化 (propertiesファイルを増やすたびに以下に追加する事)-->
+	<constant name="struts.custom.i18n.resources"
+		value="
+		com.internousdev.kairakutenichiba.property.cart
+		com.internousdev.kairakutenichiba.property.check
+		com.internousdev.kairakutenichiba.property.detail
+		com.internousdev.kairakutenichiba.property.finish
+		com.internousdev.kairakutenichiba.property.help
+		com.internousdev.kairakutenichiba.property.helplink
+		com.internousdev.kairakutenichiba.property.history
+		com.internousdev.kairakutenichiba.property.index
+		com.internousdev.kairakutenichiba.property.login
+		com.internousdev.kairakutenichiba.property.mypage
+		com.internousdev.kairakutenichiba.property.payment
+
+		" />
 
 
 	<package name="com.internousdev.kairakutenichiba.action" extends="struts-default">

@@ -57,8 +57,7 @@
 			<br>
 
 			<p id="logincenter">
-				<s:submit type="submit" value="%{getText('lang.login.login')}"
-					class="loginbutton" />
+				<input type="submit" value="LOGIN" class="loginbutton">
 
 			</p>
 
