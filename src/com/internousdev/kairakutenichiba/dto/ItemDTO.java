@@ -360,13 +360,4 @@ public class ItemDTO {
 	public void setis_deleted(boolean is_deleted) {
 		this.is_deleted = is_deleted;
 	}
-
-
-	
-
-
-
-
-
-
 }
