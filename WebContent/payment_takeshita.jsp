@@ -44,10 +44,10 @@
                <tr>
                <!-- カード会社の選択 　［必須］ -->
            <th><s:text name="lang.payment.cardType" /></th>
-           <td><select name="cardselect" id="cardselect">
-            <option value="Visa">Visa</option>
-            <option value="MasterCard">MasterCard</option>
-            <option value="American Express" >American Express</option>
+           <td><select name="creditId" id="cardselect">
+            <option value="1">Visa</option>
+            <option value="2">MasterCard</option>
+            <option value="3">American Express</option>
               </select>
            </td>
                </tr>
@@ -55,7 +55,7 @@
             <tr>
             <!-- カード番号　［必須］ -->
             <th><s:text name="lang.payment.cardNumber" /><br><s:text name="lang.payment.cardHankaku" /></th>
-            <td><input type="text" name="card_no1" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf"></td>
+            <td><input type="text" name="cardnumber" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf"></td>
             </tr>
 
             <tr>
@@ -68,7 +68,7 @@
             <tr>
             <!-- 有効期限　［必須］ -->
             <th><s:text name="lang.payment.cardDeadline" /></th>
-            <td><select name="card_month">
+            <td><select name="cardmonth">
 				<option value="">--</option>
 				<option value="01" >01</option>
 				<option value="02" >02</option>
@@ -84,7 +84,7 @@
 				<option value="12" >12</option>
 				</select>&nbsp;月/
 
-                <select name="card_year">
+                <select name="cardyear">
 				<option value="">--</option>
 				<option value="17" >17</option>
 				<option value="18" >18</option>

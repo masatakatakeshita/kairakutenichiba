@@ -54,6 +54,8 @@ public class DBConnector {
 		URL.append(dataBaseName);
 	}
 
+	
+
 	/**
 	 * DBとつなぐメソッド
 	 * @return Connection
