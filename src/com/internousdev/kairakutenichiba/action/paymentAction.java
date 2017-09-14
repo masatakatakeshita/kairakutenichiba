@@ -33,7 +33,7 @@ public class paymentAction extends ActionSupport implements SessionAware{
 	
 	private String expirationYear; //Stringじゃないとだめ？
 	
-	private Map<String, Object>session; //ここいるの？何に使ってんの？
+	private Map<String, Object> session; //ここいるの？何に使ってんの？
 	
 //	private String errmag; //これいるか？
 							//多分アラートで元ページを再度表示？
@@ -104,6 +104,22 @@ public class paymentAction extends ActionSupport implements SessionAware{
 		this.session = session;
 		
 	}
+	
+	public Map<String, Object> getsession(){
+		return session;
+	}
+
+
+	public String getCreditType() {
+		return creditType;
+	}
+
+
+	public void setCreditType(String creditType) {
+		this.creditType = creditType;
+	}
+	
+	
 	
 
 }
