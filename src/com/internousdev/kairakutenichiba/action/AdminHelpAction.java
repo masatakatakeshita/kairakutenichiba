@@ -53,6 +53,15 @@ public class AdminHelpAction  extends ActionSupport implements SessionAware{
 	     */
 	    private String comment;
 
+	    /**
+		 *	問い合わせリスト
+		 */
+		private ArrayList<AdminHelpDTO> selectList = new ArrayList<AdminHelpDTO>();
+
+		/**
+		 *	表示する問い合わせリスト
+		 */
+		private ArrayList<AdminHelpDTO> displayList = new ArrayList<AdminHelpDTO>();
 
 	    /**
 	     * 対応状況
@@ -178,6 +187,40 @@ public class AdminHelpAction  extends ActionSupport implements SessionAware{
 	    public void setComment(String comment) {
 	        this.comment = comment;
 	    }
+
+		/**
+		 * 問い合わせリスト取得メソッド
+		 * @return selectList　問い合わせリスト
+		 */
+		public ArrayList<AdminHelpDTO> getSelectList() {
+			return selectList;
+		}
+
+		/**
+		 * 問い合わせリスト格納メソッド
+		 * @param selectList セットする selectList
+		 */
+		public void setSelectList(ArrayList<AdminHelpDTO> selectList) {
+			this.selectList = selectList;
+		}
+
+		/**
+		 * 表示する問い合わせリスト取得メソッド
+		 * @return displayList　表示する問い合わせリスト
+		 */
+		public ArrayList<AdminHelpDTO> getDisplayList() {
+			return displayList;
+		}
+
+		/**
+		 * 表示する問い合わせリスト格納メソッド
+		 * @param displayList セットする displayList
+		 */
+		public void setDisplayList(ArrayList<AdminHelpDTO> displayList) {
+			this.displayList = displayList;
+		}
+
+
 
 	    /**
 	     *対応状況を取得すメソッド
