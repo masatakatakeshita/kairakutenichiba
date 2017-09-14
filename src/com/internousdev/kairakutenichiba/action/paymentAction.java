@@ -1,10 +1,13 @@
 package com.internousdev.kairakutenichiba.action;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dao.paymentDAO;
+import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.dto.paymentDTO;
 import com.opensymphony.xwork2.ActionSupport;
 /**
@@ -20,6 +23,8 @@ public class paymentAction extends ActionSupport implements SessionAware{
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private int userId;
 
 	private String creditType;	//visa ,master, Americanの場合分け
 
@@ -42,6 +47,10 @@ public class paymentAction extends ActionSupport implements SessionAware{
 
 
 	private Map<String, Object> session; //ここいるの？何に使ってんの？
+	
+	private ArrayList<paymentDTO> payList=new ArrayList<paymentDTO>();
+	
+	private ArrayList<CartDTO> cartList= new ArrayList<CartDTO>();
 	
 
 
@@ -67,7 +76,12 @@ public class paymentAction extends ActionSupport implements SessionAware{
 							dto.setDeliverySelect(this.deliverySelect);
 							dto.setDeliveryMonth(this.deliveryMonth);
 							dto.setDeliveryTime(this.deliveryTime);
+							payList.add(dto);
+							
+							GoCartDAO cart= new GoCartDAO();
+							cartList= cart.selectedItem(userId);
 							ret = SUCCESS;
+							
 						}
 					}
 				}
@@ -78,6 +92,14 @@ public class paymentAction extends ActionSupport implements SessionAware{
 
 
 //ここから下がなぜ必要なのか、まだ何に使うのか誰か説明してください。
+	public int getUserId(){
+		return userId;
+	}
+	
+	public void setUserId(int userId){
+		this.userId=userId;
+	}
+	
 	public String getCreditNumber(){
 		return creditNumber;
 	}
@@ -162,6 +184,24 @@ public class paymentAction extends ActionSupport implements SessionAware{
 
 	public void setDeliveryTime(String deliveryTime) {
 		this.deliveryTime = deliveryTime;
+	}
+	
+	public ArrayList<CartDTO> getCartList(){
+		return cartList;
+	}
+	
+	public void setCartList(ArrayList<CartDTO> cartList){
+		this.cartList=cartList;
+	}
+
+
+	public ArrayList<paymentDTO> getPayList() {
+		return payList;
+	}
+
+
+	public void setPayList(ArrayList<paymentDTO> payList) {
+		this.payList = payList;
 	}
 
 
