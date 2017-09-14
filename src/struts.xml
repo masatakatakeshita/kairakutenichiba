@@ -88,7 +88,7 @@
 		</action>
 
 		<!-- 支払い画面。成功なら購入確認、エラーならクレジット情報の間違いのページに飛ぶ -->
-		<action name="PaymentAction" class="com.internousdev.kairakutenichiba.action.PaymentAction"
+		<action name="PaymentAction" class="com.internousdev.kairakutenichiba.action.paymentAction"
 			method="execute">
 			<result name="success">check_shoji.jsp</result>
 			<result name="error">payment_takeshita.jsp</result>
