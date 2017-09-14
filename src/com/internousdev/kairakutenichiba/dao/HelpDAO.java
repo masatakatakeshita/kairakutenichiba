@@ -3,11 +3,15 @@
  */
 package com.internousdev.kairakutenichiba.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.TimeZone;
 
-import com.internousdev.util.db.mysql.MySqlConnector;
+import com.internousdev.kairakutenichiba.util.MongoDBConnector;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
 
 /**
  * @author internousdev
@@ -23,37 +27,42 @@ public class HelpDAO {
      * @param category 問い合わせ種類
      * @param comment 本文
      * @return countをactionに返す
+	 * @throws UnknownHostException
      */
-    public int insertDAO(String userName, String userAddress, String userMail, String category, String comment) {
-        int count = 0;
+    public boolean mongoInsert(String userName, String userAddress, String userMail, String category, String comment) throws UnknownHostException {
+    	boolean result = false;
 
-        Connection con = new MySqlConnector("kairakutenichiba").getConnection();
-        String sql = "INSERT INTO inquiry_histories(user_name,user_address,user_mail,category,comment)VALUES(?,?,?,?,?)";
+        Calendar cal = Calendar.getInstance();
+		TimeZone tz = TimeZone.getTimeZone("Asia/Tokyo");
+		cal.setTimeZone(tz);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm");
+		String dt = sdf.format(cal.getTime());
 
-        try {
-            PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, userName);
-            ps.setString(2, userAddress);
-            ps.setString(3, userMail);
-            ps.setString(4, category);
-            ps.setString(5, comment);
+		/*MongoDBサーバに接続*/
+		MongoDBConnector con = new MongoDBConnector();
+		/*利用するDB(コレクション)を取得*/
+		DB db = con.getConnection();
+		DBCollection coll = db.getCollection("inquiry_histories");
+
+		BasicDBObject input = new BasicDBObject();
+
+			input.put("user_name",userName);
+			input.put("user_address", userAddress);
+			input.put("user_mail", userMail);
+			input.put("category", category);
+			input.put("comment", comment);
+			input.put("inquiried_at", dt);
+
+			coll.insert(input);
 
 
-            count = ps.executeUpdate();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return count;
+        return result;
     }
+    /*close()はMongoDBconnectorで行う*/
+	}
 
 
-}
+
 
 

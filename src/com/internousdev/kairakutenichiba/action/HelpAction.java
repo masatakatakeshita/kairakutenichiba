@@ -3,6 +3,7 @@
  */
 package com.internousdev.kairakutenichiba.action;
 
+import java.net.UnknownHostException;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -50,7 +51,10 @@ private String category;
  */
 private String comment;
 
-
+/**
+ * 問い合わせ日時
+ */
+private String inquiriedAt;
 
 /**
  * セッション情報
@@ -72,21 +76,18 @@ private int userId;
  */
 
 public String execute() {
+	String result = ERROR;
 
-    String result = ERROR;
-    HelpDAO dao = new HelpDAO();
-    int count = 0;
+	HelpDAO dao = new HelpDAO();
+	try {
+		if (dao.mongoInsert(userName, userAddress, userMail, category, comment)) {
 
-
-        count = dao.insertDAO(userName, userAddress, userMail, category, comment);
-    if (count > 0) {
-        result = SUCCESS;
-    }
-    return result;
-
+		}
+	} catch (UnknownHostException e) {
+		e.printStackTrace();
+	}
+	return result;
 }
-
-
 
 
 /**
@@ -172,8 +173,19 @@ public void setComment(String comment) {
     this.comment = comment;
 }
 
+/**
+ * 問い合わせ日時を取得
+ */
+public String getInquiriedAt() {
+	return inquiriedAt;
+}
 
-
+/**
+ * 問い合わせ日時を格納
+ */
+public void setInquiriedAt(String inquiriedAt) {
+	this.inquiriedAt = inquiriedAt;
+}
 
 /**
  * セッションIDを取得するメソッド

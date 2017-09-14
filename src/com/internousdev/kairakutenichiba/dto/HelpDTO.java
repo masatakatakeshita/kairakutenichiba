@@ -45,6 +45,11 @@ public class HelpDTO {
 	    private String comment;
 
 	    /**
+	     * 問い合わせ日時
+	     */
+	    private String inquiried_at;
+
+	    /**
 	     * ログインフラグ
 	     */
 	    private boolean loginFlg;
@@ -166,6 +171,21 @@ public class HelpDTO {
         public void setcomment(String comment) {
         	this.comment = comment;
         }
+
+        /**
+         * 問い合わせ日時を取得
+         */
+        public String getinquiried_at() {
+        	return inquiried_at;
+        }
+
+        /**
+         * 問い合わせ日時を格納
+         */
+        public void setinquiried_at(String inquiried_at) {
+        	this.inquiried_at = inquiried_at;
+        }
+
 
 	    /**
 	     * ログインフラグを取得
