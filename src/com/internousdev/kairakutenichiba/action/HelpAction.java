@@ -50,11 +50,6 @@ private String category;
  */
 private String comment;
 
-/**
- * ログイン情報
- */
-private boolean login;
-
 
 
 /**
@@ -177,21 +172,6 @@ public void setComment(String comment) {
     this.comment = comment;
 }
 
-/**
- * ログインフラグを取得するメソッド
- * @return　login ログインフラグ
- */
-public boolean getLogin() {
-    return login;
-}
-
-/**
- * ログインフラグを格納するメソッド
- * @param login　セットする　ログインフラグ
- */
-public void setLogin(boolean login) {
-    this.login = login;
-}
 
 
 
