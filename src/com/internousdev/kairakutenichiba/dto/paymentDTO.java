@@ -1,8 +1,10 @@
 
 package com.internousdev.kairakutenichiba.dto;
 
+import java.util.Map;
+
 public class paymentDTO {
-	
+
 /*
  * 必要な変数軍
 cardType クレジットの種類
@@ -13,110 +15,113 @@ cardDeadline  month　月
 cardSecurity セキュリティコード
 
  */
-	private int userId;
-	
-	private String loginId;
-	
-	private int creditName;	//こいついらないかも←ここ所有者の名前？
-	
+	private String creditType;	//visa ,master, Americanの場合分け
+
 	private String creditNumber;
-	
-	private String nameHolder; //name_e nameE
-	
-	private int securityCode;
-	
-	private int expirationMonth;
-	
-	private int expirationYear;
-	
-	private String creditType;
-	
-//	private String lastName;
-//	
-//	private String firstName;
-//	
-//	private String registrationData;
-//	
-//	private String updateData;
 
-	
-	
-	
-	public int getUserId(){
-		return userId;
-	}
-	public void serUserID(int userId){
-		this.userId = userId;
-	}
-	
+	private String nameHolder;
 
-	public int getCreditName(){
-		return creditName;
-	}
-	public void setCreditName(int creditName){
-		this.creditName = creditName;
-	}
-	
-	
-	public String getLoginId(){
-		return loginId;
-	}
-	public void setLoginId(String loginId){
-		this.loginId = loginId;
-	}
-	
-	
+	private String securityCode;
+
+	private String expirationMonth; //Stringじゃないとだめ？
+
+	private String expirationYear; //Stringじゃないとだめ？
+
+
+    private String deliverySelect;
+
+	private String deliveryMonth;
+
+	private String deliveryTime;
+
+
+	private Map<String, Object> session; //ここいるの？何に使ってんの？
+
+
 	public String getCreditNumber(){
 		return creditNumber;
 	}
 	public void setCreditNumber(String creditNumber){
 		this.creditNumber = creditNumber;
 	}
-	
-	
+
 	public String getNameHolder(){
 		return nameHolder;
 	}
-	public void setNameHolder(String nameE){
-		this.nameHolder = nameE;
+	public void setNameHolder(String nameHolder){
+		this.nameHolder = nameHolder;
 	}
-	
-	
-	public int getSecurityCode(){
+
+	public String getSecurityCode(){
 		return securityCode;
 	}
-	public void setSecurityCode(int securityCode){
+	public void setSecurityCode(String securityCode){
 		this.securityCode = securityCode;
 	}
-	
-	
-	public int getExpirationMonth(){
+
+	public String getExpirationMonth(){
 		return expirationMonth;
 	}
-	public void setExpirationMonth(int expirationMonth){
+	public void setExpirationMonth(String expirationMonth){
 		this.expirationMonth = expirationMonth;
 	}
-	
-	
-	public int getExpirationYear(){	//メンバ変数フィールドに格納された値をreturn；
+
+	public String getExpirationYear(){
 		return expirationYear;
 	}
-	public void setExpirationYear(int expirationYear){  //DTOはJSPから値受け取ってんの？
-		this.expirationYear = expirationYear;
+	public void setExpirationYear(String expirationYeari){
+		this.expirationYear = expirationYeari;
 	}
-	
-	
-	public String getCreditType(){
+
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+
+	}
+
+	public Map<String, Object> getsession(){
+		return session;
+	}
+
+
+	public String getCreditType() {
 		return creditType;
 	}
-	public void setCreditType(String creditType){
+
+
+	public void setCreditType(String creditType) {
 		this.creditType = creditType;
 	}
-	
-//
-//	LastName FirstName変数つかわねぇだろこれ。	
-//	
 
-	
-	
+
+	public String getDeliverySelect() {
+		return deliverySelect;
+	}
+
+
+	public void setDeliverySelect(String deliverySelect) {
+		this.deliverySelect = deliverySelect;
+	}
+
+
+	public String getDeliveryMonth() {
+		return deliveryMonth;
+	}
+
+
+	public void setDeliveryMonth(String deliveryMonth) {
+		this.deliveryMonth = deliveryMonth;
+	}
+
+
+	public String getDeliveryTime() {
+		return deliveryTime;
+	}
+
+
+	public void setDeliveryTime(String deliveryTime) {
+		this.deliveryTime = deliveryTime;
+	}
+
+
 }

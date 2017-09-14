@@ -46,7 +46,7 @@
                <tr>
                <!-- カード会社の選択 　［必須］ -->
            <th><s:text name="lang.payment.cardType" /></th>
-           <td><select name="creditId" id="cardselect">
+           <td><select name="creditType" id="cardselect" >
             <option value="1">Visa</option>
             <option value="2">MasterCard</option>
             <option value="3">American Express</option>
@@ -57,20 +57,20 @@
             <tr>
             <!-- カード番号　［必須］ -->
             <th><s:text name="lang.payment.cardNumber" /><br><s:text name="lang.payment.cardHankaku" /></th>
-            <td><input type="text" name="cardnumber" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf"></td>
+            <td><input type="text" name="creditNumber" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf"></td>
             </tr>
 
             <tr>
             <!-- カード名義(ローマ字)　［必須］ -->
             <th><s:text name="lang.payment.cardHolder" /></th>
-            <td><input name="cardname" id="cardname" size="25" maxlength="40" value="" >
+            <td><input name="nameHolder" id="nameHolder" size="25" maxlength="40" value="" required >
             </td>　
             </tr>
 
             <tr>
             <!-- 有効期限　［必須］ -->
             <th><s:text name="lang.payment.cardDeadline" /></th>
-            <td><select name="cardmonth">
+            <td><select name="expirationMonth" required>
 				<option value="">--</option>
 				<option value="01" >01</option>
 				<option value="02" >02</option>
@@ -86,7 +86,7 @@
 				<option value="12" >12</option>
 				</select>&nbsp;月/
 
-                <select name="cardyear">
+                <select name="expirationYear" required>
 				<option value="">--</option>
 				<option value="17" >17</option>
 				<option value="18" >18</option>
@@ -105,14 +105,14 @@
                 <tr>
                 <!-- セキュリティーコード ［必須］ -->
                 <th><s:text name="lang.payment.security" /></th>
-                <td> <input type="password" name="cardsecurity"> </td>
+                <td> <input type="password" name="securityCode" required> </td>
                 </tr>
 
                 </table>
                 </div>
 
             <div class="haisousentaku">
-            <table class="haisou" border="1" >
+
 
 			<!-- 配達方法の選択 -->
   			<h3><s:text name="lang.payment.deliverselect" /></h3>
@@ -120,20 +120,23 @@
             <strong><s:text name="lang.payment.delivercost" /></strong>
             <br>
 
+            <table class="haisou" border="1" >
+
               <tr>
               <!-- 配送方法[必須] -->
             <th><s:text name="lang.payment.deliver" /></th>
             <!-- 宅配便 -->
-             <td><label><input type="radio" name="haisou"value="宅配便" ><s:text name="lang.payment.bike" /></label>
+             <td><label><input type="radio" name="deliverySelect"value="宅配便" checked="checked"><s:text name="lang.payment.bike" /></label>
             <!-- メール便 -->
-            <label><input type="radio" name="haisou" value="メール便"><s:text name="lang.payment.mail" /></label>
+            <label><input type="radio" name="deliverySelect" value="メール便"><s:text name="lang.payment.mail" /></label>
            　</td>
        　    </tr>
 
-            <tr>
+
+             <tr>
             <!-- お届け日指定［必須］ -->
             <th><s:text name="lang.payment.date" /></th>
-            <td><select name="siteibi" id="siteibi">
+            <td><select name="deliveryMonth" id="deliveryMonth">
             <option value="指定なし">指定なし</option>
             <option value="test" >test</option>
             <option value="test" >test</option>
@@ -145,10 +148,17 @@
            </td>
                 </tr>
 
+
+
+
+
+
+
+
              <tr>
              <!--お届け時間指定［必須］ -->
             <th><s:text name="lang.payment.time" /></th>
-            <td><select name="siteibi" id="siteibi">
+            <td><select name="deliveryTime" id="deliveryTime">
             <option value="指定なし">指定なし</option>
             <option value="午前中">午前中</option>
             <option value="12時~14時" >12時~14時</option>
