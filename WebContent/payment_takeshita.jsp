@@ -115,18 +115,24 @@
             <table class="haisou" border="1" >
 
 			<!-- 配達方法の選択 -->
-  			<h3><s:text name="lang.payment.deliver" /></h3>
-            <strong>配送料金・・・宅配便500円(税込)　メール便200円(税込)</strong><br>
+  			<h3><s:text name="lang.payment.deliverselect" /></h3>
+  			<!-- 配送料金・・・宅配便500円(税込)　メール便200円(税込) -->
+            <strong><s:text name="lang.payment.delivercost" /></strong>
+            <br>
 
               <tr>
-            <th>lang.payment.deliver</th>
-             <td><label><input type="radio" name="haisou"value="宅配便" >宅配便</label>
-            <label><input type="radio" name="haisou" value="メール便">メール便</label>
+              <!-- 配送方法[必須] -->
+            <th><s:text name="lang.payment.deliver" /></th>
+            <!-- 宅配便 -->
+             <td><label><input type="radio" name="haisou"value="宅配便" ><s:text name="lang.payment.bike." /></label>
+            <!-- メール便 -->
+            <label><input type="radio" name="haisou" value="メール便"><s:text name="lang.payment.mail" /></label>
            　</td>
        　    </tr>
 
             <tr>
-            <th>お届け日指定［必須］</th>
+            <!-- お届け日指定［必須］ -->
+            <th><s:text name="lang.payment.date" /></th>
             <td><select name="siteibi" id="siteibi">
             <option value="指定なし">指定なし</option>
             <option value="test" >test</option>
@@ -140,7 +146,8 @@
                 </tr>
 
              <tr>
-            <th>お届け時間指定［必須］</th>
+             <!--お届け時間指定［必須］ -->
+            <th><s:text name="lang.payment.time" /></th>
             <td><select name="siteibi" id="siteibi">
             <option value="指定なし">指定なし</option>
             <option value="午前中">午前中</option>
