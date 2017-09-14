@@ -64,7 +64,7 @@ public class ItemDTO {
     /**
      * イメージパス
 	 */
-	private String imgPath;
+	private String item_image;
 
 	/**
 	 * 在庫数
@@ -74,7 +74,7 @@ public class ItemDTO {
 	/**
 	 * 商品詳細
 	 */
-	private String itemDetail;
+	
 
 	/**
 	 * 売上数
@@ -91,25 +91,13 @@ public class ItemDTO {
 	 */
 	private String updated_at;
 
+	
 	/**
-	 * 商品画像01
-	 */
-	private String itemImg01;
-
-	/**
-	 * 商品画像02
-	 */
-	private String itemImg02;
-
-	/**
-	 * カテゴリID
+	 * カテゴリ
 	 */
 	private String category;
 
-	/**
-	 * 種類
-	 */
-	private String itemGenre;
+
 
 	/**
 	 * デリートキー
@@ -261,18 +249,18 @@ public class ItemDTO {
 
 	/**
 	 * イメージパスを取得するメソッド
-	 * @return imgPath
+	 * @return item_image
 	 */
-	public String getImgPath() {
-		return imgPath;
+	public String getitem_image() {
+		return item_image;
 	}
 
 	/**
 	 * イメージパスを格納するメソッド
-	 * @param imgPath セットする imgPath
+	 * @param item_image セットする item_image
 	 */
-	public void setImgPath(String imgPath) {
-		this.imgPath = imgPath;
+	public void setitem_image(String item_image) {
+		this.item_image = item_image;
 	}
 
 	/**
@@ -289,22 +277,6 @@ public class ItemDTO {
 	 */
 	public void setStocks(int stocks) {
 		this.stocks = stocks;
-	}
-
-	/**
-	 * 商品詳細を取得するメソッド
-	 * @return itemDetail
-	 */
-	public String getItemDetail() {
-		return itemDetail;
-	}
-
-	/**
-	 * 商品詳細を格納するメソッド
-	 * @param itemDetail セットする itemDetail
-	 */
-	public void setItemDetail(String itemDetail) {
-		this.itemDetail = itemDetail;
 	}
 
 	/**
@@ -355,75 +327,29 @@ public class ItemDTO {
 		this.updated_at = updated_at;
 	}
 
-	/**
-	 * 商品画像01を取得するメソッド
-	 * @return itemImg01
-	 */
-	public String getItemImg01() {
-		return itemImg01;
-	}
+	
 
 	/**
-	 * 商品画像01を格納するメソッド
-	 * @param itemImg01 セットする itemImg01
-	 */
-	public void setItemImg01(String itemImg01) {
-		this.itemImg01 = itemImg01;
-	}
-
-	/**
-	 * 商品画像02を取得するメソッド
-	 * @return itemImg02
-	 */
-	public String getItemImg02() {
-		return itemImg02;
-	}
-
-	/**
-	 * 商品画像02を格納するメソッド
-	 * @param itemImg02 セットする itemImg02
-	 */
-	public void setItemImg02(String itemImg02) {
-		this.itemImg02 = itemImg02;
-	}
-
-	/**
-	 * カテゴリIDを取得するメソッド
-	 * @return category_id
+	 * カテゴリを取得するメソッド
+	 * @return category
 	 */
 	public String getCategory() {
 		return category;
 	}
 
 	/**
-	 * カテゴリIDを格納するメソッド
-	 * @param category_id セットする category_id
+	 * カテゴリを格納するメソッド
+	 * @param category セットする category
 	 */
 	public void setCategory(String category) {
 		this.category = category;
 	}
 
 	/**
-	 * 種類を取得するメソッド
-	 * @return itemGenre
-	 */
-	public String getItemGenre() {
-		return itemGenre;
-	}
-
-	/**
-	 * 種類を格納するメソッド
-	 * @param itemGenre セットする itemGenre
-	 */
-	public void setItemGenre(String itemGenre) {
-		this.itemGenre = itemGenre;
-	}
-
-	/**
 	 * デリートキーを取得するメソッド
 	 * @return is_deleted
 	 */
-	public boolean is_deleted() {
+	public boolean getis_deleted() {
 		return is_deleted;
 	}
 
@@ -431,34 +357,7 @@ public class ItemDTO {
 	 * デリートキーを格納するメソッド
 	 * @param is_deleted セットする is_deleted
 	 */
-	public void setIs_deleted(boolean is_deleted) {
+	public void setis_deleted(boolean is_deleted) {
 		this.is_deleted = is_deleted;
 	}
-
-	public void setQuantities(int int1) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
-	public void setIsDeleted(boolean boolean1) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
-	public void setImagePath(int i, String string) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
-	public void setImgPath(int i, String string) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
-
-
-
-
-
-
 }

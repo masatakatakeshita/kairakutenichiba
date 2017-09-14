@@ -9,7 +9,6 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.kairakutenichiba.dao.CartUpdateDAO;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dao.GoItemDetailDAO;
-import com.internousdev.kairakutenichiba.dao.PurchaseCompleteDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -101,24 +100,16 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
             CartUpdateDAO cartUpDao = new CartUpdateDAO();
             GoItemDetailDAO goItemDao = new GoItemDetailDAO();
             GoCartDAO goCartDao = new GoCartDAO();
-            PurchaseCompleteDAO purchaseDao = new PurchaseCompleteDAO();
-            itemStatus = goItemDao.selectbyItem(itemId);
+            itemStatus = goItemDao.select(itemId);
 
-            if (quantities <= 0 || quantities > 50) {
-                message="エラー：入力し直して下さい";
-                result = ERROR;
-                return result;
-                /*CartDeleteDAO DelDao = new CartDeleteDAO();
-                DelDao.delete(userId, cartId);*/
-            }
-
+            
             updateCount = cartUpDao.updateCart(cartId, userId, quantities, itemId, prevQuantities);
 
             if(updateCount <= 0){
                 message="エラー：データ不整合";
                 result = ERROR;
                 return result;
-            }
+            }else{
 
             System.out.println(quantities);
 
@@ -126,21 +117,22 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
 
             cartList = goCartDao.selectedItem(userId);
 
-            if (purchaseDao.stockCheck(cartList) == "OK") {
+            
                 if (cartList.size() > 0) {
                     for (int i = 0; i < cartList.size(); i++) {
                         amountAll += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
                     }
                     result = SUCCESS;
+                }else{
+                	message="エラー：データ不整合";
+                    result = ERROR;
                 }
-            } else if (purchaseDao.stockCheck(cartList) == "NG") {
-            } else {
-                itemName = purchaseDao.stockCheck(cartList);
-                result = ERROR;
-            }
+        
+    
+        }
         }
         return result;
-    }
+        }
 
     /**
      * カートIDを取得するメソッド

@@ -8,17 +8,10 @@ use kairakutenichiba;
 
 #--------------------------各テーブルの作成--------------------------
 
-create table categories (
-	category_id int not null auto_increment primary key,/*カテゴリ番号*/
-	category_name varchar(20) not null,/*カテゴリ名*/
-	created_at datetime not null default current_timestamp,/*登録日*/
-	updated_at datetime not null default current_timestamp/*更新日*/
-);
-
 create table items(
 	item_id int not null primary key,/*商品ID*/
 	item_name varchar(100) not null,/*商品名*/
-	category_id int not null,/*カテゴリ番号*/
+	category_name varchar(20) not null,/*カテゴリ名*/
 	release_day date not null,/*発売日*/
 	author varchar(100) not null,/*著者*/
 	publisher varchar(100)not null,/*出版社*/
@@ -29,26 +22,12 @@ create table items(
 	stocks int not null,/*在庫数*/
 	sales int default 0,/*売り上げ数*/
 	item_datail text not null,/*商品詳細*/
+	item_image varchar(255) not null, /*商品画像*/
 	is_deleted boolean default false,/*商品削除*/
 	created_at datetime not null default current_timestamp,/*登録日*/
 	updated_at datetime not null default current_timestamp,/*更新日*/
-
-	foreign key(category_id)references categories(category_id)
 );
 
-
-create table items_images (
-	item_id int not null,/*商品ID*/
-	img_path1 varchar(255) not null,/*イメージパス(1)*/
-	img_path2 varchar(255),/*イメージパス(2)*/
-	img_path3 varchar(255),/*イメージパス(3)*/
-	img_path4 varchar(255),/*イメージパス(4)*/
-	img_path5 varchar(255),/*イメージパス(5)*/
-	created_at datetime not null default current_timestamp,/*登録日*/
-	updated_at datetime not null default current_timestamp,/*更新日*/
-
-	foreign key(item_id) references items(item_id)
-);
 
 create table purchases_outlines (
 	purchase_id int not null  auto_increment primary key,/*購入ID*/
@@ -108,59 +87,26 @@ create table inquiry_histories (
 
 use kairakutenichiba;
 
-#--------------------------カテゴリ情報--------------------------
-#-----Templete:(ID,"カテゴリ名")
-insert into categories(category_id,category_name) values
-(1,"少年漫画"),
-(2,"少女漫画"),
-(3,"ライトノベル"),
-(4,"文庫本"),
-(5,"雑誌");
-
 #--------------------------商品情報(画像以外)--------------------------
 /*
-Templete:(商品ID,'商品名','カテゴリ番号','発売日','著者','出版社','発行形態','ページ数','ISBNコード',
-単価,在庫数,売り上げ数,"詳細説明文")
+Templete:(商品ID,'商品名','カテゴリ名','発売日','著者','出版社','発行形態','ページ数','ISBNコード',
+単価,在庫数,売り上げ数,"詳細説明文",'商品画像')
 */
 insert into items(
-item_id,item_name,category_id,release_day,author,publisher,publish_type,pages,isbn,price,stocks,item_datail)
+item_id,item_name,category_id,release_day,author,publisher,publish_type,pages,isbn,price,stocks,item_datail,item_image)
 values
-(1,'チビモン',1,'2099-12-31','佐藤次郎','快楽社','漫画',178,9784123456789,480,1000,"商品詳細"),
-(2,'メガネ',4,'2099-12-31','鈴木花子','快楽社','文庫',382,9784123789456,650,1000,"商品詳細"),
-(3,'ライオンの飼育方法',3,'2099-12-31','佐藤次郎','快楽社','文庫',282,9784789456123,480,1000,"商品詳細"),
-(4,'ワイルドフラワー',2,'2099-12-31','山田太郎','快楽社','漫画',180,9874159324786,440,1000,"商品詳細"),
-(5,'快楽店市場の歴史',5,'2099-12-31','山田太郎','快楽社','雑誌',60,9874741236985,440,1000,"商品詳細"),
-(6,'世界の絶景',5,'2099-12-31','山田太郎','快楽社','雑誌',64,9874147896325,520,1000,"商品詳細"),
-(7,'正しい寿司の握り方',5,'2099-12-31','鈴木花子','快楽社','雑誌',45,9874852147963,490,1000,"商品詳細"),
-(8,'美しいホネ',3,'2099-12-31','山田太郎','快楽社','文庫',215,9874963258741,620,1000,"商品詳細"),
-(9,'名探偵コナソ',1,'2099-12-31','赤山剛昌','快楽社','漫画',186,9874147963258,460,1000,"商品詳細"),
-(10,'僕に届け',2,'2099-12-31','椎名重穂','快楽社','漫画',186,9874951463782,460,1000,"商品情報"),
-(11,'ノルウェイの林(上)',4,'2099-12-31','村上冬樹','快楽社','文庫',300,9874456987321,600,1000,"商品情報"),
-(12,'ノルウェイの林(下)',4,'2099-12-31','村上冬樹','快楽社','文庫',300,9874456986321,600,1000,"商品情報"),
-(13,'俺の姉がこんなに可愛いわけがない',3,'2099-12-31','伏目つかさ','快楽社','文庫',264,92874197842136,460,1000,"商品情報"),
-(14,'頭文字C',1,'2099-12-31','しげの秀二','快楽社','漫画',196,9874102365478,420,1000,"商品情報"),
-(15,'ねだめ　カンタービレ',2,'2099-12-31','三ノ宮知子','快楽社','漫画',192,9874102512305,420,1000,"商品情報");
-
-
-#--------------------------商品情報(画像パス)--------------------------
-/*
-Templete:(商品ID,"画像パスその１","その２","その３","その４","その５")
-画像パスその２～その５は指定しない場合「default」、下記が最低限
-Templete:(商品ID,"画像パスその１",default,default,default,default)
-*/
-insert into items_images(item_id,img_path1,img_path2,img_path3,img_path4,img_path5) values
-(1,"img/items/チビモン.png",default,default,default,default),
-(2,"img/items/メガネ.png",default,default,default,default),
-(3,"img/items/ライオンの飼育方法.png",default,default,default,default),
-(4,"img/items/ワイルドフラワー.png",default,default,default,default),
-(5,"img/items/快楽店市場の歴史.png",default,default,default,default),
-(6,"img/items/世界の絶景.png",default,default,default,default),
-(7,"img/items/正しい寿司の握り方.png",default,default,default,default),
-(8,"img/items/美しい骨.png",default,default,default,default),
-(9,"img/items/名探偵コナソ.png",default,default,default,default),
-(10,"img/items/僕に届け.png",default,default,default,default),
-(11,"img/items/ノルウェイの林（上）.png",default,default,default,default),
-(12,"img/items/ノルウェイの林（下）.png",default,default,default,default),
-(13,"img/items/俺の姉が.png",default,default,default,default),
-(14,"img/items/頭文字C.png",default,default,default,default),
-(15,"img/items/ねだめ カンタービレ.png",default,default,default,default);
+(1,'チビモン','少年漫画','2099-12-31','佐藤次郎','快楽社','漫画',178,9784123456789,480,1000,"商品詳細","img/item/チビモン.png"),
+(2,'メガネ','文庫本','2099-12-31','鈴木花子','快楽社','文庫',382,9784123789456,650,1000,"商品詳細","img/item/メガネ.png"),
+(3,'ライオンの飼育方法','ライトノベル','2099-12-31','佐藤次郎','快楽社','文庫',282,9784789456123,480,1000,"商品詳細","img/item/ライオンの飼育方法.png"),
+(4,'ワイルドフラワー','少女漫画','2099-12-31','山田太郎','快楽社','漫画',180,9874159324786,440,1000,"商品詳細","img/item/ワイルドフラワー.png"),
+(5,'快楽店市場の歴史','雑誌','2099-12-31','山田太郎','快楽社','雑誌',60,9874741236985,440,1000,"商品詳細","img/item/快楽店市場の歴史.png"),
+(6,'世界の絶景','雑誌','2099-12-31','山田太郎','快楽社','雑誌',64,9874147896325,520,1000,"商品詳細","img/item/世界の絶景.png"),
+(7,'正しい寿司の握り方','雑誌','2099-12-31','鈴木花子','快楽社','雑誌',45,9874852147963,490,1000,"商品詳細","img/item/正しい寿司の握り方.png"),
+(8,'美しいホネ','ライトノベル','2099-12-31','山田太郎','快楽社','文庫',215,9874963258741,620,1000,"商品詳細","img/item/美しい骨.png"),
+(9,'名探偵コナソ','少年漫画','2099-12-31','赤山剛昌','快楽社','漫画',186,9874147963258,460,1000,"商品詳細","img/item/名探偵コナソ.png"),
+(10,'僕に届け','少女漫画','2099-12-31','椎名重穂','快楽社','漫画',186,9874951463782,460,1000,"商品情報","img/item/僕に届け.png"),
+(11,'ノルウェイの林(上)','文庫本','2099-12-31','村上冬樹','快楽社','文庫',300,9874456987321,600,1000,"商品情報","img/item/ノルウェイの林（上）.png"),
+(12,'ノルウェイの林(下)','文庫本','2099-12-31','村上冬樹','快楽社','文庫',300,9874456986321,600,1000,"商品情報","img/item/ノルウェイの林（下）.png"),
+(13,'俺の姉がこんなに可愛いわけがない','ライトノベル','2099-12-31','伏目つかさ','快楽社','文庫',264,92874197842136,460,1000,"商品情報","img/item/俺の姉が.png"),
+(14,'頭文字C','少年漫画','2099-12-31','しげの秀二','快楽社','漫画',196,9874102365478,420,1000,"商品情報","img/item/頭文字C.png"),
+(15,'ねだめ　カンタービレ','少女漫画','2099-12-31','三ノ宮知子','快楽社','漫画',192,9874102512305,420,1000,"商品情報","img/item/ねだめ カンタービレ.png");

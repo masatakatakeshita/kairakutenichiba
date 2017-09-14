@@ -16,7 +16,8 @@
 <fmt:setBundle basename="com.internousdev.kairakutenichiba.property.payment" var="lang" />
 
 <meta charset="utf-8">
-<title>支払い方法確認</title>
+<!--支払い方法確認  -->
+<title><s:text name="lang.payment.paymentScreen" /></title>
 <link rel="stylesheet" type="text/css" href="CSS/payment_takeshita.css">
 
 </head>
@@ -27,42 +28,49 @@
 		<s:include value="header.jsp" />
 	</header>
 
+
 <div class="main">
-        <h3>カード情報の入力</h3>
-        ※<strong>お支払い方法はクレジットカードのみとなります。</strong><br/>
-        ※半角カナ・全角英数文字は、使用しないでください。<br/>
+		<!--カード情報の入力  -->
+        <h3><s:text name="lang.payment.cardinfo" /></h3>
+        <!-- お支払い方法はクレジットカードのみとなります。 -->
+        ※<strong> <s:text name="lang.payment.howtopay" /></strong><br/>
+        ※<!-- 半角カナ・全角英数文字は、使用しないでください。 -->
+        <s:text name="lang.payment.attention" /><br>
+        <br/>
 
 
-
-        <div class="shiharai" >
-
-
-            <table class="nyuuryoku " border="1" >
+<s:form action="payment">
+<div class="shiharai" >
+	<table class="nyuuryoku " border="1" >
 
                <tr>
-           <th>カード会社の選択 　［必須］</th>
-           <td><select name="cardselect" id="cardselect">
-            <option value="Visa">Visa</option>
-            <option value="MasterCard">MasterCard</option>
-            <option value="American Express" >American Express</option>
+               <!-- カード会社の選択 　［必須］ -->
+           <th><s:text name="lang.payment.cardType" /></th>
+           <td><select name="creditId" id="cardselect">
+            <option value="1">Visa</option>
+            <option value="2">MasterCard</option>
+            <option value="3">American Express</option>
               </select>
            </td>
                </tr>
 
             <tr>
-            <th>カード番号　［必須］</th>
-            <td><input type="text" name="card_no1" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf"></td>
+            <!-- カード番号　［必須］ -->
+            <th><s:text name="lang.payment.cardNumber" /><br><s:text name="lang.payment.cardHankaku" /></th>
+            <td><input type="text" name="cardnumber" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf"></td>
             </tr>
 
             <tr>
-            <th>カード名義(ローマ字)　［必須］</th>
+            <!-- カード名義(ローマ字)　［必須］ -->
+            <th><s:text name="lang.payment.cardHolder" /></th>
             <td><input name="cardname" id="cardname" size="25" maxlength="40" value="" >
             </td>　
             </tr>
 
             <tr>
-            <th>有効期限　［必須］</th>
-            <td><select name="card_month">
+            <!-- 有効期限　［必須］ -->
+            <th><s:text name="lang.payment.cardDeadline" /></th>
+            <td><select name="cardmonth">
 				<option value="">--</option>
 				<option value="01" >01</option>
 				<option value="02" >02</option>
@@ -78,7 +86,7 @@
 				<option value="12" >12</option>
 				</select>&nbsp;月/
 
-                <select name="card_year">
+                <select name="cardyear">
 				<option value="">--</option>
 				<option value="17" >17</option>
 				<option value="18" >18</option>
@@ -95,7 +103,8 @@
                 </tr>
 
                 <tr>
-                <th>セキュリティーコード ［必須］</th>
+                <!-- セキュリティーコード ［必須］ -->
+                <th><s:text name="lang.payment.security" /></th>
                 <td> <input type="password" name="cardsecurity"> </td>
                 </tr>
 
@@ -105,13 +114,12 @@
             <div class="haisousentaku">
             <table class="haisou" border="1" >
 
-
-  			<h3>配達方法の選択</h3>
-
+			<!-- 配達方法の選択 -->
+  			<h3><s:text name="lang.payment.deliver" /></h3>
             <strong>配送料金・・・宅配便500円(税込)　メール便200円(税込)</strong><br>
 
               <tr>
-            <th>配送方法［必須］</th>
+            <th>lang.payment.deliver</th>
              <td><label><input type="radio" name="haisou"value="宅配便" >宅配便</label>
             <label><input type="radio" name="haisou" value="メール便">メール便</label>
            　</td>
@@ -146,7 +154,7 @@
 
             </table>
             </div>
-
+</s:form>
 
 
            <p>

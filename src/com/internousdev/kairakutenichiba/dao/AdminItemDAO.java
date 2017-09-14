@@ -66,9 +66,7 @@ public class AdminItemDAO {
 
 				dto.setSales(rs.getInt("sales"));
 
-				dto.setItemDetail(rs.getString("items_detail"));
-
-				dto.setImgPath(rs.getString("img_path"));
+				dto.setitem_image(rs.getString("img_path"));
 
 				dto.setCategory(rs.getString("category"));
 
@@ -76,7 +74,7 @@ public class AdminItemDAO {
 
 				dto.setUpdated_at(rs.getString("updated_at"));
 
-				dto.setIs_deleted(rs.getBoolean("del_key"));
+				dto.setis_deleted(rs.getBoolean("del_key"));
 
 				itemList.add(dto);
 			}
