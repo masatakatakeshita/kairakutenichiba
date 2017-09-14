@@ -42,6 +42,8 @@ public class paymentAction extends ActionSupport implements SessionAware{
 
 
 	private Map<String, Object> session; //ここいるの？何に使ってんの？
+	
+
 
 
 

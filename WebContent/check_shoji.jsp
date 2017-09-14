@@ -30,21 +30,23 @@
 
 
 
-<table border="5" cellspacing="2"  cellpadding="2">
-<tr>
-<td><img class="imagea" src= "img/1.jpg"></td>
-<td>ワンピース 1巻</td><td>500円</td>
-</tr>
-<tr>
-<td><img class="imageb" src= "img/2.jpg"></td>
-<td>ワンピース 2巻</td><td>500円</td>
-</tr>
-<tr>
-<td></td><td>送料</td><td>500円</td>
-</tr>
-<tr>
-<td></td><td>小計</td><td>1,500円</td>
-</tr>
+<table border="1">
+    <tr>
+        <th></th>
+        <th>商品名</th>
+        <th>価格</th>
+        <th>数量</th>
+    </tr>
+
+    <s:iterator value="">
+    <tr>
+        <td><s:property value="" /></td>
+        <td><s:property value="" /></td>
+        <td><s:property value="" /></td>
+        <td><s:property value="" /></td>
+    </tr>
+    </s:iterator>
+
 </table>
 
 <h3>お支払い方法</h3>
