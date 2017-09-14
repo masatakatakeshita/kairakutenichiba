@@ -31,13 +31,15 @@
 
 <div class="main">
 		<!--カード情報の入力  -->
-        <h3><s:text name="lang.cardinfo" /></h3>
+        <h3><s:text name="lang.payment.cardinfo" /></h3>
         <!-- お支払い方法はクレジットカードのみとなります。 -->
-        ※<strong><s:text name="lang.attention" /></strong><br/>
-        ※半角カナ・全角英数文字は、使用しないでください。<br/>
+        ※<strong> <s:text name="lang.payment.howtopay" /></strong><br/>
+        ※<!-- 半角カナ・全角英数文字は、使用しないでください。 -->
+        <s:text name="lang.payment.attention" /><br>
+        <br/>
 
 
-
+<s:form action="payment">
 <div class="shiharai" >
 	<table class="nyuuryoku " border="1" >
 
@@ -101,7 +103,8 @@
                 </tr>
 
                 <tr>
-                <th>セキュリティーコード ［必須］</th>
+                <!-- セキュリティーコード ［必須］ -->
+                <th><s:text name="lang.payment.security" /></th>
                 <td> <input type="password" name="cardsecurity"> </td>
                 </tr>
 
@@ -111,12 +114,12 @@
             <div class="haisousentaku">
             <table class="haisou" border="1" >
 
-
-  			<h3>配達方法の選択</h3>
+			<!-- 配達方法の選択 -->
+  			<h3><s:text name="lang.payment.deliver" /></h3>
             <strong>配送料金・・・宅配便500円(税込)　メール便200円(税込)</strong><br>
 
               <tr>
-            <th>配送方法［必須］</th>
+            <th>lang.payment.deliver</th>
              <td><label><input type="radio" name="haisou"value="宅配便" >宅配便</label>
             <label><input type="radio" name="haisou" value="メール便">メール便</label>
            　</td>
@@ -151,7 +154,7 @@
 
             </table>
             </div>
-
+</s:form>
 
 
            <p>

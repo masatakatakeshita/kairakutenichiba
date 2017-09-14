@@ -59,7 +59,7 @@ public class paymentDAO{
 			
 			ResultSet rs = ps.executeQuery(); //preparedStatementのメソッド
 			if(rs.next()){
-				dto.setNameHolder(rs.getString("name_e"));
+				dto.setNameHolder(rs.getString("name_e"));	//ここDB中のフィールド？
 				dto.setCreditNumber(rs.getString("credit_number"));
 				dto.setExpirationMonth(rs.getInt("expirationMonth"));	
 				dto.setExpirationYear(rs.getInt("expirationYear"));
