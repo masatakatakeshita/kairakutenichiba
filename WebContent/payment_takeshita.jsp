@@ -124,7 +124,7 @@
               <!-- 配送方法[必須] -->
             <th><s:text name="lang.payment.deliver" /></th>
             <!-- 宅配便 -->
-             <td><label><input type="radio" name="haisou"value="宅配便" ><s:text name="lang.payment.bike." /></label>
+             <td><label><input type="radio" name="haisou"value="宅配便" ><s:text name="lang.payment.bike" /></label>
             <!-- メール便 -->
             <label><input type="radio" name="haisou" value="メール便"><s:text name="lang.payment.mail" /></label>
            　</td>
