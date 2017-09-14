@@ -33,6 +33,16 @@ public class HelpDTO {
 	     */
 	    private String userMail;
 
+        /**
+         * 問い合わせ種類
+         */
+	    private String category;
+
+
+	    /**
+	     * 問い合わせ内容
+	     */
+	    private String comment;
 
 	    /**
 	     * ログインフラグ
@@ -129,6 +139,33 @@ public class HelpDTO {
 	        this.userMail = userMail;
 	    }
 
+	    /**
+	     * 問い合わせ種類を取得
+	     */
+	    public String getcategory() {
+	    	return category;
+	    }
+
+	    /**
+	     * 問い合わせ種類を格納
+	     */
+        public void setcategory(String category) {
+        	this.category = category;
+        }
+
+        /**
+         * 問い合わせ内容を取得
+         */
+        public String getcomment() {
+        	return comment;
+        }
+
+        /**
+         * 問い合わせ内容を格納
+         */
+        public void setcomment(String comment) {
+        	this.comment = comment;
+        }
 
 	    /**
 	     * ログインフラグを取得

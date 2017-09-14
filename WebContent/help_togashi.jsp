@@ -47,7 +47,7 @@
 
 
 
-<form action="helplink_togashi.jsp" id="form2">
+<s:form action="helplink_togashi.jsp" id="form2">
 
 
 <div class="boxA">
@@ -57,7 +57,7 @@
 <p>
 <span>氏名<font color="red">(必須)</font></span>
 <a class="box1">
-<input type="text" name="氏名"required autofocus>
+<input type="text" name="userName"required autofocus >
 
 </a>
 </p>
@@ -66,13 +66,13 @@
 <p>
 <span>住所</span>
 <a class ="box3">
-〒<input type="text" name="郵便番号" size="10" pattern="\d{3}-?\d{4}"placeholder="123-4567">
+〒<input type="text" name="userAddress" size="10" pattern="\d{3}-?\d{4}"placeholder="123-4567">
 
 </a>
 <br>
 <a class="box4">
 <span>　</span>
-<input type="text" name="住所" size="30" placeholder="例)東京都千代田区～" >
+<input type="text" name="userAddress" size="30" placeholder="例)東京都千代田区～" >
 </a>
 </p>
 <br>
@@ -80,30 +80,30 @@
 <p>
 <span>メールアドレス<font color="red">(必須)</font></span>
 <a class="box6">
-<input type="text" name="メールアドレス" size="30"required>
+<input type="text" name="userMail" size="30"required>
 </a>
 <br>
 <span>　</span>
 <a class="box7">
-<input type="text" name="メールアドレス" size="30"  placeholder="確認のため再度入力"required>
+<input type="text" name="userMail" size="30"  placeholder="確認のため再度入力"required>
 </a>
 </p>
 <br>
 <p>
 <span>お問い合わせ種類<font color="red">(必須)</font></span>
 <a class="box8">
-<select name="お問い合わせ種類"required>
-<option value="お問い合わせ種類">アカウントについて</option>
-<option value="お問い合わせ種類">お支払い方法について</option>
-<option value="お問い合わせ種類">注文内容について</option>
-<option value="お問い合わせ種類">その他</option>
+<select name="category"required>
+<option value="category">アカウントについて</option>
+<option value="category">お支払い方法について</option>
+<option value="category">注文内容について</option>
+<option value="category">その他</option>
 </select>
 </a>
 </p>
 <br>
 <p>
 <span>お問い合わせ内容<font color="red">(必須)</font></span>
-<textarea name="△" rows="10" cols="50"required></textarea>
+<textarea name="comment" rows="10" cols="50"required></textarea>
 <br>
 </p>
 <p>
@@ -115,7 +115,7 @@
 
 
 
-</form>
+</s:form>
 
 
 
