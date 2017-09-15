@@ -20,13 +20,30 @@
 <title><s:text name="lang.payment.paymentScreen" /></title>
 <link rel="stylesheet" type="text/css" href="CSS/payment_takeshita.css">
 
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" >
+<script>
+  $(function() {
+	  jQuery( '#datepicker' ) . datepicker( {
+		  minDate: '0d',
+		  maxDate: '+10m'
+		   } );
+    $("#datepicker").datepicker();
+    $("#datepicker").datepicker("option", "showOn", 'both');
+
+
+  });
+</script>
+
 </head>
 
 <body>
 
 	<header>
 		<s:include value="header.jsp" />
-	</header>
+</header>
 
 
 <div class="main">
@@ -133,20 +150,16 @@
        　    </tr>
 
 
-             <tr>
+
+            <tr>
             <!-- お届け日指定［必須］ -->
             <th><s:text name="lang.payment.date" /></th>
-            <td><select name="deliveryMonth" id="deliveryMonth">
-            <option value="指定なし">指定なし</option>
-            <option value="test" >test</option>
-            <option value="test" >test</option>
-            <option value="test" >test</option>
-            <option value="test" >test</option>
-            <option value="test" >test</option>
-            <option value="test" >test</option>
-                </select>
+            <td> 日付を選択<input type="text" name="deliveryMonth" class="form_text-small" id="datepicker" required>
+
            </td>
                 </tr>
+
+
 
 
 
