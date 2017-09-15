@@ -6,8 +6,8 @@ drop database if exists kairakutenichiba;
 create database kairakutenichiba;
 use kairakutenichiba;
 
-#--------------------------各テーブルの作成--------------------------
-
+/*--------------------------各テーブルの作成--------------------------
+*/
 create table items(
 	item_id int not null primary key,/*商品ID*/
 	item_name varchar(100) not null,/*商品名*/
@@ -25,7 +25,7 @@ create table items(
 	item_image varchar(255) not null, /*商品画像*/
 	is_deleted boolean default false,/*商品削除*/
 	created_at datetime not null default current_timestamp,/*登録日*/
-	updated_at datetime not null default current_timestamp,/*更新日*/
+	updated_at datetime not null default current_timestamp/*更新日*/
 );
 
 
@@ -40,7 +40,7 @@ create table purchases_outlines (
 	updated_at datetime not null default current_timestamp,/*更新日*/
 
 	foreign key(user_id) references openconnect.users(user_id),
-	foreign key(credit_id) reference credit(credit_id)
+	foreign key(credit_id) references openconnect.credit(credit_id)
 );
 
 create table purchases_details (
@@ -87,13 +87,13 @@ create table inquiry_histories (
 
 use kairakutenichiba;
 
-#--------------------------商品情報(画像以外)--------------------------
-/*
+/*--------------------------商品情報(画像以外)--------------------------
+
 Templete:(商品ID,'商品名','カテゴリ名','発売日','著者','出版社','発行形態','ページ数','ISBNコード',
 単価,在庫数,売り上げ数,"詳細説明文",'商品画像')
 */
 insert into items(
-item_id,item_name,category_id,release_day,author,publisher,publish_type,pages,isbn,price,stocks,item_datail,item_image)
+item_id,item_name,category_name,release_day,author,publisher,publish_type,pages,isbn,price,stocks,item_datail,item_image)
 values
 (1,'チビモン','少年漫画','2099-12-31','佐藤次郎','快楽社','漫画',178,9784123456789,480,1000,"商品詳細","img/item/チビモン.png"),
 (2,'メガネ','文庫本','2099-12-31','鈴木花子','快楽社','文庫',382,9784123789456,650,1000,"商品詳細","img/item/メガネ.png"),
