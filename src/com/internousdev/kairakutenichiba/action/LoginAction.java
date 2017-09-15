@@ -77,7 +77,7 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 						dto = dao.select(dto.getEmail(), dto.getPassword());
 
 						session.put("userId", dto.getUserId());
-						session.put("loginFlg", dto.isLoginFlg());
+						
 
 						// Cookie関連
 						String cUserId = String.valueOf(dto.getUserId());
