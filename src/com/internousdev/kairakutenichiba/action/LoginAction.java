@@ -43,8 +43,10 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 
 	/**
 	 * 管理者
-	 */
-	private boolean admin = true;
+	 *
+	* private boolean admin = true;
+	*いらないと思う。
+	*/
 
 	// Cookie関連
 	private HttpServletResponse response;
@@ -99,16 +101,16 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 						response.addCookie(cookieUserId);
 
 						response.addCookie(cookieLoginFlg);
-
-						if (admin) {
-
+/*
+*						if (admin) {
+*いらないと思う。
+*/
 							int userFlg = (int) dto.getUserFlg();
 							if (userFlg == 3) {
 								ret = LOGIN;
 							} else {
 								ret = SUCCESS;
-							}
-						}
+							}						
 					}
 				}
 			}
