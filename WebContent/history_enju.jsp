@@ -33,6 +33,42 @@
 	<div class="search">
 </div>
 
+<s:form action="HistoryAction">
+<table border="1">
+    <tr>
+
+        <th>合計金額</th>
+        <th>購入日</th>
+		<th>商品量</th>
+    </tr>
+    <tr>
+
+        <td><s:property value="multiplied_price" /></td>
+        <td><s:property value="purchased_day" /></td>
+        <td><s:property value="quantities" /></td>
+    </tr>
+    
+    
+    <tr>
+        <th>商品名</th>
+        <th>著者名</th>
+        <th>販売日</th>
+        <th>値段</th>
+    </tr>
+    <s:iterator value="">	<!-- ここitemdtoのarryalist? -->
+    <tr>
+        <td><s:property value="item_name" /></td>
+        <td><s:property value="author" /></td>
+        <td><s:property value="release_day" /></td>
+        <td><s:property value="price" /></td>
+    </tr>
+    </s:iterator>
+</table>
+</s:form>
+
+
+
+<!-- 
 <table>
 <tr>
 	<td><img class="image" src= "img/1.jpg"></td>
@@ -52,7 +88,7 @@
 
 </tr>
 </table>
-
+ -->
 
 
 
