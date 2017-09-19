@@ -33,23 +33,14 @@
 	<div class="search">
 </div>
 
-<s:form action="HistoryAction">
-<table border="1">
-    <tr>
 
-        <th>合計金額</th>
+<!-- これlist化のために多分書き直す必要あり -->
+<s:form action="HistoryAction">
+<table border="1">    
+    <tr>
+        <th>商品IDを</th>
         <th>購入日</th>
 		<th>商品量</th>
-    </tr>
-    <tr>
-
-        <td><s:property value="multiplied_price" /></td>
-        <td><s:property value="purchased_day" /></td>
-        <td><s:property value="quantities" /></td>
-    </tr>
-    
-    
-    <tr>
         <th>商品名</th>
         <th>著者名</th>
         <th>販売日</th>
@@ -57,6 +48,9 @@
     </tr>
     <s:iterator value="">	<!-- ここitemdtoのarryalist? -->
     <tr>
+        <td><s:property value="multiplied_price" /></td>
+        <td><s:property value="purchased_day" /></td>
+        <td><s:property value="quantities" /></td>
         <td><s:property value="item_name" /></td>
         <td><s:property value="author" /></td>
         <td><s:property value="release_day" /></td>

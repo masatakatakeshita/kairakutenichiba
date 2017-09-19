@@ -1,14 +1,13 @@
 
 package com.internousdev.kairakutenichiba.action;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.kairakutenichiba.dao.HistoryUserDAO;
-import com.internousdev.kairakutenichiba.dao.HistroyItemDAO;
-import com.internousdev.kairakutenichiba.dto.HistoryItemDTO;
-import com.internousdev.kairakutenichiba.dto.HistoryUserDTO;
+import com.internousdev.kairakutenichiba.dao.HistoryDAO;
+import com.internousdev.kairakutenichiba.dto.HistoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -26,22 +25,17 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	 * どんな変数がいるだろう？
 	 * userId は session.get("userId");　で最初に取得する必要ある
 	 */
-	//sessionから取得	itemDAOの引数に使う。
-	private Object userId;
-	//execute内部で下記をぶち込むようにする。
-//	= session.get("userId");
-		
-	
-	//UserDTO
+
+	private int userId; //	= session.get("userId");?
+
 	private int item_id;
 	
 	private int quantities;
 	
-	private String multiplied_price;	 //DBのdecimalのデータ型は無視でいい？
+	private String multiplied_price;	
 
-	private String purchased_day;	//テーブルのpurchased_atフィールド
-	
-	//ItemDTO
+	private String purchased_day;	
+
 	private String item_name;
 	
 	private String release_day;
@@ -50,40 +44,24 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	
 	private int price;		
 	
+//	private String imgPath;		もし画像追加するなら
 	
 	private Map<String, Object> session;
 	
+	private ArrayList<HistoryDTO> HisotryList = new ArrayList<HistoryDTO>();
+		//iterateで表示するためのリスト。オブジェクト作成
 	
 	
 	public String execute(){
 		String ret = ERROR;		//エラーなら購入履歴なしの素画面が表示。
-		HistoryUserDAO userdao = new HistoryUserDAO();
-		HistroyItemDAO itemdao = new HistroyItemDAO();
-		HistoryUserDTO userdto = new HistoryUserDTO();
-		HistoryItemDTO itemdto = new HistoryItemDTO();
 		
-		//先にuserdao.selectの実行。item_idを探してくる。
-		//ここは普通にjspにs:propertyで追加する。
-		userdto = userdao.select(userId);
-		this.item_id = userdto.getItem_id();
-		this.quantities = userdto.getQuantites();
-		this.multiplied_price = userdto.getMultplied_price();
-		this.purchased_day = userdto.getPurchased_day();
-		
-		/**
-		 * item_idを複数獲得したあとどうすればいい？
-		 * そもそもdtoの時点でitem_idを配列にしないとだめか？
-		 * quantitiesもarraylist.addしなきゃならん？
-		 */
-		//商品情報のメソッド。
-		itemdto = itemdao.select(item_id);
-		this.item_name = itemdto.getItem_name();
-		this.release_day = itemdto.getRelease_day();
-		this.author = itemdto.getAuthor();
-		this.price = itemdto.getPrice();
-
-		
-		ret = SUCCESS; //ぶっちゃけERRORもSUCCESSも遷移先変わらない。
+		if(session.containsKey("userId")){
+			this.userId = (int) session.get("userId");		//(int)はobject→int型への変換
+			
+			HistoryDAO dao = new HistoryDAO();
+			HisotryList = dao.select(userId);
+			ret = SUCCESS; //ぶっちゃけERRORもSUCCESSも遷移先変わらない。		
+		}
 		return ret;
 	}
 	
@@ -91,7 +69,6 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	
 	
 //下記は何に使ってるのか？
-	//UserDTO set・getメソッド	
 	public int getItem_id(){
 		return item_id;
 	}
@@ -121,7 +98,7 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	}
 	
 	
-	//ItemDTO　　set・getメソッド
+	
 	public String getItem_name(){
 		return item_name;
 	}
@@ -157,6 +134,29 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	}
 	public Map<String, Object> getsession(){
 		return session;
+	}
+
+
+
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+
+
+
+//list
+	public ArrayList<HistoryDTO> getHisotryList() {
+		return HisotryList;
+	}
+
+	public void setHisotryList(ArrayList<HistoryDTO> hisotryList) {
+		HisotryList = hisotryList;
 	}
 
 
