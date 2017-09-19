@@ -44,6 +44,8 @@ public class paymentAction extends ActionSupport implements SessionAware{
 	private String deliveryMonth;
 
 	private String deliveryTime;
+	
+	private int whaterror;
 
 
 	private Map<String, Object> session; //ここいるの？何に使ってんの？　いるんやで。
@@ -82,11 +84,12 @@ public class paymentAction extends ActionSupport implements SessionAware{
 							cartList= cart.selectedItem(userId);
 							ret = SUCCESS;
 							
-						}
-					}
-				}
-			}
-		}
+						}else{whaterror=1;
+						ret = "other";}
+					}else{whaterror="year";}
+				}else{whaterror="month";}
+			}else{whaterror="number";}
+		}else{whaterror="name";}
 		return ret;
 	}
 
@@ -202,6 +205,16 @@ public class paymentAction extends ActionSupport implements SessionAware{
 
 	public void setPayList(ArrayList<paymentDTO> payList) {
 		this.payList = payList;
+	}
+
+
+	public String getWhaterror() {
+		return whaterror;
+	}
+
+
+	public void setWhaterror(String whaterror) {
+		this.whaterror = whaterror;
 	}
 
 

@@ -19,6 +19,8 @@
 		com.internousdev.kairakutenichiba.property.login
 		com.internousdev.kairakutenichiba.property.mypage
 		com.internousdev.kairakutenichiba.property.payment
+		com.internousdev.kairakutenichiba.property.cartempty
+		com.internousdev.kairakutenichiba.property.peymenterror
 
 		" />
 
@@ -93,6 +95,7 @@
 			<result name="success">check_shoji.jsp</result>
 			<result name="error">payment_takeshita.jsp</result>
 			<result name="login">check_shoji.jsp</result>
+			<result name="other">paymentError.jsp</result>
 		</action>
 
 		<!-- 購入確認画面。成功なら完了画面、在庫切れだったら在庫切れ画面に飛ぶ -->
@@ -108,7 +111,7 @@
 		<action name="ContactAction" class="com.internousdev.kairakutenichiba.action.ContactAction"
 			method="execute">
 			<result name="success">helplink_togashi.jsp</result>
-			<result name="error">help_togashi.jsp</result>
+			<result name="error" >help_togashi.jsp</result>
 			<result name="login">helplink_togashi.jsp</result>
 		</action>
 
