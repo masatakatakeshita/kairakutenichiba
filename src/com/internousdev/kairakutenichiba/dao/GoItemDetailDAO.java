@@ -39,7 +39,7 @@ public class GoItemDetailDAO {
 				ItemDTO dto=new ItemDTO();
 				dto.setItem_id(rs.getInt("item_id"));
 				dto.setItem_name(rs.getString("item_name"));
-				dto.setCategory(rs.getString("category"));
+				dto.setCategory(rs.getString("category_name"));
 				dto.setPrice(rs.getFloat("price"));
 				dto.setRelease_day(rs.getInt("release_day"));
 				dto.setAuthor(rs.getString("author"));
