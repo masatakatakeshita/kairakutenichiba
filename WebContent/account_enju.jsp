@@ -36,16 +36,41 @@
 
 <table class="border">
 
-<tr>
-	<th>氏名</th>
-</tr>
 
 <tr>
-	<th>メールアドレス</th>
+	<th>ふりがな</th><s:property value = familyNameKana/>
 </tr>
+
+
 <tr>
-	<th>ご住所</th>
+	<th>ふりがな</th><s:property value = givenNameKana/>
 </tr>
+
+
+<tr>
+	<th>氏名</th><s:property value = familyNameKanji/>
+</tr>
+
+
+<tr>
+	<th>氏名</th><s:property value = givenNameKanji/>
+</tr>
+
+
+<tr>
+	<th>住所</th><s:property value = address/>
+</tr>
+
+
+<tr>
+	<th>電話番号</th><s:property value = phoneNumber/>
+</tr>
+
+
+<tr>
+	<th>メールアドレス</th><s:property value = phoneEmail/>
+</tr>
+
 
 </table>
 

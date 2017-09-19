@@ -63,7 +63,7 @@
                <tr>
                <!-- カード会社の選択 　［必須］ -->
            <th><s:text name="lang.payment.cardType" /></th>
-           <td><select name="creditType" id="cardselect" >
+           <td><select name="creditType" id="cardselect" required>
             <option value="1">Visa</option>
             <option value="2">MasterCard</option>
             <option value="3">American Express</option>
@@ -74,7 +74,7 @@
             <tr>
             <!-- カード番号　［必須］ -->
             <th><s:text name="lang.payment.cardNumber" /><br><s:text name="lang.payment.cardHankaku" /></th>
-            <td><input type="text" name="creditNumber" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf">&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf"></td>
+            <td><input type="text" name="creditNumber" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required>&nbsp;-&nbsp; <input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required>&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required>&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required></td>
             </tr>
 
             <tr>
@@ -122,7 +122,7 @@
                 <tr>
                 <!-- セキュリティーコード ［必須］ -->
                 <th><s:text name="lang.payment.security" /></th>
-                <td> <input type="password" name="securityCode" required> </td>
+                <td> <input type="password" name="securityCode" maxlength="4" required> </td>
                 </tr>
 
                 </table>
@@ -171,7 +171,7 @@
              <tr>
              <!--お届け時間指定［必須］ -->
             <th><s:text name="lang.payment.time" /></th>
-            <td><select name="deliveryTime" id="deliveryTime">
+            <td><select name="deliveryTime" id="deliveryTime" required>
             <option value="指定なし">指定なし</option>
             <option value="午前中">午前中</option>
             <option value="12時~14時" >12時~14時</option>
@@ -184,13 +184,13 @@
 
             </table>
             </div>
-</s:form>
+
 
 
            <p>
            <a href="check_shoji.jsp"><input type="submit" value=内容確認></a>
         　　</p>
-
+</s:form>
 
     　　　　
     </div>

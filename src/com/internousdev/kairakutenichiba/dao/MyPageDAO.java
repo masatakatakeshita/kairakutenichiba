@@ -31,13 +31,22 @@ public class MyPageDAO {
 			while (rs.next()) {
 				dto.setUserId(rs.getInt("userId"));
 
-				dto.setFamilyNameKanji(rs.getString("familyNameKanji"));
+				dto.setFamilyNameKanji(rs.getString("family_name_kanji"));
 
-				dto.setFamilyNameKana(rs.getString("familyNameKana"));
+				dto.setGivenNameKanji(rs.getString("given_name_kanji"));
 
-				dto.setPhoneEmail(rs.getString("phoneEmail"));
+				dto.setFamilyNameKana(rs.getString("family_name_kana"));
+
+				dto.setGivenNameKana(rs.getString("given_name_kana"));
 
 				dto.setAddress(rs.getString("address"));
+
+				dto.setPhoneEmail(rs.getString("phone_email"));
+
+				dto.setPhoneNumber(rs.getString("phone_number"));
+
+
+
 
 				userList.add(dto);
 			}
