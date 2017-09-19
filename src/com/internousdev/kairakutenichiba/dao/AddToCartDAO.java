@@ -35,7 +35,7 @@ public class AddToCartDAO {
         ArrayList<ItemDTO> itemStatus = new ArrayList<ItemDTO>();
 
         String sql= "select * from items where item_id = ?";
-        
+
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, itemId);
@@ -45,7 +45,7 @@ public class AddToCartDAO {
                 dto.setItem_name(rs.getString("item_name"));
                 dto.setPrice(rs.getFloat("price"));
                 itemStatus.add(dto);
-               
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -168,7 +168,7 @@ public class AddToCartDAO {
                 dto.setCartId(rs.getInt("cart_id"));
                 dto.setItemId(rs.getInt("item_id"));
                 dto.setQuantities(rs.getInt("quantities"));
-                cartList.add(dto);
+
 
                 PreparedStatement ps2 = con.prepareStatement(select2);
                 ps2.setInt(1, dto.getItemId());
@@ -180,6 +180,7 @@ public class AddToCartDAO {
                     dto.setPrice(rs2.getFloat("price"));
                     dto.setStocks(rs.getInt("stocks"));
                 }
+                cartList.add(dto);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -71,8 +71,6 @@ public class GoSettlementAction extends CartAssist implements SessionAware {
 			if(cartList.size() > 0){
 			result = SUCCESS;
 			}
-		}else{
-			result = LOGIN;
 		}
 		return result;
 	}

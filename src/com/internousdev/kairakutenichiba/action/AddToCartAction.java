@@ -93,6 +93,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
             userId = (int) session.get("userId");
             AddToCartDAO dao = new AddToCartDAO();
             itemStatus = dao.itemStatus(itemId);
+            setQuantities(1);
 
             if(dao.addToCart(userId, itemId, quantities)){
                 return result;
