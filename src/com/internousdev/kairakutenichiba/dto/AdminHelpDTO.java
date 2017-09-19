@@ -198,6 +198,11 @@ public class AdminHelpDTO {
         this.inquiriedAt = inquiriedAt;
     }
 
+	public void setDt(String string) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
 
 
 
