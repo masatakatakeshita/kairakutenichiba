@@ -13,22 +13,26 @@
 <!-- 国際化 ロケールID取得 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <!-- 国際化 propertyファイルの場所の定義 -->
-<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.finish" var="lang" />
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.cartempty" var="lang" />
 
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css"  href="CSS/finish.css">
 
-<title><s:text name="lang.finish.title" /></title>
-<meta http-equiv="refresh" content="3;index.jsp">
+<title><s:text name="lang.cartempty.title" /></title>
+<link rel="stylesheet" type="text/css" href="CSS/cartempty_shoji.css">
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+
+
 </head>
+
 <body>
 	<header>
 		<s:include value="header.jsp" />
-	</header>
+</header>
 
-<h1><s:text name="lang.finish.h1" /></h1>
-<h3><s:text name="lang.finish.countdown" /></h3>
-
-<h4><a href="index.jsp"><s:text name="lang.finish.toppage" /></a></h4>
+<h1><s:text name="lang.cartempty.h1" /></h1>
+<h4><a href="index.jsp"><s:text name="lang.cartempty.toppage" /></a></h4>
 </body>
 </html>

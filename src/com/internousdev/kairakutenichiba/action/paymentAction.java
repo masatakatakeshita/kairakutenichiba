@@ -46,7 +46,7 @@ public class paymentAction extends ActionSupport implements SessionAware{
 	private String deliveryTime;
 
 
-	private Map<String, Object> session; //ここいるの？何に使ってんの？
+	private Map<String, Object> session; //ここいるの？何に使ってんの？　いるんやで。
 	
 	private ArrayList<paymentDTO> payList=new ArrayList<paymentDTO>();
 	
