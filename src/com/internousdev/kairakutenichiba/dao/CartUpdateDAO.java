@@ -30,17 +30,17 @@ public class CartUpdateDAO {
 	 *@return int 成否を判断する変数
 	 *
 	 */
-	public int updateCart(int cartId,int userId,int quantities){
+	public int updateCart(int cartId,int itemId,int quantities){
 		int updateCount = 0;
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con = (Connection) db.getConnection();
-		String sql ="update carts set quantities=? where user_id=? and cart_id=?";
+		String sql ="update carts set quantities=? where item_id=? and cart_id=?";
 
 		try{
 			PreparedStatement ps = (PreparedStatement) con.prepareStatement(sql);
 			ps.setInt(1, quantities);
-			ps.setInt(2, userId);
+			ps.setInt(2, itemId);
 			ps.setInt(3, cartId);
 			updateCount = ps.executeUpdate();
 		}catch(SQLException e){
@@ -57,10 +57,6 @@ public class CartUpdateDAO {
 	return updateCount;
 	}
 
-	public int updateCart(int cartId, int userId, int quantities, int itemId, int prevQuantities) {
-		// TODO 自動生成されたメソッド・スタブ
-		return 0;
-	}
 
 
 

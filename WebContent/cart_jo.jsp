@@ -21,59 +21,66 @@
 <title><s:text name="lang.cart.title" /></title>
 
 </head>
+
+
+
+
+
 <body>
 	<header>
 		<s:include value="header.jsp" />
 	</header>
-<div class="container">
-	<h1><s:text name="lang.cart.message" /></h1>
-	<form action="#" name="form1">
+	<div class="container">
+		<h1><s:text name="lang.cart.message" /></h1>
+	</div>
 
-		<table class="type01">
-			<thead>
-				<tr>
-					<th scope="col"><s:text name="lang.cart.item_name" /></th>
-					<th scope="col"><s:text name="lang.cart.price" /></th>
-					<th scope="col"><s:text name="lang.cart.count" /></th>
-					<th scope="col"><s:text name="lang.cart.subtotal" /></th>
-				</tr>
-            </thead>
-		</table>
-        <table class="type01">
+		<!-- カートの中身を表示するテーブル -->
 
-            <td><div class="update">
+					<table class="type01">
+						<tr>
+							<th class="text-center" style="width: 25%;"><s:text
+									name="lang.cart.item_name" /></th>
+							<th class="text-center" style="width: 25%;"><s:text
+									name="lang.cart.price" /></th>
+							<th class="text-center" style="width: 25%;"><s:text
+									name="lang.cart.count" /></th>
+							<th class="text-center" style="width: 25%;"><s:text
+									name="lang.cart.subtotal" /></th>
+						</tr>
+					</table>
 
-									<s:form action="CartUpdateAction" id="form01">
-									<s:hidden name="cartId" value="%{cartId}" />
-									<s:hidden name="itemId" value="%{mId}" />
-									<s:hidden name="prevQuantities" value="%{quantities}" />
-                                        <div class="form-group">
-												<input type="text"  style="width:70px"  class="form-control"  id="${cartId}"
-													name="quantities" value="${quantities}" maxlength="2"
-													<s:if test="stocks+quantities>=50"> pattern="([1-9])|([0-4][1-9])|(50)" placeholder="1-50"</s:if>
-													<s:else>pattern="[1-<s:property value="quantities+stocks"/>]*" placeholder="1-<s:property value="quantities+stocks"/>"</s:else>/>
-                                        </div>
-                                    </s:form>
-                </div>
-            </td>
-
-        </table>
-
+					<!-- ここからイテレート -->
+					<table class="type01">
+						<s:iterator value="cartList">
+							<tr>
+								<td style="width: 25%;"><s:property value="item_name" /></td>
+								<td style="width: 25%;">
+									<div class="col-xs-5"></div> <s:form action="CartUpdateAction">
+										<s:select
+											list="{\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\"}"
+											name="quantities" Value="%{quantities}"
+											onChange="this.form.submit()" />
+									</s:form>
+								</td>
+								<td style="width: 25%;"><fmt:formatNumber
+										value="${unit_price}" pattern="###,###,###" />actionからひっぱる(小計？)
+									</td>
+								<td style="width: 25%;"><s:form action="CartDeleteAction">
+										<button type="submit" class="btn btn-danger">
+											<s:text name="lang.cart.delete" />
+										</button>
+									</s:form></td>
+							</tr>
+						</s:iterator>
+					</table>
+					<!-- ここまでイテレート -->
 		<table class="type02">
 			<tr>
 				<th align="right" colspan="3"><strong><s:text name="lang.cart.total" /></strong></th>
 				<td>
                     	<fmt:formatNumber value="${amountAll}" pattern="###,###,###" />
-                    <input type="text" name="field_total" size="8" value=""
-                           style="text-align: right;" /><s:text name="lang.cart.yen" /></td></tr></table>
-
-
-
-
-</form>
-</div>
+                    <s:text name="lang.cart.yen" /></td></tr></table>
 <span id="submit">
-
 		<input type="submit" onclick="location.href='payment_takeshita.jsp'"
 		value="<s:text name="lang.cart.message4" />">
 
@@ -82,6 +89,22 @@
 		<p><a href="index.jsp"><s:text name="lang.cart.message3" /></a>
 	</p>
 
+<script>
+		if (window.history && window.history.pushState) {
+
+			history.pushState("nohb", null, "");
+			$(window).on("popstate", function(event) {
+
+				if (!event.originalEvent.state) {
+
+					history.pushState("nohb", null, "")
+					alert("画面最上部のヘッター又は画面中央部ボタンからお戻り下さい。");
+
+					return;
+				}
+			});
+		}
+	</script>
 
 
 </body>

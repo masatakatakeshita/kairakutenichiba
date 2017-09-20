@@ -102,8 +102,8 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
             GoCartDAO goCartDao = new GoCartDAO();
             itemStatus = goItemDao.select(itemId);
 
-            
-            updateCount = cartUpDao.updateCart(cartId, userId, quantities, itemId, prevQuantities);
+
+            updateCount = cartUpDao.updateCart(cartId, itemId, quantities);
 
             if(updateCount <= 0){
                 message="エラー：データ不整合";
@@ -117,7 +117,7 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
 
             cartList = goCartDao.selectedItem(userId);
 
-            
+
                 if (cartList.size() > 0) {
                     for (int i = 0; i < cartList.size(); i++) {
                         amountAll += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
@@ -127,8 +127,8 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
                 	message="エラー：データ不整合";
                     result = ERROR;
                 }
-        
-    
+
+
         }
         }
         return result;
