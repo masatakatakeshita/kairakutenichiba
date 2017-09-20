@@ -84,12 +84,12 @@
             <td rowspan="4">
             	<!-- 更新 -->
                  <s:form action="GoAdminUpdateAction">
-                     <s:hidden name="itemsName"></s:hidden>
+                     <s:hidden name="item_name"></s:hidden>
                      <s:submit value="%{getText('lang.admin_item.upd')}" name="submit"/>
                  </s:form>
                  <!-- 削除 -->
                  <s:form action="GoAdminDeleteAction">
-                     <s:hidden name="itemsName"></s:hidden>
+                     <s:hidden name="item_name"></s:hidden>
                      <s:submit value="%{getText('lang.admin_item.del')}" name="submit"/>
                  </s:form>
             </td>
