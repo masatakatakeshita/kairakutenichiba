@@ -19,8 +19,8 @@
 
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css" href="CSS/logout_kato.css">
-
-<title>ログアウト</title>
+<!--  ログアウト-->
+<title><s:text name="lang.logout.title" /></title>
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 
@@ -38,18 +38,19 @@
 
 
 	<div id="logout">
-
-		<h1>ログアウトしました</h1>
+		<!-- ログアウトしました -->
+		<h1><s:text name="lang.logout.logout" /></h1>
 
 	</div>
 
 	<div id="relogin">
-
-		<a href="login_kato.jsp">再度ログインする</a>
+		<!-- 再度ログインする -->
+		<a href="login_kato.jsp"><s:text name="lang.logout.login" /></a>
 	</div>
 
 	<div id="linktop">
-		<a href="index.jsp">トップページへ</a>
+		<!-- トップページへ -->
+		<a href="index.jsp"><s:text name="lang.logout.toppage" /></a>
 	</div>
 
 	<script>
@@ -65,7 +66,8 @@
 
 					//. もう一度履歴を操作
 					history.pushState("nohb", null, "")
-					alert("「トップページへ」からお戻りください。");
+					//"「トップページへ」からお戻りください。"
+					alert(<s:text name="lang.logout.backtotop" />);
 
 					return;
 				}

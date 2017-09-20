@@ -17,7 +17,8 @@
 
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="CSS/history_enju.css">
-<title>快楽歴史</title>
+<!-- 快楽歴史 -->
+<title><s:text name="lang.history.title" /></title>
 
 </head>
 <body>
@@ -27,9 +28,11 @@
 	</header>
 
 <div class="main">
-<h1>快楽歴史</h1>
+<!-- 快楽歴史 -->
+<h1><s:text name="lang.history.title" /></h1>
 <div class="gif"><img src="img/ninsani02.gif"width="50" height="50"></div>
-	<p>こちらには過去に貪った快楽が表示されます</p>
+	<!--こちらには過去に貪った快楽が表示されます  -->
+	<p><s:text name="lang.history.explanation" /></p>
 	<div class="search">
 </div>
 
@@ -37,12 +40,18 @@
 <s:form action="HistoryAction">
 <table border="1">    
     <tr>
-        <th>商品名</th>
-        <th>著者名</th>
-        <th>値段</th>
-        <th>購入日</th>
-        <th>販売日</th>
-        <th>販売量</th>
+    	<!-- 商品名 -->
+        <th><s:text name="lang.history.name" /></th>
+        <!-- 著者名 -->
+        <th><s:text name="lang.history.author" /></th>
+        <!-- 値段 -->
+        <th><s:text name="lang.history.price" /></th>
+        <!-- 購入日 -->
+        <th><s:text name="lang.history.buyday" /></th>
+        <!-- 販売日 -->
+        <th><s:text name="lang.history.dayonsale" /></th>
+        <!-- 販売個数 -->
+        <th><s:text name="lang.history.quantity" /></th>
         
     </tr>
     <s:iterator value="">	<!-- ここitemdtoのarryalist? -->

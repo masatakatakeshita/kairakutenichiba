@@ -6,7 +6,7 @@
 <html>
 
 <head>
-<fmt:setBundle basename="com.internousdev.legmina.property.admin_header"
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.admin_header"
 	var="lang" />
 <meta charset="utf-8">
 
@@ -19,11 +19,11 @@
 
 		<a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
 		<a href="admin_top_yama.jsp" class="header_btn"><s:text name="lang.admin_header_btn"/></a>
-		<a href="admin_customer.jsp" class="header_btn"><s:text name="lang.admin_header_btn"/>顧客情報</a>
-		<a href="admin_history_kato.jsp" class="header_btn"<s:text name="lang.admin_header_userbtn"/>>販売履歴</a>
-		<a href="admin_item_yama.jsp" class="header_btn"><s:text name="lang.admin_header_Itembtn"/>商品管理</a>
-		<a href="admin_help.jsp" class="header_btn"><s:text name="lang.admin_header_customerbtn"/>お問い合わせ</a>
-		<a href="logout_kato.jsp" class="header_btn"><s:text name="lang.header_logoutbtn"/>ログアウト</a>
+		<a href="admin_customer.jsp" class="header_btn"><s:text name="lang.admin_header_btn"/></a>
+		<a href="admin_history_kato.jsp" class="header_btn"<s:text name="lang.admin_header_userbtn"/>></a>
+		<a href="admin_item_yama.jsp" class="header_btn"><s:text name="lang.admin_header_Itembtn"/></a>
+		<a href="admin_help.jsp" class="header_btn"><s:text name="lang.admin_header_customerbtn"/></a>
+		<a href="logout_kato.jsp" class="header_btn"><s:text name="lang.header_logoutbtn"/></a>
 
 	</header>
 

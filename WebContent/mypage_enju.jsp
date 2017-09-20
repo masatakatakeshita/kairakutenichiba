@@ -18,7 +18,8 @@
 <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="CSS/mypage_enju.css">
-<title>マイページ</title>
+<!-- マイページ-->
+<title><s:text name="lang.mypage.title" /></title>
 </head>
 <body>
 
@@ -30,15 +31,17 @@
     <s:action var="select" name="MyPageAction" />
 
 <div class="main">
-
-<h1>マイページ</h1>
+<!-- マイページ -->
+<h1><s:text name="lang.mypage.title" /></h1>
 
 <p>
-<a href="http://localhost:8080/kairakutenichiba/account_enju.jsp" target="_blank" class="list">快楽的登録情報参照</a>
+<!-- 快楽的登録情報参照-->
+<a href="http://localhost:8080/kairakutenichiba/account_enju.jsp" target="_blank" class="list"><s:text name="lang.mypage.info" /></a>
 </p>
 
 <p>
-<a href="http://localhost:8080/kairakutenichiba/history_enju.jsp" target="_blank" class="list">快楽歴史</a>
+<!-- 快楽歴史 -->
+<a href="http://localhost:8080/kairakutenichiba/history_enju.jsp" target="_blank" class="list"><s:text name="lang.mypage.history" /></a>
 </p>
 </div>
 </body>

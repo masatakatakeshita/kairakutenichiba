@@ -19,8 +19,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>快楽天市場トップ</title>
+<!--  快楽天市場トップ-->
+<title><s:text name="lang.index.title" /></title>
 
 <link rel="stylesheet" type="text/css"
 	href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
@@ -87,31 +87,36 @@
 
 		<div class="sidebar-box">
 			<a href="#jump-boy"> <img src="img/item/名探偵コナソ.png" alt="" style="width: 15%">
-				 <em class="sbox"> 少年マンガ </em>
+					<!--  少年マンガ  -->
+				 <em class="sbox"><s:text name="lang.index.boymanga" /></em>
 				 </a>
 		</div>
 
 		<div class="sidebar-box">
 			<a href="#jump-girl"> <img src="img/item/僕に届け.png" alt="" style="width: 15%">
-				 <em class="sbox"> 少女マンガ </em>
+					<!--  少女マンガ  -->
+				 <em class="sbox"><s:text name="lang.index.girlmanga" /></em>
 				 </a>
 		</div>
 
 		<div class="sidebar-box">
 			<a href="#jump-novel"> <img src="img/item/俺の姉が.png" alt="" style="width: 15%">
-				 <em class="sbox"> ライトノベル </em>
+					<!-- ライトノベル -->
+				 <em class="sbox"><s:text name="lang.index.lightnovel" /></em>
 				 </a>
 		</div>
 
 		<div class="sidebar-box">
 			<a href="#jump-paperback"> <img src="img/item/メガネ.png" alt="" style="width: 15%">
-			<em class="sbox"> 文庫本 </em>
+					<!--  文庫本  -->
+			<em class="sbox"><s:text name="lang.index.novel" /></em>
 			</a>
 		</div>
 
 		<div class="sidebar-box">
 			<a href="#jump-magazine"> <img src="img/item/正しい寿司の握り方.png" alt="" style="width: 15%">
-				 <em class="sbox"> 雑誌 </em>
+					<!--  雑誌  -->
+				 <em class="sbox"><s:text name="lang.index.magazine" /></em>
 				 </a>
 		</div>
 
@@ -121,7 +126,8 @@
 
 
 	<div class="slidebox">
-		<h1 class="recommend">今月のおすすめ商品</h1>
+						<!-- 今月のおすすめ商品 -->
+		<h1 class="recommend"><s:text name="lang.index.recommandgoods" /></h1>
 
 		<ul class="bxslider">
 
@@ -160,7 +166,8 @@
 	</div>
 
 	<div id="jump-boy">
-		<h2 id="boy">少年マンガ</h2>
+		<!-- 少年マンガ -->
+		<h2 id="boy"><s:text name="lang.index.boymanga" /></h2>
 		<div class="boy-item">
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >1</s:param></s:url>'><img
 					src="img/item/チビモン.png" class="img"></a>
@@ -168,12 +175,14 @@
 					src="img/item/頭文字C.png" class="img"></a>
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >9</s:param></s:url>'><img
 					src="img/item/名探偵コナソ.png" class="img"></a>
-			<a href='#top' class="go-top">▲トップへ</a>
+										<!--  -->
+			<a href='#top' class="go-top"><s:text name="" /></a>
 		</div>
 	</div>
 
 	<div id="jump-girl">
-		<h2 id="girl">少女マンガ</h2>
+					<!--少女マンガ  -->
+		<h2 id="girl"><s:text name="lang.index.girlmanga" /></h2>
 		<div class="girl-item">
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >15</s:param></s:url>'><img
 					src="img/item/ねだめ カンタービレ.png" class="img"></a>
@@ -181,12 +190,14 @@
 					src="img/item/ワイルドフラワー.png" class="img"></a>
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >10</s:param></s:url>'><img
 					src="img/item/僕に届け.png" class="img"></a>
-			<a href='#top' class="go-top">▲トップへ</a>
+						<!-- ▲トップへ -->
+			<a href='#top' class="go-top"><s:text name="" /><s:text name="lang.index.gototop" /></a>
 		</div>
 	</div>
 
 	<div id="jump-novel">
-		<h2 id="novel">ライトノベル</h2>
+					<!-- ライトノベル -->
+		<h2 id="novel"><s:text name="lang.index.lightnovel" /></h2>
 		<div class="novel-item">
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >3</s:param></s:url>'><img
 					src="img/item/ライオンの飼育方法.png" class="img"></a>
@@ -194,12 +205,14 @@
 					src="img/item/美しいホネ.png" class="img"></a>
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >13</s:param></s:url>'><img
 					src="img/item/俺の姉が.png" class="img"></a>
-			<a href='#top' class="go-top">▲トップへ</a>
+					<!-- ▲トップへ -->
+			<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 		</div>
 	</div>
 
 	<div id="jump-paperback">
-		<h2 id="paperback">文庫本</h2>
+						<!-- 文庫本 -->
+		<h2 id="paperback"><s:text name="lang.index.novel" /></h2>
 		<div class="paperback-item">
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >11</s:param></s:url>'><img
 					src="img/item/ノルウェイの林（上）.png" class="img"></a>
@@ -207,12 +220,14 @@
 					src="img/item/ノルウェイの林（下）.png" class="img"></a>
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >2</s:param></s:url>'><img
 					src="img/item/メガネ.png" class="img"></a>
-		<a href='#top' class="go-top">▲トップへ</a>
+						<!-- ▲トップへ -->
+		<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 		</div>
 	</div>
 
 	<div id="jump-magazine">
-		<h2 id="magazine">雑誌</h2>
+						<!-- 雑誌 -->
+		<h2 id="magazine"><s:text name="lang.index.magazine" /></h2>
 		<div class="magazine-item">
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >5</s:param></s:url>'><img
 					src="img/item/快楽店市場の歴史.png" class="img"></a>
@@ -220,7 +235,8 @@
 					src="img/item/世界の絶景.png" class="img"></a>
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" >7</s:param></s:url>'><img
 					src="img/item/正しい寿司の握り方.png" class="img"></a>
-		<a href='#top' class="go-top">▲トップへ</a>
+						<!-- ▲トップへ -->
+		<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 		</div>
 	</div>
 

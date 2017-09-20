@@ -18,7 +18,8 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="CSS/account_enju.css">
 
-<title>快楽的登録情報参照</title>
+<!-- 快楽的登録情報参照 -->
+<title><s:text name="lang.mypage.user" /></title>
 
 </head>
 <body>
@@ -31,44 +32,34 @@
 
 
 <div class="main">
-
-<h1>快楽的登録情報参照</h1>
+<!--快楽的登録情報参照  -->
+<h1><s:text name="lang.mypage.user" /></h1>
 
 <table class="border">
 
 
 <tr>
-	<th>ふりがな</th><s:property value = familyNameKana/>
+<!--ふりがな  -->
+	<th><s:text name="lang.mypage.word" /></th><s:property value = familyNameKana/>
+</tr>
+
+<tr><!--氏名  -->
+	<th><s:text name="lang.mypage.name" /></th><s:property value = givenNameKanji/>
 </tr>
 
 
-<tr>
-	<th>ふりがな</th><s:property value = givenNameKana/>
+<tr><!--住所  -->
+	<th><s:text name="lang.mypage.address" /></th><s:property value = address/>
 </tr>
 
 
-<tr>
-	<th>氏名</th><s:property value = familyNameKanji/>
+<tr><!--電話番号  -->
+	<th><s:text name="lang.mypage.phonenumber" /></th><s:property value = phoneNumber/>
 </tr>
 
 
-<tr>
-	<th>氏名</th><s:property value = givenNameKanji/>
-</tr>
-
-
-<tr>
-	<th>住所</th><s:property value = address/>
-</tr>
-
-
-<tr>
-	<th>電話番号</th><s:property value = phoneNumber/>
-</tr>
-
-
-<tr>
-	<th>メールアドレス</th><s:property value = phoneEmail/>
+<tr><!--メールアドレス  -->
+	<th><s:text name="lang.mypage.mail" /></th><s:property value = phoneEmail/>
 </tr>
 
 

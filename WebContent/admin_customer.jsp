@@ -6,11 +6,11 @@
 <html>
 
 <head>
-<fmt:setBundle basename="com.internousdev.legmina.property.admin_customer"
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.admincustomer"
 	var="lang" />
 <meta charset="utf-8">
 <!-- 顧客情報 -->
-<title><s:text name="com.lang.admin_customer.topTitle"/></title>
+<title><s:text name="com.lang.admincustomer.topTitle"/></title>
 <link rel="stylesheet" type="text/css" href="CSS/admin_customer.css">
 
 </head>
@@ -30,7 +30,7 @@ td table date セル←長方形の内部データ。小さい四角
 -->
 
 	<h1>
-		<s:text name="lang.admin_customer.topTitle"/>
+		<s:text name="lang.admincustomer.topTitle"/>
 	</h1>
 	<hr>
 	
@@ -44,25 +44,25 @@ td table date セル←長方形の内部データ。小さい四角
 	<table>
 		<tr>
 			<!-- ID -->
-			<td><s:text name="lang.admin_customer.id"/></td>
+			<td><s:text name="lang.admincustomer.id"/></td>
 			<!-- 氏名 -->
-			<td><s:text name="lang.admin_customer.userName"/></td>
+			<td><s:text name="lang.admincustomer.userName"/></td>
 			<!-- 性別 -->
-			<td><s:text name="lang.admin_customer.Sex"/></td>
+			<td><s:text name="lang.admincustomer.Sex"/></td>
 			<!-- 生年月日 -->
-			<td><s:text name="lang.admin_customer.update"/></td>
+			<td><s:text name="lang.admincustomer.update"/></td>
 			<!-- パスワード -->
-			<td><s:text name="lang.admin_customer.password"/></td>
+			<td><s:text name="lang.admincustomer.password"/></td>
 			<!-- メールアドレス -->
-			<td><s:text name="lang.admin_customer.email"/></td>
+			<td><s:text name="lang.admincustomer.email"/></td>
 			<!-- 電話番号 -->
-			<td><s:text name="lang.admin_customer.PhoneNumber"/></td>
+			<td><s:text name="lang.admincustomer.PhoneNumber"/></td>
 			<!-- 郵便番号-->
-			<td><s:text name="lang.admin_customer.postal"/></td>
+			<td><s:text name="lang.admincustomer.postal"/></td>
 			<!-- 住所 -->
-			<td><s:text name="lang.admin_customer.streetaddress"/></td>
+			<td><s:text name="lang.admincustomer.streetaddress"/></td>
 			<!-- 登録日 -->
-			<td><s:text name="lang.admin_customer.dt"/></td>
+			<td><s:text name="lang.admincustomer.dt"/></td>
 		</tr>
 		
 		<tr>

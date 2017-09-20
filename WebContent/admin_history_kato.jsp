@@ -6,13 +6,16 @@
 <html>
 
 <head>
+　　<!-- 国際化 propertyファイルの場所の定義 -->
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.admin_history" var="lang" />
 
 <meta charset="utf-8">
 
 
 <link rel="stylesheet" type="text/css" href="CSS/admin_history_kato.css">
 
-<title>管理者販売履歴</title>
+<!-- 管理者販売履歴 -->
+<title><s:text name="lang.admin_history.toptitle" /></title>
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 

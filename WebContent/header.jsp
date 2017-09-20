@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="s" uri="/struts-tags" %>
 	<!-- ここから国際化 -->
     <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -19,16 +20,20 @@
 
 <link rel="stylesheet" type="text/css" href="CSS/header.css">
 
-<title>header</title>
+<!--header  -->
+<title><s:text name="lang.header.title" /></title>
 </head>
 <body>
 	<header>
-
 		<a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
-		<a href="login_kato.jsp" class="header_btn">ログイン</a>
-		<a href="mypage_enju.jsp" class="header_btn">マイページ</a>
-		<a href="cart_jo.jsp" class="header_btn">カート</a>
-		<a href="help_togashi.jsp" class="header_btn">ヘルプ</a>
+		<!--ログイン  -->
+		<a href="login_kato.jsp" class="header_btn"><s:text name="lang.header.login" /></a>
+		<!-- マイページ -->
+		<a href="mypage_enju.jsp" class="header_btn"><s:text name="lang.header.mypage" /></a>
+		<!-- カート -->
+		<a href="cart_jo.jsp" class="header_btn"><s:text name="lang.header.cart" /></a>
+		<!-- ヘルプ -->
+		<a href="help_togashi.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
 
 	</header>
 

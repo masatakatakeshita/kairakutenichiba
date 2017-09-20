@@ -6,7 +6,7 @@
 <html>
 
 <head>
-<fmt:setBundle basename="com.internousdev.legmina.property.admin_head" var="lang" />
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.admin_item" var="lang" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title><s:text name="lang.admin_item.title" /></title>
@@ -25,7 +25,7 @@
 
 
 
-	<h1><s:text name="lang.admin_history.title" /></h1>
+	<h1><s:text name="lang.admin_item.title" /></h1>
 	<br>
 
 	<!-- ITEMID検索 -->
@@ -135,16 +135,11 @@
 			<td>ゴム人間。海賊</td>
 
 		</tr>
-
-
-
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-
-
 
 	<p>
 		<a href="detail_yamaguchi.jsp">商品情報を追加する</a>
@@ -162,10 +157,6 @@
 		<a href="detail_yamaguchi.jsp">商品詳細</a>
 	</p>
 -->   
-
-
-
-
 
 
 </body>

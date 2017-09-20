@@ -42,14 +42,16 @@
 
 
 				<p id="idpass">
-					<label for="email">E-mail:</label>
+					<!-- E-mail: -->
+					<label for="email"><s:text name="lang.login.mail" /></label>
 					<input type="email" class="textbox" size="25">
 				</p>
 
 
 
 				<p id="idpass">
-					<label for="passwd">password:</label>
+					<!--password:  -->
+					<label for="passwd"><s:text name="lang.login.password" /></label>
 					<input type="password" class="textbox" size="25">
 				</p>
 			</div>

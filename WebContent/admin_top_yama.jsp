@@ -6,7 +6,7 @@
 <html>
 
 <head>
-<fmt:setBundle basename="com.internousdev.legmina.property.admin_top" var="lang" />
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.admin_top" var="lang" />
 <meta charset="utf-8">
 
 

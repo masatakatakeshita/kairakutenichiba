@@ -19,8 +19,8 @@
 
 <link rel="stylesheet" type="text/css" href="CSS/detail_yamaguchi.css">
 
-
-<title>商品詳細</title>
+<!-- 商品詳細 -->
+<title><s:text name="lang.detail.title" /></title>
 </head>
 <body>
 	<header>
@@ -43,7 +43,8 @@
 
 
 <div class="cart">
-<h1>価格</h1>
+<!--価格 -->
+<h1><s:text name="lang.detail.price" /></h1>
 <div class="price"><p><s:property value="displayList.price" /></p></div>
 
 <s:form action = "AddToCartAction">
@@ -55,13 +56,20 @@
 <div class = "clear"></div>
 
 <div class="info">
-<h1>商品基本情報</h1>
-<p>発売日　　：<s:property value="displayList.release_day" /></p>
-<p>著者　　　：<s:property value="displayList.author" /></p>
-<p>出版社　　：<s:property value="displayList.publisher" /></p>
-<p>発行形態　：<s:property value="displayList.publish_type" /></p>
-<p>ページ数　：<s:property value="displayList.pages" /></p>
-<p>ISBNコード：<s:property value="displayList.isbn" /></p>
+<!--商品基本情報  -->
+<h1><s:text name="lang.detail.baseinfo" /></h1>
+<!-- 発売日　　： -->
+<p><s:text name="lang.detail.dayonsale" /><s:property value="displayList.release_day" /></p>
+<!-- 著者　　　： -->
+<p><s:text name="lang.detail.author" /><s:property value="displayList.author" /></p>
+<!-- 出版社　　： -->
+<p><s:text name="lang.detail.company" /><s:property value="displayList.publisher" /></p>
+<!-- 発行形態　： -->
+<p><s:text name="lang.detail.waytopublish" /><s:property value="displayList.publish_type" /></p>
+<!--  ページ数　：-->
+<p><s:text name="lang.detail.page" /><s:property value="displayList.pages" /></p>
+<!-- ISBNコード： -->
+<p><s:text name="lang.detail.ISBNcode" /><s:property value="displayList.isbn" /></p>
 </div>
 
 
