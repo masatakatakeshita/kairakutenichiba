@@ -17,7 +17,8 @@
 <fmt:setBundle basename="com.internousdev.kairakutenichiba.property.help" var="lang" />
 
 <meta charset="utf-8">
-<title>ヘルプ：お問い合わせ方法</title>
+<!-- ヘルプ：お問い合わせ方法 -->
+<title><s:text name="lang.help.title" /></title>
 
 
 <link rel="stylesheet" type="text/css" href="http://localhost:8080/kairakutenichiba/CSS/help.css">
@@ -36,12 +37,20 @@
 <div id="center">
 
 <a href=""></a>
-<h1>ヘルプ＆カスタマーサービス</h1>
-<h2>お問い合わせ方法</h2>
+<!-- ヘルプ＆カスタマーサービス -->
+<h1><s:text name="lang.help.helpservice" /></h1>
+<!-- お問い合わせ方法 -->
+<h2><s:text name="lang.help.howtoask" /></h2>
 <p>
-カスタマーサービスでは24時間お問い合わせを承っております。<br>
-以下の手順でお問い合わせいただくと、お客様のアカウント情報<br>
-などをすぐに確認できるため、スムーズなご対応が可能です。
+<!-- カスタマーサービスでは24時間お問い合わせを承っております。 -->
+<s:text name="lang.help.24houravailable" />
+<br>
+<!-- 以下の手順でお問い合わせいただくと、お客様のアカウント情報 -->
+<s:text name="youcanaskusthisway" />
+<br>
+<!-- などをすぐに確認できるため、スムーズなご対応が可能です。 -->
+<s:text name="lang.help.canretreateasy" />
+
 </p>
 
 
@@ -54,8 +63,8 @@
 
 
 
-<p>
-<span>氏名<font color="red">(必須)</font></span>
+<p><!-- 氏名 -->
+<span><s:text name="lang.help.name" /><font color="red"><!-- 必須 --><s:text name="lang.help.necessary" /></font></span>
 <a class="box1">
 <input type="text" name="userName"required autofocus >
 
@@ -63,46 +72,54 @@
 </p>
 
 <br>
-<p>
-<span>住所</span>
+<p><!--住所  -->
+<span><s:text name="lang.help.streetaddress" /></span>
 <a class ="box3">
-〒<input type="text" name="userAddress" size="10" pattern="\d{3}-?\d{4}"placeholder="123-4567">
+<!--〒  -->
+<s:text name="lang.help.symbol" /><input type="text" name="userAddress" size="10" pattern="\d{3}-?\d{4}"placeholder="123-4567">
 
 </a>
 <br>
 <a class="box4">
 <span>　</span>
-<input type="text" name="userAddress" size="30" placeholder="例)東京都千代田区～" >
+<input type="text" name="userAddress" size="30" placeholder="<s:text name="lang.help.addressex" />" ><!-- 例)東京都千代田区～ -->
 </a>
 </p>
 <br>
 
-<p>
-<span>メールアドレス<font color="red">(必須)</font></span>
+<p><!-- メールアドレス -->
+<span><s:text name="=\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9
+" /><font color="red"><!-- (必須) --><s:text name="lang.help.necessary" /></font></span>
 <a class="box6">
 <input type="text" name="userMail" size="30"required>
 </a>
 <br>
 <span>　</span>
 <a class="box7">
-<input type="text" name="userMail" size="30"  placeholder="確認のため再度入力"required>
+<input type="text" name="userMail" size="30"  placeholder="><s:text name="lang.help.typeagain" />"required><!-- 確認のため再度入力 -->
 </a>
 </p>
 <br>
 <p>
-<span>お問い合わせ種類<font color="red">(必須)</font></span>
+<!-- お問い合わせ種類 -->
+<span><s:text name="lang.help.askcategory" /><font color="red"><!--(必須)  --><s:text name="lang.help.necessary" /></font></span>
 <a class="box8">
 <select name="category"required>
-<option value="category">アカウントについて</option>
-<option value="category">お支払い方法について</option>
-<option value="category">注文内容について</option>
-<option value="category">その他</option>
+<!--アカウントについて -->
+<option value="category"><s:text name="lang.help.account" /></option>
+<!-- お支払い方法について -->
+<option value="category"><s:text name="lang.help.howtopay" /></option>
+<!--  注文内容について-->
+<option value="category"><s:text name="lang.help.ordercontent" /></option>
+<!-- その他 -->
+<option value="category"><s:text name="lang.help.other" /></option>
 </select>
 </a>
 </p>
 <br>
 <p>
-<span>お問い合わせ内容<font color="red">(必須)</font></span>
+<!-- お問い合わせ内容 -->
+<span><s:text name="lang.help.askdetail" /><font color="red"><!--(必須)  --><s:text name="lang.help.necessary" /></font></span>
 <textarea name="comment" rows="10" cols="50"required></textarea>
 <br>
 </p>
