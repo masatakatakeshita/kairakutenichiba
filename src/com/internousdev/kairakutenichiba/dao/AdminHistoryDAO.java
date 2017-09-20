@@ -51,7 +51,7 @@ public class AdminHistoryDAO {
 
 
 		}else{
-		 sql = "select * from purchases_details  items on purchases_details.item_id = items.item_id where purchases.item_id=?";
+		 sql = "select * from purchases_details  items on purchases_details.item_id = items.item_id where purchases_details.item_id=?";
 		k=1;
 
 		}
