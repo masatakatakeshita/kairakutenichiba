@@ -22,13 +22,13 @@
 		com.internousdev.kairakutenichiba.property.cartempty
 		com.internousdev.kairakutenichiba.property.peymenterror
 		com.internousdev.kairakutenichiba.property.account
-		com.internousdev.kairakutenichiba.property.admin_help
-		com.internousdev.kairakutenichiba.property.admin_helpdetail
+		com.internousdev.kairakutenichiba.property.adminhelp
+		com.internousdev.kairakutenichiba.property.adminhelpdetail
 		com.internousdev.kairakutenichiba.property.header
 		com.internousdev.kairakutenichiba.property.admincustomer
-		com.internousdev.kairakutenichiba.property.admin_history
-		com.internousdev.kairakutenichiba.property.admin_item
-		com.internousdev.kairakutenichiba.property.admin_top
+		com.internousdev.kairakutenichiba.property.adminhistory
+		com.internousdev.kairakutenichiba.property.adminitem
+		com.internousdev.kairakutenichiba.property.admintop
 		" />
 
 
