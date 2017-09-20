@@ -48,8 +48,8 @@ public class GoItemDetailDAO {
 				dto.setPages(rs.getInt("pages"));
 				dto.setIsbn(rs.getInt("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
-				dto.setitem_image(rs.getString("item_image"));
-			
+				dto.setItem_image(rs.getString("item_image"));
+
 				searchList.add(dto);
 			}
 		} catch (SQLException e ) {
