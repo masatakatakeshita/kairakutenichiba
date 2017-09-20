@@ -60,21 +60,37 @@ public class AdminItemDAO {
 
 				dto.setItem_name(rs.getString("items_name"));
 
+				dto.setCategory(rs.getString("category"));
+
+				dto.setRelease_day(rs.getInt("release_day"));
+
+				dto.setAuthor(rs.getString("author"));
+
+				dto.setPublisher(rs.getString("publisher"));
+
+				dto.setPublish_type(rs.getString("publish_type"));
+
+				dto.setPages(rs.getInt("pages"));
+
+				dto.setIsbn(rs.getInt("isbn"));
+
 				dto.setPrice(rs.getFloat("price"));
 
 				dto.setStocks(rs.getInt("stocks"));
 
 				dto.setSales(rs.getInt("sales"));
 
-				dto.setitem_image(rs.getString("img_path"));
+				dto.setItem_detail(rs.getString("item_detail"));
 
-				dto.setCategory(rs.getString("category"));
+				dto.setItem_image(rs.getString("item_image"));
+
+				dto.setIs_deleted(rs.getBoolean("is_deleted"));
 
 				dto.setCreated_at(rs.getString("created_at"));
 
 				dto.setUpdated_at(rs.getString("updated_at"));
 
-				dto.setis_deleted(rs.getBoolean("del_key"));
+
 
 				itemList.add(dto);
 			}

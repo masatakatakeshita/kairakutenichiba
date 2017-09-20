@@ -33,14 +33,14 @@ td table date セル←長方形の内部データ。小さい四角
 		<s:text name="lang.admincustomer.topTitle"/>
 	</h1>
 	<hr>
-	
-	
+
+
 	<s:form action = "AdminUserAction">
 		<s:textfield name="userId" size="50" placeholder="userId" type ="number" min="0" max="100000"/>
 		<s:submit value="Search"></s:submit>
 	</s:form>
 <br>
-	
+
 	<table>
 		<tr>
 			<!-- ID -->
@@ -64,10 +64,10 @@ td table date セル←長方形の内部データ。小さい四角
 			<!-- 登録日 -->
 			<td><s:text name="lang.admincustomer.dt"/></td>
 		</tr>
-		
+
 		<tr>
 <!-- itemListはDAOで定義された配列オブジェクト -->
-			<s:iterator value = "itemList">		
+			<s:iterator value = "itemList">
 <!-- s:property は変数内のvalue(値のこと)をgetするタグ -->
 				<td><s:property value="userId" /></td>
 				<td><s:property value="familyName" /></td>

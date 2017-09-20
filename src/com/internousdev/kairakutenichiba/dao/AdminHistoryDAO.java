@@ -45,13 +45,13 @@ public class AdminHistoryDAO {
 		if(itemId == 0){
 
 
-			sql= "select * from purchases left join items on purchases.item_id = items.item_id";
+			sql= "select * from purchases_details  items on purchases_details.item_id = items.item_id";
 
 
 
 
 		}else{
-		 sql = "select * from purchases left join items on purchases.item_id = items.item_id where purchases.item_id=?";
+		 sql = "select * from purchases_details  items on purchases_details.item_id = items.item_id where purchases.item_id=?";
 		k=1;
 
 		}

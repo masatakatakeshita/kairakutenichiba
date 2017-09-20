@@ -25,7 +25,7 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 
 	/**
 	 * 商品ID
-	 * @author kota.miyazato
+	 * 
      */
 	private int itemId;
 

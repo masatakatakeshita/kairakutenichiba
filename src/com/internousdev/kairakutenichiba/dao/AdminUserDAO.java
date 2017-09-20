@@ -24,7 +24,7 @@ public class AdminUserDAO {
 	* @return itemList 顧客情報
 	* @version 1.0
 	*/
-	public ArrayList<MyPageDTO> select(int user_id) {
+	public ArrayList<MyPageDTO> select() {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		MyPageDTO dto = new MyPageDTO();
@@ -32,36 +32,37 @@ public class AdminUserDAO {
 		/**
 
 		**/
-		String sql = "select * from users where user_id=?";
+		String sql = "select * from users";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, user_id);
+
 
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 
-				dto.setUserId(rs.getInt("userId"));
+				dto.setUserId(rs.getInt("user_id"));
 
 				dto.setFamilyName(rs.getString("family_name"));
 
 				dto.setGivenName(rs.getString("given_name"));
 
+				dto.setSex(rs.getString("sex"));
+
 				dto.setBirthday(rs.getString("birthday"));
 
-				dto.setPhoneNumber(rs.getString("phone_number"));
+				dto.setPassword(rs.getString("password"));
 
 				dto.setPhoneEmail(rs.getString("phone_email"));
+
+				dto.setPhoneNumber(rs.getString("phone_number"));
 
 				dto.setPostal(rs.getString("postal"));
 
 				dto.setAddress(rs.getString("address"));
 
-				dto.setPassword(rs.getString("password"));
-
-				dto.setSex(rs.getString("sex"));
-
 				dto.setRegisterDay(rs.getString("register_day"));
+
 
 				itemList.add(dto);
 			}

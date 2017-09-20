@@ -99,7 +99,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 		AdminUserDAO dao = new AdminUserDAO();
-		itemList = dao.select(userId);
+		itemList = dao.select();
 		if (itemList.size() > 0) {
 
 			result = SUCCESS;

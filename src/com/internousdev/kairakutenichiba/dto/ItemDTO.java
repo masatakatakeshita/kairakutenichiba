@@ -74,7 +74,7 @@ public class ItemDTO {
 	/**
 	 * 商品詳細
 	 */
-	
+	private String item_detail;
 
 	/**
 	 * 売上数
@@ -91,7 +91,7 @@ public class ItemDTO {
 	 */
 	private String updated_at;
 
-	
+
 	/**
 	 * カテゴリ
 	 */
@@ -259,7 +259,7 @@ public class ItemDTO {
 	 * イメージパスを格納するメソッド
 	 * @param item_image セットする item_image
 	 */
-	public void setitem_image(String item_image) {
+	public void setItem_image(String item_image) {
 		this.item_image = item_image;
 	}
 
@@ -327,7 +327,7 @@ public class ItemDTO {
 		this.updated_at = updated_at;
 	}
 
-	
+
 
 	/**
 	 * カテゴリを取得するメソッド
@@ -357,7 +357,21 @@ public class ItemDTO {
 	 * デリートキーを格納するメソッド
 	 * @param is_deleted セットする is_deleted
 	 */
-	public void setis_deleted(boolean is_deleted) {
+	public void setIs_deleted(boolean is_deleted) {
 		this.is_deleted = is_deleted;
+	}
+
+	/**
+	 * @return item_detail
+	 */
+	public String getItem_detail() {
+		return item_detail;
+	}
+
+	/**
+	 * @param item_detail セットする item_detail
+	 */
+	public void setItem_detail(String item_detail) {
+		this.item_detail = item_detail;
 	}
 }

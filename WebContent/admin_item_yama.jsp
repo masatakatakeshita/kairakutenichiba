@@ -33,32 +33,32 @@
 		<input type="number" name="itemId" size="50" placeholder="ITEM ID" min="0" max="1000000">
 		<input type="submit" value="検索/Search">
 	</s:form>
-	
-	
+
+
 	<!-- 商品名を入力 -->
       <p><s:text name="lang.adminitem.order" /></p>
 	<!-- 検索 -->
 		<s:form action="AdminItemAction">
 			<s:textfield name="itemsName" placeholder="ITEM NAME" />
-			<s:submit value="%{getText('lang.adminitem.sarch')}" name="submit" />
+			<s:submit value="%{getText('lang.admin_item.sarch')}" name="submit" />
 		</s:form>
 	<!-- 全件表示 -->
 	<s:form action="AdminItemAction">
-		<s:submit value="%{getText('lang.adminitem.all')}" name="submit" />
+		<s:submit value="%{getText('lang.admin_item.all')}" name="submit" />
 	</s:form>
 <!--
 <div align="right" style="padding-right:20%">
  -->
  	<!-- 商品追加 -->
 	<s:form action="GoAdminAddAction">
-		<s:submit value="%{getText('lang.adminitem.add')}" name="submit" />
+		<s:submit value="%{getText('lang.admin_item.add')}" name="submit" />
 	</s:form>
 
 
 	<!-- 商品一覧 -->
 	<h2><s:text name="lang.adminitem.h2" /></h2>
  	<hr>
- 	
+
 	<table border="1">
         <tr>
 			<!-- 商品ID -->
@@ -85,38 +85,38 @@
             	<!-- 更新 -->
                  <s:form action="GoAdminUpdateAction">
                      <s:hidden name="itemsName"></s:hidden>
-                     <s:submit value="%{getText('lang.adminitem.upd')}" name="submit"/>
+                     <s:submit value="%{getText('lang.admin_item.upd')}" name="submit"/>
                  </s:form>
                  <!-- 削除 -->
                  <s:form action="GoAdminDeleteAction">
                      <s:hidden name="itemsName"></s:hidden>
-                     <s:submit value="%{getText('lang.adminitem.del')}" name="submit"/>
+                     <s:submit value="%{getText('lang.admin_item.del')}" name="submit"/>
                  </s:form>
             </td>
         </tr>
-        
+
         <!-- itemListはDAOで定義された配列オブジェクト -->
-		<s:iterator value = "itemList">	
+		<s:iterator value = "itemList">
 			<tr>
-            	<td><s:property value="itemId" /></td>
-            	<td><s:property value="itemsName" /></td>
+            	<td><s:property value="item_id" /></td>
+            	<td><s:property value="item_name" /></td>
 				<td><fmt:formatNumber value="${price}" pattern="###,###,###"/></td>
 				<td><s:property value="stocks" /></td>
 				<td><s:property value="sales" /></td>
-				<td><s:property value="sortId" />：<s:property value="itemGenre" /></td>
-				<td><s:property value="createdAt" /></td>
-				<td><s:property value="updatedAt" /></td>
-				<td><s:property value="delKey" /></td>
-				<td><img src="<s:property value="imgPath"/>" width="50" height="50">
-					<s:property value="imgPath"/></td>
+				<td><s:property value="category" /></td>
+				<td><s:property value="created_at" /></td>
+				<td><s:property value="updated_at" /></td>
+				<td><s:property value="is_deleted" /></td>
+				<td><img src="<s:property value="item_image"/>" width="50" height="50">
+					<s:property value="item_image"/></td>
 			</tr>
 		</s:iterator>
-        
+
 	</table>
-	
-	
-        
- <!--   
+
+
+
+ <!--
 		<tr>
 			<td>少年誌</td>
 			<td>ONE PIECE巻1</td>
@@ -156,7 +156,7 @@
 	<p>
 		<a href="detail_yamaguchi.jsp">商品詳細</a>
 	</p>
--->   
+-->
 
 
 </body>
