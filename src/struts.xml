@@ -21,6 +21,7 @@
 		com.internousdev.kairakutenichiba.property.payment
 		com.internousdev.kairakutenichiba.property.cartempty
 		com.internousdev.kairakutenichiba.property.peymenterror
+		com.internousdev.kairakutenichiba.property.stockserror
 		com.internousdev.kairakutenichiba.property.account
 		com.internousdev.kairakutenichiba.property.adminhelp
 		com.internousdev.kairakutenichiba.property.adminhelpdetail
@@ -110,8 +111,9 @@
 			class="com.internousdev.kairakutenichiba.action.PurchaseCompleteAction"
 			method="execute">
 			<result name="success">finish_shoji.jsp</result>
-			<result name="error">stocksError.jsp</result>
+			<result name="error">login_kato.jsp</result>
 			<result name="login">finish_shoji.jsp</result>
+			<result name="other">stockserror.jsp</result>
 		</action>
 
 		<!-- 問い合わせ画面。問い合わせ完了画面に飛ぶ。必須が埋まってなかったらERRORで別ページ？ -->
