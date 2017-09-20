@@ -6,10 +6,10 @@
 <html>
 
 <head>
-<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.admin_item" var="lang" />
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.adminitem" var="lang" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title><s:text name="lang.admin_item.title" /></title>
+<title><s:text name="lang.adminitem.title" /></title>
 </head>
 
 
@@ -25,7 +25,7 @@
 
 
 
-	<h1><s:text name="lang.admin_item.title" /></h1>
+	<h1><s:text name="lang.adminitem.title" /></h1>
 	<br>
 
 	<!-- ITEMID検索 -->
@@ -36,61 +36,61 @@
 	
 	
 	<!-- 商品名を入力 -->
-      <p><s:text name="lang.admin_item.order" /></p>
+      <p><s:text name="lang.adminitem.order" /></p>
 	<!-- 検索 -->
 		<s:form action="AdminItemAction">
 			<s:textfield name="itemsName" placeholder="ITEM NAME" />
-			<s:submit value="%{getText('lang.admin_item.sarch')}" name="submit" />
+			<s:submit value="%{getText('lang.adminitem.sarch')}" name="submit" />
 		</s:form>
 	<!-- 全件表示 -->
 	<s:form action="AdminItemAction">
-		<s:submit value="%{getText('lang.admin_item.all')}" name="submit" />
+		<s:submit value="%{getText('lang.adminitem.all')}" name="submit" />
 	</s:form>
 <!--
 <div align="right" style="padding-right:20%">
  -->
  	<!-- 商品追加 -->
 	<s:form action="GoAdminAddAction">
-		<s:submit value="%{getText('lang.admin_item.add')}" name="submit" />
+		<s:submit value="%{getText('lang.adminitem.add')}" name="submit" />
 	</s:form>
 
 
 	<!-- 商品一覧 -->
-	<h2><s:text name="lang.admin_item.h2" /></h2>
+	<h2><s:text name="lang.adminitem.h2" /></h2>
  	<hr>
  	
 	<table border="1">
         <tr>
 			<!-- 商品ID -->
-            <th><s:text name="lang.admin_item.id" /></th>
+            <th><s:text name="lang.adminitem.id" /></th>
 			<!-- 商品名 -->
-            <th><s:text name="lang.admin_item.name" /></th>
+            <th><s:text name="lang.adminitem.name" /></th>
 			<!-- 単価 -->
-           <th><s:text name="lang.admin_item.price" /></th>
+           <th><s:text name="lang.adminitem.price" /></th>
 			<!-- 在庫数 -->
-            <th><s:text name="lang.admin_item.stocks" /></th>
+            <th><s:text name="lang.adminitem.stocks" /></th>
 			<!-- 売り上げ数 -->
-            <th><s:text name="lang.admin_item.sales" /></th>
+            <th><s:text name="lang.adminitem.sales" /></th>
 			<!-- カテゴリー -->
-            <th><s:text name="lang.admin_item.cate" /></th>
+            <th><s:text name="lang.adminitem.cate" /></th>
 			<!-- 登録日 -->
-            <th><s:text name="lang.admin_item.regday" /></th>
+            <th><s:text name="lang.adminitem.regday" /></th>
 			<!-- 更新日 -->
-            <th><s:text name="lang.admin_item.updday" /></th>
+            <th><s:text name="lang.adminitem.updday" /></th>
 			<!-- デリートキー -->
-            <th><s:text name="lang.admin_item.delkey" /></th>
+            <th><s:text name="lang.adminitem.delkey" /></th>
 			<!-- 商品画像 -->
-            <th><s:text name="lang.admin_item.img" /></th>
+            <th><s:text name="lang.adminitem.img" /></th>
             <td rowspan="4">
             	<!-- 更新 -->
                  <s:form action="GoAdminUpdateAction">
                      <s:hidden name="itemsName"></s:hidden>
-                     <s:submit value="%{getText('lang.admin_item.upd')}" name="submit"/>
+                     <s:submit value="%{getText('lang.adminitem.upd')}" name="submit"/>
                  </s:form>
                  <!-- 削除 -->
                  <s:form action="GoAdminDeleteAction">
                      <s:hidden name="itemsName"></s:hidden>
-                     <s:submit value="%{getText('lang.admin_item.del')}" name="submit"/>
+                     <s:submit value="%{getText('lang.adminitem.del')}" name="submit"/>
                  </s:form>
             </td>
         </tr>
