@@ -86,10 +86,10 @@ public class paymentAction extends ActionSupport implements SessionAware{
 							
 						}else{whaterror=1;
 						ret = "other";}
-					}else{whaterror="year";}
-				}else{whaterror="month";}
-			}else{whaterror="number";}
-		}else{whaterror="name";}
+					}else{whaterror=2;}
+				}else{whaterror=3;}
+			}else{whaterror=4;}
+		}else{whaterror=5;}
 		return ret;
 	}
 
@@ -208,12 +208,12 @@ public class paymentAction extends ActionSupport implements SessionAware{
 	}
 
 
-	public String getWhaterror() {
+	public int getWhaterror() {
 		return whaterror;
 	}
 
 
-	public void setWhaterror(String whaterror) {
+	public void setWhaterror(int whaterror) {
 		this.whaterror = whaterror;
 	}
 
