@@ -21,7 +21,9 @@
 		com.internousdev.kairakutenichiba.property.payment
 		com.internousdev.kairakutenichiba.property.cartempty
 		com.internousdev.kairakutenichiba.property.peymenterror
-
+		com.internousdev.kairakutenichiba.property.account
+		com.internousdev.kairakutenichiba.property.admin_help
+		com.internousdev.kairakutenichiba.property.admin_helpdetail
 		" />
 
 
