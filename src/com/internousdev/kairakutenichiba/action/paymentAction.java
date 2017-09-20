@@ -70,6 +70,7 @@ public class paymentAction extends ActionSupport implements SessionAware{
 		//dtoに格納
 		dto = dao.select(nameHolder, creditNumber, expirationMonth, expirationYear, securityCode);
 		//
+	if(session.containsKey("userId")){
 		if(nameHolder.equals(dto.getNameHolder())){
 			if(creditNumber.equals(dto.getCreditNumber())){
 				if(expirationMonth.equals(dto.getExpirationMonth())){
@@ -84,12 +85,27 @@ public class paymentAction extends ActionSupport implements SessionAware{
 							cartList= cart.selectedItem(userId);
 							ret = SUCCESS;
 							
-						}else{whaterror=1;
-						ret = "other";}
-					}else{whaterror=2;}
-				}else{whaterror=3;}
-			}else{whaterror=4;}
-		}else{whaterror=5;}
+						}else{
+							whaterror=1;
+						ret = "other";
+						}
+					}else{
+						whaterror=2;
+					ret = "other";
+					}
+				}else{
+					whaterror=3;
+				ret = "other";
+				}
+			}else{
+				whaterror=4;
+			ret = "other";
+			}
+		}else{
+			whaterror=5;
+		ret = "other";
+		}
+	}
 		return ret;
 	}
 
