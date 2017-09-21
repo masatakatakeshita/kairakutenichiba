@@ -142,11 +142,13 @@
               <tr>
               <!-- 配送方法[必須] -->
             <th><s:text name="lang.payment.deliver" /></th>
+        
             <!-- 宅配便 -->
              <td><label><input type="radio" name="deliverySelect"value="宅配便" checked="checked"><s:text name="lang.payment.bike" /></label>
             <!-- メール便 -->
             <label><input type="radio" name="deliverySelect" value="メール便"><s:text name="lang.payment.mail" /></label>
            　</td>
+         
        　    </tr>
 
 
@@ -177,7 +179,8 @@
             <option value="12時~14時" >12時~14時</option>
             <option value="14時~16時" >14時~16時</option>
             <option value="16時~18時" >16時~18時</option>
-            <option value="18時~20時" >18時~20時</option> <option value="20時~21時" >20時~21時</option>
+            <option value="18時~20時" >18時~20時</option> 
+            <option value="20時~21時" >20時~21時</option>
               </select>
            </td>
                 </tr>

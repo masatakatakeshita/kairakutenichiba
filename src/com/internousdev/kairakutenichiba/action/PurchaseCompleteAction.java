@@ -62,7 +62,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 */
 	public String execute() {
 
-		String result = LOGIN;
+		String result = ERROR;
 
 		//セッション切れでないか？ＯＫなら次へ進む
 		

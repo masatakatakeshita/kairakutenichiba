@@ -42,43 +42,58 @@
         <th><s:text name="lang.check.value" /></th>
         <!-- 数量 -->
         <th><s:text name="lang.check.quantitiy" /></th>
+        <!-- 小計 -->
+        <th><s:text name="lang.check.subtotal" /></th>
     </tr>
 
-    <s:iterator value="">
+    <s:iterator value="cartList">
     <tr>
-        <td><s:property value="" /></td>
-        <td><s:property value="" /></td>
-        <td><s:property value="" /></td>
-        <td><s:property value="" /></td>
+        <td><s:property value="imgPath" /></td>
+        <td><s:property value="itemName" /></td>
+        <td><s:property value="price" /></td>
+        <td><s:property value="quantities" /></td>
+        <td><s:property value="subtotal" /></td>
     </tr>
     </s:iterator>
+    
+    <tr>
+    	
+        <th><s:text name="" /></th>
+        <th><s:text name="" /></th>
+        <th><s:text name="" /></th>
+        <th><s:text name="lang.check.total" /></th>
+        <th><s:property value="amountAll" /></th>
+    </tr>
+    
 
 </table>
 <!--お支払い方法  -->
 <h3><s:text name="lang.check.payment" /></h3>
-<p><!--VISA(ロゴ) カード番号 **** **** **** 1234  -->
-<s:text name="lang.check.cardexample" />
-</p><!--配送方法  -->
+<p><s:property value="creditType" /><s:property value="creditNumber" /></p>
+<!--配送方法  -->
 <h3><s:text name="lang.check.deliver" /></h3>
-<p><!-- クロネコヤマト -->
-<s:text name="lang.check.kuroneko" />
-</p><!--お届け先住所 -->
-<h3><s:text name="lang.check.address" /></h3>
-<p><!--東京都A区B 1-2-3　山田荘101  -->
-<s:text name="lang.check.addressex" />
-</p>
+<p><s:property value="deliverySelect" /></p>
+<!--お届け日時 -->
+<h3><s:text name="lang.check.time" /></h3>
+<p><s:property value="deliveryMonth" /><s:property value="deliveryTime" /></p>
 
 <!-- 注文を確定する -->
-<h4><a href="finish_shoji.jsp"><s:text name="lang.check.decision" /></a></h4>
+<s:form action="PurchaseCompleteAction">
+<h4><s:submit value= <s:text name="lang.check.decision" /> ></s:submit></h4>
+</s:form>
+
 <!-- *購入手続きされません -->
 <div class="a"><s:text name="lang.check.notfinish" /></div> <!-- floatの処理のために順番が前後している。 -->
 <!-- カートへ戻る -->
-<div class="b"><a href="cart_jo.jsp"><s:text name="lang.check.backtocart" /></a></div> <br>
+<s:form action="GoCartAction">
+<div class="b"><s:submit value=<s:text name="lang.check.backtocart" /> /> </div> <br>
+</s:form>
 <!-- *購入手続きされません -->
-<div class="a"> <s:text name="" /><s:text name="lang.check.notfinish" /></div>
+<div class="a"><s:text name="lang.check.notfinish" /></div>
 <!-- 支払い方法の選択へ戻る -->
-<div class="b"><a href="shiharai_takeshita.jsp"><s:text name="backtoselect" />支払い方法の選択へ戻る</a></div>
-
+<s:form action=GoSettlementAction>
+<div class="b"><s:submit value=<s:text name="backtoselect" /> /></div>
+</s:form>
 </div>
 </body>
 </html>

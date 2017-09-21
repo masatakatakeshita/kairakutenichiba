@@ -46,6 +46,8 @@ public class paymentAction extends ActionSupport implements SessionAware{
 	private String deliveryTime;
 	
 	private int whaterror;
+	
+	private float amountAll;
 
 
 	private Map<String, Object> session; //ここいるの？何に使ってんの？　いるんやで。
@@ -66,6 +68,7 @@ public class paymentAction extends ActionSupport implements SessionAware{
 		String ret = ERROR;
 		paymentDAO dao = new paymentDAO();
 		paymentDTO dto = new paymentDTO();
+		amountAll=0;
 
 		//dtoに格納
 		dto = dao.select(nameHolder, creditNumber, expirationMonth, expirationYear, securityCode);
@@ -76,13 +79,13 @@ public class paymentAction extends ActionSupport implements SessionAware{
 				if(expirationMonth.equals(dto.getExpirationMonth())){
 					if(expirationYear.equals(dto.getExpirationYear())){
 						if(securityCode.equals(dto.getSecurityCode())){
-							dto.setDeliverySelect(this.deliverySelect);
-							dto.setDeliveryMonth(this.deliveryMonth);
-							dto.setDeliveryTime(this.deliveryTime);
 							payList.add(dto);
 							
 							GoCartDAO cart= new GoCartDAO();
 							cartList= cart.selectedItem(userId);
+							for (int i = 0; i < cartList.size(); i++) {
+				                amountAll = amountAll+(cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
+				            }
 							ret = SUCCESS;
 							
 						}else{
@@ -231,6 +234,16 @@ public class paymentAction extends ActionSupport implements SessionAware{
 
 	public void setWhaterror(int whaterror) {
 		this.whaterror = whaterror;
+	}
+
+
+	public float getAmountAll() {
+		return amountAll;
+	}
+
+
+	public void setAmountAll(float amountAll) {
+		this.amountAll = amountAll;
 	}
 
 

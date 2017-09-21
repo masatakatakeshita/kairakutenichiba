@@ -33,14 +33,14 @@ create table purchases_outlines (
 	purchase_id int not null  auto_increment primary key,/*購入ID*/
 	user_id int not null,/*ユーザーID*/
 	total_price decimal(9,2) not null,/*価格合計*/
-	delivery enum('mail','rapid'),/*配送方法*/
-	credit_id int not null,/*クレジットID*/
+	delivery enum('mail','home_delivery'),/*配送方法*/
+	credit_number int not null,/*クレジットカード番号*/
 	purchased_at datetime not null default current_timestamp,/*購入日*/
 	created_at datetime not null default current_timestamp,/*登録日*/
 	updated_at datetime not null default current_timestamp,/*更新日*/
 
 	foreign key(user_id) references openconnect.users(user_id),
-	foreign key(credit_id) references openconnect.credit(credit_id)
+	foreign key(credit_number) references openconnect.credit(credit_number)
 );
 
 create table purchases_details (

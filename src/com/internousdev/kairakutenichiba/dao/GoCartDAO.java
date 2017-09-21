@@ -44,18 +44,18 @@ public class GoCartDAO{
     		dto.setCartId(rs.getInt("cart_id"));//カートID
     		dto.setItemId(rs.getInt("item_id"));//商品ID
     		dto.setQuantities(rs.getInt("quantities"));//数量
-    		cartList.add(dto);
-
+    		
     		PreparedStatement ps2 = con.prepareStatement(select2);
 			ps2.setInt(1, dto.getItemId());
 			ResultSet rs2 = ps2.executeQuery();
 
 			while (rs2.next()) {
 
-				dto.setItemName(rs2.getString("items_name"));//商品名
+				dto.setItemName(rs2.getString("item_name"));//商品名
 				dto.setPrice(rs2.getFloat("price")); //価格
 				dto.setSubtotal(dto.getPrice()*dto.getQuantities()); //小計
-				dto.setImgPath(rs2.getString("img_path")); //イメージパス
+				dto.setImgPath(rs2.getString("item_image")); //イメージパス
+				cartList.add(dto);
 			}
     	}
     }catch(SQLException e){
