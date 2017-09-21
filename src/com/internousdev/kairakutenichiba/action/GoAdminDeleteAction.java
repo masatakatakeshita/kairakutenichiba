@@ -14,262 +14,328 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class GoAdminDeleteAction extends ActionSupport{
 
-/**
- * シリアルID
- */
-private static final long serialVersionUID = 2281123274036546024L;
-/**
- *
- */
-/**
- * 商品名
- *
- */
-private String itemsName="";
+	/**
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = 2281123274036546024L;
+	/**
+	 *
+	 */
 
-/**
- * 商品ID
- */
-private int itemId;
+	/**
+	 * 商品ID
+	 */
+	private int itemId;
 
-/**
- * ジャンル
- */
-private String itemGenre;
+	/**
+	 * 商品名
+	 */
+	private String itemsName="";
 
-/**
- * 単価
- */
-private float price;
+	/**
+	 * カテゴリ名
+	 */
+	private String category_name;
 
-/**
- * イメージファイルパス
- */
-private String imgPath;
+	/**
+	 * 発売日
+	 */
+	private String release_day;
 
-/**
- * 商品詳細
- */
-private String itemDetail;
+	/**
+	 * 著者
+	 */
+	private String author;
 
-/**
- * 在庫数
- */
-private int stock;
+	/**
+	 * 出版社
+	 */
+	private String publisher;
 
-/**
- * 売上数
- */
-private int sales;
-/**
- * 種類ID
- */
-private int sort;
+	/**
+	 * 発行形態
+	 */
+	private String publish_type;
 
-/**
- * 登録日
- */
-private String createdAt;
+	/**
+	 * ページ数
+	 */
+	private int pages;
 
-/**
- * 更新日
- */
-private String updatedAt;
+	/**
+	 * isbnコード
+	 */
+	private long isbn;
 
-/**
- * 商品画像01
- */
-private String itemImg01;
+	/**
+	 * 単価
+	 */
+	private float price;
 
-/**
- * 商品画像02
- */
-private String itemImg02;
+	/**
+	 * 在庫数
+	 */
+	private int stocks;
 
-/**
- * 商品リスト
- */
-public ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
+	/**
+	 * 商品詳細
+	 */
+	private String itemDetail;
 
-/**
- * 実行メソッド
- * DBのアイテム情報を変更するメソッド
- * @return result 成功=SUCCESS 失敗=ERROR
- */
+	/**
+	 * 商品画像
+	 */
+	private String item_image;
 
-public String execute(){
-	String result=ERROR;
-	AdminItemDAO dao = new AdminItemDAO();
-	itemList=dao.select(itemsName);
-	if(itemList.size()>0){
-		result=SUCCESS;
+	/**
+	 * 商品リスト
+	 */
+	public ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
+
+
+
+	/**
+	 * 実行メソッド
+	 * DBのアイテム情報を変更するメソッド
+	 * @return result 成功=SUCCESS 失敗=ERROR
+	 */
+
+	public String execute(){
+		String result=ERROR;
+		AdminItemDAO dao = new AdminItemDAO();
+		itemList=dao.select(itemsName);
+		if(itemList.size()>0){
+			result=SUCCESS;
+		}
+		return result;
 	}
-	return result;
+
+
+	/**
+	 * セッターゲッター
+	 */
+
+	/**
+	 *  商品IDを格納するメソッド
+	 *  @param itemId セットする
+	 */
+	public void setItemId(int itemId){
+		this.itemId=itemId;
+	}
+
+	/**
+	 *  商品IDを取得するメソッド
+	 *  @return itemId 商品ID
+	 */
+	public int getItemId(){
+		return itemId;
+	}
+
+
+	/**
+	 *  商品名を格納するメソッド
+	 *  @param itemsName セットする
+	 */
+	public void setItemsName(String itemsName){
+		this.itemsName = itemsName;
+	}
+
+	/**
+	 *  商品名を取得するメソッド
+	 *  @return itemsName 商品名
+	 */
+	public String getItemsName(){
+		return itemsName;
+	}
+
+
+	/**
+	 *  カテゴリ名を取得するメソッド
+	 *  @param category_name セットする
+	 */
+	public void setCategory_name(String category_name){
+		this.category_name = category_name;
+	}
+
+	/**
+	 *  カテゴリ名を格納するメソッド
+	 *  @return category_name カテゴリ名
+	 */
+	public String getCategory_name(){
+		return category_name;
+	}
+
+
+	/**
+	 *  発売日を格納するメソッド
+	 *  @param  release_day セットする
+	 */
+	public void setRelease_day(String release_day){
+		this.release_day=release_day;
+	}
+
+	/**
+	 *  発売日を取得するメソッド
+	 *  @return release_day 発売日
+	 */
+	public String getRelease_day(){
+		return release_day;
+	}
+
+
+	/**
+	 *  著者を格納するメソッド
+	 *  @param author セットする
+	 */
+	public void setAuthor(String author){
+		this.author=author;
+	}
+
+	/**
+	 *  著者を取得するメソッド
+	 *  @return author 著者
+	 */
+	public String getAuthor(){
+		return author;
+	}
+
+
+	/**
+	 *  出版社を格納するメソッド
+	 *  @param publisher セットする
+	 */
+	public void setPublisher(String publisher){
+		this.publisher=publisher;
+	}
+
+	/**
+	 *  出版社を取得するメソッド
+	 *  @return publisher 出版社
+	 */
+	public String getPublisher(){
+		return publisher;
+	}
+
+
+	/**
+	 *  発行形態を格納するメソッド
+	 *  @param publish_type セットする
+	 */
+	public void setPublish_type(String publish_type){
+		this.publish_type=publish_type;
+	}
+
+	/**
+	 *  発行形態を取得するメソッド
+	 *  @return publish_type 発行形態
+	 */
+	public String getPublish_type(){
+		return publish_type;
+	}
+
+
+	/**
+	 *  ページ数を格納するメソッド
+	 *  @param pages セットする
+	 */
+	public void setPages(int pages){
+		this.pages=pages;
+	}
+
+	/**
+	 *  ページ数を取得するメソッド
+	 *  @return pages ページ数
+	 */
+	public int getPages(){
+		return pages;
+	}
+
+
+	/**
+	 *  isbnコードを格納するメソッド
+	 *  @param isbn セットする
+	 */
+	public void setIsbn(long isbn){
+		this.isbn=isbn;
+	}
+
+	/**
+	 *  isbnコードを取得するメソッド
+	 *  @return isbn isbnコード
+	 */
+	public long getIsbn(){
+		return isbn;
+	}
+
+
+	/**
+	 *  単価を取得するメソッド
+	 *  @param price セットする
+	 */
+	public void setPrice(float price){
+		this.price = price;
+	}
+
+	/**
+	 *  単価を格納するメソッド
+	 *  @return price 単価
+	 */
+	public float getPrice(){
+		return price;
+	}
+
+
+	/**
+	 *  在庫数を格納するメソッド
+	 *  @param stocks セットする
+	 */
+	public void setStocks(int stocks){
+		this.stocks=stocks;
+	}
+
+	/**
+	 *  在庫数を取得するメソッド
+	 *  @return stocks 在庫数
+	 */
+	public int getstocks(){
+		return stocks;
+	}
+
+
+	/**
+	 *  商品詳細を格納するメソッド
+	 *  @param itemDetail セットする
+	 */
+	public void setItemDetail(String itemDetail){
+		this.itemDetail = itemDetail;
+	}
+
+	/**
+	 *  商品詳細を取得するメソッド
+	 *  @return itemDetail 商品詳細
+	 */
+	public String getItemDetail(){
+		return itemDetail;
+	}
+
+
+	/**
+	 *  商品画像を格納するメソッド
+	 *  @param item_image セットする
+	 */
+	public void setItem_image(String item_image){
+		this.item_image=item_image;
+	}
+
+	/**
+	 *  商品画像を取得するメソッド
+	 *  @return item_image 商品画像
+	 */
+	public String getItem_image(){
+		return item_image;
+	}
+
+
 }
 
 
-/**
- * セッターゲッター
- */
-
-  /**
-   *  商品名を格納するメソッド
-   *  @param itemsName セットする itemsName
-   */
-  public void setItemsName(String itemsName){this.itemsName = itemsName;}
-
-  /**
-   *  商品名を取得するメソッド
-   *  @return itemsName　商品名
-   */
-  public String getItemsName(){return itemsName;}
-
-  /**
-   *  商品IDを格納するメソッド
-   *  @param itemId　セットする itemId
-   */
-  public void setItemId(int itemId){this.itemId=itemId;}
-
-  /**
-   *  商品IDを取得するメソッド
-   *  @return itemId　商品ID
-   */
-  public int getItemId(){return itemId;}
-
-  /**
-   *  単価を取得するメソッド
-   *  @param price　セットする price
-   */
-  public void setPrice(float price){this.price = price;}
-
-  /**
-   *  単価を格納するメソッド
-   *  @return price　単価
-   */
-  public float getPrice(){return price;}
-
-  /**
-   *  イメージファイルパスを格納するメソッド
-   *  @param imgPath　セットする imgpath
-   */
-  public void setImgPath(String imgPath){this.imgPath = imgPath;}
-
-  /**
-   *  イメージファイルパスを取得するメソッド
-   *  @return imgPath　イメージファイルパス
-   */
-  public String getImgPath(){return imgPath;}
-
-  /**
-   *  在庫数をを格納するメソッド
-   *  @param stock　セットする stock
-   */
-  public void setStock(int stock){this.stock=stock;}
-
-  /**
-   *  在庫数を取得するメソッド
-   *  @return stock　在庫数
-   */
-  public int getStock(){return stock;}
-
-  /**
-   *  商品詳細を格納するメソッド
-   *  @param itemDetail　セットする itemDetail
-   */
-  public void setItemDetail(String itemDetail){this.itemDetail = itemDetail;}
-
-  /**
-   *  商品詳細を取得するメソッド
-   *  @return itemDetail　商品詳細
-   */
-  public String getItemDetail(){return itemDetail;}
-
-  /**
-   *  売上数を格納するメソッド
-   *  @param sales　セットする sales
-   */
-  public void setSales(int sales){this.sales = sales;}
-
-  /**
-   *  売上数を取得するメソッド
-   *  @return sales　売上数
-   */
-  public int getSales(){return sales;}
-
-  /**
-   *  種類Idを格納するメソッド
-   *  @param sort　セットする sort
-   */
-  public void setSort(int sort){this.sort = sort;}
-
-  /**
-   *  種類IDを取得するメソッド
-   *  @return sort　種類ID
-   */
-  public int getSort(){return sort;}
-
-  /**
-   *  登録日を格納するメソッド
-   *  @param createdAt　セットする createdAt
-   */
-  public void setCreatedAt(String createdAt){this.createdAt=createdAt;}
-
-  /**
-   *  登録日を取得するメソッド
-   *  @return createdAt　登録日
-   */
-  public String getCreatedAt(){return createdAt;}
-
-  /**
-   *  更新日を格納するメソッド
-   *  @param updatedAt　セットする updateAt
-   */
-  public void setUpdatedAt(String updatedAt){this.updatedAt=updatedAt;}
-
-  /**
-   *  更新日を取得するメソッド
-   *  @return updateAt　更新日
-   */
-  public String getUpdatedAt(){return updatedAt;}
-
-  /**
-   *商品画像01を格納するメソッド
-   *  @param itemImg01　セットする itemImg01
-   */
-  public void setItemIm01(String itemImg01){this.itemImg01=itemImg01;}
-
-  /**
-  *  商品画像01を取得するメソッド
-  *  @return itemImg01 商品画像01
-  */
-  public String getItemImg01() {return itemImg01;}
-
-  /**
-   * 商品画像02を格納するメソッド
-   *  itemImg02
-   *  @param itemImg02　セットする  itemImg02
-   */
-  public void setItemImg02(String itemImg02) {this.itemImg02 = itemImg02;}
-
-  /**
-  *  商品画像02を取得するメソッド
-  *  itemImg02
-  *  @return itemImg02 商品画像02
-  */
-  public String getItemImg02() {return itemImg02;}
-
-  /**
-   *  ジャンルを格納するメソッド
-   *  itemGenre
-   *  @param itemGenre　セットする itemGenre
-   */
-  public void setitemGenre(String itemGenre) {this.itemGenre = itemGenre;}
-
-  /**
-  *  ジャンルを取得するメソッド
-  *  @return itemGenre ジャンル
-  */
-  public String getitemGenre() {return itemGenre;}
-
-
-}
