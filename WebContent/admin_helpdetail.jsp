@@ -4,6 +4,7 @@
     <!-- ここから国際化 -->
     <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <!-- ここまで国際化 -->
 <!DOCTYPE html>
 <html>
 

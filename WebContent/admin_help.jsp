@@ -1,12 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    <!-- ここから国際化 -->
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <!-- ここまで国際化 -->
+
 <!DOCTYPE html>
 <html>
 
 <head>
-<fmt:setBundle basename="com.internousdev.legmina.property.adminhelp" var="lang" />
+<!-- 国際化 ロケールID取得 -->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<!-- 国際化 propertyファイルの場所の定義 -->
+<fmt:setBundle basename="com.internousdev.kairakutenichiba.property.adminhelp" var="lang" />
+
 <meta charset="utf-8">
 <title><s:text name="lang.admin_contact.topTitle" /></title>
 
@@ -23,7 +31,7 @@
 
 	<h1><s:text name="lang.admin_contact.h1title" /></h1>
 	<p><!-- 検索したいキーワードを入力してください。 -->
-		<s:text name="lang.adminhelp.topTitle" /> 
+		<s:text name="lang.adminhelp.topTitle" />
 		<br> <input type="text" name="検索" size="30"
 			placeholder="キーワードを入力"> <input type="submit" value="検索">
 	<p><!-- お問い合わせ一覧 -->
