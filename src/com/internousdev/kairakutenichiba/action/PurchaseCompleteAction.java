@@ -17,84 +17,55 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 決済をするクラス
- * @author MISA KIKUCHI
- * @since 5/19
- * @version 1.0
  */
 public class PurchaseCompleteAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * シリアルID
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
+	
 	 */
 	private static final long serialVersionUID = 3692422332609482760L;
 
 	/**
 	 * ユーザー（お客様）ID
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	private int userId;
 	/**
 	 * セッション情報
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	private Map<String, Object> session;
 	/**
 	 * カード番号
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	private String creditNumber;
 	/**
 	 * カード会社
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	private int creditId;
 	/**
 	 * 合計金額
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	private float amountAll;
 	/**
 	 * 商品名
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	private String itemsName;
 
 	/**
 	 * カート、クレジットのリスト
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	private ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 	private ArrayList<CreditDTO> creditList = new ArrayList<CreditDTO>();
 
 	/**
 	 * 決済をするための実行メソッド
-	 * @author MISA KIKUCHI
-	 * @since 5/19
-	 * @version 1.0
 	 */
 	public String execute() {
 
 		String result = LOGIN;
 
 		//セッション切れでないか？ＯＫなら次へ進む
-		userId=0;
+		
 		if (session.containsKey("userId")) {
 			userId = (int)session.get("userId");
 

@@ -64,6 +64,7 @@ public class paymentDAO{
 				dto.setExpirationMonth(rs.getString("expirationMonth"));
 				dto.setExpirationYear(rs.getString("expirationYear"));
 				dto.setSecurityCode(rs.getString("secuirtycode"));
+				dto.setCreditId(rs.getInt("credit_id"));
 			}
 			//loginDAOのやつもpassward数字だけど、Stringでやってもんもん
 		}catch(SQLException e){

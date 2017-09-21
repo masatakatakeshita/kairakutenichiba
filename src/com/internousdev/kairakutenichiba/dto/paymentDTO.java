@@ -33,6 +33,8 @@ cardSecurity セキュリティコード
 	private String deliveryMonth;
 
 	private String deliveryTime;
+	
+	private int creditId;
 
 
 	private Map<String, Object> session; //ここいるの？何に使ってんの？
@@ -121,6 +123,12 @@ cardSecurity セキュリティコード
 
 	public void setDeliveryTime(String deliveryTime) {
 		this.deliveryTime = deliveryTime;
+	}
+	public int getCreditId() {
+		return creditId;
+	}
+	public void setCreditId(int creditId) {
+		this.creditId = creditId;
 	}
 
 
