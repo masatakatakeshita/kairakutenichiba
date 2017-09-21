@@ -71,9 +71,16 @@ public class AdminItemInsertAction extends ActionSupport{
 	}
 
 
-	private void setDuplication(String duplication) {
-		this.duplication = duplication;	
+	public String getDuplication() {
+		return duplication;
 	}
+
+
+	public void setDuplication(String duplication) {
+		this.duplication = duplication;
+	}
+
+
 	
 	/**
 	 * set,getメソッド

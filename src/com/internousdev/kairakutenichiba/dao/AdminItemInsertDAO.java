@@ -78,6 +78,7 @@ public class AdminItemInsertDAO {
 				+ "values(itemId, itemName,category,releaseday,Author,publisher,publishtype,page,ISBN,price,stocks,sales,itemdetail,itemimagePass,deleteFlag,RegisteredDay,UpdatedDay)";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
+			ps.executeUpdate();
 			
 			con.close();
 		}catch(SQLException e){

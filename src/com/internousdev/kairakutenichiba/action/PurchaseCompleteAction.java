@@ -38,10 +38,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * カード番号
 	 */
 	private String creditNumber;
-	/**
-	 * カード会社
-	 */
-	private int creditId;
+	
 	/**
 	 * 合計金額
 	 */
@@ -55,7 +52,6 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * カート、クレジットのリスト
 	 */
 	private ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
-	private ArrayList<CreditDTO> creditList = new ArrayList<CreditDTO>();
 
 	/**
 	 * 決済をするための実行メソッド
