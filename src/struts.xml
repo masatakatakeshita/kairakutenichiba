@@ -35,7 +35,7 @@
 
 	<package name="com.internousdev.kairakutenichiba.action" extends="struts-default">
 
-		<!-- あああログインアクション、SUCCESSならindex.jsp、ERRORならlogin.jsp、loginならadmin_top.jspに遷移する -->
+		<!-- ログインアクション、SUCCESSならindex.jsp、ERRORならlogin.jsp、loginならadmin_top.jspに遷移する -->
 		<action name="LoginAction" class="com.internousdev.kairakutenichiba.action.LoginAction"
 			method="execute">
 			<result name="success">index.jsp</result>
@@ -47,7 +47,7 @@
 		<action name="LogoutAction" class="com.internousdev.kairakutenichiba.action.LogoutAction"
 			method="execute">
 			<result name="success">logout_kato.jsp</result>
-			<result name="error">login_kato.jsp</result>
+			<result name="error">logout_kato.jsp</result>
 		</action>
 
 		<!-- 商品詳細画面への遷移 -->
@@ -133,7 +133,7 @@
 			<result name="login">admin_help.jsp</result>
 		</action>
 
-		<!-- 管理者商品管理画面 -->
+		<!-- 管理者商品管理画面 　 -->
 		<action name="AdminItemAction" class="com.internousdev.kairakutenichiba.action.AdminItemAction"
 			method="execute">
 			<result name="success">admin_item_yama.jsp</result>
@@ -142,7 +142,7 @@
 		</action>
 
 		<!-- 管理者商品管理画面 -->
-		<action name="AdminAddAction" class="com.internousdev.kairakutenichiba.action.AdminAddAction"
+		<action name="AdminItemInsertAction" class="com.internousdev.kairakutenichiba.action.AdminItemInsertAction"
 			method="execute">
 			<result name="success">admin_item_yama.jsp</result>
 			<result name="error">admin_item_yama.jsp</result>
