@@ -50,16 +50,16 @@ public class paymentDAO{
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, nameHolder); //selectメソッドに入れてんの？
+			ps.setString(1, nameHolder); 
 			ps.setString(2, creditNumber);
 			ps.setString(3, expirationMonth );
 			ps.setString(4, expirationYear);
 			ps.setString(5, securityCode);
-					//こいつらがselectメソッドのコンストラクタ用引数になんの？
+			//ここで検索してるっぽい。
 
-			ResultSet rs = ps.executeQuery(); //preparedStatementのメソッド
+			ResultSet rs = ps.executeQuery(); 
 			if(rs.next()){
-				dto.setNameHolder(rs.getString("name_e"));	//ここDB中のフィールド？
+				dto.setNameHolder(rs.getString("name_e"));	//ここテーブルの値をdtoに保存
 				dto.setCreditNumber(rs.getString("credit_number"));
 				dto.setExpirationMonth(rs.getString("expirationMonth"));
 				dto.setExpirationYear(rs.getString("expirationYear"));
