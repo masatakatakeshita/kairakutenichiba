@@ -8,10 +8,16 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.kairakutenichiba.dao.CartDeleteDAO;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
-import com.internousdev.kairakutenichiba.dao.PurchaseCompleteDAO;
+import com.internousdev.kairakutenichiba.dao.ItemSalesDAO;
+import com.internousdev.kairakutenichiba.dao.ItemSalesUpdateDAO;
+import com.internousdev.kairakutenichiba.dao.ItemStocksDAO;
+import com.internousdev.kairakutenichiba.dao.ItemStocksUpdateDAO;
+import com.internousdev.kairakutenichiba.dao.PurchaseDetailDAO;
+import com.internousdev.kairakutenichiba.dao.PurchaseIdDAO;
+import com.internousdev.kairakutenichiba.dao.PurchaseOutlineDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
-import com.internousdev.kairakutenichiba.dto.CreditDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -21,12 +27,11 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 
 	/**
 	 * シリアルID
-	
-	 */
+		 */
 	private static final long serialVersionUID = 3692422332609482760L;
 
 	/**
-	 * ユーザー（お客様）ID
+	 * ユーザーID
 	 */
 	private int userId;
 	/**
@@ -56,6 +61,17 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * カートのリスト
 	 */
 	private ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
+	
+	
+	/**
+	 * 在庫を確認する。0のときは在庫がある。1以上のときは在庫が不足している。
+	 */
+	private int stockcheck;
+	/**
+	 * 売上数の更新が正常に行われたかを確認する。
+	 */
+	private int updatecount;
+	
 
 	/**
 	 * 決済をするための実行メソッド
@@ -63,18 +79,52 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	public String execute() {
 
 		String result = ERROR;
+		amountAll=0;
+		stockcheck=0;
 
-		//セッション切れでないか？ＯＫなら次へ進む
-		
 		if (session.containsKey("userId")) {
 			userId = (int)session.get("userId");
-			GoCartDAO cart=new GoCartDAO();
-			
+			GoCartDAO cartdao=new GoCartDAO();
+		    cartList=cartdao.selectedItem(userId);
+		    ItemStocksDAO stocksdao=new ItemStocksDAO();
+		    for(int i=0;i<cartList.size();i++){
+		    	
+		        amountAll=amountAll+cartList.get(i).getSubtotal();
+		    	if(cartList.get(i).getQuantities()>stocksdao.stocks(cartList.get(i).getItemId())){
+		    		stockcheck++;
+		    	}
+		    }
+		    
+		    if(stockcheck==0){
+		    	PurchaseIdDAO purchaseiddao=new PurchaseIdDAO();
+		    	
+		    	PurchaseOutlineDAO outlinedao=new PurchaseOutlineDAO();
+		    	if(outlinedao.insert(1+purchaseiddao.count(),userId,amountAll,delivery,creditNumber)>0){
+		    		PurchaseDetailDAO detaildao=new PurchaseDetailDAO();
+		    		for(int i=0;i<cartList.size();i++){
+		    		if(detaildao.insert(1+purchaseiddao.count(), userId,cartList.get(i).getItemId(),cartList.get(i).getQuantities(), cartList.get(i).getPrice())>0){
+		    			ItemStocksUpdateDAO stocksupdatedao=new ItemStocksUpdateDAO();
+		    			if(stocksupdatedao.itemstocksupdate(cartList.get(i).getItemId(),stocksdao.stocks(cartList.get(i).getItemId())-cartList.get(i).getQuantities())>0){
+		    				ItemSalesDAO salesdao=new ItemSalesDAO();
+		    				ItemSalesUpdateDAO salesupdatedao=new ItemSalesUpdateDAO();
+		    			     updatecount=updatecount+salesupdatedao.itemsalesupdate(cartList.get(i).getItemId(),salesdao.sales(cartList.get(i).getItemId()));
+		    					
+		    					
+		    				
+		    			}
+		    		}
+		    		}
+		    		if(updatecount==cartList.size()){
+		    			CartDeleteDAO delete=new CartDeleteDAO();
+		    			if(delete.delete(userId)>0){
+		    		result=SUCCESS;
+		    			}
+		    		}
+		    	}
+		    	
+		    }
+		    
 
-
-			
-					result = SUCCESS;
-				}
 		}
 		return result;
 	}
@@ -135,24 +185,6 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 
 
 	/**
-	 * カード会社を取得するメソッド
-	 * @return creditId　カード会社
-	 */
-	public int getCreditId() {
-		return creditId;
-	}
-
-
-	/**
-	 * カード会社を格納するメソッド
-	 * @param creditId セットする creditId
-	 */
-	public void setCreditId(int creditId) {
-		this.creditId = creditId;
-	}
-
-
-	/**
 	 * カートリストを取得するメソッド
 	 * @return cartList　カートリスト
 	 */
@@ -203,18 +235,10 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 */
 	public void setItemsName(String itemsName) {
 		this.itemsName = itemsName;
+
 	}
+}
 
 
 	
 
-
-	/**
-	 * クレジットリストを格納するメソッド
-	 * @param creditList セットする creditList
-	 */
-	public void setCreditList(ArrayList<CreditDTO> creditList) {
-		this.creditList = creditList;
-	}
-
-}

@@ -2,7 +2,6 @@ package com.internousdev.kairakutenichiba.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.internousdev.util.db.mysql.MySqlConnector;
@@ -21,31 +20,22 @@ public class CartDeleteDAO {
      * @since
      * @version
      * @param userId ユーザーID
-     * @param cartId カートID
      * @return delCount 削除する件数
      */
+	
+	private int delCount;
 
-    public int delete(int userId, int cartId) {
-        int delCount = 0;
+    public int delete(int userId) {
+        delCount = 0;
         MySqlConnector db = new MySqlConnector("kairakutenichiba");
         Connection con = db.getConnection();
-        String sql1 = "select * from carts where user_id=? and cart_id=?";
-        String sql2 = "delete from carts where user_id=? and cart_id=?";
+        String sql = "delete from carts where user_id=?";
        
         try {
-            PreparedStatement ps = con.prepareStatement(sql1);
-            ps.setInt(1, userId);
-            ps.setInt(2, cartId);System.out.println(ps.toString());
-            ResultSet rs = ps.executeQuery();
-
-            if(rs.next()){
-               
-                ps.close();
-                rs.close();
-                ps = con.prepareStatement(sql2);
+            	PreparedStatement ps = con.prepareStatement(sql);
                 ps.setInt(1, userId);
-                ps.setInt(2, cartId);System.out.println(ps.toString());
-                }
+                delCount=ps.executeUpdate();
+               
             
         } catch (SQLException e) {
             e.printStackTrace();

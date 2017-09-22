@@ -23,7 +23,8 @@ public class GoCartDAO{
 	 * カート内の商品情報を取得しリストに格納するメソッド
 	 * @param userId ユーザーID
 	 * @return cartList カート内の商品情報
-	 * @version 1.0
+	 * @autor shoji hayato
+	 * @since 17/09/22
 	 */
   public ArrayList<CartDTO> selectedItem(int userId){
 
@@ -53,7 +54,7 @@ public class GoCartDAO{
 
 				dto.setItemName(rs2.getString("item_name"));//商品名
 				dto.setPrice(rs2.getFloat("price")); //価格
-				dto.setSubtotal(dto.getPrice()*dto.getQuantities()); //小計
+				dto.setSubtotal(rs2.getFloat("total_price")); //小計
 				dto.setImgPath(rs2.getString("item_image")); //イメージパス
 				cartList.add(dto);
 			}

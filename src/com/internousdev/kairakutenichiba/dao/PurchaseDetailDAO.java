@@ -10,7 +10,7 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 public class PurchaseDetailDAO {
 	int ret;
-	public int insert(int purchaseId,int userId,int itemId,int quantity,int price){
+	public int insert(int purchaseId,int userId,int itemId,int quantity,float price){
 		ret=0;
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();
@@ -22,8 +22,7 @@ public class PurchaseDetailDAO {
 			ps.setInt(2,userId );
 			ps.setInt(3,itemId );
 			ps.setInt(4,quantity );
-			ps.setInt(5,price*quantity );
-			ps.executeUpdate();
+			ps.setFloat(5,price*quantity );
 			ret=ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
