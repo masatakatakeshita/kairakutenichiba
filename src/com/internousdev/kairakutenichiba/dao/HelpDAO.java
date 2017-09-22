@@ -27,7 +27,7 @@ public class HelpDAO {
      * @param userAddress 住所
      * @param userMail メールアドレス
      * @param category 問い合わせ種類
-     * @param comment 本文
+     * @param comment 問い合わせ内容
 	 * @param
      * @return countをactionに返す
 	 * @throws UnknownHostException
