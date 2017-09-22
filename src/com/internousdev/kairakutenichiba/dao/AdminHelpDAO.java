@@ -30,8 +30,8 @@ public class AdminHelpDAO {
 	 * @author
 	 * @since
 	 * @version 1.0
-	 * @param searchTitle お問い合わせ種類検索
-	 * @param searchName 名前検索
+	 * @param searchCategory お問い合わせ種類検索
+	 * @param searchUserName 名前検索
 	 * @param searchSort ソート検索
 	 * @return selectList お問い合わせ情報
 	 */
