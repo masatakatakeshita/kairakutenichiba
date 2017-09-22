@@ -81,6 +81,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		String result = ERROR;
 		amountAll=0;
 		stockcheck=0;
+		updatecount=0;
 
 		if (session.containsKey("userId")) {
 			result="other";
