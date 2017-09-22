@@ -35,7 +35,7 @@
 
 	<package name="com.internousdev.kairakutenichiba.action" extends="struts-default">
 
-		<!-- ログインアクション、SUCCESSならindex.jsp、ERRORならlogin.jsp、loginならadmin_top.jspに遷移する -->
+		<!-- ログインアクション、SUCCESSならindex.jsp、ERRORならlogin.jsp、loginならadmintop.jspに遷移する -->
 		<action name="LoginAction" class="com.internousdev.kairakutenichiba.action.LoginAction"
 			method="execute">
 			<result name="success">index.jsp</result>
