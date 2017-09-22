@@ -23,12 +23,6 @@ public class GoItemDetailAction extends ActionSupport {
 
 
 	/**
-	 * アイテム情報に関するDTOクラス
-	 * @version 1.0
-	 *
-	 */
-
-	/**
 	 * 商品名
 	 */
 	private String item_name;

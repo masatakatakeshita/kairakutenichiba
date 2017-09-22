@@ -20,6 +20,13 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class AdminItemInsertAction extends ActionSupport{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8532713829641837301L;
+
+
+
 	private int itemId;
 	
 	private String itemName;
