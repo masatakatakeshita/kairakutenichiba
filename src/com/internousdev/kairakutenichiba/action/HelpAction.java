@@ -81,7 +81,8 @@ public String execute() {
 	HelpDAO dao = new HelpDAO();
 	try {
 		if (dao.mongoInsert(userName, userAddress, userMail, category, comment)) {
-
+			comment = comment.replace("\r\n","<br>");
+          result=SUCCESS;
 		}
 	} catch (UnknownHostException e) {
 		e.printStackTrace();
