@@ -37,7 +37,7 @@
 		<!-- ヘルプ -->
 		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
 	</s:if>
-	
+
 	<s:else><!-- 非ログイン状態 -->
 		<!-- トップページ -->
 		<a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
@@ -47,22 +47,22 @@
 		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
 	</s:else>
 	</header>
-	
-	
+
+
 <!--
-汎用例 
+汎用例
 	<header>
 		<a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
 		<!--ログイン  -->
-		<a href="login.jsp" class="header_btn"><s:text name="lang.header.login" /></a>
+<!--		<a href="login.jsp" class="header_btn"><s:text name="lang.header.login" /></a> -->
 		<!-- マイページ -->
-		<a href="mypage.jsp" class="header_btn"><s:text name="lang.header.mypage" /></a>
+<!--		<a href="mypage.jsp" class="header_btn"><s:text name="lang.header.mypage" /></a> -->
 		<!-- カート -->
-		<a href="cart.jsp" class="header_btn"><s:text name="lang.header.cart" /></a>
+<!--		<a href="cart.jsp" class="header_btn"><s:text name="lang.header.cart" /></a> -->
 		<!-- ヘルプ -->
-		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
-	</header>
- -->
+<!--		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a> -->
+<!--	</header> -->
+
 
 </body>
 </html>
