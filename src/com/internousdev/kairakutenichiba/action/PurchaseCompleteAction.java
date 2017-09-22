@@ -109,10 +109,8 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		    			if(stocksupdatedao.itemstocksupdate(cartList.get(i).getItemId(),stocksdao.stocks(cartList.get(i).getItemId())-cartList.get(i).getQuantities())>0){
 		    				ItemSalesDAO salesdao=new ItemSalesDAO();
 		    				ItemSalesUpdateDAO salesupdatedao=new ItemSalesUpdateDAO();
-		    			     updatecount=updatecount+salesupdatedao.itemsalesupdate(cartList.get(i).getItemId(),salesdao.sales(cartList.get(i).getItemId()));
-		    					
-		    					
-		    				
+		    			     updatecount=updatecount+salesupdatedao.itemsalesupdate(cartList.get(i).getItemId(),salesdao.sales(cartList.get(i).getItemId())+cartList.get(i).getQuantities());
+		    						    				
 		    			}
 		    		}
 		    		}
