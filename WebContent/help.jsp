@@ -91,7 +91,7 @@
 <span><s:text name="=\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9
 " /><font color="red"><!-- (必須) --><s:text name="lang.help.necessary" /></font></span>
 <a class="box6">
-<input type="text" name="userMail" size="30"required>
+<input type="email" name="userMail" size="30"required>
 </a>
 <br>
 <span>　</span>
