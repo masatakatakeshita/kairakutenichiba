@@ -18,13 +18,13 @@
 <meta charset="utf-8">
 <!-- 顧客情報 -->
 <title><s:text name="com.lang.admincustomer.topTitle"/></title>
-<link rel="stylesheet" type="text/css" href="CSS/admin_customer.css">
+<link rel="stylesheet" type="text/css" href="CSS/admincustomer.css">
 
 </head>
 
 <body>
 	<header>
-		<s:include value="admin_header.jsp" />
+		<s:include value="adminheader.jsp" />
 	</header>
 	<br>
 	<br>

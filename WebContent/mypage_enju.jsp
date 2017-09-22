@@ -36,7 +36,7 @@
 
 <p>
 <!-- 快楽的登録情報参照-->
-<a href="http://localhost:8080/kairakutenichiba/account_enju.jsp" target="_blank" class="list"><s:text name="lang.mypage.info" /></a>
+<a href="http://localhost:8080/kairakutenichiba/account.jsp" target="_blank" class="list"><s:text name="lang.mypage.info" /></a>
 </p>
 
 <p>

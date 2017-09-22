@@ -18,7 +18,7 @@
 <meta charset="utf-8">
 
 
-<link rel="stylesheet" type="text/css" href="CSS/admin_history_kato.css">
+<link rel="stylesheet" type="text/css" href="CSS/adminhistory.css">
 
 <!-- 管理者販売履歴 -->
 <title><s:text name="lang.adminhistory.toptitle" /></title>

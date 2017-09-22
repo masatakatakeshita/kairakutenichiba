@@ -21,7 +21,7 @@
 </head>
 <body>
 	<header>
-		<s:include value="admin_header.jsp" />
+		<s:include value="adminheader.jsp" />
 	</header>
 	<br>
 	<br>
@@ -54,7 +54,7 @@
 			<!-- アカウントについて -->
 			<td><s:text name="" /><s:text name="lang.adminhelp.account" /></td>
 			<!-- ログインできなくなってしまった -->
-			<td><s:text name="" /><s:text name="lang.adminhelp.cannotlogin" /><a href="admin_helpdetail.jsp"><s:text name="lang.adminhelp.detail" /></a></td>
+			<td><s:text name="" /><s:text name="lang.adminhelp.cannotlogin" /><a href="adminhelpdetail.jsp"><s:text name="lang.adminhelp.detail" /></a></td>
 		</tr>
 		<tr><!--山田  -->
 			<td><s:text name="" /><s:text name="lang.adminhelp.sample" /></td>
@@ -63,7 +63,7 @@
 			<!-- 注文内容について -->
 			<td><s:text name="" /><s:text name="lang.adminhelp.sample" /></td>
 			<!--  カートに入れた商品がなくなった-->
-			<td><s:text name="" /><s:text name="lang.adminhelp.sample" /><a href="admin_helpdetail.jsp"><s:text name="lang.adminhelp.detail" /><!--(詳細)  --></a></td>
+			<td><s:text name="" /><s:text name="lang.adminhelp.sample" /><a href="adminhelpdetail.jsp"><s:text name="lang.adminhelp.detail" /><!--(詳細)  --></a></td>
 		</tr>
 	</table>
 

@@ -39,13 +39,13 @@
 
 			<ul>
 				<!-- 顧客情報 -->
-				<li><a href="admin_customer.jsp"><s:text name="lang.admintop.user" /></a></li>
+				<li><a href="admincustomer.jsp"><s:text name="lang.admintop.user" /></a></li>
 				<!-- 販売履歴 -->
-				<li><a href="admin_history_kato.jsp"><s:text name="lang.admintop.log" /></a></li>
+				<li><a href="adminhistory.jsp"><s:text name="lang.admintop.log" /></a></li>
 				<!--  商品管理-->
-				<li><a href="admin_item_yama.jsp"><s:text name="lang.admintop.item" /></a></li>
+				<li><a href="adminitem.jsp"><s:text name="lang.admintop.item" /></a></li>
 				<!--  お問い合わせ-->
-				<li><a href="admin_help.jsp"><s:text name="lang.admintop.contact" /></a></li>
+				<li><a href="adminhelp.jsp"><s:text name="lang.admintop.contact" /></a></li>
 				<!--  Log out-->
 				<li><a href="logout.jsp"><s:text name="lang.admintop.logout" /></a></li>
 

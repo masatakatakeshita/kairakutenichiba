@@ -20,7 +20,7 @@
 </head>
 <body>
 	<header>
-		<s:include value="admin_header.jsp" />
+		<s:include value="adminheader.jsp" />
 	</header>
 	<br>
 	<br>

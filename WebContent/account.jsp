@@ -16,7 +16,7 @@
 <fmt:setBundle basename="com.internousdev.kairakutenichiba.property.account" var="lang" />
 
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="CSS/account_enju.css">
+<link rel="stylesheet" type="text/css" href="CSS/account.css">
 
 <!-- 快楽的登録情報参照 -->
 <title><s:text name="lang.mypage.user" /></title>

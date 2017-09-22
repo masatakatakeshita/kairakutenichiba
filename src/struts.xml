@@ -40,7 +40,7 @@
 			method="execute">
 			<result name="success">index.jsp</result>
 			<result name="error">login_kato.jsp</result>
-			<result name="login">admin_top_yama.jsp</result>
+			<result name="login">admintop.jsp</result>
 		</action>
 
 		<!-- ログアウトアクション、SUCCESSならlogout.jsp、ERRORならlogin.jspに遷移する -->
@@ -128,34 +128,34 @@
 		<!-- 管理者問い合わせ画面 -->
 		<action name="AdminContactAction"
 			class="com.internousdev.kairakutenichiba.action.AdminContactAction" method="execute">
-			<result name="success">admin_help.jsp</result>
-			<result name="error">admin_help.jsp</result>
-			<result name="login">admin_help.jsp</result>
+			<result name="success">adminhelp.jsp</result>
+			<result name="error">adminhelp.jsp</result>
+			<result name="login">adminhelp.jsp</result>
 		</action>
 
 		<!-- 管理者商品管理画面 　 -->
 		<action name="AdminItemAction" class="com.internousdev.kairakutenichiba.action.AdminItemAction"
 			method="execute">
-			<result name="success">admin_item_yama.jsp</result>
-			<result name="error">admin_item_yama.jsp</result>
-			<result name="login">admin_item_yama.jsp</result>
+			<result name="success">adminitem.jsp</result>
+			<result name="error">adminitem.jsp</result>
+			<result name="login">adminitem.jsp</result>
 		</action>
 
 		<!-- 管理者商品管理画面 -->
 		<action name="AdminItemInsertAction" class="com.internousdev.kairakutenichiba.action.AdminItemInsertAction"
 			method="execute">
-			<result name="success">admin_item_yama.jsp</result>
-			<result name="error">admin_item_yama.jsp</result>
-			<result name="login">admin_item_yama.jsp</result>
+			<result name="success">adminitem.jsp</result>
+			<result name="error">adminitem.jsp</result>
+			<result name="login">adminitem.jsp</result>
 		</action>
 
 
 		<!-- 管理者顧客情報 -->
 		<action name="AdminUserAction" class="com.internousdev.kairakutenichiba.action.AdminUserAction"
 			method="execute">
-			<result name="success">admin_customer.jsp</result>
-			<result name="error">admin_customer.jsp</result>
-			<result name="login">admin_customer.jsp</result>
+			<result name="success">admincustomer.jsp</result>
+			<result name="error">admincustomer.jsp</result>
+			<result name="login">admincustomer.jsp</result>
 
 
 		</action>
@@ -163,16 +163,16 @@
 		<!-- 管理者顧客購入情報 -->
 		<action name="AdminHistoryAction"
 			class="com.internousdev.kairakutenichiba.action.AdminHistoryAction" method="execute">
-			<result name="success">admin_history_kato.jsp</result>
-			<result name="error">admin_history_kato.jsp</result>
-			<result name="login">admin_history_kato.jsp</result>
+			<result name="success">adminhistory.jsp</result>
+			<result name="error">adminhistory.jsp</result>
+			<result name="login">adminhistory.jsp</result>
 		</action>
 
 		<!-- 管理者商品一覧 -->
 		<action name="ItemAction" class="com.internousdev.kairakutenichiba.action.ItemAction"
 			method="execute">
-			<result name="success">admin_item_yama.jsp</result>
-			<result name="error">admin_item_yama.jsp</result>
+			<result name="success">adminitem.jsp</result>
+			<result name="error">adminitem.jsp</result>
 		</action>
 
 
@@ -182,7 +182,7 @@
 			method="execute">
 			<result name="success">history_enju.jsp</result>
 			<result name="error">history_enju.jsp</result>
-			<result name="login">admin_history_kato.jsp</result>
+			<result name="login">adminhistory.jsp</result>
 		</action>
 
 
@@ -190,9 +190,9 @@
 		<!-- Mypageの情報を表示させるアクション -->
 		<action name="MyPageAction" class="com.internousdev.kairakutenichiba.action.MyPageAction"
 			method="execute">
-			<result name="success">account_enju.jsp</result>
+			<result name="success">account.jsp</result>
 			<result name="error">index.jsp</result>
-			<result name="login">admin_customer.jsp</result>
+			<result name="login">admincustomer.jsp</result>
 		</action>
 
 
