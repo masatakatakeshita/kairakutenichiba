@@ -83,6 +83,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		stockcheck=0;
 
 		if (session.containsKey("userId")) {
+			result="other";
 			userId = (int)session.get("userId");
 			GoCartDAO cartdao=new GoCartDAO();
 		    cartList=cartdao.selectedItem(userId);
