@@ -45,7 +45,7 @@
 
 	<div id="relogin">
 		<!-- 再度ログインする -->
-		<a href="login_kato.jsp"><s:text name="lang.logout.login" /></a>
+		<a href="login.jsp"><s:text name="lang.logout.login" /></a>
 	</div>
 
 	<div id="linktop">

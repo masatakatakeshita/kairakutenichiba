@@ -17,7 +17,7 @@
 
 <meta charset="utf-8">
 
-<link rel="stylesheet" type="text/css" href="CSS/mypage_enju.css">
+<link rel="stylesheet" type="text/css" href="CSS/mypage.css">
 <!-- マイページ-->
 <title><s:text name="lang.mypage.title" /></title>
 </head>
@@ -41,7 +41,7 @@
 
 <p>
 <!-- 快楽歴史 -->
-<a href="http://localhost:8080/kairakutenichiba/history_enju.jsp" target="_blank" class="list"><s:text name="lang.mypage.history" /></a>
+<a href="http://localhost:8080/kairakutenichiba/history.jsp" target="_blank" class="list"><s:text name="lang.mypage.history" /></a>
 </p>
 </div>
 </body>

@@ -56,7 +56,7 @@
 
 
 
-<s:form action="helplink_togashi.jsp" id="form2">
+<s:form action="helplink.jsp" id="form2">
 
 
 <div class="boxA">

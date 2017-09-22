@@ -58,7 +58,7 @@
 	<!--top  -->
 	<a href="index.jsp"><s:text name="lang.admintop.top" /></a>
 	<!-- login -->
-	<a href="login_kato.jsp"><s:text name="lang.admintop.login" /></a>
+	<a href="login.jsp"><s:text name="lang.admintop.login" /></a>
 
 
 

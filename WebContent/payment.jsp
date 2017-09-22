@@ -18,7 +18,7 @@
 <meta charset="utf-8">
 <!--支払い方法確認  -->
 <title><s:text name="lang.payment.paymentScreen" /></title>
-<link rel="stylesheet" type="text/css" href="CSS/payment_takeshita.css">
+<link rel="stylesheet" type="text/css" href="CSS/payment.css">
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>

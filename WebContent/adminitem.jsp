@@ -150,19 +150,19 @@
 	<br>
 
 	<p>
-		<a href="detail_yamaguchi.jsp">商品情報を追加する</a>
+		<a href="detail.jsp">商品情報を追加する</a>
 	</p>
 
 	<p>
-		<a href="detail_yamaguchi.jsp">商品情報を編集する</a>
+		<a href="detail.jsp">商品情報を編集する</a>
 	</p>
 
 	<p>
-		<a href="detail_yamaguchi.jsp">商品情報を削除する</a>
+		<a href="detail.jsp">商品情報を削除する</a>
 	</p>
 
 	<p>
-		<a href="detail_yamaguchi.jsp">商品詳細</a>
+		<a href="detail.jsp">商品詳細</a>
 	</p>
 -->
 

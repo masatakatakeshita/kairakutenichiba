@@ -81,7 +81,7 @@
                     	<fmt:formatNumber value="${amountAll}" pattern="###,###,###" />
                     <s:text name="lang.cart.yen" /></td></tr></table>
 <span id="submit">
-		<input type="submit" onclick="location.href='payment_takeshita.jsp'"
+		<input type="submit" onclick="location.href='payment.jsp'"
 		value="<s:text name="lang.cart.message4" />">
 
 		</span>

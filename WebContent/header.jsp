@@ -31,11 +31,11 @@
 		<!--　ログアウト logout.actionを必須 -->
 		<a href="<s:url action="LogoutAction"/>" class="header_btn"><s:text name="lang.header.logout" /></a>
 		<!-- マイページ -->
-		<a href="mypage_enju.jsp" class="header_btn"><s:text name="lang.header.mypage" /></a>
+		<a href="mypage.jsp" class="header_btn"><s:text name="lang.header.mypage" /></a>
 		<!-- カート -->
 		<a href="<s:url action="GoCartAction"/>" class="header_btn"><s:text name="lang.header.cart" /></a>
 		<!-- ヘルプ -->
-		<a href="help_togashi.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
+		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
 	</s:if>
 	
 	<s:else><!-- 非ログイン状態 -->
@@ -44,7 +44,7 @@
 		<!--ログイン  -->
 		<a href="<s:url action="LoginAction"/>" class="header_btn"><s:text name="lang.header.login" /></a>
 		<!-- ヘルプ -->
-		<a href="help_togashi.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
+		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
 	</s:else>
 	</header>
 	
@@ -54,13 +54,13 @@
 	<header>
 		<a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
 		<!--ログイン  -->
-		<a href="login_kato.jsp" class="header_btn"><s:text name="lang.header.login" /></a>
+		<a href="login.jsp" class="header_btn"><s:text name="lang.header.login" /></a>
 		<!-- マイページ -->
-		<a href="mypage_enju.jsp" class="header_btn"><s:text name="lang.header.mypage" /></a>
+		<a href="mypage.jsp" class="header_btn"><s:text name="lang.header.mypage" /></a>
 		<!-- カート -->
-		<a href="cart_jo.jsp" class="header_btn"><s:text name="lang.header.cart" /></a>
+		<a href="cart.jsp" class="header_btn"><s:text name="lang.header.cart" /></a>
 		<!-- ヘルプ -->
-		<a href="help_togashi.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
+		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
 	</header>
  -->
 

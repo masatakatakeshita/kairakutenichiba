@@ -39,7 +39,7 @@
 		<action name="LoginAction" class="com.internousdev.kairakutenichiba.action.LoginAction"
 			method="execute">
 			<result name="success">index.jsp</result>
-			<result name="error">login_kato.jsp</result>
+			<result name="error">login.jsp</result>
 			<result name="login">admintop.jsp</result>
 		</action>
 
@@ -53,55 +53,55 @@
 		<!-- 商品詳細画面への遷移 -->
 		<action name="GoItemDetailAction"
 			class="com.internousdev.kairakutenichiba.action.GoItemDetailAction" method="execute">
-			<result name="success">detail_yamaguchi.jsp</result>
-			<result name="error">detail_yamaguchi.jsp</result>
-			<result name="login">detail_yamaguchi.jsp</result>
+			<result name="success">detail.jsp</result>
+			<result name="error">detail.jsp</result>
+			<result name="login">detail.jsp</result>
 		</action>
 
 		<!-- カートに商品を追加する -->
 		<action name="AddToCartAction" class="com.internousdev.kairakutenichiba.action.AddToCartAction"
 			method="execute">
-			<result name="success">cart_jo.jsp</result>
-			<result name="error">login_kato.jsp</result>
-			<result name="login">cart_jo.jsp</result>
+			<result name="success">cart.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="login">cart.jsp</result>
 		</action>
 
 		<!-- カートに商品の数を増減する -->
 		<action name="CartUpdateAction" class="com.internousdev.kairakutenichiba.action.CartUpdateAction"
 			method="execute">
-			<result name="success">cart_jo.jsp</result>
-			<result name="error">cart_jo.jsp</result>
-			<result name="login">cart_jo.jsp</result>
+			<result name="success">cart.jsp</result>
+			<result name="error">cart.jsp</result>
+			<result name="login">cart.jsp</result>
 		</action>
 
 		<!-- カート商品削除 -->
 		<action name="CartDeleteAction" class="com.internousdev.kairakutenichiba.action.CartDeleteAction"
 			method="execute">
-			<result name="success">cart_jo.jsp</result>
-			<result name="error">cart_jo.jsp</result>
-			<result name="login">cart_jo.jsp</result>
+			<result name="success">cart.jsp</result>
+			<result name="error">cart.jsp</result>
+			<result name="login">cart.jsp</result>
 		</action>
 
 		<!-- カート画面への遷移 -->
 		<action name="GoCartAction" class="com.internousdev.kairakutenichiba.action.GoCartAction"
 			method="execute">
-			<result name="success">cart_jo.jsp</result>
-			<result name="error">cart_jo.jsp</result>
-			<result name="login">cart_jo.jsp</result>
+			<result name="success">cart.jsp</result>
+			<result name="error">cart.jsp</result>
+			<result name="login">cart.jsp</result>
 		</action>
 		<!-- 支払い画面への遷移 -->
 		<action name="GoSettlementAction"
 			class="com.internousdev.kairakutenichiba.action.GoSettlementAction" method="execute">
-			<result name="success">payment_takeshita.jsp</result>
-			<result name="error">cart_jo.jsp</result>
-			<result name="login">payment_takeshita.jsp</result>
+			<result name="success">payment.jsp</result>
+			<result name="error">cart.jsp</result>
+			<result name="login">payment.jsp</result>
 		</action>
 
 		<!-- 支払い画面。成功なら購入確認、エラーならクレジット情報の間違いのページに飛ぶ -->
 		<action name="PaymentAction" class="com.internousdev.kairakutenichiba.action.paymentAction"
 			method="execute">
 			<result name="success">check.jsp</result>
-			<result name="error">payment_takeshita.jsp</result>
+			<result name="error">payment.jsp</result>
 			<result name="login">check.jsp</result>
 			<result name="other">paymenterror.jsp</result>
 		</action>
@@ -110,18 +110,18 @@
 		<action name="PurchaseCompleteAction"
 			class="com.internousdev.kairakutenichiba.action.PurchaseCompleteAction"
 			method="execute">
-			<result name="success">finish_shoji.jsp</result>
-			<result name="error">login_kato.jsp</result>
-			<result name="login">finish_shoji.jsp</result>
+			<result name="success">finish.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="login">finish.jsp</result>
 			<result name="other">stockserror.jsp</result>
 		</action>
 
 		<!-- 問い合わせ画面。問い合わせ完了画面に飛ぶ。必須が埋まってなかったらERRORで別ページ？ -->
 		<action name="ContactAction" class="com.internousdev.kairakutenichiba.action.ContactAction"
 			method="execute">
-			<result name="success">helplink_togashi.jsp</result>
-			<result name="error" >help_togashi.jsp</result>
-			<result name="login">helplink_togashi.jsp</result>
+			<result name="success">helplink.jsp</result>
+			<result name="error" >help.jsp</result>
+			<result name="login">helplink.jsp</result>
 		</action>
 
 
@@ -180,8 +180,8 @@
 		<action name="UserPurchaseHistoryAction"
 			class="com.internousdev.kairakutenichiba.action.UserPurchaseHistoryAction"
 			method="execute">
-			<result name="success">history_enju.jsp</result>
-			<result name="error">history_enju.jsp</result>
+			<result name="success">history.jsp</result>
+			<result name="error">history.jsp</result>
 			<result name="login">adminhistory.jsp</result>
 		</action>
 

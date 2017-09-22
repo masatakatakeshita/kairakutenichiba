@@ -17,7 +17,7 @@
 
 <meta charset="utf-8">
 
-<link rel="stylesheet" type="text/css" href="CSS/detail_yamaguchi.css">
+<link rel="stylesheet" type="text/css" href="CSS/detail.css">
 
 <!-- 商品詳細 -->
 <title><s:text name="lang.detail.title" /></title>

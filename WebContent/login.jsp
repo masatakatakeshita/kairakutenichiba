@@ -19,7 +19,7 @@
 
 <!-- Stylesheet -->
 
-<link rel="stylesheet" type="text/css" href="CSS/login_kato.css">
+<link rel="stylesheet" type="text/css" href="CSS/login.css">
 
 <title><s:text name="lang.login.title" /></title>
 

@@ -16,7 +16,7 @@
 <fmt:setBundle basename="com.internousdev.kairakutenichiba.property.history" var="lang" />
 
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="CSS/history_enju.css">
+<link rel="stylesheet" type="text/css" href="CSS/history.css">
 <!-- 快楽歴史 -->
 <title><s:text name="lang.history.title" /></title>
 
@@ -74,14 +74,14 @@
 <table>
 <tr>
 	<td><img class="image" src= "img/1.jpg"></td>
-	<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 1巻</a></div><br>
+	<td><div class="name"><a href="detail.jsp">ワンピース 1巻</a></div><br>
 		<a href="category_shojidairi.jsp">尾田栄一郎</a><br>
 		<a href="category_shojidairi.jsp">集英社</a></td>
 			<td>500円</td>
 </tr>
 <tr>
 	<td><img class="image" src= "img/2.jpg"></td>
-	<td><div class="name"><a href="detail_yamaguchi.jsp">ワンピース 2巻</a></div><br>
+	<td><div class="name"><a href="detail.jsp">ワンピース 2巻</a></div><br>
 		<a href="category_shojidairi.jsp">尾田栄一郎</a><br>
 		<a href="category_shojidairi.jsp">集英社</a></td>
 			<td>500円</td>
