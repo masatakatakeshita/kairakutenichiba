@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @since 2017/05/15
  * @version 1.0
  */
-public class GoAdminDeleteAction extends ActionSupport{
+public class AdminItemDeleteAction extends ActionSupport{
 
 	/**
 	 * シリアルID
