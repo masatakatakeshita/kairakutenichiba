@@ -46,7 +46,7 @@ public class CartDTO {
     /**
      * 価格合計
      */
-    private float totalPrice;
+    private float subtotal;
 
     private int stocks;
     /**
@@ -166,7 +166,7 @@ public class CartDTO {
      * @return subtotal
      */
     public float getSubtotal() {
-        return totalPrice;
+        return subtotal;
     }
 
     /**
@@ -174,7 +174,7 @@ public class CartDTO {
      * @param subtotal セットする subtotal
      */
     public void setSubtotal(float subtotal) {
-        this.totalPrice = subtotal;
+        this.subtotal = subtotal;
     }
     /**
      * @return stocks
