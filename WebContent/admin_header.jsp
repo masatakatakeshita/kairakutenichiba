@@ -30,7 +30,7 @@
 		<a href="admin_history_kato.jsp" class="header_btn"<s:text name="lang.adminheader.userbtn"/>></a>
 		<a href="admin_item_yama.jsp" class="header_btn"><s:text name="lang.adminheader.Itembtn"/></a>
 		<a href="admin_help.jsp" class="header_btn"><s:text name="lang.adminheader.customerbtn"/></a>
-		<a href="logout_kato.jsp" class="header_btn"><s:text name="lang.header.logoutbtn"/></a>
+		<a href="logout.jsp" class="header_btn"><s:text name="lang.header.logoutbtn"/></a>
 
 	</header>
 

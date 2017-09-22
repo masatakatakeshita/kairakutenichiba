@@ -18,7 +18,7 @@
 <meta charset="utf-8">
 
 <!-- Stylesheet -->
-<link rel="stylesheet" type="text/css" href="CSS/logout_kato.css">
+<link rel="stylesheet" type="text/css" href="CSS/logout.css">
 <!--  ログアウト-->
 <title><s:text name="lang.logout.title" /></title>
 <meta http-equiv="Content-Style-Type" content="text/css">

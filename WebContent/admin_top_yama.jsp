@@ -47,7 +47,7 @@
 				<!--  お問い合わせ-->
 				<li><a href="admin_help.jsp"><s:text name="lang.admintop.contact" /></a></li>
 				<!--  Log out-->
-				<li><a href="logout_kato.jsp"><s:text name="lang.admintop.logout" /></a></li>
+				<li><a href="logout.jsp"><s:text name="lang.admintop.logout" /></a></li>
 
 			</ul>
 
