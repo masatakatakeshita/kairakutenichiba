@@ -1,7 +1,7 @@
 /**
  * 国際化用プロパティファイルをまとめているパッケージ
- * @author INTERNOUSDEV
- * @since 2017/08/14
- * @version 1.0
+ * @author ryohei kato
+ *
+ *
  */
 package com.internousdev.kairakutenichiba.property;
