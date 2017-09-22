@@ -13,7 +13,6 @@ import com.internousdev.kairakutenichiba.dto.AdminHistoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * @author internousdev
  *管理者販売履歴のためのクラス
  */
 public class AdminHistoryAction extends ActionSupport implements SessionAware{

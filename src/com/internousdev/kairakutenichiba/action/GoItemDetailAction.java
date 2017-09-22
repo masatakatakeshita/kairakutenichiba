@@ -19,9 +19,6 @@ public class GoItemDetailAction extends ActionSupport {
 	 * シリアルID
 	 */
 	private static final long serialVersionUID = 265702236011588767L;
-
-
-
 	/**
 	 * 商品名
 	 */
@@ -77,15 +74,15 @@ public class GoItemDetailAction extends ActionSupport {
 	 */
 	private int stocks;
 
-	
-
-	
-
+	/**
+	 * DBから表示するための情報をリスト化している
+	 */
 	private ArrayList<ItemDTO> displayList = new ArrayList<ItemDTO>();
 
 
 	/**
 	 * 商品情報表示用リストの生成
+	 * 1：テーブル名itemsのひつ情報をdisplayListに格納して表示する
     */
 	public String execute() throws SQLException {
 		String result = ERROR;

@@ -18,8 +18,6 @@ import com.internousdev.kairakutenichiba.util.CartAssist;
 /**
  *  カートの中身を削除するクラス
  * @author
- * @version
- * @since
  */
 
 public class CartDeleteAction extends CartAssist implements SessionAware {
@@ -74,9 +72,11 @@ public class CartDeleteAction extends CartAssist implements SessionAware {
 
     /**
      * カートの中身の削除を実行するメソッド
-     * @author MISAKI AKIMOTO
-     * @version 1.0
-     * @since 2017/8/10
+     * @author
+     * 1：
+     * 2：
+     * 3：
+     * 4：
      */
     public String execute() throws SQLException {
         String result = ERROR;
@@ -90,7 +90,7 @@ public class CartDeleteAction extends CartAssist implements SessionAware {
             CartDeleteDAO dao = new CartDeleteDAO();
             GoCartDAO dao2 = new GoCartDAO();
 
-            delCount = dao.delete(userId, cartId);
+            delCount = dao.delete(userId);
             if (delCount > 0) {
                 cartList = dao2.selectedItem(userId);
                 if (cartList.size() > 0) {

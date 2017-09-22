@@ -23,7 +23,6 @@ public class HelpAction extends ActionSupport  implements SessionAware {
      */
     private static final long serialVersionUID = 7307749500088925358L;
 
-
 	/**
 	 * 問い合わせ氏名
 	 *
@@ -70,8 +69,7 @@ private int userId;
 
 
 /**
- * 実行メソッド
- *
+ * MONGODBと接続して情報を取得する
  * @return HelpDAO
  */
 

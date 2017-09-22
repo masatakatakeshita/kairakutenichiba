@@ -67,14 +67,10 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 */
 	private float price;
 
-
-
 	/**
      * 商品削除
      */
     private boolean is_deleted;
-
-
 
 	/**
 	 * イメージファイルパス
@@ -95,8 +91,6 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 売上数
 	 */
 	private int sales;
-
-
 
 	/**
 	 * 登録日
@@ -241,11 +235,6 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 
-
-
-
-
-
 	/**
 	 * 商品名重複時のエラー文を取得するメソッド
 	 * @return doubling　商品名重複時のエラー文
@@ -253,9 +242,6 @@ public class AdminItemUpdateAction extends ActionSupport{
 	public String getDoubling() {
 		return doubling;
 	}
-
-
-
 	/**
 	 * 商品名重複時のエラー文を格納するメソッド
 	 * @param doubling セットする doubling
@@ -283,6 +269,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品名を取得するメソッド
 	 * @return item_name
 	 */
 	public String getItem_name() {
@@ -290,6 +277,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品名を格納するメソッド
 	 * @param item_name セットする item_name
 	 */
 	public void setItem_name(String item_name) {
@@ -297,6 +285,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品IDを取得する
 	 * @return item_id
 	 */
 	public int getItem_id() {
@@ -304,6 +293,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品IDを格納する
 	 * @param item_id セットする item_id
 	 */
 	public void setItem_id(int item_id) {
@@ -311,6 +301,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * カテゴリーを取得する
 	 * @return category
 	 */
 	public String getCategory() {
@@ -318,13 +309,15 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
-	 * @param category セットする category
+	 * カテゴリーを格納する
+	 * @param category セットする 
 	 */
 	public void setCategory(String category) {
 		this.category = category;
 	}
 
 	/**
+	 * 販売日を取得する
 	 * @return release_day
 	 */
 	public int getRelease_day() {
@@ -332,6 +325,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 販売日を格納する
 	 * @param release_day セットする release_day
 	 */
 	public void setRelease_day(int release_day) {
@@ -339,6 +333,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 著者を取得する
 	 * @return author
 	 */
 	public String getAuthor() {
@@ -346,6 +341,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 著者を格納する
 	 * @param author セットする author
 	 */
 	public void setAuthor(String author) {
@@ -353,6 +349,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 発行会社を取得する
 	 * @return publisher
 	 */
 	public String getPublisher() {
@@ -360,6 +357,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 発行会社を格納する
 	 * @param publisher セットする publisher
 	 */
 	public void setPublisher(String publisher) {
@@ -367,6 +365,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 発行形態を取得する
 	 * @return publish_type
 	 */
 	public String getPublish_type() {
@@ -374,6 +373,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 発行形態を格納する
 	 * @param publish_type セットする publish_type
 	 */
 	public void setPublish_type(String publish_type) {
@@ -381,6 +381,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * ページ数を取得する
 	 * @return pages
 	 */
 	public int getPages() {
@@ -388,13 +389,16 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * ページ数を格納する
 	 * @param pages セットする pages
 	 */
 	public void setPages(int pages) {
 		this.pages = pages;
 	}
 
+	//tesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesetteset
 	/**
+	 * IDBNコードを取得する
 	 * @return isbn
 	 */
 	public int getIsbn() {
@@ -402,6 +406,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * IDBNを格納する
 	 * @param isbn セットする isbn
 	 */
 	public void setIsbn(int isbn) {
@@ -409,6 +414,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品画像へのパスを取得する
 	 * @return item_image
 	 */
 	public String getItem_image() {
@@ -416,6 +422,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品画像へのパスを格納する
 	 * @param item_image セットする item_image
 	 */
 	public void setItem_image(String item_image) {
@@ -423,6 +430,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品画像へのパスを取得する
 	 * @return item_image2
 	 */
 	public String getItem_image2() {
@@ -430,6 +438,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品画像へのパスを格納する
 	 * @param item_image2 セットする item_image2
 	 */
 	public void setItem_image2(String item_image2) {
@@ -437,6 +446,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 商品詳細を取得する
 	 * @return item_detail
 	 */
 	public String getItem_detail() {
@@ -444,13 +454,15 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
-	 * @param item_detail セットする item_detail
+	 * 商品詳細を格納する
+	 * @param item_detail セットする
 	 */
 	public void setItem_detail(String item_detail) {
 		this.item_detail = item_detail;
 	}
 
 	/**
+	 * 削除フラグを取得する
 	 * @return is_deleted
 	 */
 	public boolean isIs_deleted() {
@@ -458,6 +470,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 削除フラグを格納する
 	 * @param is_deleted セットする is_deleted
 	 */
 	public void setIs_deleted(boolean is_deleted) {
@@ -465,6 +478,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 登録日を取得する
 	 * @return created_at
 	 */
 	public String getCreated_at() {
@@ -472,6 +486,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 登録日を格納する
 	 * @param created_at セットする created_at
 	 */
 	public void setCreated_at(String created_at) {
@@ -479,6 +494,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 更新日を取得する
 	 * @return updated_at
 	 */
 	public String getUpdated_at() {
@@ -486,6 +502,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 	/**
+	 * 更新日を格納する
 	 * @param updated_at セットする updated_at
 	 */
 	public void setUpdated_at(String updated_at) {

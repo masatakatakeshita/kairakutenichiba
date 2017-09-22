@@ -12,9 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * カートの情報を取得するアクションクラス
- * @author
- * @since
- * @version
+
  */
 
 public class GoCartAction extends ActionSupport implements SessionAware {
@@ -43,6 +41,9 @@ public class GoCartAction extends ActionSupport implements SessionAware {
      */
     private int quantities;
 
+    /**
+     *在庫
+     */
     private int stocks;
 
     /**
@@ -68,9 +69,6 @@ public class GoCartAction extends ActionSupport implements SessionAware {
      * 1：セッション情報を持っているか判断
      * 2：session内のuserIdを使用し、カートへ登録された情報を取得
      * 3：カート内の情報を元に合計金額を算出
-     * @author  MISAKI AKIMOTO
-     * @since 2017/07/18
-     * @version 1.0
      */
     public String execute() throws SQLException {
         String result = ERROR;
@@ -233,6 +231,7 @@ public class GoCartAction extends ActionSupport implements SessionAware {
     }
 
     /**
+     * 在庫を取得するメソッド
      * @return stocks
      */
     public int getStocks() {
@@ -240,6 +239,7 @@ public class GoCartAction extends ActionSupport implements SessionAware {
     }
 
     /**
+     * 在庫を格納するメソッド
      * @param stocks セットする stocks
      */
     public void setStocks(int stocks) {

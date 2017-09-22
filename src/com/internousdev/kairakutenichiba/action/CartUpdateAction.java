@@ -85,9 +85,6 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
 
     /**
      * カートの上限処理を実行するメソッド
-     * @author MISAKI AKIMOTO
-     * @since 2017/08/10
-     * @version 1.0
      */
     public String execute() throws SQLException {
 

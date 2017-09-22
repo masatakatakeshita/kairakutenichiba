@@ -443,31 +443,43 @@ public class AdminItemAction extends ActionSupport{
 
 
 
-
+	/**
+	* ページ数のget
+	*/
 	public int getMaxPage() {
 		return maxPage;
 	}
 
-
+	/**
+	 * ページ数をset
+	 */
 	public void setMaxPage(int maxPage) {
 		this.maxPage = maxPage;
 	}
 
-
+	/**
+	 * ItemDTOをリスト化してget
+	 */
 	public ArrayList<ItemDTO> getDisplayList() {
 		return displayList;
 	}
 
-
+	/**
+	 * ItemDTOをリスト化してset
+	 */
 	public void setDisplayList(ArrayList<ItemDTO> displayList) {
 		this.displayList = displayList;
 	}
-
+	/**
+	 * ページ合計をget　
+	 */
 	public int getPageNum() {
 		return pageNum;
 	}
 
-
+	/**
+	 * ページ合計をset
+	 */
 	public void setPageNum(int pageNum) {
 		this.pageNum = pageNum;
 	}

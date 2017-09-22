@@ -47,7 +47,9 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     * 数量
     */
     private int quantities;
-
+    /**
+    * 在庫
+    */
     private int stocks;
 
     /**

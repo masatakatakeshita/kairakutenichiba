@@ -13,7 +13,6 @@ import com.internousdev.kairakutenichiba.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * @author internousdev
  *顧客情報に関するクラス
  */
 public class AdminUserAction extends ActionSupport implements SessionAware{
@@ -21,11 +20,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 
 	/**
 	 * シリアルID
-	 */
-
-
-	/**
-	 *
 	 */
 	private static final long serialVersionUID = -2149261769882286949L;
 

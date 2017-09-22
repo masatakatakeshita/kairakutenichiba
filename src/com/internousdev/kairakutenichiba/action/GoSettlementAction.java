@@ -15,8 +15,8 @@ import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.util.CartAssist;
 
-/**決済入力画面に遷移するためのクラス
- * @version 1.0
+/**
+ * 決済入力画面に遷移するためのクラス
  */
 public class GoSettlementAction extends CartAssist implements SessionAware {
 
@@ -58,7 +58,6 @@ public class GoSettlementAction extends CartAssist implements SessionAware {
 
 	/**
 	 * 決済画面の遷移を実行するメソッド
-	 * @version 1.0
 	 */
 	public String execute() throws SQLException{
 		String result=ERROR;
@@ -179,6 +178,4 @@ public class GoSettlementAction extends CartAssist implements SessionAware {
 		this.order = order;
 	}
 
-
-
-	}
+}
