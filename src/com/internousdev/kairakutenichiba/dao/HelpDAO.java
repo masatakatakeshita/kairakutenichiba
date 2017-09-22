@@ -11,6 +11,7 @@ import java.util.TimeZone;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 
 /**
@@ -47,6 +48,7 @@ public class HelpDAO {
 		/*利用するコレクションを取得*/
 		DBCollection coll = db.getCollection("inquiry_histories");
 
+
 		BasicDBObject doc = new BasicDBObject();
 
 			doc.append("user_name",userName);
@@ -62,7 +64,11 @@ public class HelpDAO {
 
         return result;
     }
-    /*close()はMongoDBconnectorで行う*/
+
+    public void closeCollection(Mongo client) {
+    client.close();
+    }
+
 	}
 
 
