@@ -16,7 +16,7 @@ public class AdminItemUpdateDAO {
 
 
 
-	public boolean doubling(int itemId ,String itemsName){
+	public boolean doubling(String itemsName, int itemId ){
 		boolean result=false;
 		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
@@ -45,11 +45,11 @@ public class AdminItemUpdateDAO {
 	}
 
 
-	public int insert(int item_id, String item_name, String category, int release_day, String author, String publisher, String publish_type, int pages, int isbn,boolean is_deleted,String created_at, String item_detail, String updated_at, float price, int stocks,  int sales, int imgDel,String imgPath){
+	public int update(int item_id, String item_name, String category, int release_day, String author, String publisher, String publish_type, int pages, int isbn,boolean is_deleted,String created_at, String item_detail, String updated_at, float price, int stocks, int sales, int imgDel,String imgPath
+){
 
 		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
-
 
 		int inserted=0;
 		int c=1;
@@ -97,6 +97,8 @@ public class AdminItemUpdateDAO {
 		}
 		return inserted;
 	}
+	
+}
 
 
 
@@ -105,10 +107,6 @@ public class AdminItemUpdateDAO {
 
 
 
-
-
-
-	}
 
 
 

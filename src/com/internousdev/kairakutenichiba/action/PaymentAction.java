@@ -16,13 +16,17 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 
-public class paymentAction extends ActionSupport implements SessionAware{
+public class PaymentAction extends ActionSupport implements SessionAware{
 
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6483616756501565137L;
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
 	
 	private int userId;
 

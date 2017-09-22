@@ -98,7 +98,7 @@
 		</action>
 
 		<!-- 支払い画面。成功なら購入確認、エラーならクレジット情報の間違いのページに飛ぶ -->
-		<action name="PaymentAction" class="com.internousdev.kairakutenichiba.action.paymentAction"
+		<action name="PaymentAction" class="com.internousdev.kairakutenichiba.action.PaymentAction"
 			method="execute">
 			<result name="success">check.jsp</result>
 			<result name="error">payment.jsp</result>

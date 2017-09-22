@@ -139,9 +139,9 @@ public class AdminItemUpdateAction extends ActionSupport{
 
 		AdminItemUpdateDAO dao= new AdminItemUpdateDAO();
 
-		if(dao.doubling(item_id,item_name)){setDoubling("※同名の商品が既に存在します。");}
+		if(dao.doubling(item_name, item_id)){setDoubling("※同名の商品が既に存在します。");}
 		else{
-			updated=dao.insert(item_id,item_name,category, release_day, author,  publisher,  publish_type,  pages, isbn, is_deleted, created_at, item_detail, updated_at,  price, stocks, sales, imgDel,imgPath);
+			updated=dao.update(item_id,item_name,category, release_day, author,  publisher,  publish_type,  pages, isbn, is_deleted, created_at, item_detail, updated_at,  price, stocks, sales, imgDel,imgPath);
 
 			if(updated>0){
 				result = SUCCESS;

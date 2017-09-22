@@ -58,7 +58,7 @@
         <br/>
 
 
-<s:form action="payment">
+<s:form action="PaymentAction">
 <div class="shiharai" >
 	<table class="nyuuryoku " border="1" >
 
