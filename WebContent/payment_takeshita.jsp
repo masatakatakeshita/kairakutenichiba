@@ -191,7 +191,7 @@
 
 
            <p>
-           <a href="check_shoji.jsp"><input type="submit" value=内容確認></a>
+           <a href="check.jsp"><input type="submit" value=内容確認></a>
         　　</p>
 </s:form>
 
