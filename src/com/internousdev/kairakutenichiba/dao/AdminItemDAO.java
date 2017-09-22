@@ -14,9 +14,8 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 /**
  * 管理者商品管理に関するクラス
- * @author Ryo Maeda
- * @since 2017/05/18
- * @version 1.0
+ * @author
+ *
  */
 public class AdminItemDAO {
 
@@ -24,9 +23,7 @@ public class AdminItemDAO {
 	 * 商品情報を取得しリストに格納するメソッド
 	 * @param itemsName 商品名
 	 * @return itemList 商品情報
-	 * @author Ryo Maeda
-	 * @since 2017/05/18
-	 * @version 1.0
+	 * @author
 	 */
 	public ArrayList<ItemDTO> select(String itemsName){
 		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");

@@ -58,7 +58,7 @@
 <div align="right" style="padding-right:20%">
  -->
  	<!-- 商品追加 -->
-	<s:form action="GoAdminAddAction">
+	<s:form action="AdminItemInsertAction">
 		<s:submit value="%{getText('lang.admin_item.add')}" name="submit" />
 	</s:form>
 
@@ -91,12 +91,12 @@
             <th><s:text name="lang.adminitem.img" /></th>
             <td rowspan="4">
             	<!-- 更新 -->
-                 <s:form action="GoAdminUpdateAction">
+                 <s:form action="AdminItemUpdateAction">
                      <s:hidden name="item_name"></s:hidden>
                      <s:submit value="%{getText('lang.admin_item.upd')}" name="submit"/>
                  </s:form>
                  <!-- 削除 -->
-                 <s:form action="GoAdminDeleteAction">
+                 <s:form action="AdminItemDeleteAction">
                      <s:hidden name="item_name"></s:hidden>
                      <s:submit value="%{getText('lang.admin_item.del')}" name="submit"/>
                  </s:form>

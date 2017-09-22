@@ -30,13 +30,20 @@
 		  minDate: '0d',
 		  maxDate: '+10m',
 		  yearRange: '+5',
-
 		   } );
+
     $("#datepicker").datepicker();
     $("#datepicker").datepicker("option", "showOn", 'both');
 
-
+    var now = new Date(),
+    year = now.getFullYear();
+    year.slice(0,1);
   });
+
+
+
+
+
 </script>
 
 </head>
@@ -58,7 +65,7 @@
         <br/>
 
 
-<s:form action="PaymentAction">
+<s:form action="payment">
 <div class="shiharai" >
 	<table class="nyuuryoku " border="1" >
 
@@ -107,17 +114,17 @@
 
                 <select name="expirationYear" required>
 				<option value="">--</option>
-				<option value="17" >17</option>
-				<option value="18" >18</option>
-				<option value="19" >19</option>
-				<option value="20" >20</option>
-				<option value="21" >21</option>
-				<option value="22" >22</option>
-				<option value="23" >23</option>
-				<option value="24" >24</option>
-				<option value="25" >25</option>
-				<option value="26" >26</option>
-				<option value="27" >27</option>
+				<option value="year" >year</option>
+				<option value="year+1" >year+1</option>
+				<option value="year+2" >year+2</option>
+				<option value="year+3" >year+3</option>
+				<option value="year+4" >year+4</option>
+				<option value="year+5" >year+5</option>
+				<option value="year+6" >year+6</option>
+				<option value="year+7" >year+7</option>
+				<option value="year+8" >year+8</option>
+				<option value="year+9" >year+9</option>
+				<option value="year+10" >year+10</option>
 				</select>&nbsp;年</td>
                 </tr>
 
