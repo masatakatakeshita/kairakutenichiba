@@ -8,13 +8,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
 
-import com.internousdev.kairakutenichiba.util.MongoDBConnector;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
 
 /**
  * @author internousdev
+ *
  *
  */
 public class HelpDAO {
@@ -26,6 +27,7 @@ public class HelpDAO {
      * @param userMail メールアドレス
      * @param category 問い合わせ種類
      * @param comment 本文
+	 * @param
      * @return countをactionに返す
 	 * @throws UnknownHostException
      */
@@ -39,19 +41,20 @@ public class HelpDAO {
 		String dt = sdf.format(cal.getTime());
 
 		/*MongoDBサーバに接続*/
-		MongoDBConnector con = new MongoDBConnector();
-		/*利用するDB(コレクション)を取得*/
-		DB db = con.getConnection();
+		MongoClient cliant = new MongoClient("localhost",27017);
+		/*利用するDBを取得*/
+		DB db = cliant.getDB("kairakutenichiba");
+		/*利用するコレクションを取得*/
 		DBCollection coll = db.getCollection("inquiry_histories");
 
 		BasicDBObject doc = new BasicDBObject();
 
-			doc.put("user_name",userName);
-			doc.put("user_address", userAddress);
-			doc.put("user_mail", userMail);
-			doc.put("category", category);
-			doc.put("comment", comment);
-			doc.put("inquiried_at", dt);
+			doc.append("user_name",userName);
+			doc.append("user_address", userAddress);
+			doc.append("user_mail", userMail);
+			doc.append("category", category);
+			doc.append("comment", comment);
+			doc.append("inquiried_at", dt);
 
 			coll.insert(doc);
 
