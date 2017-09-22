@@ -10,7 +10,7 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 //購入情報（大）のデータの件数を調べる。荘司。
 public class PurchaseIdDAO {
 	int ret;
-	public int select(){
+	public int count(){
 		ret=0;
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();

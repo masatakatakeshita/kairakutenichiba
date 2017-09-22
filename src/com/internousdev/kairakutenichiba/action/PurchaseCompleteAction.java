@@ -8,7 +8,6 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.kairakutenichiba.dao.CreditInsertDAO;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dao.PurchaseCompleteDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
@@ -40,6 +39,11 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	private String creditNumber;
 	
 	/**
+	 * 配送方法
+	 */
+	private String delivery; 
+	
+	/**
 	 * 合計金額
 	 */
 	private float amountAll;
@@ -49,7 +53,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	private String itemsName;
 
 	/**
-	 * カート、クレジットのリスト
+	 * カートのリスト
 	 */
 	private ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
@@ -64,32 +68,12 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		
 		if (session.containsKey("userId")) {
 			userId = (int)session.get("userId");
+			GoCartDAO cart=new GoCartDAO();
+			
 
 
-			PurchaseCompleteDAO dao = new PurchaseCompleteDAO();
-			CreditInsertDAO creDao = new CreditInsertDAO();
-			GoCartDAO dao3 = new GoCartDAO();
-
-			cartList = dao3.selectedItem(userId);
-			creditList = creDao.selectCredit(userId);
-
-				if (dao.stockCheck(cartList)=="OK") { //在庫切れでないか？ＯＫなら次へ進む
-					dao.purchase(userId); //購入情報をインサート
-					dao.stockUpdate(userId); //商品情報の在庫を減少
-					dao.salesUpdate(userId); //商品情報の売り上げを増加
-					dao.clean(userId); //カート情報を削除
-					for (int i = 0; i < cartList.size(); i++) {
-						amountAll += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
-					}
-
-					creDao.selectInsert(creditList.get(0).getCreditType(), creditList.get(0).getCreditNumber(), (int)amountAll); //オープンコネクトの購入お支払履歴に情報をインサート
-					creDao.cleanCredit(userId); //クレジットカード情報を削除
+			
 					result = SUCCESS;
-				}else if(dao.stockCheck(cartList)=="NG"){
-					}else{
-						itemsName = dao.stockCheck(cartList);
-						System.out.println(dao.stockCheck(cartList));
-					result = ERROR;
 				}
 		}
 		return result;
@@ -222,13 +206,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	}
 
 
-	/**
-	 * クレジットリストを取得するメソッド
-	 * @return creditList　クレジットリスト
-	 */
-	public ArrayList<CreditDTO> getCreditList() {
-		return creditList;
-	}
+	
 
 
 	/**
