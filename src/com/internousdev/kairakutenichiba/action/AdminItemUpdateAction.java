@@ -310,7 +310,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 
 	/**
 	 * カテゴリーを格納する
-	 * @param category セットする 
+	 * @param category セットする
 	 */
 	public void setCategory(String category) {
 		this.category = category;
@@ -396,7 +396,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 		this.pages = pages;
 	}
 
-	//tesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesettesetteset
+
 	/**
 	 * IDBNコードを取得する
 	 * @return isbn
