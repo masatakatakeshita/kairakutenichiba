@@ -115,9 +115,7 @@ public class AdminItemAction extends ActionSupport{
 
 	/**
 	 * 商品リストを取得するメソッド
-	 * @author Ryo Maeda
-	 * 	@return SUCCESS
-	 * @since 2017/5/16
+
 	 */
 	public String execute(){
 		String result =SUCCESS;
