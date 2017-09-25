@@ -31,10 +31,7 @@
 	<br>
 	<br>
 	<br>
-	<!--
-tr table row 行←横に長い長方形。
-td table date セル←長方形の内部データ。小さい四角
--->
+
 
 	<h1>
 		<s:text name="lang.admincustomer.topTitle"/>

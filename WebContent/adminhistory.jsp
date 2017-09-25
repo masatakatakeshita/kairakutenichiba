@@ -51,14 +51,6 @@
 		<table>
 			<tr align="center">
 
-				<!-- （荘司）table表示項目
-				<th><s:text name="lang.admin_history.itemid" />販売日</th>
-				<th>ユーザID</th>
-				<th>商品ID</th>
-				<th>商品名</th>
-				<th>個数</th>
-				<th>価格</th>
-				 -->
 
 			<!--商品ID -->
 			<th><s:text name="lang.adminhistory.itemid" /></th>
@@ -73,19 +65,10 @@
              <!--購入日 -->
             <th><s:text name="lang.adminhistory.purchasedate" /></th>
 
-
-
 			</tr>
 
 
-			<tr>
-				<td>○月○日</td>
-				<td>01</td>
-				<td>001</td>
-				<td>○ンピース1巻</td>
-				<td>1</td>
-				<td>500円</td>
-			</tr>
+
 
 		<tr>
 		<!-- 値の挿入 -->

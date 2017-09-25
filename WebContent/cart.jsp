@@ -63,7 +63,7 @@
 									</s:form>
 								</td>
 								<td style="width: 25%;"><fmt:formatNumber
-										value="${unit_price}" pattern="###,###,###" />actionからひっぱる(小計？)
+										value="${unit_price}" pattern="###,###,###" />
 									</td>
 								<td style="width: 25%;"><s:form action="CartDeleteAction">
 										<button type="submit" class="btn btn-danger">

@@ -124,47 +124,7 @@
 
 
 
- <!--
-		<tr>
-			<td>少年誌</td>
-			<td>ONE PIECE巻1</td>
-			<td>100</td>
-			<td>500円</td>
-			<td><img class="imagea" src="img/1.jpg" width="300" height="400"></td>
-			<td>ゴム人間。海賊</td>
 
-		</tr>
-		<tr>
-			<td>少年誌</td>
-			<td>ONE PIECE巻2</td>
-			<td>100</td>
-			<td>500円</td>
-			<td><img class="imagea" src="img/2.jpg" width="300" height="400"></td>
-			<td>ゴム人間。海賊</td>
-
-		</tr>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-
-	<p>
-		<a href="detail.jsp">商品情報を追加する</a>
-	</p>
-
-	<p>
-		<a href="detail.jsp">商品情報を編集する</a>
-	</p>
-
-	<p>
-		<a href="detail.jsp">商品情報を削除する</a>
-	</p>
-
-	<p>
-		<a href="detail.jsp">商品詳細</a>
-	</p>
--->
 
 
 </body>

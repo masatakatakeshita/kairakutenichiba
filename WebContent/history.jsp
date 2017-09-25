@@ -38,7 +38,7 @@
 
 
 <s:form action="HistoryAction">
-<table border="1">    
+<table border="1">
     <tr>
     	<!-- 商品名 -->
         <th><s:text name="lang.history.name" /></th>
@@ -52,9 +52,9 @@
         <th><s:text name="lang.history.dayonsale" /></th>
         <!-- 販売個数 -->
         <th><s:text name="lang.history.quantity" /></th>
-        
+
     </tr>
-    <s:iterator value="">	<!-- ここitemdtoのarryalist? -->
+    <s:iterator value="">
     <tr>
         <td><s:property value="item_name" /></td>
         <td><s:property value="author" /></td>
@@ -70,27 +70,7 @@
 
 
 
-<!-- 
-<table>
-<tr>
-	<td><img class="image" src= "img/1.jpg"></td>
-	<td><div class="name"><a href="detail.jsp">ワンピース 1巻</a></div><br>
-		<a href="category_shojidairi.jsp">尾田栄一郎</a><br>
-		<a href="category_shojidairi.jsp">集英社</a></td>
-			<td>500円</td>
-</tr>
-<tr>
-	<td><img class="image" src= "img/2.jpg"></td>
-	<td><div class="name"><a href="detail.jsp">ワンピース 2巻</a></div><br>
-		<a href="category_shojidairi.jsp">尾田栄一郎</a><br>
-		<a href="category_shojidairi.jsp">集英社</a></td>
-			<td>500円</td>
-</tr>
-<tr>
 
-</tr>
-</table>
- -->
 
 
 
