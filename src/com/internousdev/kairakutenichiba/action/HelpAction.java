@@ -12,7 +12,7 @@ import com.internousdev.kairakutenichiba.dao.HelpDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * @author internousdev
+ * @author naoto togashi
  *
  */
 public class HelpAction extends ActionSupport  implements SessionAware {

@@ -13,9 +13,7 @@ import com.mongodb.DBObject;
 
 /**
  * お問い合わせ情報閲覧に関するクラス
- * @author
- * @since
- * @version 1.0
+ * @author naoto togashi
  */
 public class AdminHelpDAO {
 
@@ -27,9 +25,6 @@ public class AdminHelpDAO {
 
 	/**
 	 * mongoDBにアクセスし取得した情報をリストに格納するメソッド
-	 * @author
-	 * @since
-	 * @version 1.0
 	 * @param searchCategory お問い合わせ種類検索
 	 * @param searchUserName 名前検索
 	 * @param searchSort ソート検索

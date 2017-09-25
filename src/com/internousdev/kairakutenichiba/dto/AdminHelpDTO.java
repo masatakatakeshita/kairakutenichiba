@@ -4,7 +4,7 @@
 package com.internousdev.kairakutenichiba.dto;
 
 /**
- * @author 
+ * @author naoto togashi
  *
  */
 public class AdminHelpDTO {

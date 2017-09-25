@@ -4,7 +4,7 @@
 package com.internousdev.kairakutenichiba.dto;
 
 /**
- * @author internousdev
+ * @author naoto togashi
  *
  */
 public class HelpDTO {

@@ -15,7 +15,7 @@ import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 
 /**
- * @author internousdev
+ * @author naoto togashi
  *
  *
  */

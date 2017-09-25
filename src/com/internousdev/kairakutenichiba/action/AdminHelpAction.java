@@ -8,9 +8,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 問い合わせ情報を表示するアクションクラス
- * @author
- * @since
- * @version 1.0
+ * @author naoto togashi
  */
 public class AdminHelpAction extends ActionSupport{
 
@@ -104,8 +102,6 @@ public class AdminHelpAction extends ActionSupport{
 
 	/**
 	 * 実行メソッド DAOから指定した範囲の問い合わせ情報を取得する
-	 * @author
-	 * @since
 	 * @return result 問い合わせ情報の取得に成功したらSUCCESS,失敗したらERROR
 	 */
 public String execute(){
