@@ -9,10 +9,7 @@ import java.sql.SQLException;
 
 import com.internousdev.kairakutenichiba.util.DBConnector;
 
-/**
- * @author internousdev
- *
- */
+
 public class LogoutDAO {
 	/**
 	 * userIdのlogin_flgを引数loginFlgに更新するメソッド（基本loginFlg=false）

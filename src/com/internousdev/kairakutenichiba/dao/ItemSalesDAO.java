@@ -9,10 +9,15 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 
 public class ItemSalesDAO {
 	/**
-	 * 
+	 * 売上
 	 */
 	private int sales;
 	
+	/**
+	 * 商品IDを使って値段を取得するメソッド
+	 * @param itemId　商品ID
+	 * @return sales 売上
+	 */
 	public int sales(int itemId){
 	    sales=0;
 		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");

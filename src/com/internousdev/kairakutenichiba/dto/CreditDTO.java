@@ -5,9 +5,6 @@ package com.internousdev.kairakutenichiba.dto;
 
 /**
  * クレジット情報に関するDTOクラス
- * @author MISA KIKUCHI
- * @since 5/19
- * @version 1.0
  */
 
 

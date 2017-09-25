@@ -11,11 +11,14 @@ import java.sql.SQLException;
 import com.internousdev.kairakutenichiba.dto.LoginDTO;
 import com.internousdev.kairakutenichiba.util.DBConnector;
 
-/**
- * @author internousdev
- *
- */
+
 public class LoginDAO {
+	/**
+	 * DB内部のログインID,パスワードを比較して同一ならDTOに保存する
+	 * @param email 
+	 * @param password
+	 * @return dto dtoにDBの内容を保存。
+	 */
 	public LoginDTO select(String email, String password){
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
@@ -49,6 +52,12 @@ public class LoginDAO {
 		return dto;
 	}
 
+	/**
+	 * DBのログインフラッグを書き換えるメソッド
+	 * @param email　Eメール
+	 * @param password　パスワード
+	 * @return　count DBないでexecuteUpdate()処理が行われた回数を返す
+	 */
 	public int update(String email, String password){
 		int count=0;
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");

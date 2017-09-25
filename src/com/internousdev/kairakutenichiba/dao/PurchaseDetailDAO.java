@@ -6,10 +6,23 @@ import java.sql.SQLException;
 
 import com.internousdev.kairakutenichiba.util.DBConnector;
 
-//購入情報詳細をデータベースにぶち込む。荘司。
 
+/**
+ * 
+ * @author shoji.
+ *
+ */
 public class PurchaseDetailDAO {
 	int ret;
+	/**
+	 * 購入情報詳細をデータベースにいれる
+	 * @param purchaseId　購入ID
+	 * @param userId　ユーザーID
+	 * @param itemId　商品ID
+	 * @param quantity　量
+	 * @param price　価格
+	 * @return ret 実行行数を返す
+	 */
 	public int insert(int purchaseId,int userId,int itemId,int quantity,float price){
 		ret=0;
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");

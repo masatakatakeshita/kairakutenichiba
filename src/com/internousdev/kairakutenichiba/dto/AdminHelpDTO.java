@@ -4,14 +4,12 @@
 package com.internousdev.kairakutenichiba.dto;
 
 /**
- * @author internousdev
+ * @author 
  *
  */
 public class AdminHelpDTO {
 
-	/**
-	 * @param args
-	 */
+
 	   /**
      * 問い合わせ番号
      */
@@ -34,8 +32,6 @@ public class AdminHelpDTO {
      * メールアドレス
      */
     private String userMail;
-
-
     /**
      * 種類
      */
@@ -50,13 +46,10 @@ public class AdminHelpDTO {
      * 対応状況
      */
     private boolean isDeleted;
-
-
     /**
      * お問い合わせ日時
      */
     private String inquiriedAt;
-
     /**
      * 問い合わせ番号を取得
      * @return inquiryNo

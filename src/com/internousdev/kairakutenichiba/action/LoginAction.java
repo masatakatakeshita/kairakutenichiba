@@ -69,7 +69,7 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 
 					if (dao.update(dto.getEmail(), dto.getPassword()) > 0) {
 
-						dto = dao.select(dto.getEmail(), dto.getPassword());
+						dto = dao.select(dto.getEmail(), dto.getPassword());//こいついらん
 
 						session.put("userId", dto.getUserId());
 						

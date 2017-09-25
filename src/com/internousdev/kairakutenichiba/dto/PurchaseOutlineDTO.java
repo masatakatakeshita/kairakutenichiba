@@ -3,13 +3,10 @@
  */
 package com.internousdev.kairakutenichiba.dto;
 
-/**
- * @author internousdev
- *
- */
+
 public class PurchaseOutlineDTO {
 
-	   /**
+	/**
      * 購入ID
      */
     private int purchaseId;

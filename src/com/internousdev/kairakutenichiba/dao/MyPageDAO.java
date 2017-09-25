@@ -15,6 +15,11 @@ import com.internousdev.util.DBConnector;
 
 public class MyPageDAO {
 
+	/**
+	 * ユーザーIDでDBを検索し、ユーザー情報をDTOに格納するメソッド
+	 * @param userId　ユーザーID
+	 * @return userList　DTOのユーザー情報を配列で返す
+	 */
 	public ArrayList<MyPageDTO> select(int userId) {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();

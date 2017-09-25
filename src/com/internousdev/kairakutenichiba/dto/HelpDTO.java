@@ -10,13 +10,13 @@ package com.internousdev.kairakutenichiba.dto;
 public class HelpDTO {
 
 
-	  /**
+	  	/**
 	    * ユーザーID
 	    */
 	    private int userId;
 
 
-	  	    /**
+	  	 /**
 	     * 氏名
 	     */
 	    private String userName;

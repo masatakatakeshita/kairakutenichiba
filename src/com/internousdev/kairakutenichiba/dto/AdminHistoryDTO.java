@@ -4,7 +4,7 @@
 package com.internousdev.kairakutenichiba.dto;
 
 /**
- * @author internousdev
+ * @author 
  *管理者販売履歴に関するDTOクラス
  */
 public class AdminHistoryDTO {

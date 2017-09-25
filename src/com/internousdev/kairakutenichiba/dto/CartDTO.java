@@ -177,6 +177,7 @@ public class CartDTO {
         this.subtotal = subtotal;
     }
     /**
+     * 在庫を取得するメソッド
      * @return stocks
      */
     public int getStocks() {
@@ -184,6 +185,7 @@ public class CartDTO {
     }
 
     /**
+     * 在庫を格納するメソッド
      * @param stocks セットする stocks
      */
     public void setStocks(int stocks) {
