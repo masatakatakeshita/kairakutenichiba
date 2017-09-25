@@ -1,12 +1,14 @@
 package com.internousdev.kairakutenichiba.action;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.kairakutenichiba.dao.AddToCartDAO;
+import com.internousdev.kairakutenichiba.dao.CheckCartDAO;
+import com.internousdev.kairakutenichiba.dao.GoCartDAO;
+import com.internousdev.kairakutenichiba.dao.ItemStocksDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -43,6 +45,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     * 単価
     */
     private float price;
+    
     /**
     * 数量
     */
@@ -61,6 +64,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     * カートへ商品追加処理をした件数
     */
     private int addCount;
+    
     /**
     * カート情報
     */
@@ -82,33 +86,39 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     */
 
     /**
-    * 実行メソッド 処理内容と順番 1：セッション情報を持っているか判断→ログインしているかどうかに変更したい
-    *  2：購入数が在庫数を超えていないか判断
-    * 3：遷移元のitemId,itemName,price,quantity,imgPathとsession内のuserIdを使用し、
-    * カートへ指定商品を登録 4：カートへ登録された情報を取得 5：カート内の情報を元に購入商品の合計金額金額を算出
+    * 実行メソッド 処理内容と順番 
+    * 1：ログインしているかを確認
+    * 2：購入数が在庫数を超えていないか判断
+    * 3：ユーザーがカートにその商品をどれだけ入れているかによって分岐して処理
+    * 4：カートの情報を取得
     */
-    public String execute() throws SQLException {
-
+    public String execute() {
         String result = ERROR;
-
-        if (session.containsKey("userId")) {
+            if (session.containsKey("userId")) {
             userId = (int) session.get("userId");
-            AddToCartDAO dao = new AddToCartDAO();
-            itemStatus = dao.itemStatus(itemId);
-            setQuantities(1);
-
-            if(dao.addToCart(userId, itemId, quantities)){
-                return result;
+            CheckCartDAO checkdao=new CheckCartDAO();
+            quantities=1+checkdao.check(userId,itemId);
+            ItemStocksDAO stocksdao=new ItemStocksDAO();
+            if(quantities>stocksdao.stocks(itemId)){
+            	result="other";
+            }else{
+            	AddToCartDAO adddao=new AddToCartDAO();
+            	if(quantities==1){
+            		if(adddao.insert(userId,itemId)>0){
+            			result=SUCCESS;
+            		}
+            	}else if(quantities <= 5){
+            		if(adddao.update(userId,itemId,quantities)>0){
+            			result=SUCCESS;
+            		}else if(quantities >5){
+            			result=SUCCESS;
+            		}
+            	}
             }
-            cartList = dao.selected(userId);
-            if (cartList.size() > 0) {
-                for (int i = 0; i < cartList.size(); i++) {
-                    totalPrice += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
-                }
-                result = SUCCESS;
+            GoCartDAO cartdao= new GoCartDAO();
+            cartList=cartdao.selectedItem(userId);
             }
-        }
-        return result;
+            return result;
     }
 
     /**
@@ -340,4 +350,6 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     public void setStocks(int stocks) {
         this.stocks = stocks;
     }
+
+	
 }

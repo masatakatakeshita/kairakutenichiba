@@ -32,7 +32,7 @@ public class GoCartDAO{
     Connection con = db.getConnection();
     ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-    String sql = "select * from carts where user_id=?";
+    String sql = "SELECT * FROM carts WHERE user_id=?";
     String select2 = "SELECT * FROM items WHERE item_id = ?";
 
     try{
