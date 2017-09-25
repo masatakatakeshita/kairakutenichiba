@@ -88,7 +88,7 @@
 <br>
 
 <p><!-- メールアドレス -->
-<span><s:text name="=\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9
+<span><s:text name="lang.help.mail" />
 " /><font color="red"><!-- (必須) --><s:text name="lang.help.necessary" /></font></span>
 <a class="box6">
 <input type="email" name="userMail" size="30"required>
@@ -106,13 +106,13 @@
 <a class="box8">
 <select name="category"required>
 <!--アカウントについて -->
-<option value="category"><s:text name="lang.help.account" /></option>
+<option value="<s:text name="lang.help.account" />"  ><s:text name="lang.help.account" /></option>
 <!-- お支払い方法について -->
-<option value="category"><s:text name="lang.help.howtopay" /></option>
+<option value="<s:text name="lang.help.howtopay" />" ><s:text name="lang.help.howtopay" /></option>
 <!--  注文内容について-->
-<option value="category"><s:text name="lang.help.ordercontent" /></option>
+<option value="<s:text name ="lang.help.ordercontent"/>" ><s:text name="lang.help.ordercontent" /></option>
 <!-- その他 -->
-<option value="category"><s:text name="lang.help.other" /></option>
+<option value="<s:text name="lang.help.other"/>" ><s:text name="lang.help.other" /></option>
 </select>
 </a>
 </p>
@@ -124,7 +124,7 @@
 <br>
 </p>
 <p>
-<input type="submit" value="送信">
+<input type="submit" value="<s:text name = "lang.help.return"/>"/>
 </p>
 
 </div>
