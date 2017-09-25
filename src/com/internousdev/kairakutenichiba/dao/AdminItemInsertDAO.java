@@ -21,8 +21,8 @@ import com.internousdev.util.db.mysql.MySqlConnector;
  */
 public class AdminItemInsertDAO {
 
-	public boolean duplication(int itemId, String itemName){
-		boolean result = false;
+	public Boolean duplication(int itemId, String itemName){
+		Boolean ret = false;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 		
@@ -31,17 +31,17 @@ public class AdminItemInsertDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, itemId);
 			ps.setString(2, itemName);
-			ResultSet rs = ps.executeQuery();
+			ResultSet rs=ps.executeQuery();
 			if(rs.next()){
 				if(rs.getInt("item_id")==itemId || rs.getString("item_name").equals(itemName)){
-					result = true;
+					ret = true;
 				}
 			}
 			con.close();
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
-		return result;
+		return ret;
 	}
 	
 	
@@ -67,7 +67,8 @@ public class AdminItemInsertDAO {
 	 */
 	//voidでよくね？
 	//なんかデータ型で返すものなんて無いだろ
-	public void insert(int itemId, String itemName, String category, String releaseday, String Author, String publisher, String publishtype, int page, int ISBN, int price, int stocks,int sales, String itemdetail, String itemimagePass, boolean deleteFlag, String RegisteredDay, String UpdatedDay){
+	public int insert(int itemId, String itemName, String category, String releaseday, String Author, String publisher, String publishtype, int page, int ISBN, int price, int stocks,int sales, String itemdetail, String itemimagePass, boolean deleteFlag, String RegisteredDay, String UpdatedDay){
+		int ret=0;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();
 		
@@ -75,11 +76,12 @@ public class AdminItemInsertDAO {
 				+ "values(itemId, itemName,category,releaseday,Author,publisher,publishtype,page,ISBN,price,stocks,sales,itemdetail,itemimagePass,deleteFlag,RegisteredDay,UpdatedDay)";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.executeUpdate();
+			ret = ps.executeUpdate();
 			
 			con.close();
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
+		return ret;
 	}
 }

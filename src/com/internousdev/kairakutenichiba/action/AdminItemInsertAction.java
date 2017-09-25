@@ -15,11 +15,9 @@ import com.opensymphony.xwork2.ActionSupport;
 public class AdminItemInsertAction extends ActionSupport{
 
 	/**
-	 * 
+	 * シリアルID
 	 */
 	private static final long serialVersionUID = 8532713829641837301L;
-
-
 	/**
 	 * 商品ID
 	 */
@@ -108,11 +106,10 @@ public class AdminItemInsertAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 		AdminItemInsertDAO dao = new AdminItemInsertDAO();
-//daoではそうか、すでに存在しているテーブルであったなら削除スべきだな。		
 		if(dao.duplication(itemId,itemName) == false){
 			setDuplication("エラー：同名の商品と商品IDが存在しています");
-		}else{
-			dao.insert(itemId,itemName,category,releaseday,author,publisher,publishtype,page,ISBN,price,stocks,sales,itemdetail,itemimagePass,deleteFlag,RegisteredDay,UpdatedDay);	//こいつ実行すればDB書き換わる。
+		}else if(dao.insert(itemId,itemName,category,releaseday,author,publisher,publishtype,page,ISBN,price,stocks,sales,itemdetail,itemimagePass,deleteFlag,RegisteredDay,UpdatedDay)>0){
+			dao.insert(itemId,itemName,category,releaseday,author,publisher,publishtype,page,ISBN,price,stocks,sales,itemdetail,itemimagePass,deleteFlag,RegisteredDay,UpdatedDay);	
 			result = SUCCESS;
 		}
 		return result;
