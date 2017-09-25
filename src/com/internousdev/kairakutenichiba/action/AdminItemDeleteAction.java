@@ -4,39 +4,22 @@ import com.internousdev.kairakutenichiba.dao.AdminDeleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
-<<<<<<< HEAD
- * 商品情報削除画面への遷移時、削除する商品データを取得するクラス
- * @author
-=======
  * 商品情報を削除するクラス
- * @author
- * @since
- * @version
->>>>>>> branch 'master' of https://github.com/internousdevwork/kairakutenichiba
  */
 public class AdminItemDeleteAction extends ActionSupport{
 
-<<<<<<< HEAD
+
 	/**
 	 * シリアルID
 	 */
 	private static final long serialVersionUID = 2281123274036546024L;
-=======
-	private static final long serialVersionUID = 8523447612582469504L;
-
->>>>>>> branch 'master' of https://github.com/internousdevwork/kairakutenichiba
-
-
 	/**
 	 * 商品ID
      */
-
 	private int itemId;
-
 	/**
 	 * デリートキー
      */
-
 	private int delete=0;
 
 
