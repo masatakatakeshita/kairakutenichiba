@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 public class ItemSalesDAO {
 	/**
@@ -20,7 +20,7 @@ public class ItemSalesDAO {
 	 */
 	public int sales(int itemId){
 	    sales=0;
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 		String sql= "select * from items where item_id=?";
 	

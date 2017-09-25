@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.CartDTO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
 * 決済に関するクラス
@@ -29,7 +29,7 @@ public class PurchaseCompleteDAO {
 	 * @version 1.0
 	 */
 	public String stockCheck(ArrayList<CartDTO> cartList) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
 		String sql = "select * from items where item_id=?";
@@ -78,7 +78,7 @@ public class PurchaseCompleteDAO {
 	 */
 	public int purchase(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = null;
 		con = db.getConnection();
 		CartDTO dto = new CartDTO();
@@ -121,7 +121,7 @@ public class PurchaseCompleteDAO {
 	 */
 	public int clean(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String cleanCart = "delete from carts where user_id = ?";
 		try {
@@ -147,7 +147,7 @@ public class PurchaseCompleteDAO {
 	 */
 	public int stockUpdate(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String stockUpdate = "UPDATE items SET stocks = ? WHERE item_id = ?";
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
@@ -222,7 +222,7 @@ public class PurchaseCompleteDAO {
 	 */
 	public int salesUpdate(int userId) {
 		int ret = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 		String stockUpdate = "UPDATE items SET sales = ? WHERE item_id = ?";
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 public class ItemSalesUpdateDAO {
 
@@ -12,7 +12,7 @@ public class ItemSalesUpdateDAO {
 	
 	public int itemsalesupdate(int itemId,int newsales){
 		ret=0;
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 		String sql= "update items set sales =? where item_id=?";
 		try{

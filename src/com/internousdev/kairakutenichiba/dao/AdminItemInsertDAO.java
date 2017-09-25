@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * 
@@ -23,7 +23,7 @@ public class AdminItemInsertDAO {
 
 	public boolean duplication(int itemId, String itemName){
 		boolean result = false;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 		
 		String sql = "select * from items where item_id = ? and item_name = ?";
@@ -68,7 +68,7 @@ public class AdminItemInsertDAO {
 	//voidでよくね？
 	//なんかデータ型で返すものなんて無いだろ
 	public void insert(int itemId, String itemName, String category, String releaseday, String Author, String publisher, String publishtype, int page, int ISBN, int price, int stocks,int sales, String itemdetail, String itemimagePass, boolean deleteFlag, String RegisteredDay, String UpdatedDay){
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();
 		
 		String sql="insert into items(item_id, item_name, category, release_day, author, publisher, publisher_type, pages, isbn, price, stocks, sales, item_detail, item_image, is_deleted, created_at, updated_at)"

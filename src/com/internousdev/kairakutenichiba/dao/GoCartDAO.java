@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.CartDTO;
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 /**
@@ -28,7 +28,7 @@ public class GoCartDAO{
 	 */
   public ArrayList<CartDTO> selectedItem(int userId){
 
-    DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+    MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
     Connection con = db.getConnection();
     ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 

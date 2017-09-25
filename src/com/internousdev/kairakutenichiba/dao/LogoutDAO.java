@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 public class LogoutDAO {
@@ -20,7 +20,7 @@ public class LogoutDAO {
 	 */
 	public int update(int userId, boolean loginFlg){	//Actionで実行時にここの引数が渡されてくる
 		int count = 0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 
 		String sql = "update users set login_flg=? where user_id=?";

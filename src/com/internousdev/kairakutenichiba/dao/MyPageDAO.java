@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.MyPageDTO;
-import com.internousdev.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 public class MyPageDAO {
@@ -21,7 +21,7 @@ public class MyPageDAO {
 	 * @return userList　DTOのユーザー情報を配列で返す
 	 */
 	public ArrayList<MyPageDTO> select(int userId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		MyPageDTO dto = new MyPageDTO();
 		ArrayList<MyPageDTO> userList = new ArrayList<MyPageDTO>();

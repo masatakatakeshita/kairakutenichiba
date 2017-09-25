@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 
@@ -33,7 +33,7 @@ public class CartUpdateDAO {
 	public int updateCart(int cartId,int itemId,int quantities){
 		int updateCount = 0;
 
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con = (Connection) db.getConnection();
 		String sql ="update carts set quantities=? where item_id=? and cart_id=?";
 

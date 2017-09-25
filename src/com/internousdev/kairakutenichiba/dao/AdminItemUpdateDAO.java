@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * @author
@@ -23,7 +23,7 @@ public class AdminItemUpdateDAO {
 	 */
 	public boolean doubling(String itemsName, int itemId ){
 		boolean result=false;
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
 		String sql="select * from items where item_name = ? and item_id !=?";
@@ -74,7 +74,7 @@ public class AdminItemUpdateDAO {
 	public int update(int item_id, String item_name, String category, int release_day, String author, String publisher, String publish_type, int pages, int isbn,boolean is_deleted,String created_at, String item_detail, String updated_at, float price, int stocks, int sales, int imgDel,String imgPath
 ){
 
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
 		int inserted=0;

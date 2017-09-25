@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
 * 商品詳細表示に関するクラス
@@ -27,7 +27,7 @@ public class GoItemDetailDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<ItemDTO> select(int itemId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","kairakutenichiba", "root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","kairakutenichiba", "root","mysql");
 		Connection con = db.getConnection();
 		String sql;
 		 sql = "select * from items where item_id=? and is_deleted =false";

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.AdminHistoryDTO;
 import com.internousdev.kairakutenichiba.dto.HistoryDTO;
-import com.internousdev.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  *管理者販売履歴の表示に関するメソッド
@@ -32,7 +32,7 @@ public class AdminHistoryDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<AdminHistoryDTO> select(int itemId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 
 		ArrayList<AdminHistoryDTO> adminhistoryList = new ArrayList<AdminHistoryDTO>();

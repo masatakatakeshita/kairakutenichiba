@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.internousdev.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 
@@ -25,7 +25,7 @@ public class AdminAddDAO {
 	 */
 	public boolean doubling(String itemsName){
 		boolean result=false;
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con=db.getConnection();
 
 		String sql="select * from items where items_name = ?";
@@ -62,7 +62,7 @@ public class AdminAddDAO {
 	 * @return inserted 成否を格納する変数
 	 */
 	public int insert(String itemsName,float price,int stocks, String itemDetail,String imgPath,int sortId){
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con=db.getConnection();
 		int inserted=0;
 		String sql= "insert into items(items_name,price,stocks,items_detail,img_path,sort_id,item_img01,item_img02)"

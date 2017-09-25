@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 /**
@@ -25,7 +25,7 @@ public class PurchaseDetailDAO {
 	 */
 	public int insert(int purchaseId,int userId,int itemId,int quantity,float price){
 		ret=0;
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();
 		
 		String sql="insert into purchases_details(purchase_id,user_id,item_id,quantities,multiplied_price)values(?,?,?,?,?)";

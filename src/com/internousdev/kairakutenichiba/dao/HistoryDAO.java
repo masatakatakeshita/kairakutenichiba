@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.HistoryDTO;
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 /**
@@ -24,7 +24,7 @@ public class HistoryDAO {
 	 * @return　HistoryList　購入履歴
 	 */
 	public ArrayList<HistoryDTO> select(Object userId){
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<HistoryDTO> HistoryList = new ArrayList<HistoryDTO>();
 				//jspに表示するための情報郡を1行ずつ登録していく保存先。

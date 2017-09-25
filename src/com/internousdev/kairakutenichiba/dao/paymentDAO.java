@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.internousdev.kairakutenichiba.dto.paymentDTO;
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * @author koizumi junpei
@@ -26,7 +26,7 @@ public class paymentDAO{
 	 * @return 
 	 */
 	public paymentDTO select(String nameHolder, String creditNumber, String expirationMonth, String expirationYear, String securityCode){
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "creditcard_manager", "root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "creditcard_manager", "root","mysql");
 		Connection con = db.getConnection();
 		paymentDTO dto = new paymentDTO();
 

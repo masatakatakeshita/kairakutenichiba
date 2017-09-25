@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * 管理者商品管理に関するクラス
@@ -26,7 +26,7 @@ public class AdminItemDAO {
 	 * @author
 	 */
 	public ArrayList<ItemDTO> select(String itemsName){
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con=db.getConnection();
 
 		ArrayList<ItemDTO> itemList=new ArrayList<ItemDTO>();

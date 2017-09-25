@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  *商品情報削除に関するクラス
@@ -21,7 +21,7 @@ public class AdminDeleteDAO {
 	 * @version 1.0
 	 */
 	public int delete(int itemId){
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con=db.getConnection();
 		int deleted=0;
 		String sql="update items set del_key = true where item_id=?";

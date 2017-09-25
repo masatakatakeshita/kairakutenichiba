@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.MyPageDTO;
-import com.internousdev.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  *
@@ -24,7 +24,7 @@ public class AdminUserDAO {
 	* @version 1.0
 	*/
 	public ArrayList<MyPageDTO> select() {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		MyPageDTO dto = new MyPageDTO();
 		ArrayList<MyPageDTO> itemList = new ArrayList<MyPageDTO>();
