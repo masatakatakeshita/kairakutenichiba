@@ -231,13 +231,17 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	}
 
 	/**
-	 * HistoryDTO
-	 * @return
+	 * HistoryDTOの配列化された情報を取得する
+	 * @return　HisotryList
 	 */
 	public ArrayList<HistoryDTO> getHisotryList() {
 		return HisotryList;
 	}
 
+	/**
+	 * historyListにDTOの値を配列で格納する
+	 * @param hisotryList
+	 */
 	public void setHisotryList(ArrayList<HistoryDTO> hisotryList) {
 		HisotryList = hisotryList;
 	}

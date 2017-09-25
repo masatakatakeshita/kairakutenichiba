@@ -19,7 +19,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 
 /**
- * @author internousdev
  *
  */
 public class LoginAction extends ActionSupport implements SessionAware, ServletResponseAware, ServletRequestAware {
@@ -41,12 +40,7 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 	 */
 	private Map<String, Object> session;
 
-	/**
-	 * 管理者
-	 *
-	* private boolean admin = true;
-	*いらないと思う。
-	*/
+
 
 	// Cookie関連
 	private HttpServletResponse response;
@@ -59,7 +53,6 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 
 	/**
 	 * ログインするための実行メソッド
-	 *
 	 * @return ログイン成功 =SUCCESS 失敗 =ERROR 管理人ならLOGIN
 	 */
 	public String execute() {
@@ -101,10 +94,8 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 						response.addCookie(cookieUserId);
 
 						response.addCookie(cookieLoginFlg);
-/*
-*						if (admin) {
-*いらないと思う。
-*/
+
+
 							int userFlg = (int) dto.getUserFlg();
 							if (userFlg == 3) {
 								ret = LOGIN;
@@ -176,6 +167,7 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
 
 	public HttpServletResponse getResponse() {
 		return response;

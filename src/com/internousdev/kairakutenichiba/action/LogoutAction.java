@@ -16,10 +16,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.util.login.LogoutDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
-/**
- * @author internousdev
- *
- */
+
 public class LogoutAction extends ActionSupport implements SessionAware, ServletResponseAware, ServletRequestAware {
 
 	/**

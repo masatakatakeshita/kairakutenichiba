@@ -27,7 +27,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 
 	/**
 	 * シリアルID
-		 */
+	 */
 	private static final long serialVersionUID = 3692422332609482760L;
 
 	/**
