@@ -53,7 +53,7 @@ public class GoItemDetailDAO {
 				searchList.add(dto);
 			}
 		} catch (SQLException e ) {
-		   e.printStackTrace() ;
+			e.printStackTrace();
 		} finally {
 			try{
 				con.close();
