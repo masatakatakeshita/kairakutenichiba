@@ -54,7 +54,7 @@
         <th><s:text name="lang.history.quantity" /></th>
 
     </tr>
-    <s:iterator value="">
+    <s:iterator value="HisotryList">
     <tr>
         <td><s:property value="item_name" /></td>
         <td><s:property value="author" /></td>
