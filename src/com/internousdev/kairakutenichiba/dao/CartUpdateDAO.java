@@ -13,10 +13,10 @@ import com.internousdev.util.db.mysql.MySqlConnector;
 
 
 /**
- * カートインサート＆アップデートに関するクラス
- *@author
- *@since
- *@version
+ * カートアップデートに関するクラス
+ *@author　shoji hayato
+ *@since   17/09/25
+ *@version 1.0
  */
 public class CartUpdateDAO {
 	private int ret;

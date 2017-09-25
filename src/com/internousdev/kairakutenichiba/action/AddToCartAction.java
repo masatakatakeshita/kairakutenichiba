@@ -59,7 +59,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     /**
     * 合計金額
     */
-    private int totalPrice;
+	private int amountAll;
 
     /**
     * カートへ商品追加処理をした件数
@@ -120,6 +120,9 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
             }
             GoCartDAO cartdao= new GoCartDAO();
             cartList=cartdao.selectedItem(userId);
+            for(int i=0;i<cartList.size();i++){
+            	amountAll += (cartList.get(i).getPrice()*cartList.get(i).getQuantities());
+            }
             }
             return result;
     }
@@ -251,7 +254,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
      * @return amountAll 合計金額
      */
     public int getAmountAll() {
-        return totalPrice;
+        return amountAll;
     }
 
     /**
@@ -261,7 +264,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
      * @param amountAll セットする amountAll
      */
     public void setAmountAll(int amountAll) {
-        this.totalPrice = amountAll;
+        this.amountAll = amountAll;
     }
 
     /**

@@ -8,16 +8,17 @@ import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * カートテーブル内情報の削除に関するクラス
- * @since
- * @version
+ * @author shoji hayato
+ * @since 17/09/21
+ * @version 1.0
  */
 public class CartDeleteDAO {
 
     /**
      * カート内の商品を削除するメソッド
-     * @author
-     * @since
-     * @version
+     * @author shoji hayato
+     * @since 17/09/21
+     * @version 1.0
      * @param userId ユーザーID
      * @return delCount 削除する件数
      */
@@ -26,8 +27,8 @@ public class CartDeleteDAO {
 
     public int delete(int userId) {
         delCount = 0;
-        MySqlConnector db = new MySqlConnector("kairakutenichiba");
-        Connection con = db.getConnection();
+        MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+    	Connection con = db.getConnection();
         String sql = "delete from carts where user_id=?";
        
         try {
