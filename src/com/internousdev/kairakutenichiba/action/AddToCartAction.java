@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.kairakutenichiba.dao.AddToCartDAO;
+import com.internousdev.kairakutenichiba.dao.CartUpdateDAO;
 import com.internousdev.kairakutenichiba.dao.CheckCartDAO;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dao.ItemStocksDAO;
@@ -80,9 +81,9 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
 
     /**
     * カートに商品を追加する実行メソッド
-    * @author
-    * @since
-    * @version
+    * @author　shoji hayato
+    * @since 17/09/25
+    * @version 1.0
     */
 
     /**
@@ -102,13 +103,15 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
             if(quantities>stocksdao.stocks(itemId)){
             	result="other";
             }else{
-            	AddToCartDAO adddao=new AddToCartDAO();
+            	
             	if(quantities==1){
+            		AddToCartDAO adddao=new AddToCartDAO();
             		if(adddao.insert(userId,itemId)>0){
             			result=SUCCESS;
             		}
             	}else if(quantities <= 5){
-            		if(adddao.update(userId,itemId,quantities)>0){
+            		CartUpdateDAO updatedao=new CartUpdateDAO();
+            		if(updatedao.update(userId,itemId,quantities)>0){
             			result=SUCCESS;
             		}else if(quantities >5){
             			result=SUCCESS;

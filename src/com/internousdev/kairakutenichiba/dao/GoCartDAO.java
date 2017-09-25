@@ -28,7 +28,7 @@ public class GoCartDAO{
 	 */
   public ArrayList<CartDTO> selectedItem(int userId){
 
-    MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+    MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
     Connection con = db.getConnection();
     ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 

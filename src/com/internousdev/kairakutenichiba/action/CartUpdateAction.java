@@ -1,6 +1,5 @@
 package com.internousdev.kairakutenichiba.action;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -8,9 +7,8 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.kairakutenichiba.dao.CartUpdateDAO;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
-import com.internousdev.kairakutenichiba.dao.GoItemDetailDAO;
+import com.internousdev.kairakutenichiba.dao.ItemStocksDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
-import com.internousdev.kairakutenichiba.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -70,67 +68,45 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
      *カート情報
      */
     private ArrayList<CartDTO> cartList;
-    /**
-     *商品情報
-     */
-    private ArrayList<ItemDTO> itemStatus;
-    /**
-     *エラーメッセージ
-     */
-    private String message;
+    
     /**
      *セッション情報
      */
     private Map<String, Object> session;
-
+    
     /**
-     * カートの上限処理を実行するメソッド
+     * カートの数量を更新するメソッド
+     * @author　shoji hayato
+     * @since 17/09/25
+     * @version 1.0
      */
-    public String execute() throws SQLException {
 
-        String result = LOGIN;
-        message="";
-
-        if (session.containsKey("userId")) {
-
+     /**
+     * 実行メソッド 処理内容と順番 
+     * 1：ログインしているかを確認
+     * 2：購入数が在庫数を超えていないか判断
+     * 3：カートからその商品のデータを削除
+     * 4：カートの情報を取得
+     */
+    public String execute() {
+        String result = ERROR;
+            if (session.containsKey("userId")) {
             userId = (int) session.get("userId");
-            CartUpdateDAO cartUpDao = new CartUpdateDAO();
-            GoItemDetailDAO goItemDao = new GoItemDetailDAO();
-            GoCartDAO goCartDao = new GoCartDAO();
-            itemStatus = goItemDao.select(itemId);
-
-
-            updateCount = cartUpDao.updateCart(cartId, itemId, quantities);
-
-            if(updateCount <= 0){
-                message="エラー：データ不整合";
-                result = ERROR;
-                return result;
+            ItemStocksDAO stocksdao=new ItemStocksDAO();
+            if(quantities>stocksdao.stocks(itemId)){
+            	result="other";
             }else{
-
-            System.out.println(quantities);
-
-
-
-            cartList = goCartDao.selectedItem(userId);
-
-
-                if (cartList.size() > 0) {
-                    for (int i = 0; i < cartList.size(); i++) {
-                        amountAll += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
-                    }
-                    result = SUCCESS;
-                }else{
-                	message="エラー：データ不整合";
-                    result = ERROR;
-                }
-
-
-        }
-        }
-        return result;
-        }
-
+            	CartUpdateDAO updatedao=new CartUpdateDAO();
+            	if(updatedao.update(userId, itemId, quantities)>0){
+            		result=SUCCESS;
+            	}
+            }
+            
+            GoCartDAO cartdao= new GoCartDAO();
+            cartList=cartdao.selectedItem(userId);
+            }
+            return result;
+    }
     /**
      * カートIDを取得するメソッド
      * @return cartId カートID
@@ -305,36 +281,7 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
         this.cartList = cartList;
     }
 
-    /**
-     * 商品情報を取得するメソッド
-     * @return itemStatus　商品情報
-     */
-    public ArrayList<ItemDTO> getItemStatus() {
-        return itemStatus;
-    }
-
-    /**
-     * 商品情報を格納するメソッド
-     * @param itemStatus セットする itemStatus
-     */
-    public void setItemStatus(ArrayList<ItemDTO> itemStatus) {
-        this.itemStatus = itemStatus;
-    }
-    /**
-     * エラーメッセージを取得するメソッド
-     * @return session　エラーメッセージ
-     */
-    public String getMessage() {
-        return message;
-    }
-    /**
-     * エラーメッセージを格納するメソッド
-     * @param message セットする message
-     */
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
+  
     /**
      * セッション情報を取得するメソッド
      * @return session　セッション情報
