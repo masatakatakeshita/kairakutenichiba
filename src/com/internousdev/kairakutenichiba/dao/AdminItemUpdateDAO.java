@@ -9,13 +9,18 @@ import java.sql.SQLException;
 import com.internousdev.kairakutenichiba.util.DBConnector;
 
 /**
- * @author internous
+ * @author
  */
 
 public class AdminItemUpdateDAO {
 
 
-
+	/**
+	 * 重複しているかどうかを判定するメソッド
+	 * @param itemsName 商品名
+	 * @param itemId　商品ID
+	 * @return result　重複判定
+	 */
 	public boolean doubling(String itemsName, int itemId ){
 		boolean result=false;
 		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
@@ -44,7 +49,28 @@ public class AdminItemUpdateDAO {
 		return result;
 	}
 
-
+	/**
+	 * DBの商品情報を更新するメソッド
+	 * @param item_id 商品ID
+	 * @param item_name　商品名
+	 * @param category　カテゴリー
+	 * @param release_day　販売日
+	 * @param author　著者
+	 * @param publisher　発行会社
+	 * @param publish_type　発行形態
+	 * @param pages　ページ数
+	 * @param isbn　ISBNコード
+	 * @param is_deleted　削除フラグ
+	 * @param created_at　作成日
+	 * @param item_detail　商品詳細
+	 * @param updated_at　更新日
+	 * @param price　単価
+	 * @param stocks　在庫
+	 * @param sales　売上
+	 * @param imgDel　画像削除
+	 * @param imgPath　商品画像
+	 * @return　inserted　成功かどうかの判定
+	 */
 	public int update(int item_id, String item_name, String category, int release_day, String author, String publisher, String publish_type, int pages, int isbn,boolean is_deleted,String created_at, String item_detail, String updated_at, float price, int stocks, int sales, int imgDel,String imgPath
 ){
 

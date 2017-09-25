@@ -16,18 +16,12 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
  */
 public class HistoryDAO {
 	
-	/**
-	 * DBのテーブルから取得したデータをDTOに格納するために使う具体化オブジェクト
-	 * public ArrayList<HistoryDTO> HistoryList = new ArrayList<HistroyDTO>;
-	 * listには1行ずつdto変数の配列が追加されていく感じ。
-	 */
-	
 	
 	/**
-	 * 1つのDAO内部にsql起動分を2つ作成。
-	 * すべてをdtoに格納したら、cartList.add(dto);でlistに追加する。
-	 * 
-	 *  ArrayList<HistoryDTO> →javadrive
+	 * ユーザーの購入履歴をリスト化して表示する
+	 * @author junpei.koizumi
+	 * @param userId ユーザーID
+	 * @return　HistoryList　購入履歴
 	 */
 	public ArrayList<HistoryDTO> select(Object userId){
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");

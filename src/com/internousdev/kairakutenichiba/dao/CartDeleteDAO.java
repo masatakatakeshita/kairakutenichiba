@@ -8,7 +8,6 @@ import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * カートテーブル内情報の削除に関するクラス
- * @author
  * @since
  * @version
  */

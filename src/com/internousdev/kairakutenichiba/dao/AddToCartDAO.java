@@ -13,17 +13,13 @@ import com.internousdev.util.db.mysql.MySqlConnector;
 /**
  * カートテーブル情報追加に関するクラス
  * @author
- * @since
- * @version
  */
 
 public class AddToCartDAO {
 
     /**
      * カートテーブルに追加する商品の情報を取得するメソッド
-     * @author  MISAKI AKIMOTO
-     * @since  2017/07/24
-     * @version 1.0
+	 * @author
      * @param itemId 商品ID
      * @return itemStatus 成否を格納する変数
      */

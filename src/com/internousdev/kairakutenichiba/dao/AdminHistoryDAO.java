@@ -14,7 +14,6 @@ import com.internousdev.kairakutenichiba.dto.HistoryDTO;
 import com.internousdev.util.DBConnector;
 
 /**
- * @author internousdev
  *管理者販売履歴の表示に関するメソッド
  */
 public class AdminHistoryDAO {

@@ -8,7 +8,10 @@ import java.sql.SQLException;
 import com.internousdev.kairakutenichiba.util.DBConnector;
 
 public class ItemSalesDAO {
-private int sales;
+	/**
+	 * 
+	 */
+	private int sales;
 	
 	public int sales(int itemId){
 	    sales=0;

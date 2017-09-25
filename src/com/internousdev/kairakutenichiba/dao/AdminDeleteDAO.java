@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import com.internousdev.util.DBConnector;
 
 /**
- * @author internousdev
  *商品情報削除に関するクラス
  */
 public class AdminDeleteDAO {

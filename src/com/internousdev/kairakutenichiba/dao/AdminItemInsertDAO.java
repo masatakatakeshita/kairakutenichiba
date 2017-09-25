@@ -14,10 +14,10 @@ import com.internousdev.kairakutenichiba.util.DBConnector;
 /**
  * @author junpeikoizumi
  * 商品の登録に関するメソッド。
- * s:textfiledに入力された値を引数としてうけてメソッドの実行する。
- * すでに引数でテーブルの中身を検索。すでに同じ値が存在した場合はfalse
- * テーブルの中身がなかった場合は、insertメソッドを実行。
- * テーブルの中に新たに行を追加する。
+ * 1:s:textfiledに入力された値を引数としてうけてメソッドの実行する。
+ * 2:すでに引数でテーブルの中身を検索。すでに同じ値が存在した場合はfalse
+ * 3:テーブルの中身がなかった場合は、insertメソッドを実行。
+ * 4:テーブルの中に新たに行を追加する。
  */
 public class AdminItemInsertDAO {
 
@@ -47,26 +47,23 @@ public class AdminItemInsertDAO {
 	
 	/**
 	 * DBのテーブルに入力された情報を登録するメソッド
-	 * itemId
-	 * itemName
-	 * category
-	 * releaseday
-	 * Author
-	 * publisher, 
-	 * publishtype, 
-	 * page, 
-	 * ISBN, 
-	 * price, 
-	 * stocks, 
-	 * sales
-	 * itemdetail, 
-	 * itemimagePass, 
-	 * deleteFlag, 
-	 * RegisteredDay,
-	 * UpdatedDay)
-	 * 17個？
-	 * 
-	 * 
+	 * @param itemId　商品ID
+	 * @param itemName　商品名
+	 * @param category　カテゴリー
+	 * @param releaseday　販売日
+	 * @param Author　著者
+	 * @param publisher　発行会社
+	 * @param publishtype　発行形態
+	 * @param page　ページ数
+	 * @param ISBN　ISBNコード
+	 * @param price　単価
+	 * @param stocks　在庫数
+	 * @param sales　売上
+	 * @param itemdetail　商品詳細 
+	 * @param itemimagePass　商品画像
+	 * @param deleteFlag	削除フラグ
+	 * @param RegisteredDay　登録日
+	 * @param UpdatedDay　更新日
 	 */
 	//voidでよくね？
 	//なんかデータ型で返すものなんて無いだろ

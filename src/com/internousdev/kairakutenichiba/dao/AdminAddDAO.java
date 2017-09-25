@@ -13,7 +13,6 @@ import com.internousdev.util.DBConnector;
 
 
 /**
- * @author internousdev
  *商品情報追加に関するクラス
  */
 public class AdminAddDAO {
