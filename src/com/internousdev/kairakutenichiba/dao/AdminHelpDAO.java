@@ -53,6 +53,7 @@ public class AdminHelpDAO {
 			db = con.getConnection();
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
+
 		}
 		DBCollection coll = db.getCollection("inquiry_histories");
 		DBCursor cursor=null;
@@ -95,7 +96,7 @@ public class AdminHelpDAO {
 				cursor = cursor.sort(querysort);
 
 
-		try {
+
 			while (cursor.hasNext()) {
 				AdminHelpDTO dto = new AdminHelpDTO();
 				DBObject dbs = cursor.next();
@@ -105,13 +106,14 @@ public class AdminHelpDAO {
 				dto.setComment((String) dbs.get("comment"));
 				dto.setDt((String) dbs.get("inquiried_at"));
 				selectList.add(dto);
-			}
-		} finally {
+
+
+
 			cursor.close();
-		}
+			}
 		return selectList;
+
+
 	}
-
-
 
 }
