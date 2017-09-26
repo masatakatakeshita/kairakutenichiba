@@ -46,7 +46,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		UserList = MyPagedao.select(userId);
 
 		if (UserList.size() ==0){
-			return ERROR;
+			return "other";
 		}else{
 			return SUCCESS;
 		}

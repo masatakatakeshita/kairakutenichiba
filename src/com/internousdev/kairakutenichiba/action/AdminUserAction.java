@@ -87,7 +87,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	/**
 	 * 実行メソッド
 	 * 処理内容と順番
-	 * 1：useridを入力することでuserへ登録された顧客情報を表示する。
+	 * 顧客リストを表示する。
 	 */
 	public String execute() {
 

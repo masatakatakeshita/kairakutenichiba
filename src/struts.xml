@@ -30,6 +30,7 @@
 		com.internousdev.kairakutenichiba.property.adminhistory
 		com.internousdev.kairakutenichiba.property.adminitem
 		com.internousdev.kairakutenichiba.property.admintop
+		com.internousdev.kairakutenichiba.property.error
 		" />
 
 
@@ -54,7 +55,7 @@
 		<action name="GoItemDetailAction"
 			class="com.internousdev.kairakutenichiba.action.GoItemDetailAction" method="execute">
 			<result name="success">detail.jsp</result>
-			<result name="error">detail.jsp</result>
+			<result name="error">error.jsp</result>
 			<result name="login">detail.jsp</result>
 		</action>
 
@@ -64,21 +65,25 @@
 			<result name="success">cart.jsp</result>
 			<result name="error">login.jsp</result>
 			<result name="login">cart.jsp</result>
+			<result name="other">stockserror.jsp</result>
+			
+
 		</action>
 
 		<!-- カートに商品の数を増減する -->
 		<action name="CartUpdateAction" class="com.internousdev.kairakutenichiba.action.CartUpdateAction"
 			method="execute">
 			<result name="success">cart.jsp</result>
-			<result name="error">cart.jsp</result>
+			<result name="error">login.jsp</result>
 			<result name="login">cart.jsp</result>
+			<result name="other">stockserror.jsp</result>
 		</action>
 
 		<!-- カート商品削除 -->
 		<action name="CartItemDeleteAction" class="com.internousdev.kairakutenichiba.action.CartDeleteAction"
 			method="execute">
 			<result name="success">cart.jsp</result>
-			<result name="error">cart.jsp</result>
+			<result name="error">login.jsp</result>
 			<result name="login">cart.jsp</result>
 		</action>
 
@@ -86,15 +91,17 @@
 		<action name="GoCartAction" class="com.internousdev.kairakutenichiba.action.GoCartAction"
 			method="execute">
 			<result name="success">cart.jsp</result>
-			<result name="error">cart.jsp</result>
+			<result name="error">login.jsp</result>
 			<result name="login">cart.jsp</result>
 		</action>
+		
 		<!-- 支払い画面への遷移 -->
 		<action name="GoSettlementAction"
 			class="com.internousdev.kairakutenichiba.action.GoSettlementAction" method="execute">
 			<result name="success">payment.jsp</result>
-			<result name="error">cart.jsp</result>
+			<result name="error">login.jsp</result>
 			<result name="login">payment.jsp</result>
+			<result name="other">cartempty.jsp</result>
 		</action>
 
 		<!-- 支払い画面。成功なら購入確認、エラーならクレジット情報の間違いのページに飛ぶ -->
@@ -117,17 +124,25 @@
 		</action>
 
 		<!-- 問い合わせ画面。問い合わせ完了画面に飛ぶ。必須が埋まってなかったらERRORで別ページ？ -->
-		<action name="ContactAction" class="com.internousdev.kairakutenichiba.action.ContactAction"
+		<action name="HelpAction" class="com.internousdev.kairakutenichiba.action.HelpAction"
 			method="execute">
 			<result name="success">helplink.jsp</result>
-			<result name="error" >help.jsp</result>
+			<result name="error" >error.jsp</result>
 			<result name="login">helplink.jsp</result>
+		</action>
+		
+		<!-- 購入履歴 -->
+		<action name="HistoryAction" class="com.internousdev.kairakutenichiba.action.HistoryAction"
+			method="execute">
+			<result name="success">history.jsp</result>
+			<result name="error" >login.jsp</result>
+			<result name="login">history.jsp</result>
 		</action>
 
 
 		<!-- 管理者問い合わせ画面 -->
-		<action name="AdminContactAction"
-			class="com.internousdev.kairakutenichiba.action.AdminContactAction" method="execute">
+		<action name="AdminHelpAction"
+			class="com.internousdev.kairakutenichiba.action.AdminHelpAction" method="execute">
 			<result name="success">adminhelp.jsp</result>
 			<result name="error">adminhelp.jsp</result>
 			<result name="login">adminhelp.jsp</result>
@@ -137,7 +152,7 @@
 		<action name="AdminItemAction" class="com.internousdev.kairakutenichiba.action.AdminItemAction"
 			method="execute">
 			<result name="success">adminitem.jsp</result>
-			<result name="error">adminitem.jsp</result>
+			<result name="error">error.jsp</result>
 			<result name="login">adminitem.jsp</result>
 		</action>
 
@@ -145,9 +160,26 @@
 		<action name="AdminItemInsertAction" class="com.internousdev.kairakutenichiba.action.AdminItemInsertAction"
 			method="execute">
 			<result name="success">adminitem.jsp</result>
-			<result name="error">adminitem.jsp</result>
+			<result name="error">error.jsp</result>
 			<result name="login">adminitem.jsp</result>
 		</action>
+		
+		<!-- 管理者商品管理画面 -->
+		<action name="AdminItemDeleteAction" class="com.internousdev.kairakutenichiba.action.AdminItemDeleteAction"
+			method="execute">
+			<result name="success">adminitem.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="login">adminitem.jsp</result>
+		</action>
+		
+		<!-- 管理者商品管理画面 -->
+		<action name="AdminItemUpdateAction" class="com.internousdev.kairakutenichiba.action.AdminItemUpdateAction"
+			method="execute">
+			<result name="success">adminitem.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="login">adminitem.jsp</result>
+		</action>
+		
 
 
 		<!-- 管理者顧客情報 -->
@@ -156,48 +188,34 @@
 			<result name="success">admincustomer.jsp</result>
 			<result name="error">admincustomer.jsp</result>
 			<result name="login">admincustomer.jsp</result>
-
-
 		</action>
 
 		<!-- 管理者顧客購入情報 -->
 		<action name="AdminHistoryAction"
 			class="com.internousdev.kairakutenichiba.action.AdminHistoryAction" method="execute">
 			<result name="success">adminhistory.jsp</result>
-			<result name="error">adminhistory.jsp</result>
+			<result name="error">error.jsp</result>
 			<result name="login">adminhistory.jsp</result>
 		</action>
 
 		<!-- 管理者商品一覧 -->
-		<action name="ItemAction" class="com.internousdev.kairakutenichiba.action.ItemAction"
+		<action name="AdminItemAction" class="com.internousdev.kairakutenichiba.action.AdminItemAction"
 			method="execute">
 			<result name="success">adminitem.jsp</result>
-			<result name="error">adminitem.jsp</result>
+			<result name="error">error.jsp</result>
 		</action>
-
-
-		<!-- 購入履歴 -->
-		<action name="UserPurchaseHistoryAction"
-			class="com.internousdev.kairakutenichiba.action.UserPurchaseHistoryAction"
-			method="execute">
-			<result name="success">history.jsp</result>
-			<result name="error">history.jsp</result>
-			<result name="login">adminhistory.jsp</result>
-		</action>
-
-
 
 		<!-- Mypageの情報を表示させるアクション -->
 		<action name="MyPageAction" class="com.internousdev.kairakutenichiba.action.MyPageAction"
 			method="execute">
 			<result name="success">account.jsp</result>
-			<result name="error">index.jsp</result>
-			<result name="login">admincustomer.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="other">error.jsp</result>
 		</action>
 
 
-		<!-- トップサイトへ遷移するアクション -->
-		<action name="MainTopAction" class="com.internousdev.kairakutenichiba.action.MainTopAction"
+		<!-- トップページへ遷移するアクション -->
+		<action name="IndexAction" class="com.internousdev.kairakutenichiba.action.IndexAction"
 			method="execute">
 			<result name="success">index.jsp</result>
 			<result name="error">index.jsp</result>

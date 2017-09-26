@@ -69,6 +69,8 @@ public class GoSettlementAction extends CartAssist implements SessionAware {
 			cartList = dao.selectedItem(userId);
 			if(cartList.size() > 0){
 			result = SUCCESS;
+			}else{
+				result="other";
 			}
 		}
 		return result;
