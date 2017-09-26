@@ -8,12 +8,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
 
+import com.internousdev.kairakutenichiba.util.MongoDBConnector;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
-import com.mongodb.Mongo;
-import com.mongodb.MongoClient;
-
 /**
  * @author naoto togashi
  *
@@ -42,10 +40,9 @@ public class HelpDAO {
 		String dt = sdf.format(cal.getTime());
 
 		/*MongoDBサーバに接続*/
-		MongoClient cliant = new MongoClient("localhost",27017);
-		/*利用するDBを取得*/
-		DB db = cliant.getDB("kairakutenichiba");
-		/*利用するコレクションを取得*/
+		MongoDBConnector con = new MongoDBConnector();
+		/*利用するDB(コレクション)を取得*/
+		DB db = con.getConnection();
 		DBCollection coll = db.getCollection("inquiry_histories");
 
 
@@ -65,9 +62,6 @@ public class HelpDAO {
         return result;
     }
 
-    public void closeCollection(Mongo client) {
-    client.close();
-    }
 
 	}
 
