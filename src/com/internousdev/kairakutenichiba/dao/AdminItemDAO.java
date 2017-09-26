@@ -25,29 +25,15 @@ public class AdminItemDAO {
 	 * @return itemList 商品情報
 	 * @author
 	 */
-	public ArrayList<ItemDTO> select(String itemsName){
+	public ArrayList<ItemDTO> select(){
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con=db.getConnection();
 
 		ArrayList<ItemDTO> itemList=new ArrayList<ItemDTO>();
-		int k=0;
-		String sql;
-
-		if(itemsName.equals("") || itemsName==null){
-			sql="select * from items where del_key = false";
-		}else{
-			sql="select * from items where items_name= ? and del_key= false";
-			k=1;
-		}
-
-
-
+		String sql="select * from items where del_key = false";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
-			if(k==1){
-				ps.setString(1,itemsName);
-			}
 			ResultSet rs=ps.executeQuery();
 
 			while (rs.next()) {

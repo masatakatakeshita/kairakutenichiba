@@ -123,7 +123,7 @@ public class AdminItemAction extends ActionSupport{
 		int all=0;
 		ArrayList<ItemDTO> allList = new ArrayList<ItemDTO>();
 		AdminItemDAO dao=new AdminItemDAO();
-		allList=dao.select("");
+		allList=dao.select();
 		all=allList.size();
 		for(int i=0;i<all;i++){
 			ItemDTO dto = new ItemDTO();
