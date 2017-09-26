@@ -27,24 +27,25 @@
 <script>
   $(function() {
 	  jQuery( '#datepicker' ) . datepicker( {
-		  minDate: '0d',
+		  minDate: '1d',
 		  maxDate: '+10m',
-		  yearRange: '+5',
-		   } );
+	   } );
 
     $("#datepicker").datepicker();
     $("#datepicker").datepicker("option", "showOn", 'both');
-
-    var now = new Date(),
-    year = now.getFullYear();
-    year.slice(0,1);
   });
 
+  $(function() {
+      var now = new Date();
+      var year = now.getFullYear();
 
-
-
+      for(var i=year;i<=(year+10);i++){
+      $("#year").append('<option value="'+i+'">' +i+ '</option>');
+        }
+        });
 
 </script>
+
 
 </head>
 
@@ -82,7 +83,7 @@
 
             <tr>
             <!-- カード番号　［必須］ -->
-            <th><s:text name="lang.payment.cardNumber" /><br><s:text name="lang.payment.cardHankaku" /></th>
+            <th><s:text name="lang.payment.cardNumber" /></th>
             <td><input type="text" name="creditNumber" maxlength="4" onBlur="singlebyte2(card_no1.value,card_no1)" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required>&nbsp;-&nbsp; <input type="text" name="card_no2" onBlur="singlebyte2(card_no2.value,card_no2)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required>&nbsp;-&nbsp;<input type="text" name="card_no3" onBlur="singlebyte2(card_no3.value,card_no3)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required>&nbsp;-&nbsp;<input type="text" name="card_no4" onBlur="singlebyte2(card_no4.value,card_no4)" maxlength="4" onkeydown="essentialCcaInquiry()" onkeyup="essentialCcaInquiry()" value="" size="7" class="txtHalf" required></td>
             </tr>
 
@@ -112,21 +113,11 @@
 				<option value="12" >12</option>
 				</select>&nbsp;月/
 
-                <select name="expirationYear" required>
+                <select id="year" name="expirationYear" required>
 				<option value="">--</option>
-				<option value="year" >year</option>
-				<option value="year+1" >year+1</option>
-				<option value="year+2" >year+2</option>
-				<option value="year+3" >year+3</option>
-				<option value="year+4" >year+4</option>
-				<option value="year+5" >year+5</option>
-				<option value="year+6" >year+6</option>
-				<option value="year+7" >year+7</option>
-				<option value="year+8" >year+8</option>
-				<option value="year+9" >year+9</option>
-				<option value="year+10" >year+10</option>
 				</select>&nbsp;年</td>
                 </tr>
+
 
                 <tr>
                 <!-- セキュリティーコード ［必須］ -->
@@ -161,22 +152,13 @@
        　    </tr>
 
 
-
             <tr>
             <!-- お届け日指定［必須］ -->
             <th><s:text name="lang.payment.date" /></th>
             <td> 日付を選択<input type="text" name="deliveryMonth" class="form_text-small" id="datepicker" required>
 
-           </td>
-                </tr>
-
-
-
-
-
-
-
-
+            </td>
+            </tr>
 
 
              <tr>
@@ -202,6 +184,8 @@
            <p>
            <a href="check.jsp"><input type="submit" value=内容確認></a>
         　　</p>
+
+
 </s:form>
 
     　　　　
