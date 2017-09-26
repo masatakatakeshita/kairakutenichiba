@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
 <!-- 国際化 ロケールID取得 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
