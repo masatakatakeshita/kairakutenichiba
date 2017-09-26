@@ -31,7 +31,7 @@
 
 <div id="center">
 
-	document.write(<s:text name="lang.helplink.success" />);
+	<h1><s:text name="lang.helplink.success" /></h1>
 
 </div>
 </body>
