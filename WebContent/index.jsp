@@ -134,8 +134,8 @@
 
 		<ul class="bxslider">
 		   <s:iterator value = "itemList">
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
-					src=<s:property value="%{getText("IndexAction.item_image")/> class="img-responsive"></a></li>
+			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'>
+			<img src=<s:property value="%{getText("IndexAction.item_image")"/> class="img-responsive"></a></li>
            </s:iterator>
 		</ul>
     </div>

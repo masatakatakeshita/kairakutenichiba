@@ -46,7 +46,7 @@
 <s:text name="lang.help.24houravailable" />
 <br>
 <!-- 以下の手順でお問い合わせいただくと、お客様のアカウント情報 -->
-<s:text name="youcanaskusthisway" />
+<s:text name="lang.help.youcanaskusthisway" />
 <br>
 <!-- などをすぐに確認できるため、スムーズなご対応が可能です。 -->
 <s:text name="lang.help.canretreateasy" />
