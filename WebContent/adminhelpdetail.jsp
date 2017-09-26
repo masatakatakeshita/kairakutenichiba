@@ -23,10 +23,6 @@
 		<s:include value="adminheader.jsp" />
 	</header>
 	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<!--  管理者・問い合わせ内容詳細-->
 	<h2><s:text name="lang.adminhelpdetail.detail" /></h2>
 	<p>
