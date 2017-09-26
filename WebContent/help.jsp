@@ -89,7 +89,7 @@
 
 <p><!-- メールアドレス -->
 <span><s:text name="lang.help.mail" />
-" /><font color="red"><!-- (必須) --><s:text name="lang.help.necessary" /></font></span>
+<font color="red"><!-- (必須) --><s:text name="lang.help.necessary" /></font></span>
 <a class="box6">
 <input type="email" name="userMail" size="30"required>
 </a>
