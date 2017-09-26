@@ -121,7 +121,7 @@
 <p>
 <!-- お問い合わせ内容 -->
 <span><s:text name="lang.help.askdetail" /><font color="red"><!--(必須)  --><s:text name="lang.help.necessary" /></font></span>
-<textarea name="comment" rows="10" cols="50"required></textarea>
+<textarea name="comment" rows="10" cols="50"required ></textarea>
 <br>
 </p>
 <p>
