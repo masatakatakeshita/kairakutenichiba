@@ -30,16 +30,10 @@
 
 
 <div id="center">
-<script>
-var send =0;
-if (send =1){
+
 	//-- 送信されました。 -->
 	document.write(<s:text name="lang.helplink.success" />);
-}else{
-	//--送信されませんでした。 -->
-document.write(<s:text name="lang.helplink.error" />)
-}
-</script>
+
 </div>
 </body>
 </html>
