@@ -31,7 +31,6 @@
 
 <div id="center">
 
-	//-- 送信されました。 -->
 	document.write(<s:text name="lang.helplink.success" />);
 
 </div>
