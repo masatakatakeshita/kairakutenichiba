@@ -118,7 +118,7 @@ public class AdminItemAction extends ActionSupport{
 
 	 */
 	public String execute(){
-		String result =SUCCESS;
+		String result =ERROR;
 
 		int all=0;
 		ArrayList<ItemDTO> allList = new ArrayList<ItemDTO>();
