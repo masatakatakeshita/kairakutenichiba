@@ -69,7 +69,6 @@
 
 <s:if test="itemList == null || itemList.isEmpty()">
 <meta http-equiv="refresh" content="0; <s:url action="IndexAction"/>">
-
 </s:if>
 
 
@@ -134,8 +133,8 @@
 
 		<ul class="bxslider">
 		   <s:iterator value = "itemList">
-			<li><a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'>
-			<img src=<s:property value="%{getText("IndexAction.item_image")"/> class="img-responsive"></a></li>
+			<li><a href="<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>">
+			<img src="<s:property value="item_image"/>" class="img-responsive"></a></li>
            </s:iterator>
 		</ul>
     </div>
@@ -146,8 +145,8 @@
 		<h2 id="boy"><s:text name="lang.index.boymanga" /></h2>
 		<div class="boy-item">
 		<s:iterator value = "itemListA">
-			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
-					src="<s:property value="item_image"/>" class="img"></a>
+			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'>
+			<img src="<s:property value="item_image"/>" class="img"></a>
 			</s:iterator>
 			<a href='#top' class="go-top"><s:text name="" /></a>
 	</div>

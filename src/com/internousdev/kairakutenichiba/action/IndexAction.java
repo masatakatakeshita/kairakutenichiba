@@ -107,6 +107,17 @@ public class IndexAction extends ActionSupport {
 	 * デリートキー
 	 */
 	private boolean is_deleted;
+	
+	/**
+	 * 商品リスト
+	 */
+	public ArrayList<ItemDTO> itemList  = new ArrayList<ItemDTO>();
+	public ArrayList<ItemDTO> itemListA = new ArrayList<ItemDTO>();
+	public ArrayList<ItemDTO> itemListB = new ArrayList<ItemDTO>();
+	public ArrayList<ItemDTO> itemListC = new ArrayList<ItemDTO>();
+	public ArrayList<ItemDTO> itemListD = new ArrayList<ItemDTO>();
+	public ArrayList<ItemDTO> itemListE = new ArrayList<ItemDTO>();
+
 
 
 
@@ -407,16 +418,7 @@ public class IndexAction extends ActionSupport {
 		public void setItem_detail(String item_detail) {
 			this.item_detail = item_detail;
 		}
-		/**
-		 * 商品リスト
-		 */
-		public ArrayList<ItemDTO> itemList  = new ArrayList<ItemDTO>();
-		public ArrayList<ItemDTO> itemListA = new ArrayList<ItemDTO>();
-		public ArrayList<ItemDTO> itemListB = new ArrayList<ItemDTO>();
-		public ArrayList<ItemDTO> itemListC = new ArrayList<ItemDTO>();
-		public ArrayList<ItemDTO> itemListD = new ArrayList<ItemDTO>();
-		public ArrayList<ItemDTO> itemListE = new ArrayList<ItemDTO>();
-
+		
 
 
 

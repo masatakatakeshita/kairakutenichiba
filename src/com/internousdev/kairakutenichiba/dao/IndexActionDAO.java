@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
-import com.internousdev.kairakutenichiba.util.DBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  * @author internous
@@ -21,7 +21,7 @@ public class IndexActionDAO  {
 	ArrayList<ItemDTO> itemList=new ArrayList<ItemDTO>();
 
 	public ArrayList<ItemDTO> select(){
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
 		String sql="select * from items";
@@ -45,15 +45,18 @@ public class IndexActionDAO  {
 
 			rs.close();
 			ps.close();
-			con.close();
+			
 
 
 		}catch (SQLException e){
 			e.printStackTrace();
+		}finally{
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
-
-
-
 		return itemList;
 	}
 
@@ -63,7 +66,7 @@ public class IndexActionDAO  {
 
 
 	public ArrayList<ItemDTO> select(String category){
-		DBConnector db=new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
 		Connection con=db.getConnection();
 
 		String sql="select * from items where category = ?";
@@ -87,15 +90,16 @@ public class IndexActionDAO  {
 
 			rs.close();
 			ps.close();
-			con.close();
-
 
 		}catch (SQLException e){
 			e.printStackTrace();
+		}finally{
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
-
-
-
 		return itemList;
 	}
 
