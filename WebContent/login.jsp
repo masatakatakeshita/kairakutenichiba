@@ -44,7 +44,7 @@
 				<p id="idpass">
 					<!-- E-mail: -->
 					<label for="email"><s:text name="lang.login.mail" /></label>
-					<input type="email" class="textbox" size="25">
+					<input name="email" type="email" class="textbox" size="25">
 				</p>
 
 

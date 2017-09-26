@@ -125,7 +125,7 @@ public class LoginDTO {
 	 * ログインフラグを収納するメソッド
 	 * @return loginFlg
 	 */
-	public boolean isLoginFlg() {
+	public boolean getLoginFlg() {
 		return loginFlg;
 	}
 	/**
