@@ -16,21 +16,21 @@
 <fmt:setBundle basename="com.internousdev.kairakutenichiba.property.error" var="lang" />
 
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css"  href="CSS/error.css">
+<link rel="stylesheet" type="text/css"  href="error.css">
 
 <title><s:text name="lang.error.title" /></title>
 </head>
-<body>
+<body bgcolor="pink">
 	<header>
 		<s:include value="header.jsp" />
 	</header>
+<br><br><br><br><br><br><br><br>
+    <h1><div align="center"><font size="7"><s:text name="lang.error.error" /></font><img src="img/original.gif" width="150" height="80" alt="GIFアニメーションです" border="0" align="center" hspace="10" vspace="10"></div></h1>
+    <h2><div align="center"><font size="5"><s:text name="lang.error.message" /></font></div></h2>
 
-<h1><s:text name="lang.error.error" /></h1>
- <h1><font size="7"><s:text name="lang.error.error" /></font><img src="img/original.gif" width="150" height="80" alt="GIFアニメーションです" border="0" align="center" hspace="10" vspace="10"></h1>
 
-<h2><font size="5"><s:text name="lang.error.message" /></font></h2>
-
-<h4><a href="index.jsp"><s:text name="lang.error.toppage" /></a></h4>
-<h4><a href="help.jsp"><s:text name="lang.error.help" /></a></h4>
+<h4><div align="center"><a href="index.jsp"><s:text name="lang.error.toppage" /></a></div></h4>
+<h4><div align="center"><a href="help.jsp"><s:text name="lang.error.help" /></a></div></h4>
 </body>
 </html>
+
