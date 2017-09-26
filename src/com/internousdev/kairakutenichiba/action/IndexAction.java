@@ -111,12 +111,18 @@ public class IndexAction extends ActionSupport {
 	/**
 	 * 商品リスト
 	 */
-	public ArrayList<ItemDTO> itemList  = new ArrayList<ItemDTO>();
-	public ArrayList<ItemDTO> itemListA = new ArrayList<ItemDTO>();
-	public ArrayList<ItemDTO> itemListB = new ArrayList<ItemDTO>();
-	public ArrayList<ItemDTO> itemListC = new ArrayList<ItemDTO>();
-	public ArrayList<ItemDTO> itemListD = new ArrayList<ItemDTO>();
-	public ArrayList<ItemDTO> itemListE = new ArrayList<ItemDTO>();
+	private ArrayList<ItemDTO> itemList  = new ArrayList<ItemDTO>();
+	private ArrayList<ItemDTO> itemListA = new ArrayList<ItemDTO>();
+	private ArrayList<ItemDTO> itemListB = new ArrayList<ItemDTO>();
+	private ArrayList<ItemDTO> itemListC = new ArrayList<ItemDTO>();
+	private ArrayList<ItemDTO> itemListD = new ArrayList<ItemDTO>();
+	private ArrayList<ItemDTO> itemListE = new ArrayList<ItemDTO>();
+	private String aa;
+	private String bb;
+	private String cc;
+	private String dd;
+	private String ee;
+	
 
 
 
@@ -125,18 +131,17 @@ public class IndexAction extends ActionSupport {
 	public String execute() {
         String result = ERROR;
         IndexActionDAO dao = new IndexActionDAO();
-        itemList  = dao.select();
+        setItemList(dao.select());
         itemListA = dao.select("少年漫画");
         itemListB = dao.select("少女漫画");
         itemListC = dao.select("ライトノベル");
         itemListD = dao.select("文庫");
         itemListE = dao.select("雑誌");
-        String[] array = new String[5];
-        array[1] = itemListA.get(1).getitem_image();
-        array[2] = itemListB.get(1).getitem_image();
-        array[3] = itemListC.get(1).getitem_image();
-        array[4] = itemListD.get(1).getitem_image();
-        array[5] = itemListE.get(1).getitem_image();
+        aa = itemListA.get(1).getitem_image();
+        bb = itemListB.get(1).getitem_image();
+        cc = itemListC.get(1).getitem_image();
+        dd = itemListD.get(1).getitem_image();
+        ee = itemListE.get(1).getitem_image();
 
 
         result = SUCCESS;
@@ -417,6 +422,90 @@ public class IndexAction extends ActionSupport {
 		 */
 		public void setItem_detail(String item_detail) {
 			this.item_detail = item_detail;
+		}
+
+
+
+
+		public ArrayList<ItemDTO> getItemList() {
+			return itemList;
+		}
+
+
+
+
+		public void setItemList(ArrayList<ItemDTO> itemList) {
+			this.itemList = itemList;
+		}
+
+
+
+
+		public String getAa() {
+			return aa;
+		}
+
+
+
+
+		public void setAa(String aa) {
+			this.aa = aa;
+		}
+
+
+
+
+		public String getBb() {
+			return bb;
+		}
+
+
+
+
+		public void setBb(String bb) {
+			this.bb = bb;
+		}
+
+
+
+
+		public String getCc() {
+			return cc;
+		}
+
+
+
+
+		public void setCc(String cc) {
+			this.cc = cc;
+		}
+
+
+
+
+		public String getDd() {
+			return dd;
+		}
+
+
+
+
+		public void setDd(String dd) {
+			this.dd = dd;
+		}
+
+
+
+
+		public String getEe() {
+			return ee;
+		}
+
+
+
+
+		public void setEe(String ee) {
+			this.ee = ee;
 		}
 		
 

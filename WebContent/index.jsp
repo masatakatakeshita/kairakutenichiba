@@ -88,35 +88,35 @@
 	<div class="sidebar">
 
 		<div class="sidebar-box">
-			<a href="#jump-boy"> <img src="<s:property value="array[1]"/>" alt="" style="width: 15%">
+			<a href="#jump-boy"> <img src="<s:property value="aa"/>" alt="" style="width: 15%">
 					<!--  少年マンガ  -->
 				 <em class="sbox"><s:text name="lang.index.boymanga" /></em>
 				 </a>
 		</div>
 
 		<div class="sidebar-box">
-			<a href="#jump-girl"> <img src="<s:property value="array[2]"/>" alt="" style="width: 15%">
+			<a href="#jump-girl"> <img src="<s:property value="b"/>" alt="" style="width: 15%">
 					<!--  少女マンガ  -->
 				 <em class="sbox"><s:text name="lang.index.girlmanga" /></em>
 				 </a>
 		</div>
 
 		<div class="sidebar-box">
-			<a href="#jump-novel"> <img src="<s:property value="array[3]"/>" alt="" style="width: 15%">
+			<a href="#jump-novel"> <img src="<s:property value="cc"/>" alt="" style="width: 15%">
 					<!-- ライトノベル -->
 				 <em class="sbox"><s:text name="lang.index.lightnovel" /></em>
 				 </a>
 		</div>
 
 		<div class="sidebar-box">
-			<a href="#jump-paperback"> <img src="<s:property value="array[4]"/>" alt="" style="width: 15%">
+			<a href="#jump-paperback"> <img src="<s:property value="dd"/>" alt="" style="width: 15%">
 					<!--  文庫本  -->
 			<em class="sbox"><s:text name="lang.index.novel" /></em>
 			</a>
 		</div>
 
 		<div class="sidebar-box">
-			<a href="#jump-magazine"> <img src="<s:property value="array[5]"/>" alt="" style="width: 15%">
+			<a href="#jump-magazine"> <img src="<s:property value="ee"/>" alt="" style="width: 15%">
 					<!--  雑誌  -->
 				 <em class="sbox"><s:text name="lang.index.magazine" /></em>
 				 </a>
