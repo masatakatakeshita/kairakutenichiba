@@ -58,8 +58,8 @@ public class HelpDAO {
 			coll.insert(input);
 
 
+			return result;
 
-        return result;
     }
 
 
