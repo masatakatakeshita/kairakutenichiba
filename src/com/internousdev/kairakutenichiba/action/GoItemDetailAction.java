@@ -88,17 +88,17 @@ public class GoItemDetailAction extends ActionSupport {
 		String result = ERROR;
 		GoItemDetailDAO dao = new GoItemDetailDAO();
 		displayList = dao.select(item_id);
-		if(displayList.size() != 0) {
+		if(displayList.size() > 0) {
 			result = SUCCESS;
 		}
 		return result;
 	}
 	
-	public ArrayList<ItemDTO> getdisplayList(){
+	public ArrayList<ItemDTO> getDisplayList(){
 		return displayList;
 	}
 	
-	public void setdisplayList(ArrayList<ItemDTO> displayList){
+	public void setDisplayList(ArrayList<ItemDTO> displayList){
 		this.displayList=displayList;
 	}
 

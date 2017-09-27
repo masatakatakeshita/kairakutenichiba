@@ -201,7 +201,7 @@ public class ItemDTO {
 	 * 発行形態を取得するメソッド
 	 * @return publish_type
 	 */
-	public String getpublish_type(){
+	public String getPublish_type(){
 		return publish_type;
 	}
 	/**

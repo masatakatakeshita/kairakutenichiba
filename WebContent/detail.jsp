@@ -26,18 +26,20 @@
 	<header>
 		<s:include value="header.jsp" />
 	</header>
+	
 
 <!-- アクション -->
     <s:action name="GoItemDetailAction" />
+    <s:iterator value="displayList">
  <div class="relative">
-
-<img class="center" src=<s:property value="displayList.item_image" /> alt=""class="absolute" />
+<img class="center" src="<s:property value="item_image" />"  />
+<!-- class=absoluteだった。 -->
 </div>
 
 <div class="navi">
-<div class="navibox"><h1><s:property value="displayList.item_name" /></h1></div>
-<div class="navibox"><p><s:property value="displayList.author" /></p></div>
-<div class="navibox"><p><s:property value="displayList.publisher" /></p></div>
+<div class="navibox"><h1><s:property value="item_name" /></h1></div>
+<div class="navibox"><p><s:property value="author" /></p></div>
+<div class="navibox"><p><s:property value="publisher" /></p></div>
 </div>
 <div class = "clear"></div>
 
@@ -45,10 +47,10 @@
 <div class="cart">
 <!--価格 -->
 <h1><s:text name="lang.detail.price" /></h1>
-<div class="price"><p><s:property value="displayList.price" /></p></div>
+<div class="price"><p><s:property value="price" /></p></div>
 
 <s:form action = "AddToCartAction">
-  <s:param name="itemId"> <s:property value="item_id" /></s:param>>
+  <s:param name="itemId"> <s:property value="item_id" /></s:param>
   <s:submit value="商品をカートに追加"/>
 </s:form>
 
@@ -60,19 +62,20 @@
 <!--商品基本情報  -->
 <h1><s:text name="lang.detail.baseinfo" /></h1>
 <!-- 発売日　　： -->
-<p><s:text name="lang.detail.dayonsale" /><s:property value="displayList.release_day" /></p>
+<p><s:text name="lang.detail.dayonsale" /><s:property value="release_day" /></p>
 <!-- 著者　　　： -->
-<p><s:text name="lang.detail.author" /><s:property value="displayList.author" /></p>
+<p><s:text name="lang.detail.author" /><s:property value="author" /></p>
 <!-- 出版社　　： -->
-<p><s:text name="lang.detail.company" /><s:property value="displayList.publisher" /></p>
+<p><s:text name="lang.detail.company" /><s:property value="publisher" /></p>
 <!-- 発行形態　： -->
-<p><s:text name="lang.detail.waytopublish" /><s:property value="displayList.publish_type" /></p>
+<p><s:text name="lang.detail.waytopublish" /><s:property value="publish_type" /></p>
 <!--  ページ数　：-->
-<p><s:text name="lang.detail.page" /><s:property value="displayList.pages" /></p>
+<p><s:text name="lang.detail.page" /><s:property value="pages" /></p>
 <!-- ISBNコード： -->
-<p><s:text name="lang.detail.ISBNcode" /><s:property value="displayList.isbn" /></p>
+<p><s:text name="lang.detail.ISBNcode" /><s:property value="isbn" /></p>
 </div>
 
+</s:iterator>
 
 
 
