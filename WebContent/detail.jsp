@@ -26,14 +26,14 @@
 	<header>
 		<s:include value="header.jsp" />
 	</header>
-	
+
 
 <!-- アクション -->
     <s:action name="GoItemDetailAction" />
     <s:iterator value="displayList">
  <div class="relative">
 <img class="center" src="<s:property value="item_image" />"  />
-<!-- class=absoluteだった。 -->
+
 </div>
 
 <div class="navi">
@@ -49,10 +49,12 @@
 <h1><s:text name="lang.detail.price" /></h1>
 <div class="price"><p><s:property value="price" /></p></div>
 
+<div class="button">
 <s:form action = "AddToCartAction">
-  <s:param name="itemId"> <s:property value="item_id" /></s:param>
+  <s:param name="itemId" value="<s:property value="item_id" />"></s:param>
   <s:submit value="商品をカートに追加"/>
 </s:form>
+</div>
 
 </div>
 
