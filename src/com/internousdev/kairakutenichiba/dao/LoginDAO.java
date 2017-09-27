@@ -38,6 +38,7 @@ public class LoginDAO {
 				dto.setPassword(rs.getString("password"));
 				dto.setLoginFlg(rs.getBoolean("login_flg"));
 				dto.setUserFlg(rs.getInt("user_flg"));
+				dto.setUserId(rs.getInt("user_id"));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
