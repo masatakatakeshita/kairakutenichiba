@@ -32,7 +32,7 @@ public class ItemDTO {
 	/**
 	 * 発売日
 	 */
-	private int release_day;
+	private String release_day;
 
 	/**
 	 * 著者
@@ -57,7 +57,7 @@ public class ItemDTO {
 	/**
 	 * コード
 	 */
-	private int isbn;
+	private long isbn;
 
     /**
      * イメージパス
@@ -155,14 +155,14 @@ public class ItemDTO {
 	 * 発売日を取得するメソッド
 	 * @return release_day
 	 */
-	public int getRelease_day() {
+	public String getRelease_day() {
 		return release_day;
 	}
 
 	/**
 	 * 発売日を格納するメソッド
 	 */
-	public void setRelease_day(int release_day) {
+	public void setRelease_day(String release_day) {
 		this.release_day = release_day;
 	}
 
@@ -231,14 +231,14 @@ public class ItemDTO {
 	 * コードを取得するメソッド
 	 * @return publish_type
 	 */
-	public int getIsbn(){
+	public long getIsbn(){
 		return isbn;
 	}
 	/**
 	 * コードを格納するメソッド
 	 * @param publish_type
 	 */
-	public void setIsbn(int isbn){
+	public void setIsbn(long isbn){
 		this.isbn = isbn;
 	}
 
@@ -254,7 +254,7 @@ public class ItemDTO {
 	 * イメージパスを取得するメソッド
 	 * @return item_image
 	 */
-	public String getitem_image() {
+	public String getItem_image() {
 		return item_image;
 	}
 

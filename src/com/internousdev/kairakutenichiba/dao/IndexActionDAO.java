@@ -18,9 +18,10 @@ import com.internousdev.util.db.mysql.MySqlConnector;
  */
 public class IndexActionDAO  {
 
-	ArrayList<ItemDTO> itemList=new ArrayList<ItemDTO>();
+	
 
 	public ArrayList<ItemDTO> select(){
+		ArrayList<ItemDTO> itemList=new ArrayList<ItemDTO>();
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
@@ -66,12 +67,14 @@ public class IndexActionDAO  {
 
 
 	public ArrayList<ItemDTO> select(String category){
+		ArrayList<ItemDTO> itemList=new ArrayList<ItemDTO>();
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
 		String sql="select * from items where category_name = ?";
 
 		try{
+			
 			PreparedStatement ps= con.prepareStatement(sql);
             ps.setString(1,category);
 			ResultSet rs=ps.executeQuery();

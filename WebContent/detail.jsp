@@ -48,7 +48,7 @@
 <div class="price"><p><s:property value="displayList.price" /></p></div>
 
 <s:form action = "AddToCartAction">
-  <s:param name=itemId value="<s:property value="item_id" />" />
+  <s:param name="itemId"> <s:property value="item_id" /></s:param>>
   <s:submit value="商品をカートに追加"/>
 </s:form>
 

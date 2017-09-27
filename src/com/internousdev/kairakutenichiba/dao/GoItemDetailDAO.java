@@ -41,12 +41,12 @@ public class GoItemDetailDAO {
 				dto.setItem_name(rs.getString("item_name"));
 				dto.setCategory(rs.getString("category_name"));
 				dto.setPrice(rs.getFloat("price"));
-				dto.setRelease_day(rs.getInt("release_day"));
+				dto.setRelease_day(rs.getString("release_day"));
 				dto.setAuthor(rs.getString("author"));
 				dto.setPublisher(rs.getString("publisher"));
 				dto.setPublish_type(rs.getString("publish_type"));
 				dto.setPages(rs.getInt("pages"));
-				dto.setIsbn(rs.getInt("isbn"));
+				dto.setIsbn(rs.getLong("isbn"));
 				dto.setStocks(rs.getInt("stocks"));
 				dto.setItem_image(rs.getString("item_image"));
 

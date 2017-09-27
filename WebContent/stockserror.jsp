@@ -29,6 +29,6 @@
 <s:text name="lang.stockserror.h1" />
 </h1>
 
-<h4><a href="index.jsp"><s:text name="lang.stockserror.cart" /></a></h4>
+<h4><a href="<s:url action="GoCartAction" ></s:url>"><s:text name="lang.stockserror.cart" /></a></h4>
 </body>
 </html>

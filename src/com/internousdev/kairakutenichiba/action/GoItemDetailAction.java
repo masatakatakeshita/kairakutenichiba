@@ -37,7 +37,7 @@ public class GoItemDetailAction extends ActionSupport {
 	/**
 	 * 発売日
 	 */
-	private int release_day;
+	private String release_day;
 
 	/**
 	 * 著者
@@ -62,7 +62,7 @@ public class GoItemDetailAction extends ActionSupport {
 	/**
 	 * コード
 	 */
-	private int isbn;
+	private long isbn;
 
     /**
      * イメージパス
@@ -148,14 +148,14 @@ public class GoItemDetailAction extends ActionSupport {
 	 * 発売日を取得するメソッド
 	 * @return release_day
 	 */
-	public int getRelease_day() {
+	public String getRelease_day() {
 		return release_day;
 	}
 
 	/**
 	 * 発売日を格納するメソッド
 	 */
-	public void setRelease_day(int release_day) {
+	public void setRelease_day(String release_day) {
 		this.release_day = release_day;
 	}
 
@@ -224,14 +224,14 @@ public class GoItemDetailAction extends ActionSupport {
 	 * コードを取得するメソッド
 	 * @return publish_type
 	 */
-	public int getIsbn(){
+	public long getIsbn(){
 		return isbn;
 	}
 	/**
 	 * コードを格納するメソッド
 	 * @param publish_type
 	 */
-	public void setIsbn(int isbn){
+	public void setIsbn(long isbn){
 		this.isbn = isbn;
 	}
 
