@@ -33,8 +33,9 @@
     <s:iterator value="displayList">
  <div class="relative">
 <img class="center" src="<s:property value="item_image" />"  />
-
 </div>
+
+
 
 <div class="navi">
 <div class="navibox"><h1><s:property value="item_name" /></h1></div>
@@ -44,17 +45,19 @@
 <div class = "clear"></div>
 
 
+
+
 <div class="cart">
 <!--価格 -->
 <h1><s:text name="lang.detail.price" /></h1>
 <div class="price"><p><s:property value="price" /></p></div>
 
-<div class="button">
+
 <s:form action = "AddToCartAction">
   <s:param name="itemId" ><s:property value="item_id" /></s:param>
   <s:submit value="商品をカートに追加"/>
 </s:form>
-</div>
+
 
 </div>
 
