@@ -70,29 +70,19 @@ public class IndexAction extends ActionSupport {
         IndexActionDAO dao = new IndexActionDAO();
         itemList = dao.select();
         
-        ItemDTO dtoa=new ItemDTO();
-        dtoa.setItemList( dao.select("少年漫画"));
-        itemListA=dtoa.getItemList();
-        
-        ItemDTO dtob=new ItemDTO();
-        dtob.setItemList( dao.select("少女漫画"));
-        itemListB=dtob.getItemList();
-        
+        itemListA = dao.select("少年漫画");
+        itemListB = dao.select("少女漫画");
         itemListC = dao.select("ライトノベル");
         itemListD = dao.select("文庫本");
+        itemListE = dao.select("雑誌");
         
-        ItemDTO dtoe=new ItemDTO();
-        dtoe.setItemList( dao.select("雑誌"));
-        itemListE=dtoe.getItemList();
         
-        System.out.println("test"+itemListA);
-        System.out.println(itemListB);
         aa = itemListA.get(1).getItem_image();
         bb = itemListB.get(1).getItem_image();
         cc = itemListC.get(1).getItem_image();
         dd = itemListD.get(1).getItem_image();
         ee = itemListE.get(1).getItem_image();
-        System.out.println(aa);
+      
 
 
         result = SUCCESS;

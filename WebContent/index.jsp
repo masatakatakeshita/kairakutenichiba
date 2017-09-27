@@ -158,9 +158,6 @@
 		<h2 id="girl"><s:text name="lang.index.girlmanga" /></h2>
 		<div class="girl-item">
 		<s:iterator value = "itemListB">
-		
-		<h1><s:property value="item_id"/></h1>
-		
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
 					src="<s:property value="item_image"/>" class="img"></a>
 		</s:iterator>

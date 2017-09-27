@@ -95,11 +95,16 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
     */
     public String execute() {
         String result = ERROR;
+        System.out.println("aaaa");
+        System.out.println(itemId);
+        System.out.println("ゆーざーID取れてる？"+session.get("userId"));
             if (session.containsKey("userId")) {
-            userId = (int) session.get("userId");
+            setUserId ( (int) session.get("userId"));
+        System.out.println("ユーザーIDsetできてる？"+userId);
             CheckCartDAO checkdao=new CheckCartDAO();
             quantities=1+checkdao.check(userId,itemId);
             ItemStocksDAO stocksdao=new ItemStocksDAO();
+        System.out.println(stocksdao.stocks(itemId));
             if(quantities>stocksdao.stocks(itemId)){
             	result="other";
             }else{
