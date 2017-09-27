@@ -61,10 +61,6 @@ private String inquiriedAt;
 private Map<String, Object> session;
 
 
-/**
- * ユーザーID
- */
-private int userId;
 
 
 
@@ -78,9 +74,9 @@ public String execute() {
 
 	HelpDAO dao = new HelpDAO();
 	try {
-		comment = comment.replace("\r\n","<br>");
 		if (dao.mongoInsert(userName, userAddress, userMail, category, comment)) {
           result=SUCCESS;
+          return result;
 		}
 	} catch (UnknownHostException e) {
 		e.printStackTrace();
@@ -202,21 +198,6 @@ public void setSession(Map<String, Object> session) {
     this.session = session;
 }
 
-/**
- * ユーザーIDを取得するメソッド
- * @return userId ユーザーID
- */
-public int getUserId() {
-    return userId;
-}
-
-/**
- * ユーザーIDを格納するメソッド
- * @param userId　セットする　ユーザーID
- */
-public void setUser_int(int userId) {
-    this.userId = userId;
-}
 
 
 

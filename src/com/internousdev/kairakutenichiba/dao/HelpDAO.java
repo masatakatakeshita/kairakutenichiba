@@ -46,16 +46,16 @@ public class HelpDAO {
 		DBCollection coll = db.getCollection("inquiry_histories");
 
 
-		BasicDBObject doc = new BasicDBObject();
+		BasicDBObject input = new BasicDBObject();
 
-			doc.append("user_name",userName);
-			doc.append("user_address", userAddress);
-			doc.append("user_mail", userMail);
-			doc.append("category", category);
-			doc.append("comment", comment);
-			doc.append("inquiried_at", dt);
+			input.put("user_name",userName);
+			input.put("user_address", userAddress);
+			input.put("user_mail", userMail);
+			input.put("category", category);
+			input.put("comment", comment);
+			input.put("inquiried_at", dt);
 
-			coll.insert(doc);
+			coll.insert(input);
 
 
 
