@@ -1,107 +1,49 @@
 
 
 .center {
-  position: absolute;
-  width:400px;
-  height:500px;
-  left: 5%;
-  top: 20%;
+position: absolute;
+width:350px;
+height:500px;
+left: 5%;
+top: 20%;
 }
-
-
 
 
 .navi{
 position:absolute;
 top:20%;
-width:auto;
-left: 45%;
+width:200px;
+height:200px;
+left: 40%;
 }
-
 
 
 .cart{
 position:absolute;
-right:10px;
-width:250px;
-height:auto;
-background-color:#adff2f;
-font-color:black;
-top:100px;
-text-align:center;
-border:groove;
+top:20%;
+width:200px;
+height:200px;
+left: 60%;
 }
 
-}
-
-
-
-
-.navibox{
-position:relative;
-top:40%;
-font:ÉÅÉCÉäÉI;
-font-weight:bold;
-
-text-align:center;
-width:220px;
-height:50px;
-background-color:#00ffff;
-
-margin:5px;
-font-size:14px;
-color:black;
-line-height:30px;
-border:groove;
-}
-
-
-
-.cartbox{
-position:absolute;
-text-align:center;
-}
-
-
-
-
-.relative{
-	potion:relative;
-	width:100%;
-
-}
-
-.absolute{
-	position:absolute;
-
-}
-
-
-
-.clear{
-	clear:both;
-
-}
 
 .info{
 position:absolute;
-left:10px;
-bottom:30px;
-text-align:center;
-width:30%;
-height:270px;
-font-size:14px;
-background-color:white;
-border:groove;
-}
-
-.price{
-	color:#ff0000;
-	font-size:18px;
-	font-weight:bold;
-
+top:50%;
+width:200px;
+height:300px;
+left:40%;
 }
 
 
+h1{
+padding-bottom: .5em;
+border-bottom: 3px solid #ccc;
+  }
+
+h3{
+padding-bottom: .5em;
+border-bottom: 3px solid #ccc;}
 
 
+h2{color:red;}
