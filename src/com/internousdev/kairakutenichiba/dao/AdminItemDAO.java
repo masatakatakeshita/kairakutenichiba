@@ -45,7 +45,7 @@ public class AdminItemDAO {
 
 				dto.setCategory(rs.getString("category"));
 
-				dto.setRelease_day(rs.getInt("release_day"));
+				dto.setRelease_day(rs.getString("release_day"));
 
 				dto.setAuthor(rs.getString("author"));
 
