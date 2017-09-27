@@ -33,7 +33,7 @@ public class LoginDAO {
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 
-			if(rs.next()){
+			while(rs.next()){
 				dto.setEmail(rs.getString("phone_email"));
 				dto.setPassword(rs.getString("password"));
 				dto.setLoginFlg(rs.getBoolean("login_flg"));
