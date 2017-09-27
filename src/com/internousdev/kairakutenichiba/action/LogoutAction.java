@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.util.login.LogoutDAO;
+import com.internousdev.kairakutenichiba.dao.LogoutDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -21,10 +21,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	 * セッション情報（ユーザーID）
 	 */
 	private Map<String, Object> session;
-	/**
-	 * ログインフラグ
-	 */
-	private boolean loginFlg;
+
 	/**
 	 * ユーザーID
 	 */
@@ -39,8 +36,9 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		String result = ERROR;
 		if (session.containsKey("userId")) {
 			LogoutDAO dao = new LogoutDAO();
-			dao.update((int) session.get("userId"), false);
+			if(dao.update((int) session.get("userId"))>0){
 			session.clear();
+			}
 			if (session.isEmpty()) {
 				result = SUCCESS;
 			}
@@ -67,24 +65,6 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 
-	/**
-	 * ログインフラグを取得するメソッド
-	 *
-	 * @return loginFlg ログインフラグ
-	 */
-	public boolean isLoginFlg() {
-		return loginFlg;
-	}
-
-	/**
-	 * ログインフラグを格納するメソッド
-	 *
-	 * @param loginFlg
-	 *            セットする loginFlg
-	 */
-	public void setLoginFlg(boolean loginFlg) {
-		this.loginFlg = loginFlg;
-	}
 
 	/**
 	 * ユーザーIDを取得するメソッド

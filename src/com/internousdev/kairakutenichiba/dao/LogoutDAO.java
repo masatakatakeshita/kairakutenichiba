@@ -18,17 +18,15 @@ public class LogoutDAO {
 	 * @return count 正しく動作すれば変更を行った行数、errorならば0を返す
 	 * @version 1.0
 	 */
-	public int update(int userId, boolean loginFlg){	//Actionで実行時にここの引数が渡されてくる
+	public int update(int userId){	//Actionで実行時にここの引数が渡されてくる
 		int count = 0;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 
-		String sql = "update users set login_flg=? where user_id=?";
+		String sql = "update users set login_flg=false where user_id=?";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-
-			ps.setBoolean(1, loginFlg);	//上記のメソッド定義ときの引数をここに入れる。メソッドの引数はActionで実行時に渡す。
-			ps.setInt(2, userId);
+			ps.setInt(1, userId);
 			count = ps.executeUpdate();
 			return count;
 		}catch(SQLException e){

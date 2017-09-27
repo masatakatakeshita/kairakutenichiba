@@ -44,8 +44,8 @@
 				<p id="idpass">
 					<!-- E-mail: -->
 					<label for="email"><s:text name="lang.login.mail" /></label>
-	<!-- 			<input name="email" type="email" class="textbox" size="25">			 -->	
-					<s:textfield name ="email" />
+<!-- 			<input name="email" type="email" class="textbox" size="25">	 -->
+					<s:textfield name ="email" size="25" />
 				</p>
 
 
@@ -53,8 +53,8 @@
 				<p id="idpass">
 					<!--password:  -->
 					<label for="passwd"><s:text name="lang.login.password" /></label>
-	<!-- 				<input type="password" class="textbox" size="25">		 -->
-					<s:textfield name ="password" />
+	<!-- 				<input type="password" class="textbox" size="25">		-->
+					<s:textfield name ="password" size="25"/>
 				</p>
 			</div>
 
@@ -62,7 +62,7 @@
 
 			<p id="logincenter">
 	<!-- 			<input type="submit" value="LOGIN" class="loginbutton">	 	-->
-			<s:submit value = "LOGIN" />
+			<s:submit value = "LOGIN" class="loginbutton" />
 
 			</p>
 
