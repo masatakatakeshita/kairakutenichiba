@@ -49,9 +49,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		
 		if (email.equals(dto.getEmail())){
 			if (password.equals(dto.getPassword())){
-				System.out.println(dto.getLoginFlg());
-				
-			
 				
 				if (dto.getLoginFlg() == false){
 
