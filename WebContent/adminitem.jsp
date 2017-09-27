@@ -77,7 +77,7 @@
 			<!-- 売り上げ数 -->
             <th><s:text name="lang.adminitem.sales" /></th>
 			<!-- カテゴリー -->
-            <th><s:text name="lang.adminitem.cate" /></th>
+            <th><s:text name="lang.adminitem.category" /></th>
 			<!-- 登録日 -->
             <th><s:text name="lang.adminitem.regday" /></th>
 			<!-- 更新日 -->
