@@ -22,20 +22,19 @@ public class LoginDAO {
 	public LoginDTO select(String email, String password){
 
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
-
 		Connection con = db.getConnection();
 		LoginDTO dto = new LoginDTO();
 
 		String sql = "select * from users where phone_email=? and password=?";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-
+			
 			ps.setString(1, email);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 
 			if(rs.next()){
-				dto.setEmail(rs.getString("email"));
+				dto.setEmail(rs.getString("phone_email"));
 				dto.setPassword(rs.getString("password"));
 				dto.setLoginFlg(rs.getBoolean("login_flg"));
 				dto.setUserFlg(rs.getInt("user_flg"));
