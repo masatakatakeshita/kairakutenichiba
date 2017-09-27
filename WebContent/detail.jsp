@@ -40,7 +40,7 @@
 <div class="navi">
 <div class="navibox"><h1><s:property value="item_name" /></h1></div>
 <div class="navibox"><p><s:property value="author" /></p></div>
-<div class="navibox"><p><s:property value="publisher" /></p></div>
+
 </div>
 <div class = "clear"></div>
 
@@ -50,7 +50,7 @@
 <div class="cart">
 <!--価格 -->
 <h1><s:text name="lang.detail.price" /></h1>
-<div class="price"><p><s:property value="price" /></p></div>
+<div class="price"><h2><s:property value="price" /></h2></div>
 
 <s:form action="AddToCartAction">
   <s:param name="itemId"><s:property value="item_id" /></s:param>
@@ -64,7 +64,7 @@
 
 <div class="info">
 <!--商品基本情報  -->
-<h1><s:text name="lang.detail.baseinfo" /></h1>
+<h3><s:text name="lang.detail.baseinfo" /></h3>
 <!-- 発売日　　： -->
 <p><s:text name="lang.detail.dayonsale" /><s:property value="release_day" /></p>
 <!-- 著者　　　： -->
