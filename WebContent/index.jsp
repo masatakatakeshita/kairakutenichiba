@@ -88,14 +88,14 @@
 	<div class="sidebar">
 
 		<div class="sidebar-box">
-			<a href="#jump-boy"> <img src="<s:property value="aa"/>" alt="" style="width: 15%">
+			<a href="#jump-boy"> <img src="${aa}" alt="" style="width: 15%">
 					<!--  少年マンガ  -->
 				 <em class="sbox"><s:text name="lang.index.boymanga" /></em>
 				 </a>
 		</div>
 
 		<div class="sidebar-box">
-			<a href="#jump-girl"> <img src="<s:property value="b"/>" alt="" style="width: 15%">
+			<a href="#jump-girl"> <img src="<s:property value="bb"/>" alt="" style="width: 15%">
 					<!--  少女マンガ  -->
 				 <em class="sbox"><s:text name="lang.index.girlmanga" /></em>
 				 </a>
@@ -158,6 +158,9 @@
 		<h2 id="girl"><s:text name="lang.index.girlmanga" /></h2>
 		<div class="girl-item">
 		<s:iterator value = "itemListB">
+		
+		<h1><s:property value="item_id"/></h1>
+		
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
 					src="<s:property value="item_image"/>" class="img"></a>
 		</s:iterator>

@@ -111,12 +111,12 @@ public class IndexAction extends ActionSupport {
 	/**
 	 * 商品リスト
 	 */
-	private ArrayList<ItemDTO> itemList  = new ArrayList<ItemDTO>();
-	private ArrayList<ItemDTO> itemListA = new ArrayList<ItemDTO>();
-	private ArrayList<ItemDTO> itemListB = new ArrayList<ItemDTO>();
-	private ArrayList<ItemDTO> itemListC = new ArrayList<ItemDTO>();
-	private ArrayList<ItemDTO> itemListD = new ArrayList<ItemDTO>();
-	private ArrayList<ItemDTO> itemListE = new ArrayList<ItemDTO>();
+	private ArrayList<ItemDTO> itemList  = new ArrayList<>();
+	private ArrayList<ItemDTO> itemListA = new ArrayList<>();
+	private ArrayList<ItemDTO> itemListB = new ArrayList<>();
+	private ArrayList<ItemDTO> itemListC = new ArrayList<>();
+	private ArrayList<ItemDTO> itemListD = new ArrayList<>();
+	private ArrayList<ItemDTO> itemListE = new ArrayList<>();
 	private String aa;
 	private String bb;
 	private String cc;
@@ -131,17 +131,31 @@ public class IndexAction extends ActionSupport {
 	public String execute() {
         String result = ERROR;
         IndexActionDAO dao = new IndexActionDAO();
-        setItemList(dao.select());
-        itemListA = dao.select("少年漫画");
-        itemListB = dao.select("少女漫画");
+        itemList = dao.select();
+        
+        ItemDTO dtoa=new ItemDTO();
+        dtoa.setItemList( dao.select("少年漫画"));
+        itemListA=dtoa.getItemList();
+        
+        ItemDTO dtob=new ItemDTO();
+        dtob.setItemList( dao.select("少女漫画"));
+        itemListB=dtob.getItemList();
+        
         itemListC = dao.select("ライトノベル");
-        itemListD = dao.select("文庫");
-        itemListE = dao.select("雑誌");
+        itemListD = dao.select("文庫本");
+        
+        ItemDTO dtoe=new ItemDTO();
+        dtoe.setItemList( dao.select("雑誌"));
+        itemListE=dtoe.getItemList();
+        
+        System.out.println("test"+itemListA);
+        System.out.println(itemListB);
         aa = itemListA.get(1).getitem_image();
         bb = itemListB.get(1).getitem_image();
         cc = itemListC.get(1).getitem_image();
         dd = itemListD.get(1).getitem_image();
         ee = itemListE.get(1).getitem_image();
+        System.out.println(aa);
 
 
         result = SUCCESS;
@@ -432,11 +446,32 @@ public class IndexAction extends ActionSupport {
 		}
 
 
-
-
 		public void setItemList(ArrayList<ItemDTO> itemList) {
-			this.itemList = itemList;
+			this.itemList= itemList;
 		}
+
+
+
+		public ArrayList<ItemDTO> getItemListA() {
+			return itemListA;
+		}
+
+		public void setItemListA(ArrayList<ItemDTO> itemListA) {
+			this.itemListA = itemListA;
+		}
+
+		public ArrayList<ItemDTO> getItemListB() {
+			return itemListB;
+		}
+
+
+
+
+		public void setItemListB(ArrayList<ItemDTO> itemListB) {
+			this.itemListB = itemListB;
+		}
+
+
 
 
 

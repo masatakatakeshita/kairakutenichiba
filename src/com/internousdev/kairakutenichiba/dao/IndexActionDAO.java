@@ -36,7 +36,7 @@ public class IndexActionDAO  {
 
 				dto.setItem_id(rs.getInt("item_id"));
 
-				dto.setCategory(rs.getString("category"));
+				dto.setCategory(rs.getString("category_name"));
 
 				dto.setItem_image(rs.getString("item_image"));
 
@@ -66,22 +66,23 @@ public class IndexActionDAO  {
 
 
 	public ArrayList<ItemDTO> select(String category){
-		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
-		String sql="select * from items where category = ?";
+		String sql="select * from items where category_name = ?";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
             ps.setString(1,category);
 			ResultSet rs=ps.executeQuery();
+			itemList.clear();
 
 			while (rs.next()) {
 				ItemDTO dto= new ItemDTO();
 
 				dto.setItem_id(rs.getInt("item_id"));
 
-				dto.setCategory(rs.getString("category"));
+				dto.setCategory(rs.getString("category_name"));
 
 				dto.setItem_image(rs.getString("item_image"));
 

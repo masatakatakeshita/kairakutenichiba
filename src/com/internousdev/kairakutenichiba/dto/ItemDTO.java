@@ -3,6 +3,7 @@
  */
 package com.internousdev.kairakutenichiba.dto;
 
+import java.util.ArrayList;
 
 public class ItemDTO {
 
@@ -101,6 +102,11 @@ public class ItemDTO {
 	 */
 	private boolean is_deleted;
 
+	
+	/**
+	 * リスト
+	 */
+	private ArrayList<ItemDTO> itemList;
 
 	//以下アクセサリー
 
@@ -370,5 +376,13 @@ public class ItemDTO {
 	 */
 	public void setItem_detail(String item_detail) {
 		this.item_detail = item_detail;
+	}
+
+	public ArrayList<ItemDTO> getItemList() {
+		return itemList;
+	}
+
+	public void setItemList(ArrayList<ItemDTO> itemList) {
+		this.itemList = itemList;
 	}
 }

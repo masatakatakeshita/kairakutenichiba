@@ -42,7 +42,7 @@
 		<!-- トップページ -->
 		<a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
 		<!--ログイン  -->
-		<a href="<s:url action="LoginAction"/>" class="header_btn"><s:text name="lang.header.login" /></a>
+		<a href="login.jsp" class="header_btn"><s:text name="lang.header.login" /></a>
 		<!-- ヘルプ -->
 		<a href="help.jsp" class="header_btn"><s:text name="lang.header.help" /></a>
 	</s:else>
