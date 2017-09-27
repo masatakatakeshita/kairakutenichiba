@@ -32,11 +32,7 @@
 	<header>
 		<s:include value="adminheader.jsp" />
 	</header>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+
 
 
 	<div class="container">

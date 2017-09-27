@@ -18,6 +18,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title><s:text name="lang.adminitem.title" /></title>
+<link rel="stylesheet" type="text/css" href="CSS/adminitem.css">
 </head>
 
 
@@ -25,11 +26,7 @@
 	<header>
 		<s:include value="adminheader.jsp" />
 	</header>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+
 
 
 
