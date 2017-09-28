@@ -50,7 +50,7 @@
 <div class="cart">
 <!--価格 -->
 <h1><s:text name="lang.detail.price" /></h1>
-<div class="price"><h2><s:property value="price" /></h2></div>
+<div class="price"><h2><s:property value="priceyen" /><s:text name="lang.detail.yen" /></h2></div>
 
 <a href='<s:url action="AddToCartAction" ><s:param name="itemId" ><s:property value="item_id"/></s:param></s:url>'><s:submit value="商品をカートに追加"/></a>
 

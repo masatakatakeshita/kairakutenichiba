@@ -26,6 +26,8 @@ public class ItemDTO {
 	 * 単価
 	 */
 	private float price;
+	
+	private int priceyen;
 
 	/**
 	 * 発売日
@@ -370,6 +372,14 @@ public class ItemDTO {
 	 */
 	public void setItem_detail(String item_detail) {
 		this.item_detail = item_detail;
+	}
+
+	public int getPriceyen() {
+		return priceyen;
+	}
+
+	public void setPriceyen(int priceyen) {
+		this.priceyen = priceyen;
 	}
 
 }
