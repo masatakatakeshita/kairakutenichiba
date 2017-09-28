@@ -24,7 +24,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	private static final long serialVersionUID = -2149261769882286949L;
 
 	/**
-	 * 顧客ID
+	 * ユーザーID
 	 */
 	private int userId;
 
@@ -82,7 +82,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	/**
 	 * 商品リスト
 	 */
-	public ArrayList<MyPageDTO> itemList = new ArrayList<MyPageDTO>();
+	private ArrayList<MyPageDTO> itemList = new ArrayList<MyPageDTO>();
 
 	/**
 	 * 実行メソッド
@@ -90,21 +90,19 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	 * 顧客リストを表示する。
 	 */
 	public String execute() {
-
 		String result = ERROR;
 		AdminUserDAO dao = new AdminUserDAO();
-		itemList = dao.select();
+		itemList = dao.select(userId);
+	System.out.println(userId);
+	System.out.println(itemList.size());
 		if (itemList.size() > 0) {
-
 			result = SUCCESS;
 		}
 		return result;
-
 	}
 
+	
 	//以下アクセサー
-
-
 	/**
 	 * 顧客IDを取得するメソッド
 	 * @return　userId　顧客ID
@@ -112,8 +110,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	public int getUserId() {
 		return userId;
 	}
-
-
 	/**
 	 * 顧客IDを格納するメソッド
 	 * @param userId　セットする　userId
@@ -121,6 +117,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
+	
 
 	/**
 	 * 姓（英字）を取得するメソッド
@@ -129,7 +126,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	public String getFamilyName() {
 		return familyName;
 	}
-
 	/**
 	 * 姓（英字）を格納するメソッド
 	 * @param familyName　セットする famliyName
@@ -138,6 +134,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		this.familyName = familyName;
 	}
 
+	
 	/**
 	 * 名（英字）を取得するメソッド
 	 * @return givenName　名（英字）
@@ -145,7 +142,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	public String getGivenName() {
 		return givenName;
 	}
-
 	/**
 	 * 名（英字）を格納するメソッド
 	 * @param givenName　セットする givenName
@@ -177,7 +173,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public String getPhoneNumber() {
 			return phoneNumber;
 		}
-
 		/**
 		 * 電話番号を格納するメソッド
 		 * @param phoneNumber　セットする phoneNumber
@@ -186,6 +181,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 			this.phoneNumber = phoneNumber;
 		}
 
+		
 		/**
 		 * メールアドレスを取得するメソッド
 		 * @return phoneEmail　メールアドレス
@@ -193,7 +189,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public String getPhoneEmail() {
 			return phoneEmail;
 		}
-
 		/**
 		 * メールを格納するメソッド
 		 * @param phoneEmail　セットする phoneEmail
@@ -202,6 +197,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 			this.phoneEmail = phoneEmail;
 		}
 
+		
 		/**
 		 * 郵便番号を取得するメソッド
 		 * @return　postal 郵便番号
@@ -209,8 +205,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public String getPostal() {
 			return postal;
 		}
-
-
 		/**
 		 * 郵便番号を格納するメソッド
 		 * @param postal　セットする postal
@@ -218,6 +212,8 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public void setPostal(String postal) {
 			this.postal = postal;
 		}
+		
+		
 		/**
 		 * 住所を取得するメソッド
 		 * @return　address 住所
@@ -225,7 +221,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public String getAddress() {
 			return address;
 		}
-
 		/**
 		 * 住所を格納するメソッド
 		 * @param address セットする address
@@ -248,6 +243,8 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public void setPassword(String password) {
 			this.password = password;
 		}
+		
+		
 		/**
 		 * 性別を取得するメソッド
 		 * @return sex　性別
@@ -255,7 +252,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public String getSex() {
 			return sex;
 		}
-
 		/**
 		 * 性別を格納するメソッド
 		 * @param sex　セットする sex
@@ -263,6 +259,8 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public void setSex(String sex) {
 			this.sex = sex;
 		}
+		
+		
 		/**
 		 * 登録日を取得するメソッド
 		 * @return registerDay　登録日
@@ -270,7 +268,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public String getRegisterDay() {
 			return registerDay;
 		}
-
 		/**
 		 * 登録日を格納するメソッド
 		 * @param registerDay　セットする registerDay

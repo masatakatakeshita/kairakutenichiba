@@ -23,19 +23,18 @@ public class AdminUserDAO {
 	* @return itemList 顧客情報
 	* @version 1.0
 	*/
-	public ArrayList<MyPageDTO> select() {
+	public ArrayList<MyPageDTO> select(int userId) {
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		MyPageDTO dto = new MyPageDTO();
 		ArrayList<MyPageDTO> itemList = new ArrayList<MyPageDTO>();
-		/**
 
-		**/
-		String sql = "select * from users";
+		String sql = "select * from users where user_id=?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-
+			ps.setInt(1, userId);
+			System.out.println("userId");
 
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -61,7 +60,6 @@ public class AdminUserDAO {
 				dto.setAddress(rs.getString("address"));
 
 				dto.setRegisterDay(rs.getString("register_day"));
-
 
 				itemList.add(dto);
 			}

@@ -34,7 +34,7 @@
 
 
 	<h1>
-		<s:text name="lang.admincustomer.topTitle"/>
+	<s:text name="lang.admincustomer.topTitle"/>
 	</h1>
 	<hr>
 
