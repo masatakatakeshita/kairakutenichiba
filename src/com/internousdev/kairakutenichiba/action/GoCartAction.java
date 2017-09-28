@@ -53,7 +53,7 @@ public class GoCartAction extends ActionSupport implements SessionAware {
     /**
      * 合計金額
      */
-    private float amountAll;
+    private int amountAll;
     /**
      * カート内の商品情報を入れるリスト
      */
@@ -80,7 +80,7 @@ public class GoCartAction extends ActionSupport implements SessionAware {
             GoCartDAO dao = new GoCartDAO();
             cartList = dao.selectedItem(userId);
             for (int i = 0; i < cartList.size(); i++) {
-                amountAll += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
+                amountAll += (cartList.get(i).getPriceyen()) * (cartList.get(i).getQuantities());
             }
             result = SUCCESS;
         }
@@ -187,7 +187,7 @@ public class GoCartAction extends ActionSupport implements SessionAware {
      * 合計金額を取得するメソッド
      * @return amountAll　合計金額
      */
-    public float getAmountAll() {
+    public int getAmountAll() {
         return amountAll;
     }
 
@@ -195,7 +195,7 @@ public class GoCartAction extends ActionSupport implements SessionAware {
      * 合計金額を格納するメソッド
      * @param amountAll セットする amountAll
      */
-    public void setAmountAll(float amountAll) {
+    public void setAmountAll(int amountAll) {
         this.amountAll = amountAll;
     }
 

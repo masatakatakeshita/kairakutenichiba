@@ -107,6 +107,23 @@ public class CartItemDeleteAction extends CartAssist implements SessionAware {
     public void setUserId(int userId) {
         this.userId = userId;
     }
+    
+    /**
+     * アイテムIDを取得するためのメソッド
+     * @return itemId ユーザーID
+     */
+    public int getItemId() {
+        return itemId;
+    }
+
+    /**
+     * アイテムIDを格納するためのメソッド
+     * @param itemId セットする itemId
+     */
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
+
 
     /**
      * セッションを取得するためのメソッド

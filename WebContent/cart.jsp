@@ -55,25 +55,24 @@
 						<s:iterator value="cartList">
 							<tr>
 								<td style="width: 20%;"><s:property value="itemName" /></td>
-								<td style="width: 20%;"><s:property value="priceyen" />円</td>
+								<td style="width: 20%;"><s:property value="priceyen" /><s:text name="lang.cart.yen" /></td>
 								<td style="width: 20%;">
-								<s:property value="itemId" />
-									<div class="col-xs-5"></div>
-									  <s:form action="CartUpdateAction">
+									<div class="col-xs-5">
+									  <s:form action="CartUpdateAction" >
 										<s:select
 											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}"
 											name="quantities" 
 											value="quantities"
 						                  />
-						                  <s:param name="itemId" ><s:property value="itemId" /></s:param>
+						                  <s:hidden name="itemId" value="%{itemId}" />
 						                 <s:submit value="更新" />
 						                  </s:form>
+						                  </div>
 								</td>
-								<td style="width: 20%;"><s:property value="subtotalyen" />円</td>
+								<td style="width: 20%;"><s:property value="subtotalyen" /><s:text name="lang.cart.yen" /></td>
 								<td style="width: 20%;"><s:form action="CartItemDeleteAction">
-										<button type="submit" class="btn btn-danger">
-											<s:text name="lang.cart.delete" />
-										</button>
+								   <s:hidden name="itemId" value="%{itemId}" />
+										<s:submit value="削除" />
 									</s:form></td>
 							</tr>
 						</s:iterator>
@@ -83,9 +82,9 @@
 					
 		<table class="type02">
 			<tr>
-				<th align="right" colspan="3"><strong><s:text name="lang.cart.total" /></strong></th>
-				<td>
-                    	<fmt:formatNumber value="${amountAll}" pattern="###,###,###" />
+				<th style="width: 80%;" align="right" colspan="3"><strong><s:text name="lang.cart.total" /></strong></th>
+				<td style="width: 20%;">
+                    	<s:property value="amountAll" />
                     <s:text name="lang.cart.yen" /></td></tr></table>
 <span id="submit">
 		<input type="submit" onclick="location.href='payment.jsp'"

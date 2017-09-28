@@ -129,7 +129,7 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
 
     /**
     * カートID取得メソッド
-    * @author MISAKI AKIMOTO
+    * @author shoji hayato
     * @return cartId カートID
     */
     public int getCartId() {

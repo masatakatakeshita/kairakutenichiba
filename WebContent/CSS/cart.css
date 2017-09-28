@@ -35,16 +35,15 @@ table.type01 td {
 
 
 table.type02 {
+		   color:red;
 	border-collapse: separate;
 	border-spacing: 0;
 	text-align: right;
 	line-height: 1.5;
 	border-top: 1px solid #ccc;
 	border-left: 1px solid #ccc;
-	width: 685px;
 }
 table.type02 th {
-	width: 192px;
 	padding: 10px;
 	font-weight: bold;
 	vertical-align: top;
@@ -55,7 +54,7 @@ table.type02 th {
 	background: #eee;
 }
 table.type02 td {
-	width: 150px;
+	        color:red;
 	padding: 10px;
 	 font-weight: bold;
 	vertical-align: top;
