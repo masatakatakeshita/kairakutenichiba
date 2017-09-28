@@ -9,7 +9,7 @@ body {
 	font-family: 'メイリオ', Meiryo, sans-serif;
 }
 
-#login, loginbox {
+#login{
 	margin: 100px auto;
 	padding: 50px;
 	background: #ffffff;
@@ -37,6 +37,7 @@ body {
 	-o-transition: -o-transform 1s linear;
 	-ms-transition: -ms-transform 1s linear;
 	transition: transform 1s linear;
+	margin-top: 30px;
 }
 
 .loginbutton:hover {
@@ -53,9 +54,5 @@ body {
 
 #logincenter {
 	text-align: center;
-}
-
-#idpass {
-	text-align: right;
 }
 
