@@ -27,47 +27,49 @@
  	<header>
 		<s:include value="header.jsp" />
 	</header>
-<!-- アクション -->
-    <s:action var="select" name="MyPageAction" />
+
 
 
 <div class="main">
 <!--快楽的登録情報参照  -->
 <h1><s:text name="lang.mypage.user" /></h1>
 
+<s:iterator value="UserList">
 <table class="border">
 
 
 <tr>
 <!--ふりがな  -->
-	<th><s:text name="lang.mypage.word" /></th><s:property value = familyNameKana/>
+	<th><s:text name="lang.mypage.word" /></th><th><s:property value = "familyNameKana"/></th>
 </tr>
 
 <tr><!--氏名  -->
-	<th><s:text name="lang.mypage.name" /></th><s:property value = givenNameKanji/>
+	<th><s:text name="lang.mypage.name" /></th><th><s:property value = "givenNameKanji" /></th>
 </tr>
 
 
 <tr><!--住所  -->
-	<th><s:text name="lang.mypage.address" /></th><s:property value = address/>
+	<th><s:text name="lang.mypage.address" /></th><th><s:property value = "address" /></th>
 </tr>
 
 
 <tr><!--電話番号  -->
-	<th><s:text name="lang.mypage.phonenumber" /></th><s:property value = phoneNumber/>
+	<th><s:text name="lang.mypage.phonenumber" /></th><th><s:property value = "phoneNumber" /></th>
 </tr>
 
 
 <tr><!--メールアドレス  -->
-	<th><s:text name="lang.mypage.mail" /></th><s:property value = phoneEmail/>
+	<th><s:text name="lang.mypage.mail" /></th><th><s:property value = "phoneEmail" /></th>
 </tr>
 
 
 </table>
 
 <div class="btn">
-<input type="button" value="閉じる" onClick="javascript:window.close();">
+<h4><a href="index.jsp"><s:text name="lang.cartempty.toppage" /></a></h4>
 </div>
+
+</s:iterator>
 </div>
 
 </body>

@@ -73,9 +73,9 @@
 
 
 
-
-
-<Form class="button"><Input type="button" value="閉じる" onClick="javascript:window.close();"></Form>
+<div class="button">
+<h4><a href="index.jsp"><s:text name="lang.cartempty.toppage" /></a></h4>
+</div>
 </div>
 
 </body>

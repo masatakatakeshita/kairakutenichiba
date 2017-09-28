@@ -34,7 +34,7 @@ public class MyPageDAO {
 
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				dto.setUserId(rs.getInt("userId"));
+				dto.setUserId(rs.getInt("user_id"));
 
 				dto.setFamilyNameKanji(rs.getString("family_name_kanji"));
 

@@ -36,20 +36,22 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	 * userListにセッションの情報が移っており、存在していたらSUCCESS
 	 */
 	public String execute(){
-		if (session.get("userId") == null){
-			return ERROR;
-		}
+		String ret=ERROR;
+		if (session.containsKey("userId")){
+			
 
 		userId = (int) session.get("userId");
 		MyPageDAO MyPagedao = new MyPageDAO();
 
 		UserList = MyPagedao.select(userId);
 
-		if (UserList.size() ==0){
-			return "other";
-		}else{
-			return SUCCESS;
+		  if (UserList.size() >0){
+		
+			ret=SUCCESS;
+		  }
 		}
+			return ret;
+		
 	}
 
 	/**

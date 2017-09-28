@@ -36,12 +36,12 @@
 
 <p>
 <!-- 快楽的登録情報参照-->
-<a href="http://localhost/kairakutenichiba/account.jsp" target="_blank" class="list"><s:text name="lang.mypage.info" /></a>
+<a href='<s:url action="MyPageAction" ></s:url>'><s:text name="lang.mypage.info" /></a>
 </p>
 
 <p>
 <!-- 快楽歴史 -->
-<a href="http://localhost/kairakutenichiba/history.jsp" target="_blank" class="list"><s:text name="lang.mypage.history" /></a>
+<a href='<s:url action="HistoryAction" ></s:url>'><s:text name="lang.mypage.history" /></a>
 </p>
 </div>
 </body>
