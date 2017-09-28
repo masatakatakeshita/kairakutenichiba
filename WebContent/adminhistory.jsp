@@ -33,21 +33,16 @@
 		<s:include value="adminheader.jsp" />
 	</header>
 
-
-
 	<div class="container">
-
 		<h1> <s:text name="lang.adminhistory.title" /></h1>
 
     <s:form action="AdminHistoryAction">
 		<input type="number" name="itemId" size="50" placeholder="ITEM ID" min="0" max="100000">
-		<input type="submit" value="検索/Search">
+		<input type="submit" value="Search">
 	</s:form>
 
-		<table>
-			<tr align="center">
-
-
+	<table>
+		<tr align="center">
 			<!--商品ID -->
 			<th><s:text name="lang.adminhistory.itemid" /></th>
 			 <!--商品名  -->
@@ -60,15 +55,11 @@
             <th><s:text name="lang.adminhistory.subtotal" /></th>
              <!--購入日 -->
             <th><s:text name="lang.adminhistory.purchasedate" /></th>
+		</tr>
 
-			</tr>
-
-
-
-
-		<tr>
+	<tr>
 		<!-- 値の挿入 -->
-			<s:iterator value="adminhistoryList">
+		<s:iterator value="adminhistoryList">
             <td><s:property value="itemId" /></td>
              <!-- 商品名 -->
             <td><s:property value="itemsName" /></td>
@@ -79,16 +70,12 @@
             <!-- 合計金額 -->
             <td>&yen;<fmt:formatNumber value="${subtotal}"/></td>
             <!-- 購入日 -->
-            <td><s:property value="createdAt" /></td>
- 			</s:iterator>
-		</tr>
-
-
-		</table>
-
+            <td><s:property value="purchase_at" /></td>
+ 		</s:iterator>
+	</tr>
+	</table>
 	</div>
 
 
 </body>
-
 </html>

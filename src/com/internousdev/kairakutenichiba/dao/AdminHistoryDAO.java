@@ -10,20 +10,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.kairakutenichiba.dto.AdminHistoryDTO;
-import com.internousdev.kairakutenichiba.dto.HistoryDTO;
 import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
  *管理者販売履歴の表示に関するメソッド
  */
 public class AdminHistoryDAO {
-
-
-
-	/**
-	 * 購入履歴を格納する
-	 */
-	public ArrayList<HistoryDTO> AdminHistoryList = new ArrayList<HistoryDTO>();
 
 	/**
 	 * 商品IDで販売履歴を取得しリストに格納するメソッド
@@ -32,41 +24,20 @@ public class AdminHistoryDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<AdminHistoryDTO> select(int itemId) {
-		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		/**
+		 * 購入履歴を格納する
+		 */
+		ArrayList<AdminHistoryDTO> adminhistoryList = new ArrayList<AdminHistoryDTO>();
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root", "mysql");
 		Connection con = db.getConnection();
 
-		ArrayList<AdminHistoryDTO> adminhistoryList = new ArrayList<AdminHistoryDTO>();
-
-		int k = 0;
-		String sql;
-
-
-		if(itemId == 0){
-
-
-			sql= "select * from purchases_details  items on purchases_details.item_id = items.item_id";
-
-
-
-
-		}else{
-		 sql = "select * from purchases_details  items on purchases_details.item_id = items.item_id where purchases_details.item_id=?";
-		k=1;
-
-		}
+		String sql = "select * from purchases_details where item_id=?";
+		String sql2 = "select * from items where item_id = ?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-
-
-
-
-			if(k == 1){
-
-				ps.setInt(1, itemId);
-			}
+			ps.setInt(1, itemId);
 			ResultSet rs = ps.executeQuery();
-
 
 			while (rs.next()) {
 				AdminHistoryDTO dto = new AdminHistoryDTO();
@@ -77,27 +48,24 @@ public class AdminHistoryDAO {
 
 				dto.setQuantities(rs.getInt("quantities")); //数量
 
-				dto.setCreatedAt(rs.getString("created_at")); //登録日
+				dto.setPurchase_at(rs.getString("purchase_at")); //登録日
 
-				dto.setItemsName(rs.getString("items_name")); //商品名
+				//商品名をsqlで検索でDTOに入れなきゃならん。ここからした
+				PreparedStatement ps2 = con.prepareStatement(sql2);
+				ps2.setInt(1, dto.getItemId());
+				ResultSet rs2 = ps2.executeQuery();
+				if(rs2.next()){
+					dto.setItemsName(rs.getString("items_name")); //商品名
 
-				dto.setPrice(rs.getFloat("price")); //単価
+					dto.setPrice(rs.getFloat("price")); //単価
 
-				dto.setSubtotal(dto.getPrice()*dto.getQuantities());//合計金額
+					dto.setSubtotal(dto.getPrice()*dto.getQuantities());//合計金額
 
-
-				adminhistoryList.add(dto);
-
-
-
+					adminhistoryList.add(dto);
+				}
 			}
-
-
-
 			rs.close();
 			ps.close();
-
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

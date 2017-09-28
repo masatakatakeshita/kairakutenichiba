@@ -32,7 +32,7 @@ public class AdminHistoryDTO {
 	/**
 	 * 登録日
 	 */
-	private String createdAt;
+	private String purchase_at;
 
 	/**
 	 * 小計
@@ -115,21 +115,6 @@ public class AdminHistoryDTO {
 		this.price = price;
 	}
 
-	/**
-	 * 登録日（購入日）を格納するメソッド
-	 * @return createdAt
-	 */
-	public String getCreatedAt() {
-		return createdAt;
-	}
-
-	/**
-	 * 登録日（購入日）を格納するメソッド
-	 * @param createdAt セットする createdAt
-	 */
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
-	}
 
 	/**
 	 * 個数を取得するメソッド
@@ -161,5 +146,19 @@ public class AdminHistoryDTO {
 	 */
 	public void setSubtotal(float subtotal) {
 		this.subtotal = subtotal;
+	}
+
+	/**
+	 * @return purchase_at
+	 */
+	public String getPurchase_at() {
+		return purchase_at;
+	}
+
+	/**
+	 * @param purchase_at セットする purchase_at
+	 */
+	public void setPurchase_at(String purchase_at) {
+		this.purchase_at = purchase_at;
 	}
 }

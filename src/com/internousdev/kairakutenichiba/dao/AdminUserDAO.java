@@ -34,15 +34,15 @@ public class AdminUserDAO {
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, userId);
-			System.out.println("userId");
+			System.out.println(userId);
 
 			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
+			while(rs.next()){
 
 				dto.setUserId(rs.getInt("user_id"));
 
 				dto.setFamilyName(rs.getString("family_name"));
-
+				
 				dto.setGivenName(rs.getString("given_name"));
 
 				dto.setSex(rs.getString("sex"));

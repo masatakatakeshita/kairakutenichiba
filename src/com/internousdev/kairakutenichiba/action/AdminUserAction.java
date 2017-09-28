@@ -85,8 +85,6 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	private ArrayList<MyPageDTO> itemList = new ArrayList<MyPageDTO>();
 
 	/**
-	 * 実行メソッド
-	 * 処理内容と順番
 	 * 顧客リストを表示する。
 	 */
 	public String execute() {
@@ -96,6 +94,7 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 	System.out.println(userId);
 	System.out.println(itemList.size());
 		if (itemList.size() > 0) {
+			System.out.println("a");
 			result = SUCCESS;
 		}
 		return result;
@@ -275,6 +274,15 @@ public class AdminUserAction extends ActionSupport implements SessionAware{
 		public void setRegisterDay(String registerDay) {
 			this.registerDay = registerDay;
 		}
+		
+		
+		public ArrayList<MyPageDTO> getItemList(){
+			return itemList;
+		}
+		public void setItemList(ArrayList<MyPageDTO> itemList){
+			this.itemList = itemList;
+		}
+		
 
 		@Override
 		public void setSession(Map<String, Object> arg0) {

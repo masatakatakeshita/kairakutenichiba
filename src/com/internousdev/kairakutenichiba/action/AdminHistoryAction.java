@@ -24,40 +24,33 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 
 	/**
 	 * 商品ID
-	 * 
      */
 	private int itemId;
-
 
 	/**
 	 * 商品名
      */
 	private String itemsName;
 
-
 	/**
 	 * 購入ID
      */
 	private int purchaseId;
-
 
 	/**
 	 * 単価
      */
 	private float price;
 
-
 	/**
-	 * 登録日
+	 * 購入日
      */
-	private String createdAt;
-
+	private String purchase_at;
 
 	/**
 	 * 数量
      */
 	private int quantities;
-
 
 	/**
 	 * 合計金額
@@ -68,16 +61,14 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 	 * adminhistoryList コレクションクラスのオブジェクト宣言
      * @version 1.0
      */
-
-
 	/**
-	 * 購入履歴リスト
-	 */
-     private ArrayList<AdminHistoryDTO> adminhistoryList;
-     /**
-      * セッション情報
-      */
-     private Map<String,Object> session;
+  	 * 購入履歴リスト
+  	 */
+	private ArrayList<AdminHistoryDTO> adminhistoryList = new ArrayList<AdminHistoryDTO>();
+    /**
+     * セッション情報
+     */
+    private Map<String,Object> session;
 
 
        /**
@@ -85,10 +76,7 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
         * @version 1.0
         */
 		public String execute() {
-
 			String result = ERROR;
-
-
 			AdminHistoryDAO dao = new AdminHistoryDAO();
 			adminhistoryList = dao.select(itemId);
 			if(adminhistoryList.size() > 0){
@@ -161,21 +149,6 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 		this.price = price;
 	}
 
-	/**
-	 * 登録日を格納するメソッド
-	 * @return createdAt　登録日
-	 */
-	public String getCreatedAt() {
-		return createdAt;
-	}
-
-	/**
-	 * 登録日を格納するメソッド
-	 * @param createdAt セットする createdAt
-	 */
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
-	}
 
 	/**
 	 * 数量を取得するメソッド
@@ -216,7 +189,6 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 	public ArrayList<AdminHistoryDTO> getAdminhistoryList() {
 		return adminhistoryList;
 	}
-
 	/**
 	 * 購入履歴リストを格納するメソッド
 	 * @param adminhistoryList セットする adminhistoryList
@@ -224,6 +196,7 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 	public void setAdminhistoryList(ArrayList<AdminHistoryDTO> adminhistoryList) {
 		this.adminhistoryList = adminhistoryList;
 	}
+	
 
 	/**
 	 * セッション情報を取得するメソッド
@@ -232,7 +205,6 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 	public Map<String, Object> getSession() {
 		return session;
 	}
-
 	/**
 	 * セッション情報を格納するメソッド
 	 * @param session セットする session
@@ -240,5 +212,20 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
+	/**
+	 * @return purchase_at
+	 */
+	public String getPurchase_at() {
+		return purchase_at;
+	}
+
+	/**
+	 * @param purchase_at セットする purchase_at
+	 */
+	public void setPurchase_at(String purchase_at) {
+		this.purchase_at = purchase_at;
+	}
+	
 }
 
