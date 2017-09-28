@@ -51,7 +51,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	/**
 	 * 合計金額
 	 */
-	private float amountAll;
+	private int amountAll;
 	/**
 	 * 商品名
 	 */
@@ -67,6 +67,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * 在庫を確認する。0のときは在庫がある。1以上のときは在庫が不足している。
 	 */
 	private int stockcheck;
+	
 	/**
 	 * 売上数の更新が正常に行われたかを確認する。
 	 */
@@ -74,7 +75,21 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	
 
 	/**
+	 * @author shoji hayato
+	 * @since 170922
+	 * @version 1.0
+	 * 
 	 * 決済をするための実行メソッド
+	 * 1:セッションを持っているか確認する
+	 * 2:userIdにセッションのuserIdを格納する
+	 * 3:cartListにカートの情報を格納する
+	 * 4:cartListを元に、カート内の合計金額を算出する
+	 * 5:4のついでに、在庫を確認する
+	 * 6:購入情報（大）のデータの数を調べ、購入情報（大）、購入情報（詳細）を登録する際の購入IDを決める。
+	 * 7:購入情報（大）を登録する
+	 * 8:購入情報（詳細）を登録する
+	 * 9:商品の在庫を減らし、商品の売上を増やす
+	 * 10:カートを空にする
 	 */
 	public String execute() {
 
@@ -91,7 +106,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		    ItemStocksDAO stocksdao=new ItemStocksDAO();
 		    for(int i=0;i<cartList.size();i++){
 		    	
-		        amountAll=amountAll+cartList.get(i).getSubtotal();
+		        amountAll=amountAll+cartList.get(i).getSubtotalyen();
 		    	if(cartList.get(i).getQuantities()>stocksdao.stocks(cartList.get(i).getItemId())){
 		    		stockcheck++;
 		    	}
@@ -206,7 +221,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * 合計金額を取得するメソッド
 	 * @return amountAll　合計金額
 	 */
-	public float getAmountAll() {
+	public int getAmountAll() {
 		return amountAll;
 	}
 
@@ -215,7 +230,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * 合計金額を格納するメソッド
 	 * @param amountAll セットする amountAll
 	 */
-	public void setAmountAll(float amountAll) {
+	public void setAmountAll(int amountAll) {
 		this.amountAll = amountAll;
 	}
 
