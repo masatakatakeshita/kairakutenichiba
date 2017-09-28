@@ -63,7 +63,6 @@ create table carts (
 	user_id int not null,/*ユーザーID*/
 	item_id int not null,/*商品ID*/
 	quantities int not null default 1,/*数量*/
-	total_price decimal(9,2) not null,/*価格合計*/
 	created_at datetime not null default current_timestamp,/*登録日*/
 	updated_at datetime not null default current_timestamp,/*更新日*/
 

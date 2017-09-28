@@ -52,11 +52,7 @@
 <h1><s:text name="lang.detail.price" /></h1>
 <div class="price"><h2><s:property value="price" /></h2></div>
 
-<s:form action="AddToCartAction">
-  <s:param name="itemId"><s:property value="item_id" /></s:param>
-  <s:submit value="商品をカートに追加"/>
-</s:form>
-
+<a href='<s:url action="AddToCartAction" ><s:param name="itemId" ><s:property value="item_id"/></s:param></s:url>'><s:submit value="商品をカートに追加"/></a>
 
 </div>
 

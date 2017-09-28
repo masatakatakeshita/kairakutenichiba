@@ -12,7 +12,6 @@ public class ItemStocksDAO {
 	private int stocks;
 	
 	public int stocks(int itemId){
-		setStocks(0);
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 		String sql= "select * from items where item_id=?";
@@ -21,11 +20,12 @@ public class ItemStocksDAO {
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
 			ps.setInt(1, itemId);
+	System.out.println("アイテムIDセットできてる？"+itemId);
 			ResultSet rs = ps.executeQuery();
-			setStocks(rs.getInt("stocks"));
-			
-			
-			
+			if(rs.next()){
+			stocks=rs.getInt("stocks");
+			}
+    System.out.println("こっちは？"+stocks);
 			
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -36,7 +36,7 @@ public class ItemStocksDAO {
 				e.printStackTrace();
 			}
 		}
-			
+	System.out.println("まさか"+stocks);
 		return stocks;
     }
 
