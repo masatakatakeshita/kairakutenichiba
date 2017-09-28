@@ -83,8 +83,6 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	
 
 
-
-
 	/**
 	 * DBのテーブルの値を入力値を比較。
 	 * 配送方法も選択し、合計金額を算出し表示する
@@ -93,49 +91,48 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 		String ret = ERROR;
 		paymentDAO dao = new paymentDAO();
 		paymentDTO dto = new paymentDTO();
+		
 		amountAll=0;
-
-		//dtoに格納
-		dto = dao.select(nameHolder, creditNumber, expirationMonth, expirationYear, securityCode);
-		//
-	if(session.containsKey("userId")){
-		if(nameHolder.equals(dto.getNameHolder())){
-			if(creditNumber.equals(dto.getCreditNumber())){
-				if(expirationMonth.equals(dto.getExpirationMonth())){
-					if(expirationYear.equals(dto.getExpirationYear())){
-						if(securityCode.equals(dto.getSecurityCode())){
-							payList.add(dto);
-							
-							GoCartDAO cart= new GoCartDAO();
-							cartList= cart.selectedItem(userId);
-							for (int i = 0; i < cartList.size(); i++) {
-				                amountAll = amountAll+(cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
-				            }
-							ret = SUCCESS;
-							
+		dto  = dao.select(nameHolder, creditNumber, expirationMonth, expirationYear, securityCode, creditType);
+		
+		if(session.containsKey("userId")){
+			if(nameHolder.equals(dto.getNameHolder())){
+				if(creditNumber.equals(dto.getCreditNumber())){
+					if(expirationMonth.equals(dto.getExpirationMonth())){
+						if(expirationYear.equals(dto.getExpirationYear())){
+							if(securityCode.equals(dto.getSecurityCode())){
+								payList.add(dto);
+								
+								GoCartDAO cart= new GoCartDAO();
+								cartList= cart.selectedItem(userId);
+								for (int i = 0; i < cartList.size(); i++) {
+					                amountAll = amountAll+(cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
+					            }
+								ret = SUCCESS;
+								
+							}else{
+								whaterror=1;
+							ret = "other";
+							}
 						}else{
-							whaterror=1;
+							whaterror=2;
 						ret = "other";
 						}
 					}else{
-						whaterror=2;
+						whaterror=3;
 					ret = "other";
 					}
 				}else{
-					whaterror=3;
+					whaterror=4;
 				ret = "other";
 				}
 			}else{
-				whaterror=4;
+				whaterror=5;
 			ret = "other";
 			}
-		}else{
-			whaterror=5;
-		ret = "other";
 		}
-	}
-		return ret;
-	}
+			return ret;
+		}
 
 
 	/**
@@ -152,6 +149,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setUserId(int userId){
 		this.userId=userId;
 	}
+	
 	/**
 	 * クレジットカードナンバーを取得するメソッド
 	 * @return creditnumber
@@ -166,6 +164,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setCreditNumber(String creditNumber){
 		this.creditNumber = creditNumber;
 	}
+	
 	/**
 	 * カード名義を取得するメソッド
 	 * @return nameHolder
@@ -180,6 +179,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setNameHolder(String nameHolder){
 		this.nameHolder = nameHolder;
 	}
+	
 	/**
 	 * セキュリティコードを取得するメソッド
 	 * @return securityCode
@@ -194,6 +194,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setSecurityCode(String securityCode){
 		this.securityCode = securityCode;
 	}
+	
 	/**
 	 * 期限月を取得するメソッド
 	 * @return expirationMonth
@@ -208,6 +209,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setExpirationMonth(String expirationMonth){
 		this.expirationMonth = expirationMonth;
 	}
+	
 	/**
 	 * 期限年を取得するメソッド 
 	 * @return exipirationYear
@@ -229,7 +231,6 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 		this.session = session;
 
 	}
-
 	public Map<String, Object> getsession(){
 		return session;
 	}
@@ -248,6 +249,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setCreditType(String creditType) {
 		this.creditType = creditType;
 	}
+	
 	/**
 	 * 配送方法を取得するメソッド
 	 * @return deliverySelect
@@ -262,6 +264,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setDeliverySelect(String deliverySelect) {
 		this.deliverySelect = deliverySelect;
 	}
+	
 	/**
 	 * 配送日を取得するメソッド
 	 * @return deliveryMonth
@@ -276,6 +279,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setDeliveryMonth(String deliveryMonth) {
 		this.deliveryMonth = deliveryMonth;
 	}
+	
 	/**
 	 * 配送時間を取得するメソッド
 	 * @return　deliverytime
@@ -290,6 +294,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setDeliveryTime(String deliveryTime) {
 		this.deliveryTime = deliveryTime;
 	}
+	
 	/**
 	 * 商品リストを取得するメソッド
 	 * @return cartList
@@ -304,6 +309,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setCartList(ArrayList<CartDTO> cartList){
 		this.cartList=cartList;
 	}
+	
 	/**
 	 * 金額リストを取得するメソッド
 	 * @return
@@ -318,6 +324,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	public void setPayList(ArrayList<paymentDTO> payList) {
 		this.payList = payList;
 	}
+	
 	/**
 	 * エラーかどうか取得するメソッド
 	 * @return whaterror
@@ -341,7 +348,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 		return amountAll;
 	}
 	/**
-	 * 金額合計をカクノウスルメソッド
+	 * 金額合計を格納するメソッド
 	 * @param amountAll
 	 */
 	public void setAmountAll(float amountAll) {

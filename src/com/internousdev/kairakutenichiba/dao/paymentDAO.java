@@ -25,13 +25,14 @@ public class paymentDAO{
 	 * @param securityCode　セキュリティコード
 	 * @return 
 	 */
-	public paymentDTO select(String nameHolder, String creditNumber, String expirationMonth, String expirationYear, String securityCode){
-		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "creditcard_manager", "root","mysql");
-		Connection con = db.getConnection();
+	//creditcardTypeを
+	public paymentDTO select(String nameHolder, String creditNumber, String expirationMonth, String expirationYear, String securityCode, String creditType){
 		paymentDTO dto = new paymentDTO();
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", creditType, "root","mysql");
+		Connection con = db.getConnection();
 
-		String sql = "select * from creditcard where name_e=? and credit_number=? and expiration_month=? and expiration_year = ? and security_code = ?";
-
+		String sql = "select * from credit_card where name_e=? and credit_number=? and expiration_month=? and expiration_year = ? and security_code = ?";
+		
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, nameHolder); 
@@ -42,12 +43,12 @@ public class paymentDAO{
 
 			ResultSet rs = ps.executeQuery(); 
 			if(rs.next()){
+
 				dto.setNameHolder(rs.getString("name_e"));	
 				dto.setCreditNumber(rs.getString("credit_number"));
-				dto.setExpirationMonth(rs.getString("expirationMonth"));
-				dto.setExpirationYear(rs.getString("expirationYear"));
-				dto.setSecurityCode(rs.getString("secuirtycode"));
-				dto.setCreditId(rs.getInt("credit_id"));
+				dto.setExpirationMonth(rs.getString("expiration_month"));
+				dto.setExpirationYear(rs.getString("expiration_year"));
+				dto.setSecurityCode(rs.getString("security_code"));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -57,9 +58,7 @@ public class paymentDAO{
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
-			return dto;
-
+		return dto;
+		
 	}
-
-
 }

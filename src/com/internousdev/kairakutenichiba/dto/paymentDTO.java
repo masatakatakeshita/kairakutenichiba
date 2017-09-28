@@ -29,11 +29,11 @@ public class paymentDTO {
 	/**
 	 * 期限月
 	 */
-	private String expirationMonth; //Stringじゃないとだめ？
+	private String expirationMonth; 
 	/**
 	 * 期限年
 	 */
-	private String expirationYear; //Stringじゃないとだめ？
+	private String expirationYear;
 	/**
 	 * 配送方法
 	 */
@@ -51,6 +51,7 @@ public class paymentDTO {
 	 */
 	private int creditId;
 
+	
 
 	private Map<String, Object> session; //ここいるの？何に使ってんの？
 
