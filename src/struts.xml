@@ -17,6 +17,7 @@
 		com.internousdev.kairakutenichiba.property.history
 		com.internousdev.kairakutenichiba.property.index
 		com.internousdev.kairakutenichiba.property.login
+		com.internousdev.kairakutenichiba.property.logout
 		com.internousdev.kairakutenichiba.property.mypage
 		com.internousdev.kairakutenichiba.property.payment
 		com.internousdev.kairakutenichiba.property.cartempty
@@ -30,6 +31,7 @@
 		com.internousdev.kairakutenichiba.property.adminhistory
 		com.internousdev.kairakutenichiba.property.adminitem
 		com.internousdev.kairakutenichiba.property.admintop
+		com.internousdev.kairakutenichiba.property.adminheader
 		com.internousdev.kairakutenichiba.property.error
 		" />
 

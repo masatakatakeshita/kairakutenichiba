@@ -26,11 +26,12 @@
 
 		<a href="index.jsp"><img class="logo" src="img/logo.jpg"></a>
 		<a href="admintop.jsp" class="header_btn"><s:text name="lang.adminheader.btn"/></a>
-		<a href="admincustomer.jsp" class="header_btn"><s:text name="lang.adminheader.btn"/></a>
-		<a href="adminhistory.jsp" class="header_btn"<s:text name="lang.adminheader.userbtn"/>></a>
+		<a href="admincustomer.jsp" class="header_btn"><s:text name="lang.adminheader.userbtn"/></a>
+		<a href="adminhistory.jsp" class="header_btn"><s:text name="lang.adminheader.historybtn"/></a>
 		<a href="adminitem.jsp" class="header_btn"><s:text name="lang.adminheader.Itembtn"/></a>
 		<a href="adminhelp.jsp" class="header_btn"><s:text name="lang.adminheader.customerbtn"/></a>
 		<a href="logout.jsp" class="header_btn"><s:text name="lang.header.logoutbtn"/></a>
+
 
 	</header>
 
