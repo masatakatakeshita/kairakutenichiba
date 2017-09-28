@@ -48,10 +48,10 @@
 									name="lang.cart.subtotal" /></th>
 							<th class="text-center" style="width: 20%;"></th>
 						</tr>
-					
+
 
 					<!-- ここからイテレート -->
-					
+
 						<s:iterator value="cartList">
 							<tr>
 								<td style="width: 20%;"><s:property value="itemName" /></td>
@@ -61,7 +61,7 @@
 									  <s:form action="CartUpdateAction" >
 										<s:select
 											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}"
-											name="quantities" 
+											name="quantities"
 											value="quantities"
 						                  />
 						                  <s:hidden name="itemId" value="%{itemId}" />
@@ -78,8 +78,8 @@
 						</s:iterator>
 					</table>
 					<!-- ここまでイテレート -->
-					
-					
+
+
 		<table class="type02">
 			<tr>
 				<th style="width: 80%;" align="right" colspan="3"><strong><s:text name="lang.cart.total" /></strong></th>
