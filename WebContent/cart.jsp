@@ -38,34 +38,39 @@
 
 					<table class="type01">
 						<tr>
-							<th class="text-center" style="width: 25%;"><s:text
+							<th class="text-center" style="width: 20%;"><s:text
 									name="lang.cart.item_name" /></th>
-							<th class="text-center" style="width: 25%;"><s:text
+							<th class="text-center" style="width: 20%;"><s:text
 									name="lang.cart.price" /></th>
-							<th class="text-center" style="width: 25%;"><s:text
+							<th class="text-center" style="width: 20%;"><s:text
 									name="lang.cart.count" /></th>
-							<th class="text-center" style="width: 25%;"><s:text
+							<th class="text-center" style="width: 20%;"><s:text
 									name="lang.cart.subtotal" /></th>
+							<th class="text-center" style="width: 20%;"></th>
 						</tr>
-					</table>
+					
 
 					<!-- ここからイテレート -->
-					<table class="type01">
+					
 						<s:iterator value="cartList">
 							<tr>
-								<td style="width: 25%;"><s:property value="item_name" /></td>
-								<td style="width: 25%;">
-									<div class="col-xs-5"></div> <s:form action="CartUpdateAction">
+								<td style="width: 20%;"><s:property value="itemName" /></td>
+								<td style="width: 20%;"><s:property value="priceyen" />円</td>
+								<td style="width: 20%;">
+								<s:property value="itemId" />
+									<div class="col-xs-5"></div>
+									  <s:form action="CartUpdateAction">
 										<s:select
-											list="{\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\"}"
-											name="quantities" Value="%{quantities}"
-											onChange="this.form.submit()" />
-									</s:form>
+											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}"
+											name="quantities" 
+											value="quantities"
+						                  />
+						                  <s:param name="itemId" ><s:property value="itemId" /></s:param>
+						                 <s:submit value="更新" />
+						                  </s:form>
 								</td>
-								<td style="width: 25%;"><fmt:formatNumber
-										value="${unit_price}" pattern="###,###,###" />
-									</td>
-								<td style="width: 25%;"><s:form action="CartDeleteAction">
+								<td style="width: 20%;"><s:property value="subtotalyen" />円</td>
+								<td style="width: 20%;"><s:form action="CartItemDeleteAction">
 										<button type="submit" class="btn btn-danger">
 											<s:text name="lang.cart.delete" />
 										</button>
@@ -74,6 +79,8 @@
 						</s:iterator>
 					</table>
 					<!-- ここまでイテレート -->
+					
+					
 		<table class="type02">
 			<tr>
 				<th align="right" colspan="3"><strong><s:text name="lang.cart.total" /></strong></th>

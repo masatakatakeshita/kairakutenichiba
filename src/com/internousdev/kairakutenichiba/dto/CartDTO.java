@@ -32,6 +32,9 @@ public class CartDTO {
      * 単価
      */
     private float price;
+    
+    private int priceyen;
+    
 
     /**
      * 数量
@@ -47,6 +50,8 @@ public class CartDTO {
      * 価格合計
      */
     private float subtotal;
+    
+    private int subtotalyen;
 
     private int stocks;
     /**
@@ -191,6 +196,24 @@ public class CartDTO {
     public void setStocks(int stocks) {
         this.stocks = stocks;
     }
+
+	public int getSubtotalyen() {
+		return subtotalyen;
+	}
+
+	public void setSubtotalyen(int subtotalyen) {
+		this.subtotalyen = subtotalyen;
+	}
+
+	public int getPriceyen() {
+		return priceyen;
+	}
+
+	public void setPriceyen(int priceyen) {
+		this.priceyen = priceyen;
+	}
+    
+    
 
 
 }

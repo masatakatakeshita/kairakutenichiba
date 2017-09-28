@@ -92,6 +92,9 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
         String result = ERROR;
             if (session.containsKey("userId")) {
             userId = (int) session.get("userId");
+        System.out.println("ユーザーIDは？"+userId);
+        System.out.println("アイテムIDは？"+itemId);
+        System.out.println("数量は？"+quantities);
             ItemStocksDAO stocksdao=new ItemStocksDAO();
             if(quantities>stocksdao.stocks(itemId)){
             	result="other";

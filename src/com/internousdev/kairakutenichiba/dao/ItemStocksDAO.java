@@ -20,12 +20,10 @@ public class ItemStocksDAO {
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
 			ps.setInt(1, itemId);
-	System.out.println("アイテムIDセットできてる？"+itemId);
 			ResultSet rs = ps.executeQuery();
 			if(rs.next()){
 			stocks=rs.getInt("stocks");
 			}
-    System.out.println("こっちは？"+stocks);
 			
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -36,7 +34,6 @@ public class ItemStocksDAO {
 				e.printStackTrace();
 			}
 		}
-	System.out.println("まさか"+stocks);
 		return stocks;
     }
 
