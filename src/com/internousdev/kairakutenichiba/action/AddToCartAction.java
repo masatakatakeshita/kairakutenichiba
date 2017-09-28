@@ -103,7 +103,6 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
             if(quantities>stocksdao.stocks(itemId)){
             	result="other";
             }else{
-            	
             	if(quantities==1){
             		AddToCartDAO adddao=new AddToCartDAO();
             		if(adddao.insert(userId,itemId)>0){
@@ -113,10 +112,11 @@ public class AddToCartAction extends ActionSupport implements SessionAware {
             		CartUpdateDAO updatedao=new CartUpdateDAO();
             		if(updatedao.update(userId,itemId,quantities)>0){
             			result=SUCCESS;
-            		}else if(quantities >5){
+            		}
+            	}else if(quantities >5){
             			result=SUCCESS;
             		}
-            	}
+            	
             }
             GoCartDAO cartdao= new GoCartDAO();
             cartList=cartdao.selectedItem(userId);
