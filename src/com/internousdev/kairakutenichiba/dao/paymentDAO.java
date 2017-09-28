@@ -28,7 +28,9 @@ public class paymentDAO{
 	//creditcardTypeを
 	public paymentDTO select(String nameHolder, String creditNumber, String expirationMonth, String expirationYear, String securityCode, String creditType){
 		paymentDTO dto = new paymentDTO();
-		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", creditType, "root","mysql");
+		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "visa", "root","mysql");
+	System.out.println("DBの指定を引数でできているか"+creditType); //ここには来てる
+	//creditType
 		Connection con = db.getConnection();
 
 		String sql = "select * from credit_card where name_e=? and credit_number=? and expiration_month=? and expiration_year = ? and security_code = ?";
@@ -43,9 +45,11 @@ public class paymentDAO{
 
 			ResultSet rs = ps.executeQuery(); 
 			if(rs.next()){
-
+			System.out.println("つなっがてくれー");  //ここがだめ
 				dto.setNameHolder(rs.getString("name_e"));	
+			System.out.println(dto.getNameHolder());
 				dto.setCreditNumber(rs.getString("credit_number"));
+			System.out.println(dto.getCreditNumber());
 				dto.setExpirationMonth(rs.getString("expiration_month"));
 				dto.setExpirationYear(rs.getString("expiration_year"));
 				dto.setSecurityCode(rs.getString("security_code"));

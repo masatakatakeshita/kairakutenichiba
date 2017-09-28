@@ -13,7 +13,6 @@ import com.opensymphony.xwork2.ActionSupport;
 /**
  * @author koizumi junpei
  * 2017/09/13
- *
  */
 
 public class PaymentAction extends ActionSupport implements SessionAware{
@@ -33,9 +32,26 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 */
 	private String creditType;	//visa ,master, Americanの場合分け
 	/**
-	 * クレジットカードナンバー
+	 * クレジットカードナンバー1
 	 */
 	private String creditNumber;
+
+	private String card_no2;
+
+	private String card_no3;
+
+	private String card_no4;
+	
+	private String str;
+//	StringBuilder buf = new StringBuilder();
+//	buf.append(creditNumber);
+//	buf.append(card_no2);
+//	buf.append(card_no3);
+//	buf.append(card_no4);
+//	String str = buf.toString();
+
+
+	
 	/**
 	 * クレジットカード名義
 	 */
@@ -47,12 +63,12 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	/**
 	 * 期限月
 	 */
-	private String expirationMonth; //Stringじゃないとだめ？
+	private String expirationMonth; 
 	/**
 	 * 年
 	 */
-	private String expirationYear; //Stringじゃないとだめ？
-
+	private String expirationYear; 
+	
 	/**
 	 * 配送方法
 	 */
@@ -88,21 +104,34 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 * 配送方法も選択し、合計金額を算出し表示する
 	 */
 	public String execute(){
+	str = creditNumber + card_no2 + card_no3 + card_no4;
+	System.out.println(card_no4);	
+	System.out.println(card_no3);	
+	System.out.println(str);
 		String ret = ERROR;
 		paymentDAO dao = new paymentDAO();
 		paymentDTO dto = new paymentDTO();
 		
 		amountAll=0;
-		dto  = dao.select(nameHolder, creditNumber, expirationMonth, expirationYear, securityCode, creditType);
-		
+		dto  = dao.select(nameHolder, str, expirationMonth, expirationYear, securityCode, creditType);
+		System.out.println(nameHolder);	//受け取れてる
+		System.out.println(str);  //☓
+		System.out.println(creditType); 	//受け取れてる
+		System.out.println((int) session.get("userId")); 	//受け取れてる
+// setUserId ( (int) session.get("userId"));  
 		if(session.containsKey("userId")){
-			if(nameHolder.equals(dto.getNameHolder())){
-				if(creditNumber.equals(dto.getCreditNumber())){
+			System.out.println("aaaa");
+			if(nameHolder.equals(dto.getNameHolder())){	 //ここtrue
+				System.out.println("bbbb");
+				if(str.equals(dto.getCreditNumber())){  //false
+					System.out.println("cccc");
 					if(expirationMonth.equals(dto.getExpirationMonth())){
+						System.out.println("dddd");
 						if(expirationYear.equals(dto.getExpirationYear())){
+							System.out.println("eeee");
 							if(securityCode.equals(dto.getSecurityCode())){
 								payList.add(dto);
-								
+							System.out.println("fffff");
 								GoCartDAO cart= new GoCartDAO();
 								cartList= cart.selectedItem(userId);
 								for (int i = 0; i < cartList.size(); i++) {
@@ -353,6 +382,62 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 */
 	public void setAmountAll(float amountAll) {
 		this.amountAll = amountAll;
+	}
+
+
+	/**
+	 * @return card_no4
+	 */
+	public String getCard_no4() {
+		return card_no4;
+	}
+	/**
+	 * @param card_no4 セットする card_no4
+	 */
+	public void setCard_no4(String card_no4) {
+		this.card_no4 = card_no4;
+	}
+
+
+	/**
+	 * @return card_no3
+	 */
+	public String getCard_no3() {
+		return card_no3;
+	}
+	/**
+	 * @param card_no3 セットする card_no3
+	 */
+	public void setCard_no3(String card_no3) {
+		this.card_no3 = card_no3;
+	}
+
+
+	/**
+	 * @return card_no2
+	 */
+	public String getCard_no2() {
+		return card_no2;
+	}
+	/**
+	 * @param card_no2 セットする card_no2
+	 */
+	public void setCard_no2(String card_no2) {
+		this.card_no2 = card_no2;
+	}
+	
+	
+	/**
+	 * @return str
+	 */
+	public String getStr() {
+		return str;
+	}
+	/**
+	 * @param str
+	 */
+	public void setStr(String str) {
+		this.str = str;
 	}
 
 

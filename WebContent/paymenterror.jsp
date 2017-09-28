@@ -46,6 +46,6 @@
 
 </h1>
 
-<h4><a href="index.jsp"><s:text name="lang.paymenterror.payment" /></a></h4>
+<h4><a href="payment.jsp"><s:text name="lang.paymenterror.payment" /></a></h4>
 </body>
 </html>

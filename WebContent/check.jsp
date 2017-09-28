@@ -79,20 +79,22 @@
 
 <!-- 注文を確定する -->
 <s:form action="PurchaseCompleteAction">
-<h4><s:submit value= <s:text name="lang.check.decision" /> ></s:submit></h4>
+<h4><s:submit value= "注文完了" ></s:submit></h4>
 </s:form>
 
 <!-- *購入手続きされません -->
 <div class="a"><s:text name="lang.check.notfinish" /></div> <!-- floatの処理のために順番が前後している。 -->
 <!-- カートへ戻る -->
 <s:form action="GoCartAction">
-<div class="b"><s:submit value=<s:text name="lang.check.backtocart" /> /> </div> <br>
+<div class="b"><s:submit value="カートへ戻る" /> </div> <br>
+	<!-- <s:text name="lang.check.backtocart" /> -->
 </s:form>
 <!-- *購入手続きされません -->
 <div class="a"><s:text name="lang.check.notfinish" /></div>
 <!-- 支払い方法の選択へ戻る -->
-<s:form action=GoSettlementAction>
-<div class="b"><s:submit value=<s:text name="backtoselect" /> /></div>
+<s:form action="GoSettlementAction">
+<div class="b"><s:submit value="商品選択に戻る" /></div>
+		<!--<s:text name="backtoselect" /> -->
 </s:form>
 </div>
 </body>
