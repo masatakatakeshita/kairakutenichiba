@@ -19,7 +19,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
 	 * 商品名
 	 */
-	private String item_name="";
+	private String item_name;
 
 
 	/**
@@ -35,7 +35,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
      * 発売日
      */
-    private int release_day;
+    private String release_day;
 
     /**
      * 著者
@@ -60,7 +60,7 @@ public class AdminItemUpdateAction extends ActionSupport{
     /**
      * ISBNコード
      */
-    private int isbn;
+    private long isbn;
 
 	/**
 	 * 単価
@@ -75,7 +75,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
 	 * イメージファイルパス
 	 */
-	private String imgPath="";
+	private String imgPath;
 
 	/**
 	 * 商品詳細
@@ -117,10 +117,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 */
 	private String doubling;
 
-	/**
-	 * 商品画像削除フラグ
-	 */
-	public int imgDel=1;
+	
 
 
 	/**
@@ -128,23 +125,22 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 *商品名を確認しDBで重複していなければ商品情報を更新する
 	 */
 	public String execute() {
+		
 		String result =ERROR;
 		int updated=0;
 
 		AdminItemUpdateDAO dao= new AdminItemUpdateDAO();
 
-		if(dao.doubling(item_name, item_id)){setDoubling("※同名の商品が既に存在します。");}
-		else{
-			updated=dao.update(item_id,item_name,category, release_day, author,  publisher,  publish_type,  pages, isbn, is_deleted, created_at, item_detail, updated_at,  price, stocks, sales, imgDel,imgPath);
+		
+			updated=dao.update(item_id,item_name,category, release_day, author,  publisher,  publish_type,  pages, isbn, is_deleted, created_at, item_detail, updated_at,  price, stocks, sales,imgPath);
 
 			if(updated>0){
 				result = SUCCESS;
 			}
-		}
+		
 
 		return result;
 	}
-
 
 
 
@@ -251,22 +247,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	}
 
 
-	/**
-	 *商品画像削除フラグを取得するメソッド
-	 * @return imgDel　商品画像削除フラグ
-	 */
-	public int getImgDel() {
-		return imgDel;
-	}
-
-
-	/**
-	 * 商品画像削除フラグを格納するメソッド
-	 * @param imgDel セットする imgDel
-	 */
-	public void setImgDel(int imgDel) {
-		this.imgDel = imgDel;
-	}
+	
 
 	/**
 	 * 商品名を取得するメソッド
@@ -320,7 +301,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 販売日を取得する
 	 * @return release_day
 	 */
-	public int getRelease_day() {
+	public String getRelease_day() {
 		return release_day;
 	}
 
@@ -328,7 +309,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 販売日を格納する
 	 * @param release_day セットする release_day
 	 */
-	public void setRelease_day(int release_day) {
+	public void setRelease_day(String release_day) {
 		this.release_day = release_day;
 	}
 
@@ -401,7 +382,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * IDBNコードを取得する
 	 * @return isbn
 	 */
-	public int getIsbn() {
+	public long getIsbn() {
 		return isbn;
 	}
 
@@ -409,7 +390,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * IDBNを格納する
 	 * @param isbn セットする isbn
 	 */
-	public void setIsbn(int isbn) {
+	public void setIsbn(long isbn) {
 		this.isbn = isbn;
 	}
 
