@@ -10,12 +10,6 @@ package com.internousdev.kairakutenichiba.dto;
 public class HelpDTO {
 
 
-	  	/**
-	    * ユーザーID
-	    */
-	    private int userId;
-
-
 	  	 /**
 	     * 氏名
 	     */
@@ -49,17 +43,6 @@ public class HelpDTO {
 	     */
 	    private String inquiried_at;
 
-	    /**
-	     * ログインフラグ
-	     */
-	    private boolean loginFlg;
-
-	    /**
-	     * ユーザーフラグ
-	     */
-	    private int userFlg;
-
-
 
 	    /**
 	     * 登録日
@@ -74,22 +57,6 @@ public class HelpDTO {
 
 
 
-		 /**
-	     * ユーザーIDを取得
-	     * @return ユーザーID
-	     */
-	    public int getUserId() {
-	        return userId;
-	    }
-
-	    /**
-	     * ユーザーIDを格納
-	     * @param userId ユーザーID
-	     */
-	    public void setUserId(int userId) {
-	        this.userId = userId;
-	    }
-
 
 
 
@@ -98,7 +65,7 @@ public class HelpDTO {
 	     * 氏名を取得
 	     * @return 氏名
 	     */
-	    public String getuserName() {
+	    public String getUserName() {
 	        return userName;
 	    }
 
@@ -115,7 +82,7 @@ public class HelpDTO {
 	     * 住所を取得
 	     * @return userAddress住所
 	     */
-	    public String getuserAddress() {
+	    public String getUserAddress() {
 	        return userAddress;
 	    }
 
@@ -132,7 +99,7 @@ public class HelpDTO {
 	     * メールアドレスを取得
 	     * @return userMail メールアドレス
 	     */
-	    public String getuserMail() {
+	    public String getUserMail() {
 	        return userMail;
 	    }
 
@@ -140,91 +107,59 @@ public class HelpDTO {
 	     * メールアドレスを格納
 	     * @param userMail メールアドレス
 	     */
-	    public void setuserMail(String userMail) {
+	    public void setUserMail(String userMail) {
 	        this.userMail = userMail;
 	    }
 
 	    /**
 	     * 問い合わせ種類を取得
 	     */
-	    public String getcategory() {
+	    public String getCategory() {
 	    	return category;
 	    }
 
 	    /**
 	     * 問い合わせ種類を格納
 	     */
-        public void setcategory(String category) {
+        public void setCategory(String category) {
         	this.category = category;
         }
 
         /**
          * 問い合わせ内容を取得
          */
-        public String getcomment() {
+        public String getComment() {
         	return comment;
         }
 
         /**
          * 問い合わせ内容を格納
          */
-        public void setcomment(String comment) {
+        public void setComment(String comment) {
         	this.comment = comment;
         }
 
         /**
          * 問い合わせ日時を取得
          */
-        public String getinquiried_at() {
+        public String getInquiried_at() {
         	return inquiried_at;
         }
 
         /**
          * 問い合わせ日時を格納
          */
-        public void setinquiried_at(String inquiried_at) {
+        public void setInquiried_at(String inquiried_at) {
         	this.inquiried_at = inquiried_at;
         }
 
-
-	    /**
-	     * ログインフラグを取得
-	     * @return ログインフラグ
-	     */
-	    public boolean isLoginFlg() {
-	        return loginFlg;
-	    }
-
-	    /**
-	     * ログインフラグを格納
-	     * @param loginFlg ログインフラグ
-	     */
-	    public void setLoginFlg(boolean loginFlg) {
-	        this.loginFlg = loginFlg;
-	    }
-
-	    /**
-	     * ユーザーフラグを取得
-	     * @return ユーザーフラグ
-	     */
-	    public int getUserFlg() {
-	        return userFlg;
-	    }
-
-	    /**
-	     * ユーザーフラグを格納
-	     * @param userFlg ユーザーフラグ
-	     */
-	    public void setUserFlg(int userFlg) {
-	        this.userFlg = userFlg;
-	    }
 
 
 	    /**
 	     * 登録日を取得
 	     * @return createdDay登録日
 	     */
-	    public String getcreatedDay() {
+	    public String getCreatedDay() {
 	        return createdDay;
 	    }
 
@@ -232,7 +167,7 @@ public class HelpDTO {
 	     * 登録日を格納
 	     * @param createdDay 登録日
 	     */
-	    public void setcreatedDay(String createdDay) {
+	    public void setCreatedDay(String createdDay) {
 	        this.createdDay = createdDay;
 	    }
 
@@ -240,7 +175,7 @@ public class HelpDTO {
 	     * 更新日を取得
 	     * @return updateDay更新日
 	     */
-	    public String getupdateDay() {
+	    public String getUpdateDay() {
 	        return updateDay;
 	    }
 
@@ -248,7 +183,7 @@ public class HelpDTO {
 	     * 更新日を格納
 	     * @param updateDay 更新日
 	     */
-	    public void setupdateDay(String updateDay) {
+	    public void setUpdateDay(String updateDay) {
 	        this.updateDay = updateDay;
 	    }
 

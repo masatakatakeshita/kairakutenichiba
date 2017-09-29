@@ -928,7 +928,7 @@ public class CartDTOTest {
 	public void testSetPriceyen4() {
 		CartDTO test = new CartDTO();
 		try {
-			float priceyenMin = Integer.parseInt("4.4028235E38f");
+			int priceyenMin = Integer.parseInt("4.4028235E38f");
 			test.setPriceyen(priceyenMin);
 
 		} catch (RuntimeException e) {
@@ -943,7 +943,7 @@ public class CartDTOTest {
 	public void testSetPriceyen5() {
 		CartDTO test = new CartDTO();
 		try {
-			float priceyenMin = Integer.parseInt("-4.4028235E38f");
+			int priceyenMin = Integer.parseInt("-4.4028235E38f");
 			test.setPriceyen(priceyenMin);
 
 		} catch (RuntimeException e) {
@@ -1327,6 +1327,146 @@ public class CartDTOTest {
 		assertEquals(expected, actual);
 
 	}
+//Subtotalyen-------------------------------------
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#getSubtotalyen()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetSubtotalyen1() {
+		CartDTO test = new CartDTO();
+		int expected = 0;
+
+		test.setSubtotalyen(expected);
+
+		assertEquals(expected, test.getSubtotalyen(),0);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#getSubtotalyen()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetSubtotalyen2() {
+		CartDTO test = new CartDTO();
+		int expected =  3;
+
+		test.setSubtotalyen(expected);
+
+		assertEquals(expected, test.getSubtotalyen(),1);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#getSubtotalyen()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetSubtotalyen3() {
+		CartDTO test = new CartDTO();
+	    int expected = 1-45;
+
+		test.setSubtotalyen(expected);
+
+		assertEquals(expected, test.getSubtotal(),1);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#getSubtotalyen()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetSubtotalyen4() {
+		CartDTO test = new CartDTO();
+		try {
+			int subtotalyenMax = Integer.parseInt("4.4028235E38f");
+			test.setSubtotalyen(subtotalyenMax);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"4.4028235E38f\"");
+		}
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#getSubtotalyen()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetSubtotalyen5() {
+		CartDTO test = new CartDTO();
+		try {
+			int subtotalyenMin = Integer.parseInt("-4.4028235E38f");
+			test.setSubtotalyen(subtotalyenMin);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"-4.4028235E38f\"");
+		}
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#setSubtotalyen(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetSubtotalyen1() {
+		CartDTO test = new CartDTO();
+		int expected = 0;
+
+		test.setSubtotalyen(expected);
+
+		assertEquals(expected, test.getSubtotalyen(),1);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#setSubtotalyen(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetSubtotaltyen2() {
+		CartDTO test = new CartDTO();
+		int expected =  3;
+
+		test.setSubtotalyen(expected);
+
+		assertEquals(expected, test.getSubtotalyen(),1);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#setSubtotalyen(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetSubtotalyen3() {
+		CartDTO test = new CartDTO();
+		int expected = 1-45;
+
+		test.setSubtotalyen(expected);
+
+		assertEquals(expected, test.getSubtotalyen(),1);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#setSubtotalyen(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetSubtotalyen4() {
+		CartDTO test = new CartDTO();
+		try {
+			int subtotalyenMin = Integer.parseInt("4.4028235E38f");
+			test.setSubtotalyen(subtotalyenMin);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"4.4028235E38f\"");
+		}
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#setSubtotalyen(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetSubtotalyen5() {
+		CartDTO test = new CartDTO();
+		try {
+			int subtotalyenMin = Integer.parseInt("-4.4028235E38f");
+			test.setSubtotalyen(subtotalyenMin);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"-4.4028235E38f\"");
+		}
+	}
+
+
 //Subtotal-------------------------------------
 	/**
 	 * {@link com.internousdev.kairakutenichiba.dto.CartDTO#getSubtotal()} のためのテスト・メソッド。
@@ -1465,5 +1605,11 @@ public class CartDTOTest {
 			assertEquals(e.getMessage(), "For input string: \"-4.4028235E38f\"");
 		}
 	}
+	}
 
-}
+
+
+//Stocks--------------------------------------------
+
+
+

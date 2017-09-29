@@ -4,18 +4,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.internousdev.kairakutenichiba.dto.AdminHelpDTO;
+import com.internousdev.kairakutenichiba.dto.HelpDTO;
 
 
-public class AdminHelpDTOTest {
+public class HelpDTOTest {
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName1() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = null;
 
 		test.setUserName(expected);
@@ -25,12 +25,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName2() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "";
 
 		test.setUserName(expected);
@@ -40,12 +40,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName3() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = " ";
 
 		test.setUserName(expected);
@@ -55,12 +55,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName4() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "　";
 
 		test.setUserName(expected);
@@ -70,12 +70,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName5() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "abc123";
 
 		test.setUserName(expected);
@@ -85,12 +85,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName6() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "あいう１２３";
 
 		test.setUserName(expected);
@@ -100,12 +100,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName7() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "abc123あいう１２３";
 
 		test.setUserName(expected);
@@ -115,12 +115,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#getUserName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#getUserName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserName8() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "ａｂｃ１２３あいう漢字";
 
 		test.setUserName(expected);
@@ -130,12 +130,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName1() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = null;
 
 		test.setUserName(expected);
@@ -146,12 +146,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName2() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "";
 
 		test.setUserName(expected);
@@ -162,12 +162,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName3() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = " ";
 
 		test.setUserName(expected);
@@ -178,12 +178,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName4() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "　";
 
 		test.setUserName(expected);
@@ -194,12 +194,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName5() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "abc123";
 
 		test.setUserName(expected);
@@ -210,12 +210,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName6() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "あいう１２３";
 
 		test.setUserName(expected);
@@ -226,12 +226,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName7() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "abc123あいう１２３";
 
 		test.setUserName(expected);
@@ -242,12 +242,12 @@ public class AdminHelpDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.AdminHelpDTO#setUserName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.HelpDTO#setUserName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
 	public void testSetUserName8() {
-		AdminHelpDTO test = new AdminHelpDTO();
+		HelpDTO test = new HelpDTO();
 		String expected = "ａｂｃ１２３あいう漢字";
 
 		test.setUserName(expected);
@@ -262,7 +262,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail1() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = null;
 
         test.setUserMail(expected);
@@ -273,7 +273,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail2() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "";
 
         test.setUserMail(expected);
@@ -284,7 +284,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail3() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = " ";
 
         test.setUserMail(expected);
@@ -295,7 +295,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail4() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "　";
 
         test.setUserMail(expected);
@@ -306,7 +306,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail5() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123";
 
         test.setUserMail(expected);
@@ -318,7 +318,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail6() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "あいう１２３";
 
         test.setUserMail(expected);
@@ -329,7 +329,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail7() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123あいう１２３";
 
         test.setUserMail(expected);
@@ -340,7 +340,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetUserMail8() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "ａｂｃ１２３あいう漢字";
 
         test.setUserMail(expected);
@@ -352,7 +352,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetUserMail1() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = null;
 
         test.setUserMail(expected);
@@ -365,7 +365,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetUserMail2() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "";
 
         test.setUserMail(expected);
@@ -377,7 +377,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetUserMail3() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = " ";
 
         test.setUserMail(expected);
@@ -389,7 +389,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testSetUserMail4() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "　";
 
         test.setUserMail(expected);
@@ -400,7 +400,7 @@ public class AdminHelpDTOTest {
     }
 
     public void testSetUserMail5() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123";
 
         test.setUserMail(expected);
@@ -413,7 +413,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetUserMail6() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "あいう１２３";
 
         test.setUserMail(expected);
@@ -425,7 +425,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetUserMail7() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123あいう１２３";
 
         test.setUserMail(expected);
@@ -437,7 +437,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetUserMail8() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "ａｂｃ１２３あいう漢字";
 
         test.setUserMail(expected);
@@ -451,9 +451,139 @@ public class AdminHelpDTOTest {
 
 /*****************************************UserMailここまで**************************/
 
+    public void testGetUserAddress() {
+        HelpDTO dto = new HelpDTO();
+        String expected = null;
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testGetUserAddress2() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "";
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testGetUserAddress3() {
+        HelpDTO dto = new HelpDTO();
+        String expected = " ";
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testGetUserAddress4() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "　";
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testGetUserAddress5() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "abc123";
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testGetUserAddress6() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "あいう１２３";
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testGetUserAddress7() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "abc123あいう１２３";
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testGetUserAddress8() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "abc123あいう１２３漢字";
+        dto.setUserAddress(expected);
+        assertEquals(expected, dto.getUserAddress());
+    }
+
+    public void testSetUserAddress() {
+        HelpDTO dto = new HelpDTO();
+        String expected = null;
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+    public void testSetUserAddress2() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "";
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+    public void testSetUserAddress3() {
+        HelpDTO dto = new HelpDTO();
+        String expected = " ";
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+    public void testSetUserAddress4() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "　";
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+    public void testSetUserAddress5() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "abc123";
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+    public void testSetUserAddress6() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "あいう１２３";
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+    public void testSetUserAddress7() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "abc123あいう１２３";
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+    public void testSetUserAddress8() {
+        HelpDTO dto = new HelpDTO();
+        String expected = "abc123あいう１２３漢字";
+        dto.setUserAddress(expected);
+        String actual=dto.getUserAddress();
+        assertEquals(expected, actual);
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     public void testGetCategory1() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = null;
 
         test.setCategory(expected);
@@ -464,7 +594,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetCategory2() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "";
 
         test.setCategory(expected);
@@ -475,7 +605,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetCategory3() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = " ";
 
         test.setCategory(expected);
@@ -486,7 +616,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testGetCategory4() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "　";
 
         test.setCategory(expected);
@@ -497,7 +627,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetCategory5() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123";
 
         test.setCategory(expected);
@@ -509,7 +639,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testGetCategory6() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "あいう１２３";
 
         test.setCategory(expected);
@@ -520,7 +650,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetCategory7() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123あいう１２３";
 
         test.setCategory(expected);
@@ -531,7 +661,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetCategory8() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "ａｂｃ１２３あいう漢字";
 
         test.setCategory(expected);
@@ -543,7 +673,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testSetCategory1() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = null;
 
         test.setCategory(expected);
@@ -556,7 +686,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetCategory2() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "";
 
         test.setCategory(expected);
@@ -568,7 +698,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetCategory3() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = " ";
 
         test.setCategory(expected);
@@ -580,7 +710,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetCategory4() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "　";
 
         test.setCategory(expected);
@@ -591,7 +721,7 @@ public class AdminHelpDTOTest {
     }
 
     public void testSetCategory5() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123";
 
         test.setCategory(expected);
@@ -604,7 +734,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testSetCategory6() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "あいう１２３";
 
         test.setCategory(expected);
@@ -616,7 +746,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetCategory7() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123あいう１２３";
 
         test.setCategory(expected);
@@ -628,7 +758,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetCategory8() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "ａｂｃ１２３あいう漢字";
 
         test.setCategory(expected);
@@ -644,7 +774,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetComment1() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = null;
 
         test.setComment(expected);
@@ -655,7 +785,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetComment2() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "";
 
         test.setComment(expected);
@@ -666,7 +796,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetComment3() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = " ";
 
         test.setComment(expected);
@@ -677,7 +807,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetComment4() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "　";
 
         test.setComment(expected);
@@ -688,7 +818,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetComment5() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123";
 
         test.setComment(expected);
@@ -700,7 +830,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testGetComment6() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "あいう１２３";
 
         test.setComment(expected);
@@ -711,7 +841,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetComment7() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123あいう１２３";
 
         test.setComment(expected);
@@ -722,7 +852,7 @@ public class AdminHelpDTOTest {
 
 
     public void testGetComment8() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "ａｂｃ１２３あいう漢字";
 
         test.setComment(expected);
@@ -734,7 +864,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testSetComment1() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = null;
 
         test.setComment(expected);
@@ -747,7 +877,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetComment2() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "";
 
         test.setComment(expected);
@@ -759,7 +889,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetComment3() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = " ";
 
         test.setComment(expected);
@@ -771,7 +901,7 @@ public class AdminHelpDTOTest {
 
     @Test
     public void testSetComment4() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "　";
 
         test.setComment(expected);
@@ -782,7 +912,7 @@ public class AdminHelpDTOTest {
     }
 
     public void testSetComment5() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123";
 
         test.setComment(expected);
@@ -795,7 +925,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetComment6() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "あいう１２３";
 
         test.setComment(expected);
@@ -807,7 +937,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetComment7() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "abc123あいう１２３";
 
         test.setComment(expected);
@@ -819,7 +949,7 @@ public class AdminHelpDTOTest {
 
 
     public void testSetComment8() {
-        AdminHelpDTO test = new AdminHelpDTO();
+        HelpDTO test = new HelpDTO();
         String expected = "ａｂｃ１２３あいう漢字";
 
         test.setComment(expected);
