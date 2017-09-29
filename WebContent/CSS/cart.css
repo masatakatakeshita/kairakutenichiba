@@ -35,6 +35,7 @@ table.type01 td {
 
 
 table.type02 {
+width: 1584px;
 		   color:red;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -64,5 +65,5 @@ table.type02 td {
 
 #submit{
 	position:absolute;
-	margin-left:562px;
+	margin-left:1450px;
 }
