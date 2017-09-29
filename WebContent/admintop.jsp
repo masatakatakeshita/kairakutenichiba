@@ -43,11 +43,11 @@
 				<!-- 販売履歴 -->
 				<li><a href="adminhistory.jsp"><s:text name="lang.admintop.log" /></a></li>
 				<!--  商品管理-->
-				<li><a href="adminitem.jsp"><s:text name="lang.admintop.item" /></a></li>
+				<li><a href="<s:url action="AdminItemAction"/>" ><s:text name="lang.admintop.item"/></a></li>
 				<!--  お問い合わせ-->
 				<li><a href="adminhelp.jsp"><s:text name="lang.admintop.contact" /></a></li>
 				<!--  Log out-->
-				<li><a href="logout.jsp"><s:text name="lang.admintop.logout" /></a></li>
+				<li><a href="<s:url action="LogoutAction"/>" ><s:text name="lang.header.logoutbtn"/></a></li>
 
 			</ul>
 
@@ -57,8 +57,7 @@
 	</div>
 	<!--top  -->
 	<a href="index.jsp"><s:text name="lang.admintop.top" /></a>
-	<!-- login -->
-	<a href="login.jsp"><s:text name="lang.admintop.login" /></a>
+	
 
 
 

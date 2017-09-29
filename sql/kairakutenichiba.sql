@@ -23,7 +23,7 @@ create table items(
 	sales int default 0,/*売り上げ数*/
 	item_datail text not null,/*商品詳細*/
 	item_image varchar(255) not null, /*商品画像*/
-	is_deleted boolean default false,/*商品削除*/
+	is_deleted int default 0,/*商品削除*/
 	created_at datetime not null default current_timestamp,/*登録日*/
 	updated_at datetime not null default current_timestamp/*更新日*/
 );

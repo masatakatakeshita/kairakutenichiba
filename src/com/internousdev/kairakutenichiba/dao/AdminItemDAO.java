@@ -26,11 +26,11 @@ public class AdminItemDAO {
 	 * @author
 	 */
 	public ArrayList<ItemDTO> select(){
-		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
 		ArrayList<ItemDTO> itemList=new ArrayList<ItemDTO>();
-		String sql="select * from items where del_key = false";
+		String sql="select * from items";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
@@ -41,9 +41,9 @@ public class AdminItemDAO {
 
 				dto.setItem_id(rs.getInt("item_id"));
 
-				dto.setItem_name(rs.getString("items_name"));
+				dto.setItem_name(rs.getString("item_name"));
 
-				dto.setCategory(rs.getString("category"));
+				dto.setCategory(rs.getString("category_name"));
 
 				dto.setRelease_day(rs.getString("release_day"));
 
@@ -55,7 +55,7 @@ public class AdminItemDAO {
 
 				dto.setPages(rs.getInt("pages"));
 
-				dto.setIsbn(rs.getInt("isbn"));
+				dto.setIsbn(rs.getLong("isbn"));
 
 				dto.setPrice(rs.getFloat("price"));
 
@@ -63,11 +63,11 @@ public class AdminItemDAO {
 
 				dto.setSales(rs.getInt("sales"));
 
-				dto.setItem_detail(rs.getString("item_detail"));
+				dto.setItem_detail(rs.getString("item_datail"));
 
 				dto.setItem_image(rs.getString("item_image"));
 
-				dto.setIs_deleted(rs.getBoolean("is_deleted"));
+				dto.setIs_deleted(rs.getInt("is_deleted"));
 
 				dto.setCreated_at(rs.getString("created_at"));
 

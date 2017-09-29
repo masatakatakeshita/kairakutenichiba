@@ -100,7 +100,7 @@ public class ItemDTO {
 	/**
 	 * デリートキー
 	 */
-	private boolean is_deleted;
+	private int is_deleted;
 
 	
 
@@ -348,7 +348,7 @@ public class ItemDTO {
 	 * デリートキーを取得するメソッド
 	 * @return is_deleted
 	 */
-	public boolean getis_deleted() {
+	public int getIs_deleted() {
 		return is_deleted;
 	}
 
@@ -356,7 +356,7 @@ public class ItemDTO {
 	 * デリートキーを格納するメソッド
 	 * @param is_deleted セットする is_deleted
 	 */
-	public void setIs_deleted(boolean is_deleted) {
+	public void setIs_deleted(int is_deleted) {
 		this.is_deleted = is_deleted;
 	}
 

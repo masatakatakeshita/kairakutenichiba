@@ -35,10 +35,7 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	 * 量
 	 */
 	private int quantities;
-	/**
-	 * 合計金額
-	 */
-	private String multiplied_price;	
+	
 	/**
 	 * 購入日
 	 */
@@ -115,20 +112,7 @@ public class HistoryAction extends ActionSupport implements SessionAware{
 	public void setQuantities(int Quantities){
 		quantities = Quantities;
 	}
-	/**
-	 * 合計金額を取得するメソッド
-	 * @return　multiplied_price
-	 */
-	public String getMultplied_price(){
-		return multiplied_price;
-	}
-	/**
-	 * 合計金額を格納するメソッド
-	 * @param Multiplied_price
-	 */
-	public void setMultiplied_price(String Multiplied_price){
-		multiplied_price = Multiplied_price;
-	}
+	
 	/**
 	 * 購入日を取得するメソッド
 	 * @return　purchased_day

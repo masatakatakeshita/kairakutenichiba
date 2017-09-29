@@ -28,7 +28,7 @@
 		<a href="admintop.jsp" class="header_btn"><s:text name="lang.adminheader.btn"/></a>
 		<a href="admincustomer.jsp" class="header_btn"><s:text name="lang.adminheader.userbtn"/></a>
 		<a href="adminhistory.jsp" class="header_btn"><s:text name="lang.adminheader.historybtn"/></a>
-		<a href="adminitem.jsp" class="header_btn"><s:text name="lang.adminheader.Itembtn"/></a>
+		<a href="<s:url action="AdminItemAction"/>" class="header_btn"><s:text name="lang.adminheader.Itembtn"/></a>
 		<a href="adminhelp.jsp" class="header_btn"><s:text name="lang.adminheader.customerbtn"/></a>
 		<a href="<s:url action="LogoutAction"/>" class="header_btn"><s:text name="lang.header.logoutbtn"/></a>
 
