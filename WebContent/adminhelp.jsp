@@ -18,8 +18,12 @@
 <meta charset="utf-8">
 <title><s:text name="lang.adminhelp.topTitle" /></title>
 
+<link rel="stylesheet" type="text/css"  href="CSS/adminhelp.css">
+
 </head>
 <body>
+<div id="center">
+
 	<header>
 		<s:include value="adminheader.jsp" />
 	</header>
@@ -169,6 +173,6 @@
 
 <s:else><h1><s:text name="lang.adminhelp.display" /></h1></s:else>
 
-
+</div>
 </body>
 </html>
