@@ -28,6 +28,8 @@
 
 
 
+
+
 </head>
 <body>
 
@@ -57,7 +59,8 @@
 
 
 
-<s:form action="helplink.jsp"HelpAction" id="form2">
+<s:form method="post" action="HelpAction" class="autoConfirm" id="form2">
+
 
 
 <div class="boxA">
