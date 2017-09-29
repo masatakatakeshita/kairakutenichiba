@@ -57,7 +57,7 @@
 
 
 
-<s:form action="helplink.jsp" id="form2">
+<s:form action="helplink.jsp"HelpAction" id="form2">
 
 
 <div class="boxA">

@@ -45,23 +45,6 @@ public class HelpDTO {
 
 
 	    /**
-	     * 登録日
-	     */
-	    private String createdDay;
-
-	    /**
-	     * 更新日
-	     */
-
-		private String updateDay;
-
-
-
-
-
-
-
-	    /**
 	     * 氏名を取得
 	     * @return 氏名
 	     */
@@ -154,38 +137,6 @@ public class HelpDTO {
         }
 
 
-
-	    /**
-	     * 登録日を取得
-	     * @return createdDay登録日
-	     */
-	    public String getCreatedDay() {
-	        return createdDay;
-	    }
-
-	    /**
-	     * 登録日を格納
-	     * @param createdDay 登録日
-	     */
-	    public void setCreatedDay(String createdDay) {
-	        this.createdDay = createdDay;
-	    }
-
-	    /**
-	     * 更新日を取得
-	     * @return updateDay更新日
-	     */
-	    public String getUpdateDay() {
-	        return updateDay;
-	    }
-
-	    /**
-	     * 更新日を格納
-	     * @param updateDay 更新日
-	     */
-	    public void setUpdateDay(String updateDay) {
-	        this.updateDay = updateDay;
-	    }
 
 }
 
