@@ -12,7 +12,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserId1() {
@@ -26,7 +26,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserId2() {
@@ -39,7 +39,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserId3() {
@@ -52,7 +52,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserId4() {
@@ -67,7 +67,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserId()} のためのテスト・メソッド。
 	 */
 	@Test
 	public void testGetUserId5() {
@@ -84,7 +84,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserId(int)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserId(int)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -99,7 +99,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserId(int)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserId(int)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -114,7 +114,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserId(int)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserId(int)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -129,7 +129,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserId(int)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserId(int)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -145,7 +145,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserId(int)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserId(int)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -164,7 +164,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -179,7 +179,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -194,7 +194,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -209,7 +209,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -224,7 +224,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -239,7 +239,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -254,7 +254,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -269,7 +269,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -284,7 +284,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -300,7 +300,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -316,7 +316,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -332,7 +332,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -348,7 +348,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -364,7 +364,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -380,7 +380,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -396,7 +396,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setPassword(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPassword(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -413,7 +413,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -428,7 +428,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -443,7 +443,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -458,7 +458,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -473,7 +473,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -488,7 +488,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -503,7 +503,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -518,7 +518,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -533,7 +533,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -549,7 +549,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -565,7 +565,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -581,7 +581,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -597,7 +597,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -613,7 +613,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -629,7 +629,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -645,7 +645,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -664,7 +664,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -679,7 +679,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -694,7 +694,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -709,7 +709,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -724,7 +724,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -739,7 +739,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -754,7 +754,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -769,7 +769,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenName()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenName()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -784,7 +784,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -800,7 +800,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -816,7 +816,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -832,7 +832,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -848,7 +848,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -864,7 +864,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -880,7 +880,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -896,7 +896,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenName(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenName(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -916,7 +916,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -931,7 +931,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -946,7 +946,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -961,7 +961,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -976,7 +976,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -991,7 +991,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1006,7 +1006,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1021,7 +1021,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1036,7 +1036,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1052,7 +1052,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1068,7 +1068,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1084,7 +1084,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1100,7 +1100,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1116,7 +1116,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1132,7 +1132,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1148,7 +1148,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1167,7 +1167,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1182,7 +1182,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1197,7 +1197,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1212,7 +1212,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1227,7 +1227,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1242,7 +1242,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1257,7 +1257,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1272,7 +1272,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getFamilyNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getFamilyNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1287,7 +1287,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1303,7 +1303,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1319,7 +1319,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1335,7 +1335,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1351,7 +1351,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1367,7 +1367,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1383,7 +1383,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1399,7 +1399,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setFamilyNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1418,7 +1418,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1433,7 +1433,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1448,7 +1448,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1463,7 +1463,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1478,7 +1478,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1493,7 +1493,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1508,7 +1508,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1523,7 +1523,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKanji()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKanji()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1538,7 +1538,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1554,7 +1554,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1570,7 +1570,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1586,7 +1586,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1602,7 +1602,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1618,7 +1618,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1634,7 +1634,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1650,7 +1650,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKanji(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1666,7 +1666,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1681,7 +1681,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1696,7 +1696,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1711,7 +1711,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1726,7 +1726,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1741,7 +1741,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1756,7 +1756,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1771,7 +1771,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getGivenNameKana()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getGivenNameKana()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1786,7 +1786,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1802,7 +1802,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1818,7 +1818,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1834,7 +1834,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1850,7 +1850,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1866,7 +1866,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1882,7 +1882,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -1898,7 +1898,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setGivenNameKana(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -2048,7 +2048,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPostal(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPostal(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2064,7 +2064,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPostal(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPostal(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2080,7 +2080,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPostal(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPostal(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2096,7 +2096,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPostal(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPostal(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2112,7 +2112,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPostal(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPostal(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2128,7 +2128,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPostal(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPostal(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2144,7 +2144,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPostal(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPostal(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2171,7 +2171,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getAddress()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getAddress()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2186,7 +2186,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getAddress()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getAddress()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2201,7 +2201,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getAddress()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getAddress()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2216,7 +2216,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getAddress()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getAddress()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2231,7 +2231,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getAddress()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getAddress()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2246,7 +2246,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getAddress()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getAddress()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2261,7 +2261,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getAddress()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getAddress()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2276,7 +2276,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 */
 
@@ -2298,7 +2298,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2314,7 +2314,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2330,7 +2330,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2346,7 +2346,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2362,7 +2362,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2378,7 +2378,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2394,7 +2394,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setAddress(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setAddress(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2410,7 +2410,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPassword()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPassword()}
 		 * のためのテスト・メソッド。
 		 */
 
@@ -2426,7 +2426,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2441,7 +2441,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2456,7 +2456,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2471,7 +2471,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2486,7 +2486,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2501,7 +2501,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2516,7 +2516,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2531,7 +2531,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 
@@ -2548,7 +2548,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2564,7 +2564,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2580,7 +2580,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2596,7 +2596,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2612,7 +2612,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2628,7 +2628,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2644,7 +2644,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2666,7 +2666,7 @@ public class MyPageDTOTest {
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2681,7 +2681,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2696,7 +2696,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2711,7 +2711,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2726,7 +2726,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2741,7 +2741,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2756,7 +2756,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2771,7 +2771,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPhoneEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPhoneEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2786,7 +2786,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2802,7 +2802,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2818,7 +2818,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2834,7 +2834,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2850,7 +2850,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2866,7 +2866,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2882,7 +2882,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2898,7 +2898,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setPhoneEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2920,13 +2920,13 @@ public class MyPageDTOTest {
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getPostalEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getPostalEmail()}
 		 * のためのテスト・メソッド。
 		 */
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2941,7 +2941,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2956,7 +2956,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2971,7 +2971,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -2986,7 +2986,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3001,7 +3001,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3016,7 +3016,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3031,7 +3031,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileNumber()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileNumber()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3046,7 +3046,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3062,7 +3062,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3078,7 +3078,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3094,7 +3094,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3110,7 +3110,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3126,7 +3126,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3142,7 +3142,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3158,7 +3158,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileNumber(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileNumber(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3176,7 +3176,7 @@ public class MyPageDTOTest {
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3191,7 +3191,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3206,7 +3206,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3221,7 +3221,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3236,7 +3236,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3251,7 +3251,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3266,7 +3266,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3281,7 +3281,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getMobileEmail()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMobileEmail()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3296,7 +3296,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3312,7 +3312,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3328,7 +3328,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3344,7 +3344,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3360,7 +3360,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3376,7 +3376,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3392,7 +3392,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3408,7 +3408,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setMobileEmail(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMobileEmail(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3424,7 +3424,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3439,7 +3439,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3454,7 +3454,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3469,7 +3469,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3484,7 +3484,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3499,7 +3499,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3514,7 +3514,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3529,7 +3529,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getSex()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getSex()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3544,7 +3544,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3560,7 +3560,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3576,7 +3576,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3592,7 +3592,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3608,7 +3608,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3624,7 +3624,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3640,7 +3640,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3656,7 +3656,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setSex(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setSex(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3673,7 +3673,7 @@ public class MyPageDTOTest {
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3688,7 +3688,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3703,7 +3703,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3718,7 +3718,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3733,7 +3733,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3748,7 +3748,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3763,7 +3763,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3778,7 +3778,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getBirthday()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getBirthday()}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3793,7 +3793,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3809,7 +3809,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3825,7 +3825,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3841,7 +3841,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3857,7 +3857,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3873,7 +3873,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3889,7 +3889,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3905,7 +3905,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setBirthday(java.lang.String)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setBirthday(java.lang.String)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -3921,7 +3921,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
 		 */
 		@Test
 		public void testGetUserFlg1() {
@@ -3935,7 +3935,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
 		 */
 		@Test
 		public void testGetUserFlg2() {
@@ -3948,7 +3948,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
 		 */
 		@Test
 		public void testGetUserFlg3() {
@@ -3961,7 +3961,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
 		 */
 		@Test
 		public void testGetUserFlg4() {
@@ -3976,7 +3976,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUserFlg()} のためのテスト・メソッド。
 		 */
 		@Test
 		public void testGetUserFlg5() {
@@ -3993,7 +3993,7 @@ public class MyPageDTOTest {
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserFlg(int)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserFlg(int)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -4008,7 +4008,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserFlg(int)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserFlg(int)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -4023,7 +4023,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserFlg(int)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserFlg(int)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -4038,7 +4038,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserFlg(int)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserFlg(int)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -4054,7 +4054,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserFlg(int)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserFlg(int)}
 		 * のためのテスト・メソッド。
 		 */
 		@Test
@@ -4074,7 +4074,7 @@ public class MyPageDTOTest {
 
 	public class testtest {
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#isUserdelFlg()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#isUserdelFlg()}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4088,7 +4088,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#isUserdelFlg()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#isUserdelFlg()}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4104,7 +4104,7 @@ public class MyPageDTOTest {
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserdelFlg(boolean)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserdelFlg(boolean)}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4118,7 +4118,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setUserdelFlg(boolean)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUserdelFlg(boolean)}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4131,7 +4131,7 @@ public class MyPageDTOTest {
 			assertEquals(expected, actual);
 		}
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#isLoginFlg()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#isLoginFlg()}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4145,7 +4145,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#isLoginFlg()}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#isLoginFlg()}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4161,7 +4161,7 @@ public class MyPageDTOTest {
 
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setLoginFlg(boolean)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setLoginFlg(boolean)}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4175,7 +4175,7 @@ public class MyPageDTOTest {
 		}
 
 		/**
-		 * {@link com.internousdev.legmina.dto.MyPageDTO#setLoginFlg(boolean)}
+		 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setLoginFlg(boolean)}
 		 *  のためのテスト・メソッド。
 		 */
 		@Test
@@ -4192,7 +4192,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4207,7 +4207,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4222,7 +4222,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4237,7 +4237,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4252,7 +4252,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4267,7 +4267,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4282,7 +4282,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4297,7 +4297,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getYear()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getYear()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4312,7 +4312,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4328,7 +4328,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4344,7 +4344,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4360,7 +4360,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4376,7 +4376,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4392,7 +4392,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4408,7 +4408,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4424,7 +4424,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setYear(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setYear(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4441,7 +4441,7 @@ public class MyPageDTOTest {
 
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4456,7 +4456,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4471,7 +4471,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4486,7 +4486,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4501,7 +4501,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4516,7 +4516,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4531,7 +4531,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4546,7 +4546,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getMonth()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getMonth()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4561,7 +4561,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4577,7 +4577,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4593,7 +4593,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4609,7 +4609,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4625,7 +4625,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4641,7 +4641,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4657,7 +4657,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4673,7 +4673,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setMonth(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setMonth(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4689,7 +4689,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4704,7 +4704,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4719,7 +4719,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4734,7 +4734,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4749,7 +4749,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4764,7 +4764,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4779,7 +4779,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4794,7 +4794,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getRegisterDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getRegisterDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4809,7 +4809,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4825,7 +4825,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4841,7 +4841,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4857,7 +4857,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4873,7 +4873,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4889,7 +4889,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4905,7 +4905,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4921,7 +4921,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setRegisterDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setRegisterDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4937,7 +4937,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4952,7 +4952,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4967,7 +4967,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4982,7 +4982,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -4997,7 +4997,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5012,7 +5012,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5027,7 +5027,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5042,7 +5042,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#getUpdateDay()}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#getUpdateDay()}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5057,7 +5057,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5073,7 +5073,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5089,7 +5089,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5105,7 +5105,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5121,7 +5121,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5137,7 +5137,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5153,7 +5153,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
@@ -5169,7 +5169,7 @@ public class MyPageDTOTest {
 	}
 
 	/**
-	 * {@link com.internousdev.legmina.dto.MyPageDTO#setUpdateDay(java.lang.String)}
+	 * {@link com.internousdev.kairakutenichiba.dto.MyPageDTO#setUpdateDay(java.lang.String)}
 	 * のためのテスト・メソッド。
 	 */
 	@Test
