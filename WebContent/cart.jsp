@@ -65,14 +65,15 @@
 											value="quantities"
 						                  />
 						                  <s:hidden name="itemId" value="%{itemId}" />
-						                 <s:submit value="更新" />
+						                 <input id="submit_button" type="submit" name="submit" value="更新">
 						                  </s:form>
 						                  </div>
 								</td>
 								<td style="width: 20%;"><s:property value="subtotalyen" /><s:text name="lang.cart.yen" /></td>
-								<td style="width: 20%;"><s:form action="CartItemDeleteAction">
-								   <s:hidden name="itemId" value="%{itemId}" />
-										<s:submit value="削除" />
+								<td  style="width: 20%;"><s:form  action="CartItemDeleteAction">
+								   <s:hidden  name="itemId" value="%{itemId}" />
+										<input id="submit_button" type="submit" name="submit" value="削除">
+
 									</s:form></td>
 							</tr>
 						</s:iterator>
