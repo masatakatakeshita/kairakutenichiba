@@ -88,12 +88,10 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	/**
 	 * 金額合計
 	 */
-	private float amountAll;
+	private int amountAll;
 
 
 	private Map<String, Object> session; 
-	
-	private ArrayList<paymentDTO> payList=new ArrayList<paymentDTO>();
 	
 	private ArrayList<CartDTO> cartList= new ArrayList<CartDTO>();
 	
@@ -105,37 +103,22 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 */
 	public String execute(){
 	str = creditNumber + card_no2 + card_no3 + card_no4;
-	System.out.println(card_no4);	
-	System.out.println(card_no3);	
-	System.out.println(str);
 		String ret = ERROR;
 		paymentDAO dao = new paymentDAO();
 		paymentDTO dto = new paymentDTO();
 		
 		amountAll=0;
 		dto  = dao.select(nameHolder, str, expirationMonth, expirationYear, securityCode, creditType);
-		System.out.println(nameHolder);	//受け取れてる
-		System.out.println(str);  //☓
-		System.out.println(creditType); 	//受け取れてる
-		System.out.println((int) session.get("userId")); 	//受け取れてる
-// setUserId ( (int) session.get("userId"));  
 		if(session.containsKey("userId")){
-			System.out.println("aaaa");
-			if(nameHolder.equals(dto.getNameHolder())){	 //ここtrue
-				System.out.println("bbbb");
-				if(str.equals(dto.getCreditNumber())){  //false
-					System.out.println("cccc");
+			if(nameHolder.equals(dto.getNameHolder())){
+				if(str.equals(dto.getCreditNumber())){
 					if(expirationMonth.equals(dto.getExpirationMonth())){
-						System.out.println("dddd");
 						if(expirationYear.equals(dto.getExpirationYear())){
-							System.out.println("eeee");
 							if(securityCode.equals(dto.getSecurityCode())){
-								payList.add(dto);
-							System.out.println("fffff");
 								GoCartDAO cart= new GoCartDAO();
 								cartList= cart.selectedItem(userId);
 								for (int i = 0; i < cartList.size(); i++) {
-					                amountAll = amountAll+(cartList.get(i).getPrice()) * (cartList.get(i).getQuantities());
+					                amountAll = amountAll+(cartList.get(i).getPriceyen()) * (cartList.get(i).getQuantities());
 					            }
 								ret = SUCCESS;
 								
@@ -340,21 +323,6 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	}
 	
 	/**
-	 * 金額リストを取得するメソッド
-	 * @return
-	 */
-	public ArrayList<paymentDTO> getPayList() {
-		return payList;
-	}
-	/**
-	 * 金額リストを格納するメソッド
-	 * @param payList
-	 */
-	public void setPayList(ArrayList<paymentDTO> payList) {
-		this.payList = payList;
-	}
-	
-	/**
 	 * エラーかどうか取得するメソッド
 	 * @return whaterror
 	 */
@@ -373,14 +341,14 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 * 金額合計を取得するメソッド
 	 * @return amountAll
 	 */
-	public float getAmountAll() {
+	public int getAmountAll() {
 		return amountAll;
 	}
 	/**
 	 * 金額合計を格納するメソッド
 	 * @param amountAll
 	 */
-	public void setAmountAll(float amountAll) {
+	public void setAmountAll(int amountAll) {
 		this.amountAll = amountAll;
 	}
 
