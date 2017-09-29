@@ -48,16 +48,17 @@ public class AdminHistoryDAO {
 
 				dto.setQuantities(rs.getInt("quantities")); //数量
 
-				dto.setPurchase_at(rs.getString("purchase_at")); //登録日
+				dto.setPurchase_at(rs.getString("purchased_at")); //登録日
 
 				//商品名をsqlで検索でDTOに入れなきゃならん。ここからした
 				PreparedStatement ps2 = con.prepareStatement(sql2);
-				ps2.setInt(1, dto.getItemId());
+				ps2.setInt(1, itemId);
 				ResultSet rs2 = ps2.executeQuery();
 				if(rs2.next()){
-					dto.setItemsName(rs.getString("items_name")); //商品名
+					System.out.println("bbbb");
+					dto.setItemsName(rs2.getString("item_name")); //商品名
 
-					dto.setPrice(rs.getFloat("price")); //単価
+					dto.setPrice(rs2.getFloat("price")); //単価
 
 					dto.setSubtotal(dto.getPrice()*dto.getQuantities());//合計金額
 

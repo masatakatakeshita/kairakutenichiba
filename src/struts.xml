@@ -199,6 +199,7 @@
 			<result name="success">adminhistory.jsp</result>
 			<result name="error">error.jsp</result>
 			<result name="login">adminhistory.jsp</result>
+			<result name="other">adminhistory.jsp</result>
 		</action>
 
 		<!-- 管理者商品一覧 -->

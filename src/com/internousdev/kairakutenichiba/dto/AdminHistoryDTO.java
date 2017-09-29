@@ -74,7 +74,6 @@ public class AdminHistoryDTO {
 	public String getItemsName() {
 		return itemsName;
 	}
-
 	/**
 	 * 商品名をを格納するメソッド
 	 * @param itemsName セットする itemsName

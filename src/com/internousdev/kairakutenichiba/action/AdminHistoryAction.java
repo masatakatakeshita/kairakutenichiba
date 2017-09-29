@@ -76,7 +76,7 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
         * @version 1.0
         */
 		public String execute() {
-			String result = ERROR;
+			String result = "other";
 			AdminHistoryDAO dao = new AdminHistoryDAO();
 			adminhistoryList = dao.select(itemId);
 			if(adminhistoryList.size() > 0){
@@ -92,7 +92,6 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 	public int getItemId() {
 		return itemId;
 	}
-
 	/**
 	 * 商品IDを格納するメソッド
 	 * @param itemId セットする itemId
