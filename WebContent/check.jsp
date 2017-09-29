@@ -50,7 +50,7 @@
     <tr>
         <td><s:property value="imgPath" /></td>
         <td><s:property value="itemName" /></td>
-        <td><s:property value="price" /></td>
+        <td><s:property value="priceyen" /></td>
         <td><s:property value="quantities" /></td>
         <td><s:property value="subtotal" /></td>
     </tr>
@@ -69,7 +69,7 @@
 </table>
 <!--お支払い方法  -->
 <h3><s:text name="lang.check.payment" /></h3>
-<p><s:property value="creditType" /><s:property value="creditNumber" /></p>
+<p><s:property value="creditType" /><s:property value="str" /></p>
 <!--配送方法  -->
 <h3><s:text name="lang.check.deliver" /></h3>
 <p><s:property value="deliverySelect" /></p>
@@ -79,6 +79,8 @@
 
 <!-- 注文を確定する -->
 <s:form action="PurchaseCompleteAction">
+<s:hidden name="str" value="%{str}" />
+<s:hidden name="delivery" value="%{deliverySelect}" />
 <h4><s:submit value= "注文完了" ></s:submit></h4>
 </s:form>
 

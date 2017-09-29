@@ -41,7 +41,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	/**
 	 * カード番号
 	 */
-	private String creditNumber;
+	private String str;
 	
 	/**
 	 * 配送方法
@@ -116,7 +116,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		    	PurchaseIdDAO purchaseiddao=new PurchaseIdDAO();
 		    	
 		    	PurchaseOutlineDAO outlinedao=new PurchaseOutlineDAO();
-		    	if(outlinedao.insert(1+purchaseiddao.count(),userId,amountAll,delivery,creditNumber)>0){
+		    	if(outlinedao.insert(1+purchaseiddao.count(),userId,amountAll,delivery,str)>0){
 		    		PurchaseDetailDAO detaildao=new PurchaseDetailDAO();
 		    		for(int i=0;i<cartList.size();i++){
 		    		if(detaildao.insert(1+purchaseiddao.count(), userId,cartList.get(i).getItemId(),cartList.get(i).getQuantities(), cartList.get(i).getPrice())>0){
@@ -186,7 +186,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * @return creditNumber　クレジット番号
 	 */
 	public String getCreditNumber() {
-		return creditNumber;
+		return str;
 	}
 
 
@@ -194,8 +194,8 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * カード番号を格納するメソッド
 	 * @param creditNumber セットする creditNumber
 	 */
-	public void setCreditNumber(String creditNumber) {
-		this.creditNumber = creditNumber;
+	public void setCreditNumber(String str) {
+		this.str = str;
 	}
 
 
