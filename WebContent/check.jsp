@@ -48,11 +48,12 @@
 
     <s:iterator value="cartList">
     <tr>
-        <td><s:property value="imgPath" /></td>
+        <td><a href="<s:property value="imgPath" />"></a></td>
+        			<a href="#jump-boy"> <img src="${aa}" alt="" style="width: 15%">
         <td><s:property value="itemName" /></td>
         <td><s:property value="priceyen" /></td>
         <td><s:property value="quantities" /></td>
-        <td><s:property value="subtotal" /></td>
+        <td><s:property value="subtotalyen" /></td>
     </tr>
     </s:iterator>
     
@@ -69,13 +70,13 @@
 </table>
 <!--お支払い方法  -->
 <h3><s:text name="lang.check.payment" /></h3>
-<p><s:property value="creditType" /><s:property value="str" /></p>
+<p><s:property value="creditType" />:<s:property value="str" /></p>
 <!--配送方法  -->
 <h3><s:text name="lang.check.deliver" /></h3>
 <p><s:property value="deliverySelect" /></p>
 <!--お届け日時 -->
 <h3><s:text name="lang.check.time" /></h3>
-<p><s:property value="deliveryMonth" /><s:property value="deliveryTime" /></p>
+<p><s:property value="deliveryMonth" />:<s:property value="deliveryTime" /></p>
 
 <!-- 注文を確定する -->
 <s:form action="PurchaseCompleteAction">

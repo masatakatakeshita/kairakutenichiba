@@ -54,7 +54,7 @@ public class GoCartDAO{
 
 				dto.setItemName(rs2.getString("item_name"));//商品名
 				dto.setPriceyen(rs2.getInt("price")); //価格
-				dto.setSubtotalyen(rs.getInt("quantities")*rs2.getInt("price")); //小計
+				dto.setSubtotalyen(dto.getQuantities()*rs2.getInt("price")); //小計
 				dto.setImgPath(rs2.getString("item_image")); //イメージパス
 				cartList.add(dto);
 			}

@@ -116,7 +116,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 						if(expirationYear.equals(dto.getExpirationYear())){
 							if(securityCode.equals(dto.getSecurityCode())){
 								GoCartDAO cart= new GoCartDAO();
-								cartList= cart.selectedItem(userId);
+								cartList= cart.selectedItem((int)session.get("userId"));
 								for (int i = 0; i < cartList.size(); i++) {
 					                amountAll = amountAll+(cartList.get(i).getPriceyen()) * (cartList.get(i).getQuantities());
 					            }
