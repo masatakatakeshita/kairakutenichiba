@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.internousdev.kairakutenichiba.dto.paymentDTO;
+import com.internousdev.kairakutenichiba.dto.PaymentDTO;
 import com.internousdev.util.db.mysql.MySqlConnector;
 
 /**
@@ -26,8 +26,8 @@ public class paymentDAO{
 	 * @return 
 	 */
 	//creditcardTypeを
-	public paymentDTO select(String nameHolder, String creditNumber, String expirationMonth, String expirationYear, String securityCode, String creditType){
-		paymentDTO dto = new paymentDTO();
+	public PaymentDTO select(String nameHolder, String creditNumber, String expirationMonth, String expirationYear, String securityCode, String creditType){
+		PaymentDTO dto = new PaymentDTO();
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", creditType, "root","mysql");
 	System.out.println("DBの指定を引数でできているか"+creditType); //ここには来てる "visa"
 	//creditType

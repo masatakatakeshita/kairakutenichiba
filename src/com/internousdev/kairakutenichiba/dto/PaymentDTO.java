@@ -8,7 +8,7 @@ import java.util.Map;
  * @author junpei.koizumi
  *
  */
-public class paymentDTO {
+public class PaymentDTO {
 
 	/**
 	 * クレジットカードの種類

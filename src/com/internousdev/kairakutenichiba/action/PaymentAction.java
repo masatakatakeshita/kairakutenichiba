@@ -8,7 +8,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.kairakutenichiba.dao.GoCartDAO;
 import com.internousdev.kairakutenichiba.dao.paymentDAO;
 import com.internousdev.kairakutenichiba.dto.CartDTO;
-import com.internousdev.kairakutenichiba.dto.paymentDTO;
+import com.internousdev.kairakutenichiba.dto.PaymentDTO;
 import com.opensymphony.xwork2.ActionSupport;
 /**
  * @author koizumi junpei
@@ -105,7 +105,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	str = creditNumber + card_no2 + card_no3 + card_no4;
 		String ret = ERROR;
 		paymentDAO dao = new paymentDAO();
-		paymentDTO dto = new paymentDTO();
+		PaymentDTO dto = new PaymentDTO();
 		
 		amountAll=0;
 		dto  = dao.select(nameHolder, str, expirationMonth, expirationYear, securityCode, creditType);
