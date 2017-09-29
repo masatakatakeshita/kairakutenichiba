@@ -20,7 +20,7 @@ public class PurchaseIdDAO {
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();
 		
-		String sql="select * from purchas_outlines";
+		String sql="select * from purchases_outlines";
 				try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();

@@ -23,7 +23,7 @@ public class PurchaseDetailDAO {
 	 * @param price　価格
 	 * @return ret 実行行数を返す
 	 */
-	public int insert(int purchaseId,int userId,int itemId,int quantity,float price){
+	public int insert(int purchaseId,int userId,int itemId,int quantity,int price){
 		ret=0;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();

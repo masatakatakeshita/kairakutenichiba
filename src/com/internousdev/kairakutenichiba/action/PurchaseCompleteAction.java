@@ -52,10 +52,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * 合計金額
 	 */
 	private int amountAll;
-	/**
-	 * 商品名
-	 */
-	private String itemsName;
+
 
 	/**
 	 * カートのリスト
@@ -111,15 +108,14 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		    		stockcheck++;
 		    	}
 		    }
-		    
 		    if(stockcheck==0){
 		    	PurchaseIdDAO purchaseiddao=new PurchaseIdDAO();
-		    	
+		    	int newPurchaseId=1+purchaseiddao.count();
 		    	PurchaseOutlineDAO outlinedao=new PurchaseOutlineDAO();
-		    	if(outlinedao.insert(1+purchaseiddao.count(),userId,amountAll,delivery,str)>0){
+		    	if(outlinedao.insert(newPurchaseId,userId,amountAll,delivery,str)>0){
 		    		PurchaseDetailDAO detaildao=new PurchaseDetailDAO();
 		    		for(int i=0;i<cartList.size();i++){
-		    		if(detaildao.insert(1+purchaseiddao.count(), userId,cartList.get(i).getItemId(),cartList.get(i).getQuantities(), cartList.get(i).getPrice())>0){
+		    		if(detaildao.insert(newPurchaseId, userId,cartList.get(i).getItemId(),cartList.get(i).getQuantities(), cartList.get(i).getPriceyen())>0){
 		    			ItemStocksUpdateDAO stocksupdatedao=new ItemStocksUpdateDAO();
 		    			if(stocksupdatedao.itemstocksupdate(cartList.get(i).getItemId(),stocksdao.stocks(cartList.get(i).getItemId())-cartList.get(i).getQuantities())>0){
 		    				ItemSalesDAO salesdao=new ItemSalesDAO();
@@ -130,6 +126,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		    		}
 		    		}
 		    		if(updatecount==cartList.size()){
+		   System.out.println("eeee"); 
 		    			CartDeleteDAO delete=new CartDeleteDAO();
 		    			if(delete.delete(userId)>0){
 		    		result=SUCCESS;
@@ -185,7 +182,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * カード番号を取得するメソッド
 	 * @return creditNumber　クレジット番号
 	 */
-	public String getCreditNumber() {
+	public String getStr() {
 		return str;
 	}
 
@@ -194,7 +191,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	 * カード番号を格納するメソッド
 	 * @param creditNumber セットする creditNumber
 	 */
-	public void setCreditNumber(String str) {
+	public void setStr(String str) {
 		this.str = str;
 	}
 
@@ -233,25 +230,16 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	public void setAmountAll(int amountAll) {
 		this.amountAll = amountAll;
 	}
-
-
-	/**
-	 * 商品名を取得するメソッド
-	 * @return itemsName　商品名
-	 */
-	public String getItemsName() {
-		return itemsName;
+	
+	public String getDelivery(){
+		return delivery;
+	}
+	
+	public void setDelivery(String delivery){
+		this.delivery=delivery;
 	}
 
 
-	/**
-	 * 商品名を格納するメソッド
-	 * @param itemsName セットする itemsName
-	 */
-	public void setItemsName(String itemsName) {
-		this.itemsName = itemsName;
-
-	}
 }
 
 

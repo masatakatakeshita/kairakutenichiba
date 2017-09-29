@@ -23,7 +23,7 @@ public class PurchaseOutlineDAO {
 	 * @param creditNumber　クレジットカード番号
 	 * @return ret 実行行数を返す
 	 */
-	public int insert(int purchaseId,int userId,float totalPrice,String delivery,String creditNumber){
+	public int insert(int purchaseId,int userId,int totalPrice,String delivery,String creditNumber){
 		ret=0;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();

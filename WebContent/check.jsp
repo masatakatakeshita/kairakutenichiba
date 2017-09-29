@@ -48,8 +48,7 @@
 
     <s:iterator value="cartList">
     <tr>
-        <td><a href="<s:property value="imgPath" />"></a></td>
-        			<a href="#jump-boy"> <img src="${aa}" alt="" style="width: 15%">
+        <td><img src="<s:property value="imgPath" />" style="width: 15%"></td>
         <td><s:property value="itemName" /></td>
         <td><s:property value="priceyen" /></td>
         <td><s:property value="quantities" /></td>
