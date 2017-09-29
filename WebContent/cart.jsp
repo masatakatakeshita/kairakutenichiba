@@ -97,15 +97,11 @@
 
 <script>
 		if (window.history && window.history.pushState) {
-
 			history.pushState("nohb", null, "");
 			$(window).on("popstate", function(event) {
-
 				if (!event.originalEvent.state) {
-
 					history.pushState("nohb", null, "")
 					alert("画面最上部のヘッター又は画面中央部ボタンからお戻り下さい。");
-
 					return;
 				}
 			});
