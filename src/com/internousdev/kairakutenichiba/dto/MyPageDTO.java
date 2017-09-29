@@ -113,18 +113,6 @@ public class MyPageDTO {
 	 */
 	private String month;
 	/**
-	 * OAuthID
-	 */
-	private String oauthId;
-	/**
-	 * OAuth名
-	 */
-	private int oauthName;
-	/**
-	 * OAuthアカウント
-	 */
-	private String oauthAccount;
-	/**
 	 * 登録日
 	 */
 	private String registerDay;
@@ -430,47 +418,6 @@ public class MyPageDTO {
 	 */
 	public void setMonth(String month) {
 		this.month = month;
-	}
-	/**
-	 * oauthIDを収納するメソッド
-	 * @return oauthId
-	 */
-	public String getOauthId() {
-		return oauthId;
-	}
-	/**oauthIDを格納するメソッド
-	 * @param oauthId セットする oauthId
-	 */
-	public void setOauthId(String oauthId) {
-		this.oauthId = oauthId;
-	}
-	/**
-	 * oauth名を収納するメソッド
-	 * @return oauthName
-	 */
-	public int getOauthName() {
-		return oauthName;
-	}
-	/**
-	 * oauth名を格納するメソッド
-	 * @param oauthName セットする oauthName
-	 */
-	public void setOauthName(int oauthName) {
-		this.oauthName = oauthName;
-	}
-	/**
-	 * oauthアカウント名を収納するメソッド
-	 * @return oauthAccount
-	 */
-	public String getOauthAccount() {
-		return oauthAccount;
-	}
-	/**
-	 * oauthアカウント名を格納するメソッド
-	 * @param oauthAccount セットする oauthAccount
-	 */
-	public void setOauthAccount(String oauthAccount) {
-		this.oauthAccount = oauthAccount;
 	}
 	/**
 	 * 登録日を収納するメソッド

@@ -24,10 +24,6 @@ public class CartDeleteDTO {
      */
     private String userName;
 
-    /**
-     * 名(ふりがな)
-     */
-    private String userNameKana;
 
     /**
      * 郵便番号
@@ -78,20 +74,6 @@ public class CartDeleteDTO {
      */
     private String month;
 
-    /**
-     * OauthID
-     */
-    private String oauthId;
-
-    /**
-     * Oauth名
-     */
-    private int oauthName;
-
-    /**
-     * Oauthアカウント
-     */
-    private String oauthAccount;
 
     /**
      * 登録日
@@ -166,13 +148,6 @@ public class CartDeleteDTO {
         this.userName = userName;
     }
 
-    /**
-     * 姓(ふりがな)を取得
-     * @return 姓(ふりがな)
-     */
-    public String getUserNameKana() {
-        return userNameKana;
-    }
 
 
     /**
@@ -321,53 +296,6 @@ public class CartDeleteDTO {
         this.month = month;
     }
 
-    /**
-     * OauthIDを取得
-     * @return OauthID
-     */
-    public String getOauthId() {
-        return oauthId;
-    }
-
-    /**
-     * OauthIDを格納
-     * @param oauthId OauthID
-     */
-    public void setOauthId(String oauthId) {
-        this.oauthId = oauthId;
-    }
-
-    /**
-     * Oauth名を取得
-     * @return Oauth名
-     */
-    public int getOauthName() {
-        return oauthName;
-    }
-
-    /**
-     * Oauth名を格納
-     * @param oauthName Oauth名
-     */
-    public void setOauthName(int oauthName) {
-        this.oauthName = oauthName;
-    }
-
-    /**
-     * Oauthアカウントを取得
-     * @return Oauthアカウント
-     */
-    public String getOauthAccount() {
-        return oauthAccount;
-    }
-
-    /**
-     * Oauthアカウントを格納
-     * @param oauthAccount Oauthアカウント
-     */
-    public void setOauthAccount(String oauthAccount) {
-        this.oauthAccount = oauthAccount;
-    }
 
     /**
      * 登録日を取得
