@@ -136,4 +136,8 @@ public class LoginDTO {
 	public void setUserFlg(int userFlg) {
 		this.userFlg = userFlg;
 	}
+	public boolean LoginFlg() {
+		// TODO 自動生成されたメソッド・スタブ
+		return false;
+	}
 }

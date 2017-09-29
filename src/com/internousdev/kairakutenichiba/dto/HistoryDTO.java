@@ -11,7 +11,7 @@ import java.util.Map;
  *
  */
 public class HistoryDTO {
-	
+
 	/**
 	 * 商品ID
 	 */
@@ -21,16 +21,12 @@ public class HistoryDTO {
 	 */
 	private int quantities;
 	/**
-	 * 合計金額
-	 */
-	private String multiplied_price;	
-	/**
 	 * 購入日
 	 */
-	private String purchased_day;	
-	
-	
-	
+	private String purchased_day;
+
+
+
 	/**
 	 * 商品名
 	 */
@@ -47,12 +43,12 @@ public class HistoryDTO {
 	 * 値段
 	 */
 	private int price;		//単価
-	
+
 	private Map<String, Object> session;
 
-	
 
-	
+
+
 	/**
 	 * 以下アクセスメソッド。get set
 	 */
@@ -85,20 +81,6 @@ public class HistoryDTO {
 		quantities = Quantities;
 	}
 	/**
-	 * 合計金額を取得するメソッド
-	 * @return mutiplied_price
-	 */
-	public String getMultplied_price(){
-		return multiplied_price;
-	}
-	/**
-	 * 合計金額を格納するメソッド
-	 * @param Multiplied_price
-	 */
-	public void setMultiplied_price(String Multiplied_price){
-		multiplied_price = Multiplied_price;
-	}
-	/**
 	 * 購入日を取得するメソッド
 	 * @return purchased_day
 	 */
@@ -112,8 +94,8 @@ public class HistoryDTO {
 	public void setPurchased_day(String Purchased_day){
 		purchased_day = Purchased_day;
 	}
-	
-	
+
+
 	/**
 	 * 商品名を取得するメソッド
 	 * @return item_name
@@ -170,8 +152,8 @@ public class HistoryDTO {
 	public void setPrice(int Price){
 		price = Price;
 	}
-	
-	
+
+
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 
@@ -180,5 +162,5 @@ public class HistoryDTO {
 		return session;
 	}
 
-	
+
 }

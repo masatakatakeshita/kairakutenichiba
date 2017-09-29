@@ -12,160 +12,192 @@ public class PaymentDTOTest {
 
 
 
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getCreditId()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetCreditType1() {
-		PaymentDTO test = new PaymentDTO();
-		String expected = 0;
+	   public void testGetCreditType1() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = null;
 
-		test.setCreditType(expected);
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
 
-		assertEquals(expected, test.getCreditType());
-
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getCreditId()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetCreditId2() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 2147483647;
-
-		test.setCreditId(expected);
-
-		assertEquals(expected, test.getCreditId());
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getCreditId()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetCreditId3() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = -2147483648;
-
-		test.setCreditId(expected);
-
-		assertEquals(expected, test.getCreditId());
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getCreditId()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetCreditId4() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int CreditIdMin = Integer.parseInt("2147483648");
-			test.setCreditId(CreditIdMin);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
-		}
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getCreditId()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetCreditId5() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int CreditIdMin = Integer.parseInt("-2147483649");
-			test.setCreditId(CreditIdMin);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
+	        assertEquals(expected, actual);
+	    }
 
 
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setCreditId(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetCreditId1() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 0;
+	    public void testGetCreditType2() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "";
 
-		test.setCreditId(expected);
-		int actual = test.getCreditId();
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
 
-		assertEquals(expected, actual);
-	}
+	        assertEquals(expected, actual);
+	    }
 
 
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setCreditId(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetCreditId2() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 2147483647;
+	    public void testGetCreditType3() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = " ";
 
-		test.setCreditId(expected);
-		int actual = test.getCreditId();
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
 
-		assertEquals(expected, actual);
-	}
+	        assertEquals(expected, actual);
+	    }
 
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setCreditId(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetCreditId3() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = -2147483648;
+	    @Test
+	    public void testGetCreditType4() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "　";
 
-		test.setCreditId(expected);
-		int actual = test.getCreditId();
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
 
-		assertEquals(expected, actual);
-	}
+	        assertEquals(expected, actual);
+	    }
 
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setCreditId(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetCreditId4() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int CreditIdMax = Integer.parseInt("2147483648");
-			test.setCreditId(CreditIdMax);
 
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
-		}
-	}
+	    public void testGetCreditType5() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "abc123";
 
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setCreditId(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetCreditId5() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int CreditIdMax = Integer.parseInt("-2147483649");
-			test.setCreditId(CreditIdMax);
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
 
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
-		}
+	        assertEquals(expected, actual);
+	    }
 
-	}
+
+	    @Test
+	    public void testGetCreditType6() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "あいう１２３";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+	    }
+
+
+	    public void testGetCreditType7() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "abc123あいう１２３";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+	    }
+
+
+	    public void testGetCreditType8() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "ａｂｃ１２３あいう漢字";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+	    }
+
+
+	    @Test
+	    public void testSetCreditType1() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = null;
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
+
+
+	    public void testSetCreditType2() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
+
+	    public void testSetCreditType3() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = " ";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
+
+	    public void testSetCreditType4() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "　";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
+	    public void testSetCreditType5() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "abc123";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
+
+	    @Test
+	    public void testSetCreditType6() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "あいう１２３";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
+
+	    public void testSetCreditType7() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "abc123あいう１２３";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
+
+	    public void testSetCreditType8() {
+	        PaymentDTO test = new PaymentDTO();
+	        String expected = "ａｂｃ１２３あいう漢字";
+
+	        test.setCreditType(expected);
+	        String actual = test.getCreditType();
+
+	        assertEquals(expected, actual);
+
+	    }
+
 
 	/**
 	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getCreditNumber()}
@@ -911,328 +943,503 @@ public class PaymentDTOTest {
 
 	}
 
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationMonth1() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 0;
-
-		test.setExpirationMonth(expected);
-
-		assertEquals(expected, test.getExpirationMonth());
-
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationMonth2() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 2147483647;
-
-		test.setExpirationMonth(expected);
-
-		assertEquals(expected, test.getExpirationMonth());
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationMonth3() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = -2147483648;
-
-		test.setExpirationMonth(expected);
-
-		assertEquals(expected, test.getExpirationMonth());
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationMonth4() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationMonthMin = Integer.parseInt("2147483648");
-			test.setExpirationMonth(ExpirationMonthMin);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
-		}
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationMonth5() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationMonthMin = Integer.parseInt("-2147483649");
-			test.setExpirationMonth(ExpirationMonthMin);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationMonth1() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 0;
-
-		test.setExpirationMonth(expected);
-		int actual = test.getExpirationMonth();
-
-		assertEquals(expected, actual);
-	}
-
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationMonth2() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 2147483647;
-
-		test.setExpirationMonth(expected);
-		int actual = test.getExpirationMonth();
-
-		assertEquals(expected, actual);
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationMonth3() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = -2147483648;
-
-		test.setExpirationMonth(expected);
-		int actual = test.getExpirationMonth();
-
-		assertEquals(expected, actual);
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationMonth4() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationMonthMax = Integer.parseInt("2147483648");
-			test.setExpirationMonth(ExpirationMonthMax);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
-		}
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationMonth5() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationMonthMax = Integer.parseInt("-2147483649");
-			test.setExpirationMonth(ExpirationMonthMax);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationYear1() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 0;
-
-		test.setExpirationYear(expected);
-
-		assertEquals(expected, test.getExpirationYear());
-
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationYear2() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 2147483647;
-
-		test.setExpirationYear(expected);
-
-		assertEquals(expected, test.getExpirationYear());
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationYear3() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = -2147483648;
-
-		test.setExpirationYear(expected);
-
-		assertEquals(expected, test.getExpirationYear());
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationYear4() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationYearMin = Integer.parseInt("2147483648");
-			test.setExpirationYear(ExpirationYearMin);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
-		}
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testGetExpirationYear5() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationYearMin = Integer.parseInt("-2147483649");
-			test.setExpirationYear(ExpirationYearMin);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationYear1() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 0;
-
-		test.setExpirationYear(expected);
-		int actual = test.getExpirationYear();
-
-		assertEquals(expected, actual);
-	}
-
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationYear2() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = 2147483647;
-
-		test.setExpirationYear(expected);
-		int actual = test.getExpirationYear();
-
-		assertEquals(expected, actual);
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationYear3() {
-		PaymentDTO test = new PaymentDTO();
-		int expected = -2147483648;
-
-		test.setExpirationYear(expected);
-		int actual = test.getExpirationYear();
-
-		assertEquals(expected, actual);
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(int)}
-	 *  のためのテスト・メソッド。
-	 */
-	@Test
-	public void testSetExpirationYear4() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationYearMax = Integer.parseInt("2147483648");
-			test.setExpirationYear(ExpirationYearMax);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
-		}
-	}
-
-	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(int)}
-	 *  のためのテスト・メソッド。
-	 */
-
-	@Test
-	public void testSetExpirationYear5() {
-		PaymentDTO test = new PaymentDTO();
-		try {
-			int ExpirationYearMax = Integer.parseInt("-2147483649");
-			test.setExpirationYear(ExpirationYearMax);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-
-	}
 
 
 
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear1() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = null;
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear2() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear3() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = " ";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear4() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "　";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear5() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear6() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "あいう１２３";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear7() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123あいう１２３";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
 
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationYear()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationYear8() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "ａｂｃ１２３あいう漢字";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
 
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear1() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = null;
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
 
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear2() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
 
+}
 
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear3() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = " ";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
 
-
-
-
-
-
-
-
-
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear4() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "　";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear5() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear6() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "あいう１２３";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear7() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123あいう１２３";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationYear(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationYear8() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "ａｂｃ１２３あいう漢字";
+
+	test.setExpirationYear(expected);
+	String actual = test.getExpirationYear();
+
+	assertEquals(expected, actual);
+
+}
+
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth1() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = null;
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth2() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth3() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = " ";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth4() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "　";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth5() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth6() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "あいう１２３";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth7() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123あいう１２３";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#getExpirationMonth()}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testGetExpirationMonth8() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "ａｂｃ１２３あいう漢字";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth1() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = null;
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth2() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth3() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = " ";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth4() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "　";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth5() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth6() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "あいう１２３";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth7() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "abc123あいう１２３";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
+
+/**
+ * {@link com.internousdev.kairakutenichiba.dto.PaymentDTO#setExpirationMonth(java.lang.String)}
+ * のためのテスト・メソッド。
+ */
+@Test
+public void testSetExpirationMonth8() {
+	PaymentDTO test = new PaymentDTO();
+	String expected = "ａｂｃ１２３あいう漢字";
+
+	test.setExpirationMonth(expected);
+	String actual = test.getExpirationMonth();
+
+	assertEquals(expected, actual);
+
+}
 }

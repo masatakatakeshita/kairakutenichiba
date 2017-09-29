@@ -473,32 +473,31 @@ public class LoginDTOTest {
 
 
 
-
 	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.LoginDTO#isLoginFlg()}
+	 * {@link com.internousdev.kairakutenichiba.dto.LoginDTO#LoginFlg()}
 	 *  のためのテスト・メソッド。
 	 */
 	@Test
-	public void testIsLoginFlg1() {
+	public void testLoginFlg1() {
 		LoginDTO test = new LoginDTO();
 		boolean expected = true;
 
 		test.setLoginFlg(expected);
-		boolean actual=test.isLoginFlg();
+		boolean actual=test.LoginFlg();
 		assertEquals(expected, actual);
 	}
 
 	/**
-	 * {@link com.internousdev.kairakutenichiba.dto.LoginDTO#isLoginFlg()}
+	 * {@link com.internousdev.kairakutenichiba.dto.LoginDTO#LoginFlg()}
 	 *  のためのテスト・メソッド。
 	 */
 	@Test
-	public void testIsLoginFlg2() {
+	public void testLoginFlg2() {
 		LoginDTO test = new LoginDTO();
 		boolean expected = false;
 
 		test.setLoginFlg(expected);
-		boolean actual=test.isLoginFlg();
+		boolean actual=test.LoginFlg();
 		assertEquals(expected, actual);
 	}
 
@@ -512,7 +511,7 @@ public class LoginDTOTest {
 		boolean expected = true;
 
 		test.setLoginFlg(expected);
-		boolean actual=test.isLoginFlg();
+		boolean actual=test.LoginFlg();
 		assertEquals(expected, actual);
 	}
 
@@ -526,10 +525,9 @@ public class LoginDTOTest {
 		boolean expected = false;
 
 		test.setLoginFlg(expected);
-		boolean actual=test.isLoginFlg();
+		boolean actual=test.LoginFlg();
 		assertEquals(expected, actual);
 	}
-
 	/**
 	 * {@link com.internousdev.kairakutenichiba.dto.LoginDTO#getUserFlg()}
 	 *  のためのテスト・メソッド。
