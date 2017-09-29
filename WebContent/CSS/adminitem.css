@@ -1,3 +1,9 @@
 h1{
 margin-top:130px;
 }
+
+.upd{
+	position:relative;
+	float:left;
+	display:inline-block;
+}
