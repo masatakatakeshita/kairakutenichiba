@@ -2289,6 +2289,651 @@ public class CartDeleteDTOTest {
 	}
 
 
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay1() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = null;
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay2() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay3() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = " ";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay4() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "　";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay5() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay6() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "あいう１２３";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay7() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123あいう１２３";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getRegisterDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetRegisterDay8() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "ａｂｃ１２３あいう漢字";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay1() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = null;
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay2() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay3() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = " ";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay4() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "　";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay5() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay6() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "あいう１２３";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay7() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123あいう１２３";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setRegisterDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetRegisterDay8() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "ａｂｃ１２３あいう漢字";
+
+		test.setRegisterDay(expected);
+		String actual = test.getRegisterDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay1() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = null;
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay2() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay3() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = " ";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay4() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "　";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay5() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay6() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "あいう１２３";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay7() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123あいう１２３";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getUpdateDay()}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetUpdateDay8() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "ａｂｃ１２３あいう漢字";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay1() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = null;
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay2() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay3() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = " ";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay4() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "　";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay5() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay6() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "あいう１２３";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay7() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "abc123あいう１２３";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setUpdateDay(java.lang.String)}
+	 * のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetUpdateDay8() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		String expected = "ａｂｃ１２３あいう漢字";
+
+		test.setUpdateDay(expected);
+		String actual = test.getUpdateDay();
+
+		assertEquals(expected, actual);
+
+	}
+
+
+//PurchaseId-----------------------------------------
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getPurchaseId()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetPurchaseId1() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		int expected = 0;
+
+		test.setPurchaseId(expected);
+
+		assertEquals(expected, test.getPurchaseId());
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getPurchaseId()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetPurchaseId2() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		int expected = 2147483647;
+
+		test.setPurchaseId(expected);
+
+		assertEquals(expected, test.getPurchaseId());
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getPurchaseId()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetPurchaseId3() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		int expected = -2147483648;
+
+		test.setPurchaseId(expected);
+
+		assertEquals(expected, test.getPurchaseId());
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getPurchaseId()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetPurchaseId4() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		try {
+			int Purchase_idMin = Integer.parseInt("2147483648");
+			test.setPurchaseId(Purchase_idMin);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
+		}
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#getPurchaseId()} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testGetPurchaseId5() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		try {
+			int Purchase_idMin = Integer.parseInt("-2147483649");
+			test.setPurchaseId(Purchase_idMin);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
+		}
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setPurchaseId(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetPurchaseId1() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		int expected = 0;
+
+		test.setPurchaseId(expected);
+		int actual = test.getPurchaseId();
+
+		assertEquals(expected, actual);
+	}
+
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setPurchaseId(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetPurchaseId2() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		int expected = 2147483647;
+
+		test.setPurchaseId(expected);
+		int actual = test.getPurchaseId();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setPurchaseId(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetPurchaseId3() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		int expected = -2147483648;
+
+		test.setPurchaseId(expected);
+		int actual = test.getPurchaseId();
+
+		assertEquals(expected, actual);
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setPurchaseId(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetPurchaseId4() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		try {
+			int Purchase_idMax = Integer.parseInt("2147483648");
+			test.setPurchaseId(Purchase_idMax);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"2147483648\"");
+		}
+	}
+
+	/**
+	 * {@link com.internousdev.kairakutenichiba.dto.CartDeleteDTO#setPurchaseId(int)} のためのテスト・メソッド。
+	 */
+	@Test
+	public void testSetPurchaseId5() {
+		CartDeleteDTO test = new CartDeleteDTO();
+		try {
+			int Purchase_idMax = Integer.parseInt("-2147483649");
+			test.setPurchaseId(Purchase_idMax);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
+		}
+	}
+
+
+
+
+
 
 
 

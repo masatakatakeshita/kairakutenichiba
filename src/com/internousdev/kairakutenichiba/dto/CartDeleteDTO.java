@@ -85,10 +85,6 @@ public class CartDeleteDTO {
      */
     private String updateDay;
 
-    /**
-     * 購入日
-     */
-    private String purchasedAt;
 
     /**
      * 購入ID
@@ -329,21 +325,6 @@ public class CartDeleteDTO {
         this.updateDay = updateDay;
     }
 
-    /**
-     * 購入日を取得
-     * @return 購入日
-     */
-    public String getPurchasedAt() {
-        return purchasedAt;
-    }
-
-    /**
-     * 購入日を格納
-     * @param purchasedAt 購入日
-     */
-    public void setPurchased_at(String purchasedAt) {
-        this.purchasedAt = purchasedAt;
-    }
 
     /**
      * 購入IDを取得
