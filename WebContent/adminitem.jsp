@@ -160,7 +160,7 @@
 				<td><s:textfield name="created_at" class="regbox"/></td>
 				<td><s:textfield name="updated_at" class="regbox"/></td>
 				<td><s:textfield name="is_deleted" class="regbox"/></td>
-				<td><s:textfield name="item_image" class="regbox"/></td>
+				<td><s:textfield name="imgPath" class="regbox"/></td>
 				<td><s:submit value="新規登録" /></td>
 			</s:form>
 

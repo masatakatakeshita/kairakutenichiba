@@ -179,7 +179,6 @@
 		<action name="AdminItemUpdateAction" class="com.internousdev.kairakutenichiba.action.AdminItemUpdateAction"
 			method="execute">
 			<result name="success">adminitem.jsp</result>
-			<result name="input">index.jsp</result>
 			<result name="error">error.jsp</result>
 			<result name="login">adminitem.jsp</result>
 		</action>

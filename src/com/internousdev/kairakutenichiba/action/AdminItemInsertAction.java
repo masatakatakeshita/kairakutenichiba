@@ -77,7 +77,7 @@ public class AdminItemInsertAction extends ActionSupport{
 	/**
 	 * 商品画像
 	 */
-	private String item_image;
+	private String imgPath;
 	/**
 	 * 削除判定
 	 */
@@ -116,9 +116,9 @@ public class AdminItemInsertAction extends ActionSupport{
 		if(dao.duplication(item_id,item_name) == true){
 			System.out.println("bbbb");
 			setDuplication("エラー：同名の商品と商品IDが存在しています");
-		}else if(dao.insert(item_id,item_name,category,release_day,author,publisher,publish_type,pages,isbn,price,stocks,sales,item_detail,item_image,is_deleted,created_at,updated_at)>0){
+		}else if(dao.insert(item_id,item_name,category,release_day,author,publisher,publish_type,pages,isbn,price,stocks,sales,item_detail,imgPath,is_deleted,created_at,updated_at)>0){
 	System.out.println("fffff");
-			dao.insert(item_id,item_name,category,release_day,author,publisher,publish_type,pages,isbn,price,stocks,sales,item_detail,item_image,is_deleted,created_at,updated_at);	
+			dao.insert(item_id,item_name,category,release_day,author,publisher,publish_type,pages,isbn,price,stocks,sales,item_detail,imgPath,is_deleted,created_at,updated_at);	
 			result = SUCCESS;
 			AdminItemDAO dao2=new AdminItemDAO();
 			itemList=dao2.select();
@@ -333,15 +333,15 @@ public class AdminItemInsertAction extends ActionSupport{
 	/**
 	 * @return item_image
 	 */
-	public String getItem_image() {
-		return item_image;
+	public String getImgPath() {
+		return imgPath;
 	}
 
 	/**
 	 * @param item_image セットする item_image
 	 */
-	public void setItem_image(String item_image) {
-		this.item_image = item_image;
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
 	}
 
 	/**

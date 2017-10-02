@@ -1,9 +1,10 @@
 package com.internousdev.kairakutenichiba.action;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.ArrayList;
 
+import com.internousdev.kairakutenichiba.dao.AdminItemDAO;
 import com.internousdev.kairakutenichiba.dao.AdminItemUpdateDAO;
+import com.internousdev.kairakutenichiba.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -38,7 +39,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
      * 発売日
      */
-    private Date release_day;
+    private String release_day;
 
     /**
      * 著者
@@ -83,12 +84,12 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
 	 * 商品詳細
 	 */
-	private String item_detail="";
+	private String item_detail;
 
 	/**
 	 * 在庫数
 	 */
-	private int stocks=0;
+	private int stocks;
 
 	/**
 	 * 売上数
@@ -98,12 +99,12 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
 	 * 登録日
 	 */
-	private Time created_at;
+	private String created_at;
 
 	/**
 	 * 更新日
 	 */
-	private Time updated_at;
+	private String updated_at;
 
 	/**
 	 * 商品画像01
@@ -120,7 +121,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 */
 	private String doubling;
 
-	
+	private ArrayList<ItemDTO> itemList;
 
 
 	/**
@@ -129,7 +130,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 */
 	public String execute() {
 		
-		String result =ERROR;
+		String result = ERROR;
 		int updated=0;
 
 		AdminItemUpdateDAO dao= new AdminItemUpdateDAO();
@@ -139,6 +140,13 @@ public class AdminItemUpdateAction extends ActionSupport{
 
 			if(updated>0){
 				result = SUCCESS;
+				
+				AdminItemDAO dao2=new AdminItemDAO();
+				itemList=dao2.select();
+				
+				if(itemList.size()>0){
+					result=SUCCESS;
+				}
 			}
 		
 
@@ -304,7 +312,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 販売日を取得する
 	 * @return release_day
 	 */
-	public Date getRelease_day() {
+	public String getRelease_day() {
 		return release_day;
 	}
 
@@ -312,7 +320,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 販売日を格納する
 	 * @param release_day セットする release_day
 	 */
-	public void setRelease_day(Date release_day) {
+	public void setRelease_day(String release_day) {
 		this.release_day = release_day;
 	}
 
@@ -465,7 +473,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 登録日を取得する
 	 * @return created_at
 	 */
-	public Time getCreated_at() {
+	public String getCreated_at() {
 		return created_at;
 	}
 
@@ -473,7 +481,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 登録日を格納する
 	 * @param created_at セットする created_at
 	 */
-	public void setCreated_at(Time created_at) {
+	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
 	}
 
@@ -481,7 +489,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 更新日を取得する
 	 * @return updated_at
 	 */
-	public Time getUpdated_at() {
+	public String getUpdated_at() {
 		return updated_at;
 	}
 
@@ -489,8 +497,26 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 更新日を格納する
 	 * @param updated_at セットする updated_at
 	 */
-	public void setUpdated_at(Time updated_at) {
+	public void setUpdated_at(String updated_at) {
 		this.updated_at = updated_at;
+	}
+
+
+
+	/**
+	 * @return itemList
+	 */
+	public ArrayList<ItemDTO> getItemList() {
+		return itemList;
+	}
+
+
+
+	/**
+	 * @param itemList セットする itemList
+	 */
+	public void setItemList(ArrayList<ItemDTO> itemList) {
+		this.itemList = itemList;
 	}
 
 }
