@@ -1,50 +1,45 @@
-h1{background-color:pink;
-margin-top:100px;
+h1 {
+	background-color: pink;
+	margin-top: 100px;
 }
+
 table.type01 {
-    border-collapse: collapse;
-    line-height: 1.5;
-    border-left: 1px solid #ccc;
-    text-align: right;
+	border-collapse: collapse;
+	line-height: 1.5;
+	border-left: 1px solid #ccc;
+	text-align: right;
+}
 
+table.type01 th {
+	width: 150px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #ececec;
 }
-table.type01 thead th {
-    padding: 10px;
-    font-weight: bold;
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 2px solid #c00;
-    background: #dcdcd1;
-}
-table.type01 tbody th {
-    width: 150px;
-    padding: 10px;
-    font-weight: bold;
-    vertical-align: top;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    background: #ececec;
-}
+
 table.type01 td {
-    width: 350px;
-    padding: 10px;
-    vertical-align: top;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+	width: 350px;
+	padding: 10px;
+	vertical-align: top;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
-
 
 table.type02 {
-max-width: 100%;
-		   color:red;
+	width: 100%;
+	color: red;
 	border-collapse: separate;
 	border-spacing: 0;
 	text-align: right;
 	line-height: 1.5;
 	border-top: 1px solid #ccc;
 	border-left: 1px solid #ccc;
-	background-size:contain;
+	background-size: contain;
 }
+
 table.type02 th {
 	padding: 10px;
 	font-weight: bold;
@@ -55,67 +50,57 @@ table.type02 th {
 	border-left: 1px solid #fff;
 	background: #eee;
 }
+
 table.type02 td {
-	        color:red;
+	color: red;
 	padding: 10px;
-	 font-weight: bold;
+	font-weight: bold;
 	vertical-align: top;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
 
-button.button8{
-	position:absolute;
-	margin-left:1450px;
-	    /* 文字サイズを1.4emに指定 */
-    font-size: 01em;
-
-    /* 文字の太さをboldに指定 */
-    font-weight: bold;
-
-
-    /* 縦方向に10px、
+button.button8 {
+	position: absolute;
+	margin-left: 87%;
+	/* 文字サイズを1.4emに指定 */
+	font-size: 01em;
+	/* 文字の太さをboldに指定 */
+	font-weight: bold;
+	/* 縦方向に10px、
      * 横方向に30pxの余白を指定 */
-    padding: 10px 30px;
-
-    /* 文字色を白色に指定 */
-    color: #fff;
-
-    /* ボーダーをなくす */
-    border-style: none;
-
-    /* ボタンの影の指定
+	padding: 10px 30px;
+	/* 文字色を白色に指定 */
+	color: #fff;
+	/* ボーダーをなくす */
+	border-style: none;
+	/* ボタンの影の指定
      * 影の横幅を2px
      * 縦長を2px
      * ぼかしを3px
      * 広がりを1px
      * 色を#666（グレー）に指定 */
-    box-shadow: 2px 2px 3px 1px #666;
-    -moz-box-shadow: 2px 2px 3px 1px #666;
-    -webkit-box-shadow: 2px 2px 3px 1px #666;
-
-    /* テキストの影の指定
+	box-shadow: 2px 2px 3px 1px #666;
+	-moz-box-shadow: 2px 2px 3px 1px #666;
+	-webkit-box-shadow: 2px 2px 3px 1px #666;
+	/* テキストの影の指定
      * 影の横幅を1px
      * 縦長を1px
      * ぼかしを2px
      * 色を#000（黒）に指定 */
-    text-shadow: 1px 1px 2px #000;
-
-    /* グラデーションの指定 */
-    background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
-    background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
-
-    /* 角丸の指定 */
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+	text-shadow: 1px 1px 2px #000;
+	/* グラデーションの指定 */
+	background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
+	background: -webkit-gradient(linear, left bottom, left top, from(#36d),
+		color-stop(0.5, #248), to(#36d));
+	/* 角丸の指定 */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
+
 button.button8:hover {
-    /* 透明度を20%に指定 */
-    opacity: 0.8;
+	/* 透明度を20%に指定 */
+	opacity: 0.8;
 }
 
-.col-xs-5{
-	border-width: 0px;
-	padding:0px;
-}

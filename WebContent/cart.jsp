@@ -58,11 +58,9 @@
 								<td style="width: 20%;"><s:property value="priceyen" /><s:text name="lang.cart.yen" /></td>
 								<td style="width: 20%;">
 									<div class="col-xs-5">
-									  <s:form action="CartUpdateAction" >
+									  <s:form action="CartUpdateAction" theme="simple">
 										<s:select
-											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}"
-											name="quantities"
-											value="quantities"
+											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}" name="quantities" value="quantities"
 						                  />
 						                  <s:hidden name="itemId" value="%{itemId}" />
 						                 <input id="submit_button" type="submit" name="submit" value="<s:text name="lang.cart.update" />">
@@ -70,7 +68,7 @@
 						                  </div>
 								</td>
 								<td style="width: 20%;"><s:property value="subtotalyen" /><s:text name="lang.cart.yen" /></td>
-								<td  style="width: 20%;"><s:form  action="CartItemDeleteAction">
+								<td  style="width: 20%;"><s:form  action="CartItemDeleteAction" theme="simple">
 								   <s:hidden  name="itemId" value="%{itemId}" />
 										<input id="submit_button" type="submit" name="submit" value="<s:text name="lang.cart.delete" />">
 
@@ -94,18 +92,6 @@
 		<p><a href="index.jsp"><s:text name="lang.cart.message3" /></a>
 	</p>
 
-<script>
-		if (window.history && window.history.pushState) {
-			history.pushState("nohb", null, "");
-			$(window).on("popstate", function(event) {
-				if (!event.originalEvent.state) {
-					history.pushState("nohb", null, "")
-					alert("画面最上部のヘッター又は画面中央部ボタンからお戻り下さい。");
-					return;
-				}
-			});
-		}
-	</script>
 
 
 </body>
