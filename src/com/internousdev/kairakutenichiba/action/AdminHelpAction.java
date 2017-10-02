@@ -205,7 +205,7 @@ public String execute(){
 	 * 問い合わせ種類取得メソッド
 	 * @return category　問い合わせ種類
 	 */
-	public String getcategory() {
+	public String getCategory() {
 		return category;
 	}
 
@@ -280,6 +280,8 @@ public String execute(){
 	public void setDt(String dt) {
 		this.dt = dt;
 	}
+
+
 
 	/**
 	 * 問い合わせリスト取得メソッド

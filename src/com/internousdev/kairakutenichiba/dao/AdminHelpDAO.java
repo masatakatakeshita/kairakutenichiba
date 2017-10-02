@@ -90,7 +90,7 @@ public class AdminHelpDAO {
 				 */
 				cursor = cursor.sort(querysort);
 
-
+try {
 
 			while (cursor.hasNext()) {
 				AdminHelpDTO dto = new AdminHelpDTO();
@@ -101,6 +101,9 @@ public class AdminHelpDAO {
 				dto.setComment((String) dbs.get("comment"));
 				dto.setDt((String) dbs.get("inquiried_at"));
 				selectList.add(dto);
+
+			}
+}finally {
 
 
 
