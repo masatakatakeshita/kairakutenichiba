@@ -1364,7 +1364,7 @@ public class CartDTOTest {
 
 		test.setSubtotalyen(expected);
 
-		assertEquals(expected, test.getSubtotal(),1);
+		assertEquals(expected, test.getSubtotalyen(),1);
 	}
 
 	/**

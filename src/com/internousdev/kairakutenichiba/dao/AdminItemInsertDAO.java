@@ -25,6 +25,7 @@ public class AdminItemInsertDAO {
 		Boolean ret = false;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
+	System.out.println("cccc");
 		
 		String sql = "select * from items where item_id = ? and item_name = ?";
 		try{
@@ -33,7 +34,7 @@ public class AdminItemInsertDAO {
 			ps.setString(2, itemName);
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()){
-				if(rs.getInt("item_id")==itemId || rs.getString("item_name").equals(itemName)){
+				if(rs.getInt("item_id")==itemId && rs.getString("item_name").equals(itemName)){
 					ret = true;
 				}
 			}
@@ -65,18 +66,37 @@ public class AdminItemInsertDAO {
 	 * @param RegisteredDay　登録日
 	 * @param UpdatedDay　更新日
 	 */
-	//voidでよくね？
-	//なんかデータ型で返すものなんて無いだろ
-	public int insert(int itemId, String itemName, String category, String releaseday, String Author, String publisher, String publishtype, int page, int ISBN, int price, int stocks,int sales, String itemdetail, String itemimagePass, boolean deleteFlag, String RegisteredDay, String UpdatedDay){
+	public int insert(int itemId, String itemName, String category, String releaseday, String Author, String publisher, String publishtype, int page, long ISBN, int price, int stocks,int sales, String itemdetail, String itemimagePass, boolean deleteFlag, String RegisteredDay, String UpdatedDay){
 		int ret=0;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();
 		
-		String sql="insert into items(item_id, item_name, category, release_day, author, publisher, publisher_type, pages, isbn, price, stocks, sales, item_detail, item_image, is_deleted, created_at, updated_at)"
-				+ "values(itemId, itemName,category,releaseday,Author,publisher,publishtype,page,ISBN,price,stocks,sales,itemdetail,itemimagePass,deleteFlag,RegisteredDay,UpdatedDay)";
+	System.out.println("sql動いてる？");
+		String sql="insert into items(item_id, item_name, category_name, release_day, author, publisher, publish_type, pages, isbn, price, stocks, sales, item_datail, item_image, is_deleted, created_at, updated_at)"
+				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	System.out.println("eeeeeeee");
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, itemId);
+			ps.setString(2, itemName);
+			ps.setString(3, category);
+			ps.setString(4, releaseday);
+			ps.setString(5, Author);
+			ps.setString(6, publisher);
+			ps.setString(7, publishtype);
+			ps.setInt(8, page);
+			ps.setLong(9, ISBN);
+			ps.setInt(10, price);
+			ps.setInt(11, stocks);
+			ps.setInt(12, sales );
+			ps.setString(13, itemdetail);
+			ps.setString(14,  itemimagePass);
+			ps.setBoolean(15,  deleteFlag);
+			ps.setString(16, RegisteredDay);
+			ps.setString(17, UpdatedDay);
+			
 			ret = ps.executeUpdate();
+		System.out.println("ddddd");
 			
 			con.close();
 		}catch(SQLException e){
