@@ -47,7 +47,7 @@
  -->
 	<!-- 商品追加 -->
 	<s:form action="AdminItemInsertAction">
-		<s:submit value="%{getText('lang.admin_item.add')}" name="submit" />
+		<s:submit value="%{getText('lang.adminitem.add')}" name="submit" />
 	</s:form>
 
 
@@ -57,7 +57,7 @@
 	</h2>
 	<hr>
 
-	<table border="1">
+	<table border="1" class="table">
 		<tr>
 			<!-- 商品ID -->
 			<th><s:text name="lang.adminitem.id" /></th>
@@ -114,53 +114,53 @@
 
 				<td><s:form action="AdminItemDeleteAction">
 						<s:hidden name="item_id" value="item_id" />
-						<s:submit value="%{getText('lang.admin_item.del')}" />
+						<s:submit value="%{getText('lang.adminitem.del')}" />
 					</s:form></td>
 			</tr>
 		</s:iterator>
 
 		<!-- 更新 -->
 
-			<s:form action="AdminItemUpdateAction">
-				<s:textfield name="item_id" class="upd"/>
-				<s:textfield name="item_name" class="upd"/>
-				<s:textfield name="category" class="upd"/>
-				<s:textfield name="release_day" class="upd"/>
-				<s:textfield name="author" class="upd"/>
-				<s:textfield name="publisher" class="upd"/>
-				<s:textfield name="publish_type" class="upd"/>
-				<s:textfield name="pages" class="upd"/>
-				<s:textfield name="isbn" class="upd"/>
-				<s:textfield name="price" class="upd"/>
-				<s:textfield name="item_detail" class="upd"/>
-				<s:textfield name="stocks" class="upd"/>
-				<s:textfield name="sales" class="upd"/>
-				<s:textfield name="created_at" class="upd"/>
-				<s:textfield name="updated_at" class="upd"/>
-				<s:textfield name="is_deleted" class="upd"/>
-				<s:textfield name="item_image" class="upd"/>
-				<s:submit value="%{getText('lang.admin_item.upd')}" />
+			<s:form action="AdminItemUpdateAction"  theme="simple">
+				<td><s:textfield name="item_id" class="updbox"/></td>
+				<td><s:textfield name="item_name" class="updbox"/></td>
+				<td><s:textfield name="category" class="updbox"/></td>
+				<td><s:textfield name="release_day" class="updbox"/></td>
+				<td><s:textfield name="author" class="updbox"/></td>
+				<td><s:textfield name="publisher" class="updbox"/></td>
+				<td><s:textfield name="publish_type" class="updbox"/></td>
+				<td><s:textfield name="pages" class="updbox"/></td>
+				<td><s:textfield name="isbn" class="updbox"/></td>
+				<td><s:textfield name="price" class="updbox"/></td>
+				<td><s:textfield name="item_detail" class="updbox"/></td>
+				<td><s:textfield name="stocks" class="updbox"/></td>
+				<td><s:textfield name="sales" class="updbox"/></td>
+				<td><s:textfield name="created_at" class="updbox"/></td>
+				<td><s:textfield name="updated_at" class="updbox"/></td>
+				<td><s:textfield name="is_deleted" class="updbox"/></td>
+				<td><s:textfield name="imgPath" class="updbox"/></td>
+				<td><s:submit value="%{getText('lang.adminitem.upd')}" /></td>
 			</s:form>
 		<!-- 新規登録 -->
 		<tr>
-			<s:form action="AdminItemInsertAction">
-				<td><s:textfield name="item_id" /></td>
-				<td><s:textfield name="item_name" /></td>
-				<td><s:textfield name="category" /></td>
-				<td><s:textfield name="release_day" /></td>
-				<td><s:textfield name="author" /></td>
-				<td><s:textfield name="publisher" /></td>
-				<td><s:textfield name="publish_type" /></td>
-				<td><s:textfield name="pages" /></td>
-				<td><s:textfield name="isbn" /></td>
-				<td><s:textfield name="price" /></td>
-				<td><s:textfield name="item_detail" /></td>
-				<td><s:textfield name="stocks" /></td>
-				<td><s:textfield name="sales" /></td>
-				<td><s:textfield name="created_at" /></td>
-				<td><s:textfield name="updated_at" /></td>
-				<td><s:textfield name="is_deleted" /></td>
-				<td><s:textfield name="item_image" /></td>
+			<s:form action="AdminItemInsertAction" theme="simple">
+				<td><s:textfield name="item_id" class="regbox"/></td>
+				<td><s:textfield name="item_name" class="regbox"/></td>
+				<td><s:textfield name="category" class="regbox"/></td>
+				<td><s:textfield name="release_day" class="regbox"/></td>
+				<td><s:textfield name="author" class="regbox"/></td>
+				<td><s:textfield name="publisher" class="regbox"/></td>
+				<td><s:textfield name="publish_type" class="regbox"/></td>
+				<td><s:textfield name="pages" class="regbox"/></td>
+				<td><s:textfield name="isbn" class="regbox"/></td>
+				<td><s:textfield name="price" class="regbox"/></td>
+				<td><s:textfield name="item_detail" class="regbox"/></td>
+				<td><s:textfield name="stocks" class="regbox"/></td>
+				<td><s:textfield name="sales" class="regbox"/></td>
+				<td><s:textfield name="created_at" class="regbox"/></td>
+				<td><s:textfield name="updated_at" class="regbox"/></td>
+				<td><s:textfield name="is_deleted" class="regbox"/></td>
+				<td><s:textfield name="item_image" class="regbox"/></td>
 				<td><s:submit value="新規登録" /></td>
 			</s:form>
 

@@ -58,7 +58,7 @@
 								<td style="width: 20%;"><s:property value="priceyen" /><s:text name="lang.cart.yen" /></td>
 								<td style="width: 20%;">
 									<div class="col-xs-5">
-									  <s:form action="CartUpdateAction" >
+									  <s:form action="CartUpdateAction" theme="simple">
 										<s:select
 											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}" name="quantities" value="quantities"
 						                  />
@@ -68,7 +68,7 @@
 						                  </div>
 								</td>
 								<td style="width: 20%;"><s:property value="subtotalyen" /><s:text name="lang.cart.yen" /></td>
-								<td  style="width: 20%;"><s:form  action="CartItemDeleteAction">
+								<td  style="width: 20%;"><s:form  action="CartItemDeleteAction" theme="simple">
 								   <s:hidden  name="itemId" value="%{itemId}" />
 										<input id="submit_button" type="submit" name="submit" value="<s:text name="lang.cart.delete" />">
 
