@@ -73,6 +73,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 * 配送方法
 	 */
     private String deliverySelect;
+    private boolean deliveryselectboolean;
 	/**
 	 * 配送日
 	 */
@@ -121,6 +122,13 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 					                amountAll = amountAll+(cartList.get(i).getPriceyen()) * (cartList.get(i).getQuantities());
 					            }
 								ret = SUCCESS;
+								if(deliverySelect=="メール便"){
+									deliveryselectboolean=true;
+									amountAll+=200;
+									}else{
+										deliveryselectboolean=false;
+										amountAll+=500;
+									}
 								
 							}else{
 								whaterror=1;
@@ -406,6 +414,17 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	 */
 	public void setStr(String str) {
 		this.str = str;
+	}
+
+
+
+	public boolean isDeliveryselectboolean() {
+		return deliveryselectboolean;
+	}
+
+
+	public void setDeliveryselectboolean(boolean deliveryselectboolean) {
+		this.deliveryselectboolean = deliveryselectboolean;
 	}
 
 

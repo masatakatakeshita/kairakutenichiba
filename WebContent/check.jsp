@@ -50,19 +50,27 @@
     <tr>
         <td><img src="<s:property value="imgPath" />" style="width: 15%"></td>
         <td><s:property value="itemName" /></td>
-        <td><s:property value="priceyen" /></td>
-        <td><s:property value="quantities" /></td>
-        <td><s:property value="subtotalyen" /></td>
+        <td><s:property value="priceyen" /><s:text name="lang.check.yen" /></td>
+        <td><s:property value="quantities" /><s:text name="lang.check.quantities" /></td>
+        <td><s:property value="subtotalyen" /><s:text name="lang.check.yen" /></td>
     </tr>
     </s:iterator>
-    
+    <tr>
+    	
+        <th><s:text name="" /></th>
+        <th><s:text name="" /></th>
+        <th><s:text name="" /></th>
+        <th><s:text name="lang.check.fee" /><s:text name="lang.check.yen" /></th>
+        <th><s:if test="%{deliveryselectboolean}" >200<s:text name="lang.check.yen" /></s:if>
+             <s:else>500<s:text name="lang.check.yen" /></s:else></th>
+    </tr>
     <tr>
     	
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
         <th><s:text name="lang.check.total" /></th>
-        <th><s:property value="amountAll" /></th>
+        <th><s:property value="amountAll" /><s:text name="lang.check.yen" /></th>
     </tr>
     
 
@@ -72,7 +80,10 @@
 <p><s:property value="creditType" />:<s:property value="str" /></p>
 <!--配送方法  -->
 <h3><s:text name="lang.check.deliver" /></h3>
-<p><s:property value="deliverySelect" /></p>
+<p><s:property value="deliverySelect" />
+ <s:if test="%{deliveryselectboolean}" >(200<s:text name="lang.check.yen" />)</s:if>
+ <s:else>(500<s:text name="lang.check.yen" />)</s:else>
+</p>
 <!--お届け日時 -->
 <h3><s:text name="lang.check.time" /></h3>
 <p><s:property value="deliveryMonth" />:<s:property value="deliveryTime" /></p>
