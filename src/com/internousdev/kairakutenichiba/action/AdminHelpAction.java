@@ -173,7 +173,7 @@ public String execute(){
 	 * 名前検索の取得メソッド
 	 * @return searchName　名前検索
 	 */
-	public String getSearchName() {
+	public String getSearchUserName() {
 		return searchUserName;
 	}
 
