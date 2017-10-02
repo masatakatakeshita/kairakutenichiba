@@ -65,14 +65,14 @@
 											value="quantities"
 						                  />
 						                  <s:hidden name="itemId" value="%{itemId}" />
-						                 <input id="submit_button" type="submit" name="submit" value="更新">
+						                 <input id="submit_button" type="submit" name="submit" value="<s:text name="lang.cart.update" />">
 						                  </s:form>
 						                  </div>
 								</td>
 								<td style="width: 20%;"><s:property value="subtotalyen" /><s:text name="lang.cart.yen" /></td>
 								<td  style="width: 20%;"><s:form  action="CartItemDeleteAction">
 								   <s:hidden  name="itemId" value="%{itemId}" />
-										<input id="submit_button" type="submit" name="submit" value="削除">
+										<input id="submit_button" type="submit" name="submit" value="<s:text name="lang.cart.delete" />">
 
 									</s:form></td>
 							</tr>
@@ -87,11 +87,9 @@
 				<td style="width: 20%;">
                     	<s:property value="amountAll" />
                     <s:text name="lang.cart.yen" /></td></tr></table>
-<span id="submit">
-		<input type="submit" onclick="location.href='payment.jsp'"
-		value="<s:text name="lang.cart.message4" />">
 
-		</span>
+		<button class="button8" type="submit" onclick="location.href='payment.jsp'"><s:text name="lang.cart.message4" /></button>
+
 
 		<p><a href="index.jsp"><s:text name="lang.cart.message3" /></a>
 	</p>
