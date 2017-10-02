@@ -1,5 +1,8 @@
 package com.internousdev.kairakutenichiba.action;
 
+import java.sql.Date;
+import java.sql.Time;
+
 import com.internousdev.kairakutenichiba.dao.AdminItemUpdateDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -35,7 +38,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
      * 発売日
      */
-    private String release_day;
+    private Date release_day;
 
     /**
      * 著者
@@ -70,7 +73,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
      * 商品削除
      */
-    private boolean is_deleted;
+    private int is_deleted;
 
 	/**
 	 * イメージファイルパス
@@ -95,12 +98,12 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
 	 * 登録日
 	 */
-	private String created_at;
+	private Time created_at;
 
 	/**
 	 * 更新日
 	 */
-	private String updated_at;
+	private Time updated_at;
 
 	/**
 	 * 商品画像01
@@ -301,7 +304,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 販売日を取得する
 	 * @return release_day
 	 */
-	public String getRelease_day() {
+	public Date getRelease_day() {
 		return release_day;
 	}
 
@@ -309,7 +312,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 販売日を格納する
 	 * @param release_day セットする release_day
 	 */
-	public void setRelease_day(String release_day) {
+	public void setRelease_day(Date release_day) {
 		this.release_day = release_day;
 	}
 
@@ -446,7 +449,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 削除フラグを取得する
 	 * @return is_deleted
 	 */
-	public boolean isIs_deleted() {
+	public int getIs_deleted() {
 		return is_deleted;
 	}
 
@@ -454,7 +457,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 削除フラグを格納する
 	 * @param is_deleted セットする is_deleted
 	 */
-	public void setIs_deleted(boolean is_deleted) {
+	public void setIs_deleted(int is_deleted) {
 		this.is_deleted = is_deleted;
 	}
 
@@ -462,7 +465,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 登録日を取得する
 	 * @return created_at
 	 */
-	public String getCreated_at() {
+	public Time getCreated_at() {
 		return created_at;
 	}
 
@@ -470,7 +473,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 登録日を格納する
 	 * @param created_at セットする created_at
 	 */
-	public void setCreated_at(String created_at) {
+	public void setCreated_at(Time created_at) {
 		this.created_at = created_at;
 	}
 
@@ -478,7 +481,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 更新日を取得する
 	 * @return updated_at
 	 */
-	public String getUpdated_at() {
+	public Time getUpdated_at() {
 		return updated_at;
 	}
 
@@ -486,7 +489,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 更新日を格納する
 	 * @param updated_at セットする updated_at
 	 */
-	public void setUpdated_at(String updated_at) {
+	public void setUpdated_at(Time updated_at) {
 		this.updated_at = updated_at;
 	}
 
