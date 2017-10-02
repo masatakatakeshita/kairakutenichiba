@@ -58,7 +58,7 @@
 								<td style="width: 20%;"><s:property value="priceyen" /><s:text name="lang.cart.yen" /></td>
 								<td style="width: 20%;">
 									<div class="col-xs-5">
-									  <s:form action="CartUpdateAction" theme="simple">
+									  <s:form action="CartUpdateAction" theme="simple" >
 										<s:select
 											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}" name="quantities" value="quantities"
 						                  />
