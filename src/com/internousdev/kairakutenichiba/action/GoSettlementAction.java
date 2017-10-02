@@ -67,6 +67,7 @@ public class GoSettlementAction extends CartAssist implements SessionAware {
 
 			GoCartDAO dao = new GoCartDAO();
 			cartList = dao.selectedItem(userId);
+			System.out.println(cartList.size());
 			if(cartList.size() > 0){
 			result = SUCCESS;
 			}else{

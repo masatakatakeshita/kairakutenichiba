@@ -85,9 +85,9 @@
 				<td style="width: 20%;">
                     	<s:property value="amountAll" />
                     <s:text name="lang.cart.yen" /></td></tr></table>
-
-		<button class="button8" type="submit" onclick="location.href='payment.jsp'"><s:text name="lang.cart.message4" /></button>
-
+      <div class="button8" >
+		<a href='<s:url action="GoSettlementAction" />' > <s:text name="lang.cart.message4" /></a>
+      </div>
 
 		<p><a href="index.jsp"><s:text name="lang.cart.message3" /></a>
 	</p>
