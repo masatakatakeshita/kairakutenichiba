@@ -18,7 +18,7 @@
 <meta charset="utf-8">
 
 <title><s:text name="lang.cartempty.title" /></title>
-<link rel="stylesheet" type="text/css" href="CSS/cartempty_shoji.css">
+<link rel="stylesheet" type="text/css" href="CSS/cartempty.css">
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
