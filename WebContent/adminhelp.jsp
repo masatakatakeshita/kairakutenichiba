@@ -22,14 +22,14 @@
 
 </head>
 <body>
-<div id="center">
+
 
 	<header>
 		<s:include value="adminheader.jsp" />
 	</header>
 	<br>
 
-
+<div id="center">
 	<h1><s:text name="lang.adminhelp.h1title" /></h1>
 
 	<p>
