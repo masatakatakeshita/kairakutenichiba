@@ -92,7 +92,7 @@
 <s:form action="PurchaseCompleteAction">
 <s:hidden name="str" value="%{str}" />
 <s:hidden name="delivery" value="%{deliverySelect}" />
-<h4><s:submit value= "注文完了" ></s:submit></h4>
+<h4><s:submit value= "注文を確定する(determine)" ></s:submit></h4>
 </s:form>
 
 <!-- *購入手続きされません -->
