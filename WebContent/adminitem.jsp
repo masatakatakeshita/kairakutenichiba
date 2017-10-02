@@ -41,13 +41,12 @@
 
 
 
-
 	<!--
 <div align="right" style="padding-right:20%">
  -->
 	<!-- 商品追加 -->
 	<s:form action="AdminItemInsertAction">
-		<s:submit value="%{getText('lang.adminitem.add')}" name="submit" />
+	<s:submit value="%{getText('lang.adminitem.add')}" name="submit" />
 	</s:form>
 
 
