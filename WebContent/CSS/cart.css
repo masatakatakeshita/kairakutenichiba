@@ -8,15 +8,8 @@ table.type01 {
     text-align: right;
 
 }
-table.type01 thead th {
-    padding: 10px;
-    font-weight: bold;
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 2px solid #c00;
-    background: #dcdcd1;
-}
-table.type01 tbody th {
+
+table.type01 th {
     width: 150px;
     padding: 10px;
     font-weight: bold;
@@ -35,7 +28,7 @@ table.type01 td {
 
 
 table.type02 {
-max-width: 100%;
+width: 100%;
 		   color:red;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -66,7 +59,7 @@ table.type02 td {
 
 button.button8{
 	position:absolute;
-	margin-left:1450px;
+	margin-left:87%;
 	    /* 文字サイズを1.4emに指定 */
     font-size: 01em;
 
@@ -115,7 +108,7 @@ button.button8:hover {
     opacity: 0.8;
 }
 
-.col-xs-5{
+wwFormTable{
 	border-width: 0px;
-	padding:0px;
+	padding:0%;
 }

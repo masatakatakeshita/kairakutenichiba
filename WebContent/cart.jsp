@@ -60,9 +60,7 @@
 									<div class="col-xs-5">
 									  <s:form action="CartUpdateAction" >
 										<s:select
-											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}"
-											name="quantities"
-											value="quantities"
+											list="{\"1\",\"2\",\"3\",\"4\",\"5\"}" name="quantities" value="quantities"
 						                  />
 						                  <s:hidden name="itemId" value="%{itemId}" />
 						                 <input id="submit_button" type="submit" name="submit" value="<s:text name="lang.cart.update" />">
@@ -94,18 +92,6 @@
 		<p><a href="index.jsp"><s:text name="lang.cart.message3" /></a>
 	</p>
 
-<script>
-		if (window.history && window.history.pushState) {
-			history.pushState("nohb", null, "");
-			$(window).on("popstate", function(event) {
-				if (!event.originalEvent.state) {
-					history.pushState("nohb", null, "")
-					alert("画面最上部のヘッター又は画面中央部ボタンからお戻り下さい。");
-					return;
-				}
-			});
-		}
-	</script>
 
 
 </body>
