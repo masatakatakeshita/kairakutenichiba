@@ -4,8 +4,10 @@ h1 {
 }
 
 table.type01 {
+	width: 100%;
 	border-collapse: collapse;
 	line-height: 1.5;
+	border-top: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	text-align: right;
 }
