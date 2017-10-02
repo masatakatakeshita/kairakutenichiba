@@ -49,7 +49,7 @@ public class AdminHelpDTO {
     /**
      * お問い合わせ日時
      */
-    private String inquiriedAt;
+    private String dt;
     /**
      * 問い合わせ番号を取得
      * @return inquiryNo
@@ -178,24 +178,18 @@ public class AdminHelpDTO {
 
     /**
      * お問い合わせ日時を取得
-     * @return inquiriedAt
+     * @return Dt
      */
-    public String getInquiriedAt() {
-        return inquiriedAt;
+    public String getDt() {
+        return dt;
     }
     /**
      * お問い合わせ日時を設定
-     * @param inquiriedAt セットする inquiriedAt
+     * @param dt セットする dt
      */
-    public void setInquiriedAt(String inquiriedAt) {
-        this.inquiriedAt = inquiriedAt;
+    public void setDt(String dt) {
+        this.dt = dt;
     }
-
-	public void setDt(String string) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
 
 
 
