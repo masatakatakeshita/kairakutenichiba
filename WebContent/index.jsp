@@ -147,8 +147,9 @@
 		<s:iterator value = "itemListA">
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'>
 			<img src="<s:property value="item_image"/>" class="img"></a>
-			</s:iterator>
-			<a href='#top' class="go-top"><s:text name="" /></a>
+		</s:iterator>
+		<!-- ▲トップへ -->
+		<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 	</div>
     </div>
 
@@ -161,7 +162,8 @@
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
 					src="<s:property value="item_image"/>" class="img"></a>
 		</s:iterator>
-			<a href='#top' class="go-top"><s:text name="" /><s:text name="lang.index.gototop" /></a>
+		<!-- ▲トップへ -->
+		<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 
 		</div>
 	</div>
@@ -174,8 +176,8 @@
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
 					src="<s:property value="item_image"/>" class="img"></a>
 			</s:iterator>
-					<!-- ▲トップへ -->
-			<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
+		<!-- ▲トップへ -->
+		<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 
 		</div>
 	</div>
@@ -188,7 +190,7 @@
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
 					src="<s:property value="item_image"/>" class="img"></a>
 			</s:iterator>
-						<!-- ▲トップへ -->
+		<!-- ▲トップへ -->
 		<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 
 		</div>
@@ -202,7 +204,7 @@
 			<a href='<s:url action="GoItemDetailAction" ><s:param name="item_id" ><s:property value="item_id"/></s:param></s:url>'><img
 					src="<s:property value="item_image"/>" class="img"></a>
 			</s:iterator>
-						<!-- ▲トップへ -->
+		<!-- ▲トップへ -->
 		<a href='#top' class="go-top"><s:text name="lang.index.gototop" /></a>
 
 		</div>

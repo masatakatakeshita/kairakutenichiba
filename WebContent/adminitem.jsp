@@ -60,25 +60,31 @@
 	<table border="1" class="table">
 		<tr>
 			<!-- 商品ID -->
-			<th><s:text name="lang.adminitem.id" /></th>
+			<th><s:text name="lang.adminitem.itemid" /></th>
 			<!-- 商品名 -->
 			<th><s:text name="lang.adminitem.name" /></th>
 			<!-- カテゴリー -->
 			<th><s:text name="lang.adminitem.category" /></th>
-			<th>発売日</th>
-			<th>著者</th>
-			<th>出版社</th>
-			<th>出版形態</th>
-			<th>ページ数</th>
-			<th>ISBNコード</th>
+			<!-- 発売日 -->
+			<th><s:text name="lang.adminitem.release" /></th>
+			<!-- 著者 -->
+			<th><s:text name="lang.adminitem.author" /></th>
+			<!-- 出版社 -->
+			<th><s:text name="lang.adminitem.publisher" /></th>
+			<!-- 出版形態 -->
+			<th><s:text name="lang.adminitem.publicationform" /></th>
+			<!-- ページ数 -->
+			<th><s:text name="lang.adminitem.pages" /></th>
+			<!-- ISBNコード -->
+			<th><s:text name="lang.adminitem.isbncode" /></th>
 			<!-- 単価 -->
 			<th><s:text name="lang.adminitem.price" /></th>
-			<th>商品詳細</th>
+			<!-- 商品詳細 -->
+			<th><s:text name="lang.adminitem.itemdetails" /></th>
 			<!-- 在庫数 -->
 			<th><s:text name="lang.adminitem.stocks" /></th>
 			<!-- 売り上げ数 -->
 			<th><s:text name="lang.adminitem.sales" /></th>
-
 			<!-- 登録日 -->
 			<th><s:text name="lang.adminitem.regday" /></th>
 			<!-- 更新日 -->
@@ -161,7 +167,7 @@
 				<td><s:textfield name="updated_at" class="regbox"/></td>
 				<td><s:textfield name="is_deleted" class="regbox"/></td>
 				<td><s:textfield name="imgPath" class="regbox"/></td>
-				<td><s:submit value="新規登録" /></td>
+				<td><s:submit value="%{getText('lang.adminitem.signup')}" /></td>
 			</s:form>
 
 		</tr>
