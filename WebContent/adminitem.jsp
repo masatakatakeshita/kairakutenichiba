@@ -118,7 +118,7 @@
 					height="50"> <s:property value="item_image" /></td>
 
 				<td><s:form action="AdminItemDeleteAction">
-						<s:hidden name="item_id" value="item_id" />
+					<s:hidden name="item_id" value="%{item_id}" />
 						<s:submit value="%{getText('lang.adminitem.del')}" />
 					</s:form></td>
 			</tr>

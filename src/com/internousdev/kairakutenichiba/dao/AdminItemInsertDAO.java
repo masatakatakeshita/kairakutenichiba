@@ -25,7 +25,6 @@ public class AdminItemInsertDAO {
 		Boolean ret = false;
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
-	System.out.println("cccc");
 		
 		String sql = "select * from items where item_id = ? and item_name = ?";
 		try{
@@ -71,10 +70,8 @@ public class AdminItemInsertDAO {
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","kairakutenichiba","root","mysql");
 		Connection con = db.getConnection();
 		
-	System.out.println("sql動いてる？");
 		String sql="insert into items(item_id, item_name, category_name, release_day, author, publisher, publish_type, pages, isbn, price, stocks, sales, item_datail, item_image, is_deleted, created_at, updated_at)"
 				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	System.out.println("eeeeeeee");
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, itemId);
@@ -96,7 +93,6 @@ public class AdminItemInsertDAO {
 			ps.setString(17, UpdatedDay);
 			
 			ret = ps.executeUpdate();
-		System.out.println("ddddd");
 			
 			con.close();
 		}catch(SQLException e){

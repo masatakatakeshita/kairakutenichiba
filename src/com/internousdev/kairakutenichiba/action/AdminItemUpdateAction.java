@@ -2,7 +2,6 @@ package com.internousdev.kairakutenichiba.action;
 
 import java.util.ArrayList;
 
-import com.internousdev.kairakutenichiba.dao.AdminItemDAO;
 import com.internousdev.kairakutenichiba.dao.AdminItemUpdateDAO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -69,7 +68,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	/**
 	 * 単価
 	 */
-	private float price;
+	private int price;
 
 	/**
      * 商品削除
@@ -141,12 +140,12 @@ public class AdminItemUpdateAction extends ActionSupport{
 			if(updated>0){
 				result = SUCCESS;
 				
-				AdminItemDAO dao2=new AdminItemDAO();
-				itemList=dao2.select();
-				
-				if(itemList.size()>0){
-					result=SUCCESS;
-				}
+//				AdminItemDAO dao2=new AdminItemDAO();
+//				itemList=dao2.select();
+//				
+//				if(itemList.size()>0){
+//					result=SUCCESS;
+//				}
 			}
 		
 
@@ -171,7 +170,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 単価を取得するメソッド
 	 * @return price　単価
 	 */
-	public float getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
@@ -180,7 +179,7 @@ public class AdminItemUpdateAction extends ActionSupport{
 	 * 単価を格納するメソッド
 	 * @param price セットする price
 	 */
-	public void setPrice(float price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 

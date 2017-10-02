@@ -37,7 +37,7 @@ public class AdminItemUpdateDAO {
 	 * @param imgPath　商品画像
 	 * @return　inserted　成功かどうかの判定
 	 */
-	public int update(int item_id, String item_name, String category, String release_day, String author, String publisher, String publish_type, int pages, long isbn,int is_deleted,String created_at, String item_detail, String updated_at, float price, int stocks, int sales,String imgPath
+	public int update(int item_id, String item_name, String category, String release_day, String author, String publisher, String publish_type, int pages, long isbn,int is_deleted,String created_at, String item_detail, String updated_at, int price, int stocks, int sales,String imgPath
 ){
 
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");

@@ -21,10 +21,10 @@ public class AdminDeleteDAO {
 	 * @version 1.0
 	 */
 	public int delete(int itemId){
-		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root","mysql");
+		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 		int deleted=0;
-		String sql="update items set del_key = true where item_id=?";
+		String sql="delete from items where item_id=?";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);

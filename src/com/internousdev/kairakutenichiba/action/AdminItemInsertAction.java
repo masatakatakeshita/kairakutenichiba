@@ -3,7 +3,6 @@ package com.internousdev.kairakutenichiba.action;
 
 import java.util.ArrayList;
 
-import com.internousdev.kairakutenichiba.dao.AdminItemDAO;
 import com.internousdev.kairakutenichiba.dao.AdminItemInsertDAO;
 import com.internousdev.kairakutenichiba.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -110,22 +109,20 @@ public class AdminItemInsertAction extends ActionSupport{
     * 3：重複していない場合はDBにinsertされる
     */
 	public String execute(){
-		System.out.println("aaaa");
 		String result = ERROR;
 		AdminItemInsertDAO dao = new AdminItemInsertDAO();
 		if(dao.duplication(item_id,item_name) == true){
-			System.out.println("bbbb");
 			setDuplication("エラー：同名の商品と商品IDが存在しています");
 		}else if(dao.insert(item_id,item_name,category,release_day,author,publisher,publish_type,pages,isbn,price,stocks,sales,item_detail,imgPath,is_deleted,created_at,updated_at)>0){
-	System.out.println("fffff");
 			dao.insert(item_id,item_name,category,release_day,author,publisher,publish_type,pages,isbn,price,stocks,sales,item_detail,imgPath,is_deleted,created_at,updated_at);	
 			result = SUCCESS;
-			AdminItemDAO dao2=new AdminItemDAO();
-			itemList=dao2.select();
 			
-			if(itemList.size()>0){
-				result=SUCCESS;
-			}
+//			AdminItemDAO dao2=new AdminItemDAO();
+//			itemList=dao2.select();
+//			
+//			if(itemList.size()>0){
+//				result=SUCCESS;
+//			}
 		}
 		return result;
 	}
