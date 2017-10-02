@@ -26,7 +26,7 @@ public class CartItemDeleteAction extends CartAssist implements SessionAware {
     /**
      * 合計金額
      */
-    private float amountAll;
+    private int amountAll;
 
     /**
      * 数量
@@ -72,7 +72,7 @@ public class CartItemDeleteAction extends CartAssist implements SessionAware {
     
     public String execute(){
         String result = ERROR;
-        amountAll=0;
+        
 
         if (session.containsKey("userId")) {
             userId = (int) session.get("userId");
@@ -84,7 +84,7 @@ public class CartItemDeleteAction extends CartAssist implements SessionAware {
             GoCartDAO cartdao= new GoCartDAO();
             cartList=cartdao.selectedItem(userId);
             for(int i=0;i<cartList.size();i++){
-            	amountAll += (cartList.get(i).getPrice()*cartList.get(i).getQuantities());
+            	amountAll += (cartList.get(i).getPriceyen()*cartList.get(i).getQuantities());
             }
             
 
@@ -169,7 +169,7 @@ public class CartItemDeleteAction extends CartAssist implements SessionAware {
      * 合計金額を取得するメソッド
      * @return amountAll 合計金額
      */
-    public float getAmountAll() {
+    public int getAmountAll() {
         return amountAll;
     }
 
@@ -177,7 +177,7 @@ public class CartItemDeleteAction extends CartAssist implements SessionAware {
      * 合計金額を格納するメソッド
      * @param amountAll セットする amountAll
      */
-    public void setAmountAll(float amountAll) {
+    public void setAmountAll(int amountAll) {
         this.amountAll = amountAll;
     }
 

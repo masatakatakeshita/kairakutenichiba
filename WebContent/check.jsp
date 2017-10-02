@@ -60,7 +60,7 @@
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
-        <th><s:text name="lang.check.fee" /><s:text name="lang.check.yen" /></th>
+        <th><s:text name="lang.check.fee" /></th>
         <th><s:if test="%{deliveryselectboolean}" >200<s:text name="lang.check.yen" /></s:if>
              <s:else>500<s:text name="lang.check.yen" /></s:else></th>
     </tr>
@@ -98,17 +98,16 @@
 <!-- *購入手続きされません -->
 <div class="a"><s:text name="lang.check.notfinish" /></div> <!-- floatの処理のために順番が前後している。 -->
 <!-- カートへ戻る -->
-<s:form action="GoCartAction">
-<div class="b"><s:submit value="カートへ戻る" /> </div> <br>
+<div class="b"><a href='<s:url action="GoCartAction" />' > <s:text name="lang.check.backtocart" /></a></div> <br>
 	<!-- <s:text name="lang.check.backtocart" /> -->
-</s:form>
+
 <!-- *購入手続きされません -->
 <div class="a"><s:text name="lang.check.notfinish" /></div>
 <!-- 支払い方法の選択へ戻る -->
-<s:form action="GoSettlementAction">
-<div class="b"><s:submit value="商品選択に戻る" /></div>
+
+<div class="b"><a href='<s:url action="GoSettlementAction" />' > <s:text name="lang.check.backtoselect" /></a></div>
 		<!--<s:text name="backtoselect" /> -->
-</s:form>
+
 </div>
 </body>
 </html>

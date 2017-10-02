@@ -59,7 +59,7 @@ public class CartUpdateAction extends ActionSupport implements SessionAware {
     /**
      *購入商品の合計価格
      */
-    private int amountAll = 0;
+    private int amountAll;
     /**
      * 更新処理をした件数
      */
