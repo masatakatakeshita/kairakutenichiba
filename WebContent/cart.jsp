@@ -89,7 +89,7 @@
 		<a href='<s:url action="GoSettlementAction" />' > <s:text name="lang.cart.message4" /></a>
       </div>
 
-		<p><a href="index.jsp"><s:text name="lang.cart.message3" /></a>
+		<p class="right"><a href="index.jsp"><s:text name="lang.cart.message3" /></a>
 	</p>
 
 
