@@ -128,7 +128,7 @@
 <br>
 </p>
 <p>
-<input type="submit" value="<s:text name = "lang.help.return"/>"/>
+<input type="button" onclick="location.href='helplink.jsp'" value="<s:text name = "lang.help.return"/>"/>
 </p>
 
 </div>
