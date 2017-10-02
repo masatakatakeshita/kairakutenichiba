@@ -39,12 +39,12 @@
 
 
 <tr>
-<!--ふりがな  -->
-	<th><s:text name="lang.mypage.word" /></th><th><s:property value = "familyNameKana"/></th>
+<!--ふりがな-->
+	<th><s:text name="lang.mypage.word" /></th><th><s:property value = "familyNameKana"/></th> <th><s:property value = "givenNameKana"/></th>
 </tr>
 
 <tr><!--氏名  -->
-	<th><s:text name="lang.mypage.name" /></th><th><s:property value = "givenNameKanji" /></th>
+	<th><s:text name="lang.mypage.name" /></th><th><s:property value = "familyNameKanji" /> <s:property value = "givenNameKanji"/></th>
 </tr>
 
 
