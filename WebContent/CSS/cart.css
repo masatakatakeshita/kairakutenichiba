@@ -62,7 +62,7 @@ table.type02 td {
 	border-bottom: 1px solid #ccc;
 }
 
-button.button8 {
+.button8 {
 	position: absolute;
 	margin-left: 87%;
 	/* 文字サイズを1.4emに指定 */
@@ -90,7 +90,7 @@ button.button8 {
      * 縦長を1px
      * ぼかしを2px
      * 色を#000（黒）に指定 */
-	text-shadow: 1px 1px 2px #000;
+	text-shadow: 1px 1px 2px #fff;
 	/* グラデーションの指定 */
 	background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
 	background: -webkit-gradient(linear, left bottom, left top, from(#36d),
