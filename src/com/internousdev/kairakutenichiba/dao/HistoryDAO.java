@@ -27,7 +27,6 @@ public class HistoryDAO {
 		MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<HistoryDTO> HistoryList = new ArrayList<HistoryDTO>();
-				//jspに表示するための情報郡を1行ずつ登録していく保存先。
 		
 		String sql = "select * from purchase_details where user_id=?";
 		String sql2 = "select * from items where item_id=?";
@@ -40,9 +39,7 @@ public class HistoryDAO {
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()){		//繰り返すためのif→while
 				HistoryDTO dto = new HistoryDTO();
-				//user_idに関するget,setはいらないよね？引数で検索かけるだけ
 				dto.setQuantities(rs.getInt("quantities"));
-//				dto.setMultiplied_price(rs.getString("multiplied_price"));
 				dto.setPurchased_day(rs.getString("purchase_at"));
 				dto.setItem_id(rs.getInt("item_id"));	
 				
@@ -56,7 +53,6 @@ public class HistoryDAO {
 					dto.setRelease_day(rs.getString("release_day"));
 					dto.setAuthor(rs.getString("author"));
 					dto.setPrice(rs.getInt("price"));
-//					dto.setImgPath(rs2.getString("img_path")); 
 					HistoryList.add(dto);
 				}
 			}

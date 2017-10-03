@@ -37,7 +37,6 @@
 </div>
 
 
-<s:form action="HistoryAction">
 <table border="1">
     <tr>
     	<!-- 商品名 -->
@@ -46,10 +45,10 @@
         <th><s:text name="lang.history.author" /></th>
         <!-- 値段 -->
         <th><s:text name="lang.history.price" /></th>
-        <!-- 購入日 -->
-        <th><s:text name="lang.history.buyday" /></th>
         <!-- 販売日 -->
         <th><s:text name="lang.history.dayonsale" /></th>
+        <!-- 購入日 -->
+        <th><s:text name="lang.history.buyday" /></th>
         <!-- 販売個数 -->
         <th><s:text name="lang.history.quantity" /></th>
 
@@ -59,14 +58,13 @@
         <td><s:property value="item_name" /></td>
         <td><s:property value="author" /></td>
         <td><s:property value="price" /></td>
-        <td><s:property value="purchased_day" /></td>
         <td><s:property value="release_day" /></td>
+  　　　<td><s:property value="purchased_day" /></td>
         <td><s:property value="quantities" /></td>
 
     </tr>
     </s:iterator>
 </table>
-</s:form>
 
 
 

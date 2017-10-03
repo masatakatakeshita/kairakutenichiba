@@ -113,7 +113,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 			ret="other";
 			amountAll=0;
 			dto  = dao.select(nameHolder, str, expirationMonth, expirationYear, securityCode, creditType);
-			if(dto.getCreditId()!=0){
+			if(dto.getCreditNumber()!=null){
 			if(nameHolder.equals(dto.getNameHolder())){
 				if(str.equals(dto.getCreditNumber())){
 					if(expirationMonth.equals(dto.getExpirationMonth())){
