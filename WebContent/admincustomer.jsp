@@ -17,7 +17,7 @@
 
 <meta charset="utf-8">
 <!-- 顧客情報 -->
-<title><s:text name="com.lang.admincustomer.topTitle"/></title>
+<title><s:text name="lang.admincustomer.topTitle"/></title>
 <link rel="stylesheet" type="text/css" href="CSS/admincustomer.css">
 
 </head>
