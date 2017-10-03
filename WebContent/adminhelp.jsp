@@ -102,7 +102,7 @@
 		<tr align="left" bgcolor="#ffffff">
             <td colspan="2"><div class="sc"><s:property value="comment" escape="false" /></div></td>
         </tr>
-
+<br>
 </table>
 </s:iterator>
 </div>
