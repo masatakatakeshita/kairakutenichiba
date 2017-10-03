@@ -25,7 +25,7 @@ public class AdminDeleteDAO {
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 		int deleted=0;
-		String sql="update items set is_deleted=? where item_id=?";
+		String sql="update items set is_deleted=?, stocks=0 where item_id=?";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
