@@ -11,6 +11,24 @@
 <html>
 
 <head>
+<!--
+<body onLoad="reloadCheck()">
+<body onLoad="reset()">
+<script type="text/javascript">
+function reloadCheck(){
+	if (window.name != "reloadFlag"){
+		location.reload();
+		alert('test');
+		window.name = "reloadFlag";
+	}
+}
+function reset(){
+	window.name="no";
+}
+</script>
+-->
+
+
 <!-- 国際化 ロケールID取得 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <!-- 国際化 propertyファイルの場所の定義 -->

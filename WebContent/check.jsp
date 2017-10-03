@@ -10,6 +10,13 @@
 <html>
 
 <head>
+<script type="text/javascript">
+    history.pushState(null, null, null);
+
+    window.addEventListener("popstate", function() {
+        history.pushState(null, null, null);
+    });
+</script>
 <!-- 国際化 ロケールID取得 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <!-- 国際化 propertyファイルの場所の定義 -->
