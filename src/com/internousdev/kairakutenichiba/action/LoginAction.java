@@ -42,11 +42,12 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	 */
 	public String execute() {
 		String ret = ERROR;
-
+		
 		LoginDAO dao = new LoginDAO();
 		LoginDTO dto = new LoginDTO();
 		dto = dao.select(email, password);
 		
+	if(!(dto.getUserId() == 0)) {
 		if (email.equals(dto.getEmail())){
 			if (password.equals(dto.getPassword())){
 				System.out.println(dto.getLoginFlg());
@@ -67,6 +68,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				}
 			}
 		}
+	}
 
 		return ret;
 

@@ -15,6 +15,7 @@ import com.internousdev.util.db.mysql.MySqlConnector;
 public class AdminDeleteDAO {
 
 	/**
+	 * 
 	 * itemIdで検索した商品のデリートキーをtrueにするメソッド
 	 * @param itemId 商品ID
 	 * @return deleted 成否を格納する変数

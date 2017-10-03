@@ -20,6 +20,7 @@ public class AdminItemDeleteAction extends ActionSupport{
 	private static final long serialVersionUID = 2281123274036546024L;
 	/**
 	 * 商品ID
+	 * 
      */
 	private int item_id;
 

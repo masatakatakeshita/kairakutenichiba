@@ -10,6 +10,10 @@
 <html>
 
 <head>
+<script type="text/javascript">
+	window.onunload = function() {};
+	history.forward();
+</script>
 <!-- 国際化 ロケールID取得 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <!-- 国際化 propertyファイルの場所の定義 -->
