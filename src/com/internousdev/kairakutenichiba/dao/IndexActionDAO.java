@@ -25,7 +25,7 @@ public class IndexActionDAO  {
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
-		String sql="select * from items";
+		String sql="select * from items where is_deleted=0";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
@@ -71,7 +71,7 @@ public class IndexActionDAO  {
 		MySqlConnector db=new MySqlConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "kairakutenichiba", "root","mysql");
 		Connection con=db.getConnection();
 
-		String sql="select * from items where category_name = ?";
+		String sql="select * from items where category_name = ? and is_deleted=0";
 
 		try{
 			
