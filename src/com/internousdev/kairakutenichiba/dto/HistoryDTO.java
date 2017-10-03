@@ -70,15 +70,15 @@ public class HistoryDTO {
 	 * 個数を取得するメソッド
 	 * @return quantities
 	 */
-	public int getQuantites(){
+	public int getQuantities(){
 		return quantities;
 	}
 	/**
 	 * 個数を格納するメソッド
 	 * @param Quantities
 	 */
-	public void setQuantities(int Quantities){
-		quantities = Quantities;
+	public void setQuantities(int quantities){
+		this.quantities = quantities;
 	}
 	/**
 	 * 購入日を取得するメソッド

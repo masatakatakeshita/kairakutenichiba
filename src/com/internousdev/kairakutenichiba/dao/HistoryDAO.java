@@ -28,7 +28,7 @@ public class HistoryDAO {
 		Connection con = db.getConnection();
 		ArrayList<HistoryDTO> HistoryList = new ArrayList<HistoryDTO>();
 		
-		String sql = "select * from purchase_details where user_id=?";
+		String sql = "select * from purchases_details where user_id=?";
 		String sql2 = "select * from items where item_id=?";
 		
 		try{
@@ -40,7 +40,7 @@ public class HistoryDAO {
 			while(rs.next()){		//繰り返すためのif→while
 				HistoryDTO dto = new HistoryDTO();
 				dto.setQuantities(rs.getInt("quantities"));
-				dto.setPurchased_day(rs.getString("purchase_at"));
+				dto.setPurchased_day(rs.getString("purchased_at"));
 				dto.setItem_id(rs.getInt("item_id"));	
 				
 				//別テーブルにアクセス
@@ -49,10 +49,10 @@ public class HistoryDAO {
 				ResultSet rs2 = ps2.executeQuery();
 				
 				if(rs2.next()){
-					dto.setItem_name(rs.getString("item_name"));
-					dto.setRelease_day(rs.getString("release_day"));
-					dto.setAuthor(rs.getString("author"));
-					dto.setPrice(rs.getInt("price"));
+					dto.setItem_name(rs2.getString("item_name"));
+					dto.setRelease_day(rs2.getString("release_day"));
+					dto.setAuthor(rs2.getString("author"));
+					dto.setPrice(rs2.getInt("price"));
 					HistoryList.add(dto);
 				}
 			}

@@ -178,7 +178,7 @@ public void testSetItem_id5() {
 
 		test.setQuantities(expected);
 
-		assertEquals(expected, test.getQuantites());
+		assertEquals(expected, test.getQuantities());
 
 	}
 
@@ -193,7 +193,7 @@ public void testSetItem_id5() {
 
 		test.setQuantities(expected);
 
-		assertEquals(expected, test.getQuantites());
+		assertEquals(expected, test.getQuantities());
 	}
 
 	/**
@@ -207,7 +207,7 @@ public void testSetItem_id5() {
 
 		test.setQuantities(expected);
 
-		assertEquals(expected, test.getQuantites());
+		assertEquals(expected, test.getQuantities());
 	}
 
 	/**
@@ -252,7 +252,7 @@ public void testSetItem_id5() {
 		int expected = 0;
 
 		test.setQuantities(expected);
-		int actual = test.getQuantites();
+		int actual = test.getQuantities();
 
 		assertEquals(expected, actual);
 	}
@@ -268,7 +268,7 @@ public void testSetItem_id5() {
 		int expected = 2147483647;
 
 		test.setQuantities(expected);
-		int actual = test.getQuantites();
+		int actual = test.getQuantities();
 
 		assertEquals(expected, actual);
 	}
@@ -283,7 +283,7 @@ public void testSetItem_id5() {
 		int expected = -2147483648;
 
 		test.setQuantities(expected);
-		int actual = test.getQuantites();
+		int actual = test.getQuantities();
 
 		assertEquals(expected, actual);
 	}
