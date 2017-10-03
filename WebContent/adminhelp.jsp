@@ -42,7 +42,7 @@
 	<select name="searchCategory">
 			<option value=""><s:text name="lang.adminhelp.all" /></option>
 
-			<option value="<s:text name="lang.adminhelp.acount" />" ><s:text name="lang.adminhelp.account" /></option>
+			<option value="<s:text name="lang.adminhelp.acount" />" ><s:text name="lang.adminhelp.acount" /></option>
 
             <option value="<s:text name="lang.adminhelp.howtopay" />" ><s:text name="lang.adminhelp.howtopay" /></option>
 
