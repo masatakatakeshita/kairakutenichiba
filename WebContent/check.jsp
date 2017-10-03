@@ -56,7 +56,7 @@
     </tr>
     </s:iterator>
     <tr>
-    	
+
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
@@ -65,14 +65,14 @@
              <s:else>500<s:text name="lang.check.yen" /></s:else></th>
     </tr>
     <tr>
-    	
+
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
         <th><s:text name="" /></th>
         <th><s:text name="lang.check.total" /></th>
         <th><s:property value="amountAll" /><s:text name="lang.check.yen" /></th>
     </tr>
-    
+
 
 </table>
 <!--お支払い方法  -->
@@ -92,21 +92,22 @@
 <s:form action="PurchaseCompleteAction">
 <s:hidden name="str" value="%{str}" />
 <s:hidden name="delivery" value="%{deliverySelect}" />
-<h4><s:submit value= "注文を確定する(determine)" ></s:submit></h4>
+<h4><s:submit value= "%{getText('lang.check.determine')}" ></s:submit></h4>
 </s:form>
 
-<!-- *購入手続きされません -->
-<div class="a"><s:text name="lang.check.notfinish" /></div> <!-- floatの処理のために順番が前後している。 -->
+
+
 <!-- カートへ戻る -->
-<div class="b"><a href='<s:url action="GoCartAction" />' > <s:text name="lang.check.backtocart" /></a></div> <br>
-	<!-- <s:text name="lang.check.backtocart" /> -->
-
+<div class="b"><a href='<s:url action="GoCartAction" />' > <s:text name="lang.check.backtocart" /></a>
 <!-- *購入手続きされません -->
-<div class="a"><s:text name="lang.check.notfinish" /></div>
-<!-- 支払い方法の選択へ戻る -->
+<s:text name="lang.check.notfinish" /></div> <br>
 
-<div class="b"><a href='<s:url action="GoSettlementAction" />' > <s:text name="lang.check.backtoselect" /></a></div>
-		<!--<s:text name="backtoselect" /> -->
+
+<!-- 支払い方法の選択へ戻る -->
+<div class="b"><a href='<s:url action="GoSettlementAction" />' > <s:text name="lang.check.backtoselect" /></a>
+<!-- *購入手続きされません -->
+<s:text name="lang.check.notfinish" /></div>
+
 
 </div>
 </body>
