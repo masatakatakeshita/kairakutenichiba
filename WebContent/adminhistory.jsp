@@ -65,6 +65,7 @@
 	<tr>
 		<!-- 値の挿入 -->
 		<s:iterator value="adminhistoryList">
+		<tr>
             <td><s:property value="itemId" /></td>
              <!-- 商品名 -->
             <td><s:property value="itemsName" /></td>
@@ -76,6 +77,7 @@
             <td>&yen;<fmt:formatNumber value="${subtotal}"/></td>
             <!-- 購入日 -->
             <td><s:property value="purchase_at" /></td>
+        </tr>  
  		</s:iterator>
 	</tr>
 	</table>
