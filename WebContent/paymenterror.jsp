@@ -26,23 +26,8 @@
 	</header>
 
 <h1>
-<s:if test="whaterror==1">
+
 <s:text name="lang.paymenterror.securitycode" />
-</s:if>
-<s:if test="whaterror==2">
-<s:text name="lang.paymenterror.year" />
-</s:if>
-<s:if test="whaterror==3">
-<s:text name="lang.paymenterror.month" />
-</s:if>
-<s:if test="whaterror==4">
-<s:text name="lang.paymenterror.number" />
-</s:if>
-<s:if test="whaterror==5">
-<s:text name="lang.paymenterror.name" />
-</s:if>
-
-
 
 </h1>
 
