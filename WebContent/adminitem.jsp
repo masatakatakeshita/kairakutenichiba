@@ -10,6 +10,9 @@
 <html>
 
 <head>
+<s:if test="#session.adminflg != 1">
+	<meta http-equiv="refresh" content="0; <s:url action="LoginAction"/>">
+</s:if>
 <script type="text/javascript">
 	window.onunload = function() {};
 	history.forward();

@@ -70,6 +70,7 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
      */
     private Map<String,Object> session;
 
+    
 
        /**
         * 購入履歴を取得するメソッド
@@ -82,6 +83,7 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 			if(adminhistoryList.size() > 0){
 				result=SUCCESS;
 			}
+		
 		return result;
 		}
 
@@ -225,6 +227,8 @@ public class AdminHistoryAction extends ActionSupport implements SessionAware{
 	public void setPurchase_at(String purchase_at) {
 		this.purchase_at = purchase_at;
 	}
+
+
 	
 }
 

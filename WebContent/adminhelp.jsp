@@ -10,6 +10,9 @@
 <html>
 
 <head>
+<s:if test="#session.adminflg != 1">
+	<meta http-equiv="refresh" content="0; <s:url action="LoginAction"/>">
+</s:if>
 <!-- 国際化 ロケールID取得 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <!-- 国際化 propertyファイルの場所の定義 -->

@@ -61,6 +61,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 							int userFlg = (int) dto.getUserFlg();
 							if (userFlg == 3) {
 								ret = LOGIN;
+								session.put("adminflg", 1);
+								System.out.println(session.get("adminflg"));
 							} else {
 								ret = SUCCESS;
 							}
