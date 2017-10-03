@@ -111,11 +111,11 @@
 				<option value="10" >10</option>
 				<option value="11" >11</option>
 				<option value="12" >12</option>
-				</select>&nbsp;月/
+				</select>&nbsp;<s:text name="lang.payment.month" />
 
                 <select id="year" name="expirationYear" required>
 				<option value="">--</option>
-				</select>&nbsp;年</td>
+				</select>&nbsp;<s:text name="lang.payment.year" /></td>
                 </tr>
 
 
@@ -149,13 +149,13 @@
             <label><input type="radio" name="deliverySelect" value="メール便"><s:text name="lang.payment.mail" /></label>
            　</td>
 
-       　    </tr>
+            </tr>
 
 
             <tr>
             <!-- お届け日指定［必須］ -->
             <th><s:text name="lang.payment.date" /></th>
-            <td> 日付を選択<input type="text" name="deliveryMonth" class="form_text-small" id="datepicker" required>
+            <td><s:text name="lang.payment.dateselection" /><input type="text" name="deliveryMonth" class="form_text-small" id="datepicker" required>
 
             </td>
             </tr>
@@ -165,16 +165,18 @@
              <!--お届け時間指定［必須］ -->
             <th><s:text name="lang.payment.time" /></th>
             <td><select name="deliveryTime" id="deliveryTime" required>
-            <option value="指定なし">指定なし</option>
-            <option value="午前中">午前中</option>
-            <option value="12時~14時" >12時~14時</option>
-            <option value="14時~16時" >14時~16時</option>
-            <option value="16時~18時" >16時~18時</option>
-            <option value="18時~20時" >18時~20時</option>
-            <option value="20時~21時" >20時~21時</option>
+            <option value="指定なし"><s:text name="lang.payment.nondesignation" /></option>
+            <option value="午前中"><s:text name="lang.payment.am" /></option>
+            <option value="12時~14時" ><s:text name="lang.payment.time1" /></option>
+            <option value="14時~16時" ><s:text name="lang.payment.time2" /></option>
+            <option value="16時~18時" ><s:text name="lang.payment.time3" /></option>
+            <option value="18時~20時" ><s:text name="lang.payment.time4" /></option>
+            <option value="20時~21時" ><s:text name="lang.payment.time5" /></option>
               </select>
            </td>
                 </tr>
+
+
 
             </table>
             </div>
@@ -182,13 +184,13 @@
 
 
            <p>
-           <a href="check.jsp"><input type="submit" value=内容確認></a>
-        　　</p>
+           <a href="check.jsp"><input type="submit" value="<s:text name="lang.payment.message" />"></a>
+           </p>
 
 
 </s:form>
 
-    　　　　
+
     </div>
     </body>
 </html>
