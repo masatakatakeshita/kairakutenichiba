@@ -79,6 +79,8 @@ public class CartItemDeleteAction extends CartAssist implements SessionAware {
             CartItemDeleteDAO deletedao=new CartItemDeleteDAO();
             if(deletedao.delete(userId,itemId)>0){
             	result=SUCCESS;
+            }else{
+            	result="other";
             }
             
             GoCartDAO cartdao= new GoCartDAO();
