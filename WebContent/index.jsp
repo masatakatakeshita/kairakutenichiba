@@ -69,7 +69,8 @@
 	});
   </script>
 
-<s:if test="itemList == null || itemList.isEmpty()">
+
+<s:if test="itemList == null ">
 <meta http-equiv="refresh" content="0; <s:url action="IndexAction"/>">
 </s:if>
 

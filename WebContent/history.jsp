@@ -59,9 +59,8 @@
         <td><s:property value="author" /></td>
         <td><s:property value="price" /></td>
         <td><s:property value="release_day" /></td>
-  　　　<td><s:property value="purchased_day" /></td>
+        <td><s:property value="purchased_day" /></td>
         <td><s:property value="quantities" /></td>
-
     </tr>
     </s:iterator>
 </table>
